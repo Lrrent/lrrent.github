@@ -1,0 +1,746 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="平铺式窗口管理器
+总有一些东西是你自己不知道是否需要，但是在看到的那一刹那，就觉得相见恨晚的。
+
+因为曾经在知乎上，看到玩多屏的人介绍过awesome，就一直寻找windows下能用的类似软件，结果找到了这个名叫bug.n的小软件（名字是不是很拗口？）。
+软件在GITHUB上，详见这里
+先看一下我自己开启bug.n后桌面的窗口布局：
+
+值得一提的是，窗口顶端还有一个banner，显示的信息包括：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows下的awesome让所有窗口平铺沾满桌面的工具bug.n">
+<meta property="og:url" content="http://yoursite.com/2016/01/14/Windows下的Awesome-窗口平铺占满桌面bug.n/index.html">
+<meta property="og:site_name" content="FOOLMAN 一个人的修行">
+<meta property="og:description" content="平铺式窗口管理器
+总有一些东西是你自己不知道是否需要，但是在看到的那一刹那，就觉得相见恨晚的。
+
+因为曾经在知乎上，看到玩多屏的人介绍过awesome，就一直寻找windows下能用的类似软件，结果找到了这个名叫bug.n的小软件（名字是不是很拗口？）。
+软件在GITHUB上，详见这里
+先看一下我自己开启bug.n后桌面的窗口布局：
+
+值得一提的是，窗口顶端还有一个banner，显示的信息包括：">
+<meta property="og:image" content="http://7xrpbc.com1.z0.glb.clouddn.com/img_569711fb30fc5.png">
+<meta property="og:updated_time" content="2016-03-09T18:24:14.899Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Windows下的awesome让所有窗口平铺沾满桌面的工具bug.n">
+<meta name="twitter:description" content="平铺式窗口管理器
+总有一些东西是你自己不知道是否需要，但是在看到的那一刹那，就觉得相见恨晚的。
+
+因为曾经在知乎上，看到玩多屏的人介绍过awesome，就一直寻找windows下能用的类似软件，结果找到了这个名叫bug.n的小软件（名字是不是很拗口？）。
+软件在GITHUB上，详见这里
+先看一下我自己开启bug.n后桌面的窗口布局：
+
+值得一提的是，窗口顶端还有一个banner，显示的信息包括：">
+<meta name="twitter:image" content="http://7xrpbc.com1.z0.glb.clouddn.com/img_569711fb30fc5.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> Windows下的awesome让所有窗口平铺沾满桌面的工具bug.n | FOOLMAN 一个人的修行 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">FOOLMAN 一个人的修行</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">随笔 随心</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Windows下的awesome让所有窗口平铺沾满桌面的工具bug.n
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-14T11:11:21+08:00" content="2016-01-14">
+              2016-01-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/效率提升/" itemprop="url" rel="index">
+                    <span itemprop="name">效率提升</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="平铺式窗口管理器"><a href="#平铺式窗口管理器" class="headerlink" title="平铺式窗口管理器"></a>平铺式窗口管理器</h2><blockquote>
+<p>总有一些东西是你自己不知道是否需要，但是在看到的那一刹那，就觉得相见恨晚的。</p>
+</blockquote>
+<p>因为曾经在知乎上，看到玩多屏的人介绍过awesome，就一直寻找windows下能用的类似软件，结果找到了这个名叫bug.n的小软件（名字是不是很拗口？）。</p>
+<p>软件在GITHUB上，详见<a href="https://github.com/fuhsjr00/bug.n" target="_blank" rel="external">这里</a></p>
+<p>先看一下我自己开启bug.n后桌面的窗口布局：</p>
+<p><img src="http://7xrpbc.com1.z0.glb.clouddn.com/img_569711fb30fc5.png" alt=""></p>
+<p>值得一提的是，窗口顶端还有一个banner，显示的信息包括：</p>
+<ul>
+<li>虚拟桌面列表</li>
+<li>当前虚拟桌面使用什么布局</li>
+<li>活动窗口的标题</li>
+<li>日期时间</li>
+</ul>
+<p>bug.n支持虚拟桌面。Windows系统只有一个桌面，但通过bug.n可以虚拟出很多桌面。如果你正在一个桌面上玩游戏或看碟，看到老板来了，你可以迅速切换到早就准备好的工作桌面。老板在任务栏上不会发现任何你娱乐过的蛛丝马迹。</p>
+<p>通过按Win+加数字n，可以切换到第n个桌面。用鼠标直接点击banner上的虚拟桌面按钮也可以。另外用鼠标右键点击某个虚拟桌面，会把当前的活动窗口送到那个虚拟桌面去。</p>
+<p>每个桌面支持三种布局模式：</p>
+<ul>
+<li>平铺模式(tiling): 所有窗口平铺，左边是主窗口，右边是窗口队列。按 Win+t 可以切换到tiling模式。</li>
+<li>浮动模式(floating): 所有窗口浮动，可以互相遮盖，就是我们平常用的模式。按 win+f可以切换到floating模式。</li>
+<li>全屏模式(monocle): 所有窗口最大化，一次只显示一个。按 Win+m 可以切换到 monocle 模式。<br>用鼠标右键点击banner上的布局按钮可以在这三种布局间切换。</li>
+</ul>
+<p>通过窗口键加方向键可以调整主窗口大小和改变窗口队列，自己试试就知道。如果你觉得受不了了，按 Win + Ctrl + q，可以退出bug.n。</p>
+<p>我在Win10上用bug.n，自己的配置写在 <code>C:\Users\Administrator\AppData\Roaming\bug.n\Config.ini</code> 中。</p>
+<p>重点介绍一些常用的快捷键</p>
+<p><code>Win+左右方向键</code>，是调整分割比例，这个很好用，左侧可以调整为正好一个网页的宽度。</p>
+<p><code>Win+上下</code>，可以调整活动窗口。</p>
+<p><code>Win+Shift+上下键</code>，可以让活动窗口在不同位置之间跳转。</p>
+<p><code>Win+Shift+Enter</code>，让当前窗口和左侧活动主窗口对调位置很方便。</p>
+<p><code>Win+Ctrl+q</code>，退出bug.n。</p>
+<p><code>Win+c</code>，关闭当前窗口。</p>
+<p>配合Chrome的Vimium，可以提高不少效率。</p>
+<p>目前我正在研究的是Config.ini的一条规则，</p>
+<p><code>Config_rule=WebChat*;.*;;1;0;0;0;0;0;</code></p>
+<p>就是比如像微信电脑版这样的程序，其窗口的最小是一个固定值，如果让他按照普通窗口那样排列，基本什么也看不到，目前代替的方法就是Win+c，然后看到新信息，Ctrl+Alt+w取消息，回复完了，再关闭微信（注：Ctrl+Alt+w是微信默认快捷键，非bug.n）。</p>
+<p>部分文字摘抄<a href="http://www.cnblogs.com/jiqingwu/p/4311202.html" target="_blank" rel="external">http://www.cnblogs.com/jiqingwu/p/4311202.html</a></p>
+<p>特此说明。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/11/DotNet破解反编译资料汇总/" rel="next" title=".net破解反编译资料汇总">
+                <i class="fa fa-chevron-left"></i> .net破解反编译资料汇总
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/10/从WORDPRESS迁移到HEXO/" rel="prev" title="从WordPress迁移到HEXO">
+                从WordPress迁移到HEXO <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="节约用爱" />
+          <p class="site-author-name" itemprop="name">节约用爱</p>
+          <p class="site-description motion-element" itemprop="description">随笔 随心</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+          
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#平铺式窗口管理器"><span class="nav-number">1.</span> <span class="nav-text">平铺式窗口管理器</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">节约用爱</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+
+</body>
+</html>
