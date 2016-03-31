@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HEXO, WordPress, 搬家,," />
+  <meta name="keywords" content="HEXO, WordPress, 搬家," />
 
 
 
@@ -71,7 +71,7 @@ WordPress确实是个优秀的博客系统，但是却越来越臃肿，平心�
 <meta property="og:image" content="http://7xrpbc.com1.z0.glb.clouddn.com/hellothegit.jpg">
 <meta property="og:image" content="http://7xrpbc.com1.z0.glb.clouddn.com/hexoserver.jpg">
 <meta property="og:image" content="http://7xrpbc.com1.z0.glb.clouddn.com/zuoyebuluomarkdown.jpg">
-<meta property="og:updated_time" content="2016-03-10T16:08:17.967Z">
+<meta property="og:updated_time" content="2016-03-31T01:22:19.628Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从WordPress迁移到HEXO">
 <meta name="twitter:description" content="FOOLMAN喜欢简单的东西，虽然为了达到简单目标，付出的代价却是复杂无比
@@ -262,7 +262,7 @@ WordPress确实是个优秀的博客系统，但是却越来越臃肿，平心�
 <blockquote>
 <p>我喜欢写流水账似的记录，因为我觉得只有自己消化了的东西，写出来的心得，才能是精华，才值得记录。</p>
 </blockquote>
-<p>可能自己写作习惯不好，经常偷懒，很多东西就算记下来了，也是随手记录在印象笔记中，懒得整理了。不过既然有了这个契机，就好好整理一下。</p>
+<p>可能自己写作习惯不好，经常偷懒，很多东西就算记下来了，也是随手扔在印象笔记中，懒得整理了。不过既然有了这个契机，可以适当整理一下了。</p>
 <h2 id="本文讲的是什么"><a href="#本文讲的是什么" class="headerlink" title="本文讲的是什么"></a>本文讲的是什么</h2><p>主要是WINDOWS用户如何在本地上调试，并且上传到GITHUB免费空间，本来我的目标是上传到阿里云的，折腾了两天了，发现要总结的东西太多了，再不及时写成帖子，就要忍不了了，不是我忍不了，而是印象笔记忍不了我了（条目太多、太乱）。</p>
 <a id="more"></a>
 <h2 id="在WINDOWS电脑上要做的"><a href="#在WINDOWS电脑上要做的" class="headerlink" title="在WINDOWS电脑上要做的"></a>在WINDOWS电脑上要做的</h2><p>HEXO本身就是一个由Node.js驱动的框架，N多包（至少我这样认为），可以识别Markdown标注的笔记，并且转换为HTML页面，这样，就可以借助GitHub Pages这个免费的文档托管空间，来建立博客了，还是免费的。</p>
@@ -278,6 +278,9 @@ WordPress确实是个优秀的博客系统，但是却越来越臃肿，平心�
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
 <p>先不解释什么时候npm，先说这句命令，可能会运行很长时间，如果你觉得出错了，可以用<code>CTRL+C</code>来结束，不过更靠谱的，是加一个<code>-verbose</code>参数，变成这样，这样你就可以看到整个安装过程了，这命令对于其他命令也适用。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo -verbose</span><br></pre></td></tr></table></figure>
+<p>这里分享一个小插曲，我在WIN10系统上安装的，所以遇到了两个WARN信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm WARN optional Skipping failed optional dependency /browser-sync/chokidar/fsevents:                            </span><br><span class="line">npm WARN notsup Not compatible with your operating system or architecture: fsevents@1.0.8</span><br></pre></td></tr></table></figure>
+<p>解释：fsevent是mac osx系统的，所以在windows系统下会遇到这个警告，忽略即可。</p>
 <p>好了，hexo安装完成后，输入下面的命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -319,7 +322,7 @@ WordPress确实是个优秀的博客系统，但是却越来越臃肿，平心�
       
         <div class="post-tags">
           
-            <a href="/tags/HEXO-WordPress-搬家/" rel="tag">#HEXO, WordPress, 搬家,</a>
+            <a href="/tags/HEXO-WordPress-搬家/" rel="tag">#HEXO, WordPress, 搬家</a>
           
         </div>
       
@@ -423,7 +426,7 @@ WordPress确实是个优秀的博客系统，但是却越来越臃肿，平心�
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
