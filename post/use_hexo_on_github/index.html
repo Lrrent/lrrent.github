@@ -1,0 +1,707 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="f9kcHL9W1mQXtVMD51J919P_jKOPLSbMVi46xSMpOkM" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="hexo,github," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="&amp;#x559C;&amp;#x6B22;&amp;#x8FFD;&amp;#x6C42;&amp;#x5B8C;&amp;#x7F8E;&amp;#xFF0C;&amp;#x662F;FOOLMAN&amp;#x9AA8;&amp;#x5B50;&amp;#x91CC;&amp;#x5014;&amp;#x5F3A;
+
+&amp;#x6709;&amp;#x7528;&amp;#x7684;&amp;#x8D44;&amp;#x6599;http://yanliu.org/2015/08/07/Hexo&amp;#x642D;&amp;#x5E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在GitHub挂上HEXO博客">
+<meta property="og:url" content="http://www.wuliaole.com/post/use_hexo_on_github/index.html">
+<meta property="og:site_name" content="FOOLMAN 一个人的修行">
+<meta property="og:description" content="&amp;#x559C;&amp;#x6B22;&amp;#x8FFD;&amp;#x6C42;&amp;#x5B8C;&amp;#x7F8E;&amp;#xFF0C;&amp;#x662F;FOOLMAN&amp;#x9AA8;&amp;#x5B50;&amp;#x91CC;&amp;#x5014;&amp;#x5F3A;
+
+&amp;#x6709;&amp;#x7528;&amp;#x7684;&amp;#x8D44;&amp;#x6599;http://yanliu.org/2015/08/07/Hexo&amp;#x642D;&amp;#x5E">
+<meta property="og:updated_time" content="2016-06-17T06:58:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何在GitHub挂上HEXO博客">
+<meta name="twitter:description" content="&amp;#x559C;&amp;#x6B22;&amp;#x8FFD;&amp;#x6C42;&amp;#x5B8C;&amp;#x7F8E;&amp;#xFF0C;&amp;#x662F;FOOLMAN&amp;#x9AA8;&amp;#x5B50;&amp;#x91CC;&amp;#x5014;&amp;#x5F3A;
+
+&amp;#x6709;&amp;#x7528;&amp;#x7684;&amp;#x8D44;&amp;#x6599;http://yanliu.org/2015/08/07/Hexo&amp;#x642D;&amp;#x5E">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://www.wuliaole.com/post/use_hexo_on_github/"/>
+
+  <title> 如何在GitHub挂上HEXO博客 | FOOLMAN 一个人的修行 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0b9af06e21a88c60dc3deb5b699a3e63";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259393906&web_id=1259393906" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">FOOLMAN 一个人的修行</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">随笔 随心</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                如何在GitHub挂上HEXO博客
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-11T02:23:01+08:00" content="2016-03-11">
+              2016-03-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/use_hexo_on_github/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/use_hexo_on_github/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>&#x559C;&#x6B22;&#x8FFD;&#x6C42;&#x5B8C;&#x7F8E;&#xFF0C;&#x662F;FOOLMAN&#x9AA8;&#x5B50;&#x91CC;&#x5014;&#x5F3A;</p>
+</blockquote>
+<h2 id="&#x6709;&#x7528;&#x7684;&#x8D44;&#x6599;"><a href="#&#x6709;&#x7528;&#x7684;&#x8D44;&#x6599;" class="headerlink" title="&#x6709;&#x7528;&#x7684;&#x8D44;&#x6599;"></a>&#x6709;&#x7528;&#x7684;&#x8D44;&#x6599;</h2><p><a href="http://yanliu.org/2015/08/07/Hexo&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;/" target="_blank" rel="external">http://yanliu.org/2015/08/07/Hexo&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;/</a></p>
+<h2 id="&#x5728;GITHUB&#x4E0A;&#x6DFB;&#x52A0;SSH-Key"><a href="#&#x5728;GITHUB&#x4E0A;&#x6DFB;&#x52A0;SSH-Key" class="headerlink" title="&#x5728;GITHUB&#x4E0A;&#x6DFB;&#x52A0;SSH Key"></a>&#x5728;GITHUB&#x4E0A;&#x6DFB;&#x52A0;SSH Key</h2><p><a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/" target="_blank" rel="external">https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/</a></p>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x4E2A;&#x5751;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x662F;&#x4E0D;&#x662F;&#x56E0;&#x4E3A;&#x7248;&#x672C;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x770B;&#x7F51;&#x4E0A;&#x5F88;&#x591A;&#x5730;&#x65B9;&#x8BF4;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x4F4D;&#x7F6E;&#x4E0D;&#x5BF9;&#xFF0C;&#x4F30;&#x8BA1;&#x662F;&#x56E0;&#x4E3A;GITHUB&#x6539;&#x7248;&#x7684;&#x539F;&#x56E0;&#x3002;</p>
+<h2 id="&#x63A8;&#x9001;&#x5230;GitHub&#x4E0A;"><a href="#&#x63A8;&#x9001;&#x5230;GitHub&#x4E0A;" class="headerlink" title="&#x63A8;&#x9001;&#x5230;GitHub&#x4E0A;"></a>&#x63A8;&#x9001;&#x5230;GitHub&#x4E0A;</h2><p><a href="http://daimarushi.com/2015/11/29/%E4%BD%BF%E7%94%A8Hexo%E5%9C%A8Github%E4%B8%8A%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">http://daimarushi.com/2015/11/29/%E4%BD%BF%E7%94%A8Hexo%E5%9C%A8Github%E4%B8%8A%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</a><br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">http://ibruce.info/2013/11/22/hexo-your-blog/</a></p>
+<h2 id="&#x4E3A;GitHub-Pages&#x7ED1;&#x5B9A;&#x72EC;&#x7ACB;&#x57DF;&#x540D;"><a href="#&#x4E3A;GitHub-Pages&#x7ED1;&#x5B9A;&#x72EC;&#x7ACB;&#x57DF;&#x540D;" class="headerlink" title="&#x4E3A;GitHub Pages&#x7ED1;&#x5B9A;&#x72EC;&#x7ACB;&#x57DF;&#x540D;"></a>&#x4E3A;GitHub Pages&#x7ED1;&#x5B9A;&#x72EC;&#x7ACB;&#x57DF;&#x540D;</h2><p><a href="http://iread.io/2015/09/hexo-guide-4/" target="_blank" rel="external">http://iread.io/2015/09/hexo-guide-4/</a></p>
+<h2 id="&#x6269;&#x5C55;&#x9605;&#x8BFB;"><a href="#&#x6269;&#x5C55;&#x9605;&#x8BFB;" class="headerlink" title="&#x6269;&#x5C55;&#x9605;&#x8BFB;"></a>&#x6269;&#x5C55;&#x9605;&#x8BFB;</h2><p>&#x5982;&#x4F55;&#x8FC1;&#x79FB;&#x539F;&#x535A;&#x5BA2;&#x7A0B;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x5230;HEXO</p>
+<p><a href="https://hexo.io/zh-cn/docs/migration.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/migration.html</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+            <a href="/tags/github/" rel="tag">#github</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/how_to_comple_c_sharp_code_on_osx/" rel="next" title="如何在OSX上编译C#程序">
+                <i class="fa fa-chevron-left"></i> 如何在OSX上编译C#程序
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/how_to_solve_bonjor_service_on_windows_10_64bit/" rel="prev" title="Win10 64位操作系统无法开启BONJOR服务">
+                Win10 64位操作系统无法开启BONJOR服务 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="post/use_hexo_on_github/"
+           data-title="如何在GitHub挂上HEXO博客" data-url="http://www.wuliaole.com/post/use_hexo_on_github/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/150694?v=3&s=140"
+               alt="节约用爱" />
+          <p class="site-author-name" itemprop="name">节约用爱</p>
+          <p class="site-description motion-element" itemprop="description">随笔 随心</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">47</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">104</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tinyvane" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/tinyvane" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/tinyvane" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/2705283/" target="_blank" title="DouBan">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  DouBan
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/wang-yi-80" target="_blank" title="ZhiHu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.jerryzhang.net/" title="JerrySher's blog" target="_blank">JerrySher's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://3toptop.top/" title="山上" target="_blank">山上</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#有用的资料"><span class="nav-number">1.</span> <span class="nav-text">有用的资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在GITHUB上添加SSH-Key"><span class="nav-number">2.</span> <span class="nav-text">在GITHUB上添加SSH Key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推送到GitHub上"><span class="nav-number">3.</span> <span class="nav-text">推送到GitHub上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为GitHub-Pages绑定独立域名"><span class="nav-number">4.</span> <span class="nav-text">为GitHub Pages绑定独立域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展阅读"><span class="nav-number">5.</span> <span class="nav-text">扩展阅读</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">节约用爱</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wuliaole"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
