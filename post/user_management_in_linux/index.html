@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="随笔 随心" />
+  <meta name="keywords" content="centos,linux,用户管理," />
 
 
 
@@ -86,16 +86,22 @@
 
 
 
-<meta name="description" content="随笔 随心">
+<meta name="description" content="Linux&amp;#x4E0B;&amp;#x6709;&amp;#x4E09;&amp;#x7C7B;&amp;#x7528;&amp;#x6237;
+
+&amp;#x8D85;&amp;#x7EA7;&amp;#x7528;&amp;#x6237;&amp;#xFF1A;root &amp;#x5177;&amp;#x6709;&amp;#x64CD;&amp;#x4F5C;&amp;#x7CFB;&amp;#x7EDF;&amp;#x7684;&amp;#x4E00;&amp;#x5207;&amp;#x6743;&amp;#x9650; UID &amp;#x503C">
 <meta property="og:type" content="article">
-<meta property="og:title" content="20160618-LINUX下的用户管理">
-<meta property="og:url" content="http://www.wuliaole.com/post/undefined/index.html">
+<meta property="og:title" content="LINUX下的用户管理">
+<meta property="og:url" content="http://www.wuliaole.com/post/user_management_in_linux/index.html">
 <meta property="og:site_name" content="FOOLMAN 一个人的修行">
-<meta property="og:description" content="随笔 随心">
-<meta property="og:updated_time" content="2016-06-17T17:50:58.000Z">
+<meta property="og:description" content="Linux&amp;#x4E0B;&amp;#x6709;&amp;#x4E09;&amp;#x7C7B;&amp;#x7528;&amp;#x6237;
+
+&amp;#x8D85;&amp;#x7EA7;&amp;#x7528;&amp;#x6237;&amp;#xFF1A;root &amp;#x5177;&amp;#x6709;&amp;#x64CD;&amp;#x4F5C;&amp;#x7CFB;&amp;#x7EDF;&amp;#x7684;&amp;#x4E00;&amp;#x5207;&amp;#x6743;&amp;#x9650; UID &amp;#x503C">
+<meta property="og:updated_time" content="2016-06-18T07:36:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="20160618-LINUX下的用户管理">
-<meta name="twitter:description" content="随笔 随心">
+<meta name="twitter:title" content="LINUX下的用户管理">
+<meta name="twitter:description" content="Linux&amp;#x4E0B;&amp;#x6709;&amp;#x4E09;&amp;#x7C7B;&amp;#x7528;&amp;#x6237;
+
+&amp;#x8D85;&amp;#x7EA7;&amp;#x7528;&amp;#x6237;&amp;#xFF1A;root &amp;#x5177;&amp;#x6709;&amp;#x64CD;&amp;#x4F5C;&amp;#x7CFB;&amp;#x7EDF;&amp;#x7684;&amp;#x4E00;&amp;#x5207;&amp;#x6743;&amp;#x9650; UID &amp;#x503C">
 
 
 
@@ -116,9 +122,9 @@
 
 
 
-  <link rel="canonical" href="http://www.wuliaole.com/post/undefined/"/>
+  <link rel="canonical" href="http://www.wuliaole.com/post/user_management_in_linux/"/>
 
-  <title> 20160618-LINUX下的用户管理 | FOOLMAN 一个人的修行 </title>
+  <title> LINUX下的用户管理 | FOOLMAN 一个人的修行 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
@@ -254,7 +260,7 @@
             
             
               
-                20160618-LINUX下的用户管理
+                LINUX下的用户管理
               
             
           </h1>
@@ -277,8 +283,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/post/undefined/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="post/undefined/" itemprop="commentsCount"></span>
+                <a href="/post/user_management_in_linux/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/user_management_in_linux/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -301,7 +307,69 @@
       
 
       
-        
+        <p>Linux&#x4E0B;&#x6709;&#x4E09;&#x7C7B;&#x7528;&#x6237;</p>
+<ol>
+<li><p>&#x8D85;&#x7EA7;&#x7528;&#x6237;&#xFF1A;root &#x5177;&#x6709;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x4E00;&#x5207;&#x6743;&#x9650; UID &#x503C;&#x4E3A;0</p>
+</li>
+<li><p>&#x666E;&#x901A;&#x7528;&#x6237;&#xFF1A;&#x666E;&#x901A;&#x7528;&#x6237;&#x5177;&#x6709;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6709;&#x9650;&#x7684;&#x6743;&#x9650;&#xFF0C;UID&#x503C; 500 - 6000</p>
+</li>
+<li><p>&#x4F2A;&#x7528;&#x6237;&#xFF1A;</p>
+</li>
+</ol>
+<p>&#x662F;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#xFF0C;<br>&#x6EE1;&#x8DB3;&#x76F8;&#x5E94;&#x7684;&#x7CFB;&#x7EDF;&#x8FDB;&#x7A0B;&#x6587;&#x4EF6;&#x5C5E;&#x4E3B;&#x7684;&#x8981;&#x6C42;&#xFF0C;<br>&#x4F2A;&#x7528;&#x6237;&#x4E0D;&#x80FD;&#x767B;&#x5F55;&#x7CFB;&#x7EDF;&#xFF0C;UID&#x503C; 1 &#x2013; 499</p>
+<p>&#x7528;&#x6237;&#x7BA1;&#x7406;&#x6587;&#x4EF6;&#xFF1A;passwd /etc/passwd</p>
+<p>&#x5728;&#x6B64;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x53EA;&#x5B9A;&#x4E49;&#x5E10;&#x53F7;&#xFF0C;&#x4E0D;&#x5B9A;&#x4E49;&#x53E3;&#x4EE4;&#xFF1B;</p>
+<p>&#x6587;&#x4EF6;&#x4E2D;&#x6BCF;&#x884C;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#xFF0C;&#x5206;&#x4E03;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;<br>&#x5E10;&#x53F7;&#x540D;&#x79F0;&#xFF1A;root<br>&#x7528;&#x6237;&#x5BC6;&#x7801;&#xFF1A;x<br>&#x7528;&#x6237;&#x6807;&#x8BC6;&#x7801;&#xFF08;&#x7528;&#x6237;ID&#xFF09;&#xFF1A;0<br>&#x7EC4;&#x6807;&#x8BC6;&#x7801;&#xFF08;&#x7528;&#x6237;&#x7EC4;ID&#xFF09;&#xFF1A;0<br>&#x7528;&#x6237;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF1A;admin<br>&#x7528;&#x6237;&#x5BB6;&#x76EE;&#x5F55;&#xFF1A;/root<br>&#x7528;&#x6237;&#x73AF;&#x5883;&#xFF1A;/bin/bash</p>
+<p>&#x7528;&#x6237;&#x53E3;&#x4EE4;&#x6587;&#x4EF6;&#xFF1A;shadow /etc/passwdcat /etc/shadow</p>
+<p>&#x6B64;&#x6587;&#x4EF6;&#x53EA;&#x6709;root&#x7528;&#x6237;&#x80FD;&#x8BBF;&#x95EE;&#xFF0C;&#x5206;&#x4E5D;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;<br>&#x7528;&#x6237;&#x540D;&#xFF1A;root<br>&#x53E3;&#x4EE4;&#xFF1A;&#x5B58;&#x653E;&#x52A0;&#x5BC6;&#x53E3;&#x4EE4;&#xFF0C;&#x5982;&#x679C;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x662F;&#xFF01;&#xFF0C;&#x8868;&#x793A;&#x6539;&#x7528;&#x6237;&#x4E0D;&#x80FD;&#x767B;&#x5F55;<br>&#x6700;&#x540E;&#x4E00;&#x6B21;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;<br>&#x6700;&#x5927;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF1A;0 &#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x6539;&#x53D8;<br>&#x6700;&#x5C0F;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF1A;99999 &#x8868;&#x793A;&#x6C38;&#x8FDC;&#x4E0D;&#x8FC7;&#x671F;<br>&#x8B66;&#x544A;&#x65F6;&#x95F4;&#xFF1A;1&#x5468;<br>&#x4E0D;&#x6D3B;&#x52A8;&#x65F6;&#x95F4;&#xFF1A;</p>
+<h2 id="&#x5931;&#x6548;&#x65F6;&#x95F4;&#xFF1A;"><a href="#&#x5931;&#x6548;&#x65F6;&#x95F4;&#xFF1A;" class="headerlink" title="&#x5931;&#x6548;&#x65F6;&#x95F4;&#xFF1A;"></a>&#x5931;&#x6548;&#x65F6;&#x95F4;&#xFF1A;</h2><p>&#x7528;&#x6237;&#x5E10;&#x53F7;&#x7BA1;&#x7406;</p>
+<p>  &#x624B;&#x5DE5;&#x521B;&#x5EFA;&#x7528;&#x6237;</p>
+<p>1.&#x5728;/etc/passwd&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x8BB0;&#x5F55;<br>2.&#x521B;&#x5EFA;&#x7528;&#x6237;&#x4E3B;&#x76EE;&#x5F55;<br>3.&#x5728;&#x7528;&#x6237;&#x4E3B;&#x76EE;&#x5F55;&#x4E2D;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<br>4.&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x521D;&#x59CB;&#x53E3;&#x4EE4;</p>
+<p>  &#x547D;&#x4EE4;&#x521B;&#x5EFA;&#x7528;&#x6237;</p>
+<p>useradd &#x6216;&#x8005; adduser(man useradd)<br>-u -g -G -d -s -c -e -k -m -M -r</p>
+<p>  &#x7528;&#x6237;&#x5E10;&#x53F7;&#x7684;&#x7EF4;&#x62A4;</p>
+<p>useradd username &#x521B;&#x5EFA;&#x7528;&#x6237;<br>passwd username  &#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x5BC6;&#x7801;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;&#x7684;&#x7528;&#x6237;&#x4E0D;&#x80FD;&#x767B;&#x5F55;</p>
+<p>userdel username &#x5220;&#x9664;&#x7528;&#x6237;</p>
+<p>usermod -l newName username  &#x4FEE;&#x6539;&#x767B;&#x5F55;&#x540D;</p>
+<p>usermod -L username &#x9501;&#x5B9A;&#x7528;&#x6237;</p>
+<p>usermod -U username &#x89E3;&#x9501;&#x7528;&#x6237;</p>
+<p>passwd -l<br>passwd -u </p>
+<h2 id="passwd-s"><a href="#passwd-s" class="headerlink" title="passwd -s"></a>passwd -s</h2><p>&#x7528;&#x6237;&#x7EC4;&#x7BA1;&#x7406;<br>&#x7528;&#x6237;&#x7EC4;&#x5206;&#x4E24;&#x7C7B;&#xFF1A;</p>
+<pre><code>&#x79C1;&#x6709;&#x7EC4;&#xFF1A;
+</code></pre><p>&#x5F53;&#x5728;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7528;&#x6237;user&#x65F6;&#xFF0C;&#x82E5;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x4ED6;&#x6240;&#x5C5E;&#x4E8E;&#x7684;&#x7EC4;&#xFF0C;Linux&#x5C31;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x548C;&#x8BE5;&#x7528;&#x6237;&#x540C;&#x540D;&#x7684;&#x79C1;&#x6709;&#x7EC4;</p>
+<pre><code>&#x6807;&#x51C6;&#x7EC4;&#xFF1A;
+</code></pre><p>&#x6807;&#x51C6;&#x7EC4;&#x53EF;&#x4EE5;&#x5BB9;&#x7EB3;&#x591A;&#x4E2A;&#x7528;&#x6237;&#xFF0C;&#x82E5;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x7EC4;&#xFF0C;&#x5728;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7528;&#x6237;&#x65F6;&#xFF0C;&#x5C31;&#x5E94;&#x8BE5;&#x6307;&#x5B9A;&#x8BE5;&#x7528;&#x6237;&#x6240;&#x5C5E;&#x4E8E;&#x7684;&#x7EC4;</p>
+<p>&#x7528;&#x6237;&#x7EC4;&#x7684;&#x7BA1;&#x7406;&#x6587;&#x4EF6;&#xFF1A;group /etc/group</p>
+<p>  &#x5206;&#x4E3A;&#x56DB;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;<br>    &#x7EC4;&#x540D;&#xFF1A;&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;&#x6240;&#x5728;&#x7684;&#x7EC4;&#x540D;<br>    &#x7EC4;&#x53E3;&#x4EE4;&#xFF1A;&#x4E00;&#x822C;&#x4E0D;&#x4F7F;&#x7528;<br>    &#x7EC4;&#x6807;&#x8BC6;&#x7801;&#xFF08;GID&#xFF09;&#xFF1A;<br>    &#x7EC4;&#x5185;&#x7528;&#x6237;&#x5217;&#x8868;&#xFF1A;&#x5C5E;&#x4E8E;&#x6539;&#x7EC4;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&#x5217;&#x8868;</p>
+<p>&#x6DFB;&#x52A0;&#x7528;&#x6237;&#x7EC4;</p>
+<p>  useradd username (&#x9ED8;&#x8BA4;&#x5EFA;&#x7ACB;username&#x7528;&#x6237;&#x7EC4;)</p>
+<p>  groupadd &#x7EC4;&#x5E10;&#x53F7;&#x540D;&#x79F0; </p>
+<p>&#x4FEE;&#x6539;&#x7EC4;&#x540D;</p>
+<p>  groupmod -n newName groupName</p>
+<p>&#x5220;&#x9664;&#x7EC4;&#x5E10;&#x53F7;</p>
+<p>  groupdel &#x7EC4;&#x5E10;&#x53F7;&#x540D;&#x79F0;<br>  &#x6CE8;&#x610F;&#xFF1A;&#x5220;&#x9664;&#x7684;&#x5E10;&#x53F7;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#xFF0C;&#x4E14;&#x4E0D;&#x80FD;&#x662F;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x79C1;&#x6709;&#x7EC4;</p>
+<p>&#x6DFB;&#x52A0;&#x7528;&#x6237;&#x5230;&#x7EC4;</p>
+<p>  gpasswd -a userName groupName</p>
+<p>&#x4ECE;&#x7EC4;&#x4E2D;&#x5220;&#x9664;&#x7528;&#x6237;</p>
+<p>  gpasswd -d userName groupName</p>
+<p>&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x5C5E;&#x4E8E;&#x54EA;&#x4E2A;&#x7EC4;</p>
+<p>  groups userName</p>
+<p>&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x7EC4;&#x6709;&#x54EA;&#x4E9B;&#x7528;&#x6237;</p>
+<p>  tail 5 /etc/group    &#x6700;&#x540E;&#x4E00;&#x884C;</p>
+<p>&#x67E5;&#x770B;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x7684;UID&#x548C;GID</p>
+<p>id [options] userName     eg&#xFF1A; id bruce<br>id -g userName   &#x53EA;&#x663E;&#x793A;GID<br>id -G userName &#x663E;&#x793A;&#x6240;&#x6709;&#x7EC4;<br>id -u userName &#x53EA;&#x663E;&#x793A;UID</p>
+<p>&#x67E5;&#x770B;&#x7528;&#x6237;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x7528;&#x6237;&#x7684;&#x4E3B;&#x76EE;&#x5F55;&#xFF0C;&#x542F;&#x52A8;shell&#xFF0C;&#x7528;&#x6237;&#x540D;&#x7B49;</p>
+<p>finger [options] userName eg: finger bruce<br>finger -l userName</p>
+<h2 id="finger-s-userName"><a href="#finger-s-userName" class="headerlink" title="finger -s userName"></a>finger -s userName</h2><p>&#x53D8;&#x5316;&#x7528;&#x6237;&#x8EAB;&#x4EFD;<br>  su userName</p>
+<p>  &#x8BF4;&#x660E;&#xFF1A;&#x4ECE;&#x7BA1;&#x7406;&#x5458;&#x5230;&#x666E;&#x901A;&#x7528;&#x6237;&#x4E0D;&#x7528;&#x4F7F;&#x7528;&#x5BC6;&#x7801;&#xFF1B;&#x4ECE;&#x666E;&#x901A;&#x7528;&#x6237;&#x5230;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5BC6;&#x7801;</p>
+<p>  &#x8FD9;&#x6837;&#xFF0C;&#x81F3;&#x6539;&#x53D8;&#x7528;&#x6237;&#x8EAB;&#x4EFD;&#xFF0C;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E0D;&#x53D8;&#xFF1B;</p>
+<p>  su -userName</p>
+<p>  &#x5B8C;&#x5168;&#x8F6C;&#x53D8;&#xFF0C;&#x5305;&#x62EC;&#x8EAB;&#x4EFD;&#x548C;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<p>&#x53EA;&#x5141;&#x8BB8;root&#x7528;&#x6237;&#x767B;&#x5F55;</p>
+<p>  &#x53EF;&#x4EE5;&#x5728;/etc/&#x76EE;&#x5F55;&#x4E0B;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;nologin&#x7684;&#x6587;&#x4EF6;<br>  touch /etc/nologin</p>
+<p>  &#x89E3;&#x9664;&#x65B9;&#x6CD5;&#xFF0C;&#x5220;&#x9664;nologin&#x6587;&#x4EF6;&#x5373;&#x53EF;<br>  rm -rf /etc/nologin</p>
+
       
     </div>
 
@@ -319,6 +387,16 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/centos/" rel="tag">#centos</a>
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+            <a href="/tags/用户管理/" rel="tag">#用户管理</a>
+          
+        </div>
       
 
       
@@ -357,8 +435,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="post/undefined/"
-           data-title="20160618-LINUX下的用户管理" data-url="http://www.wuliaole.com/post/undefined/">
+      <div class="ds-thread" data-thread-key="post/user_management_in_linux/"
+           data-title="LINUX下的用户管理" data-url="http://www.wuliaole.com/post/user_management_in_linux/">
       </div>
     
   </div>
@@ -420,7 +498,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">105</span>
+                <span class="site-state-item-count">107</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -520,7 +598,7 @@
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#失效时间："><span class="nav-number">1.</span> <span class="nav-text">失效时间：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#passwd-s"><span class="nav-number">2.</span> <span class="nav-text">passwd -s</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#finger-s-userName"><span class="nav-number">3.</span> <span class="nav-text">finger -s userName</span></a></li></ol></div>
             
           </div>
         </section>
