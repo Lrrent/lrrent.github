@@ -1,0 +1,802 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="f9kcHL9W1mQXtVMD51J919P_jKOPLSbMVi46xSMpOkM" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="php,git,visual studio code,vsc," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="&amp;#x5B89;&amp;#x88C5;Visual Studio Code&amp;#x5FAE;&amp;#x8F6F;&amp;#x5B98;&amp;#x65B9;&amp;#x4E0B;&amp;#x8F7D;&amp;#x5730;&amp;#x5740;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="20160620-MAC下配置VSC的PHP开发环境">
+<meta property="og:url" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/index.html">
+<meta property="og:site_name" content="FOOLMAN 一个人的修行">
+<meta property="og:description" content="&amp;#x5B89;&amp;#x88C5;Visual Studio Code&amp;#x5FAE;&amp;#x8F6F;&amp;#x5B98;&amp;#x65B9;&amp;#x4E0B;&amp;#x8F7D;&amp;#x5730;&amp;#x5740;">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/vscdownload.jpg">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/vscautosave.jpg">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/vscautosave2.jpg">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/xampp.jpg">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/vscextinst.jpg">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/phpconifig1.jpg">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/usersetting.jpg">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/xdebugdownload.jpg">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/phpversion.jpg">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/xdebugofficialdiag.jpg">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/xdebugofficialanswer.jpg">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/debuginvsc.jpg">
+<meta property="og:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/breakpointinvsc.jpg">
+<meta property="og:updated_time" content="2016-06-20T04:35:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="20160620-MAC下配置VSC的PHP开发环境">
+<meta name="twitter:description" content="&amp;#x5B89;&amp;#x88C5;Visual Studio Code&amp;#x5FAE;&amp;#x8F6F;&amp;#x5B98;&amp;#x65B9;&amp;#x4E0B;&amp;#x8F7D;&amp;#x5730;&amp;#x5740;">
+<meta name="twitter:image" content="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/vscdownload.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/"/>
+
+  <title> 20160620-MAC下配置VSC的PHP开发环境 | FOOLMAN 一个人的修行 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0b9af06e21a88c60dc3deb5b699a3e63";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259393906&web_id=1259393906" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">FOOLMAN 一个人的修行</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">随笔 随心</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                20160620-MAC下配置VSC的PHP开发环境
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-06-20T12:33:31+08:00" content="2016-06-20">
+              2016-06-20
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/install_vscode_on_mac_with_php_and_git/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/install_vscode_on_mac_with_php_and_git/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="&#x5B89;&#x88C5;Visual-Studio-Code"><a href="#&#x5B89;&#x88C5;Visual-Studio-Code" class="headerlink" title="&#x5B89;&#x88C5;Visual Studio Code"></a>&#x5B89;&#x88C5;Visual Studio Code</h2><p>&#x5FAE;&#x8F6F;&#x5B98;&#x65B9;<a href="https://www.visualstudio.com/en-us/products/code-vs.aspx" target="_blank" rel="external">&#x4E0B;&#x8F7D;&#x5730;&#x5740;</a></p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/vscdownload.jpg" alt="&#x4E0B;&#x8F7D;&#x9875;&#x9762;"><a id="more"></a></p>
+<p>&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x540E;&#xFF0C;&#x7136;&#x540E;&#x8BBE;&#x7F6E;autosave&#xFF08;&#x81EA;&#x52A8;&#x4FDD;&#x5B58;&#xFF09;</p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/vscautosave.jpg" alt="&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;"></p>
+<p>&#x82F1;&#x6587;&#x7248;VSC&#x4ECE;<code>file</code>-&gt;<code>preference</code>-&gt;<code>user setting</code>&#x91CC;&#xFF0C;&#x7528;<code>Ctrl+F</code>&#x627E;&#x5230;&#x7684;&#x201D;files.autoSave&#x201D;: &#x201C;off&#x201D;,</p>
+<p>&#x7136;&#x540E;&#x7C98;&#x8D34;&#x5230;&#x53F3;&#x8FB9;&#xFF0C;&#x7C98;&#x8D34;&#x4E3A;&#x201D;files.autoSave&#x201D;: &#x201C;afterDelay&#x201D;&#xFF0C;&#x4FDD;&#x5B58;&#xFF0C;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x4FEE;&#x6539;&#x3002;</p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/vscautosave2.jpg" alt="&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;"></p>
+<h2 id="&#x5B89;&#x88C5;PHP&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x73AF;&#x5883;"><a href="#&#x5B89;&#x88C5;PHP&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x73AF;&#x5883;" class="headerlink" title="&#x5B89;&#x88C5;PHP&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x73AF;&#x5883;"></a>&#x5B89;&#x88C5;PHP&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x73AF;&#x5883;</h2><p><a href="https://www.apachefriends.org/index.html" target="_blank" rel="external">XAMPP&#x4E0B;&#x8F7D;&#x5730;&#x5740;</a></p>
+<p>&#x6211;&#x81EA;&#x5DF1;&#x4F7F;&#x7528;&#x7684;XAMPP&#xFF0C;&#x88C5;&#x5728;&#x4E86;E&#x76D8;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x3002;&#x4E3B;&#x8981;&#x662F;&#x56E0;&#x4E3A;C&#x76D8;&#x662F;&#x4E00;&#x4E2A;250G&#x7684;SSD&#xFF0C;&#x7A7A;&#x95F4;&#x5341;&#x5206;&#x5403;&#x7D27;&#x3002;</p>
+<p>&#x5199;&#x8FD9;&#x4E2A;&#x8BB0;&#x5F55;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7248;&#x672C;&#x662F;5.6.19&#x3002;</p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/xampp.jpg" alt="XAMPP&#x542F;&#x52A8;&#x754C;&#x9762;"></p>
+<p>&#x5982;&#x679C;80&#x7AEF;&#x53E3;&#x88AB;&#x5360;&#x7528;&#xFF0C;&#x5C31;&#x4F7F;&#x7528;8080&#x7AEF;&#x53E3;&#xFF0C;&#x5173;&#x4E8E;XAMPP&#x7684;&#x8C03;&#x8BD5;&#x548C;&#x9519;&#x8BEF;&#xFF0C;&#x6211;&#x56DE;&#x6765;&#x6253;&#x7B97;&#x53E6;&#x5F00;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#xFF0C;&#x5E76;&#x4E14;MAC&#x4E0B;&#x5C31;&#x4E0D;&#x6253;&#x7B97;&#x7528;XAMPP&#x4E86;&#xFF0C;&#x800C;&#x662F;&#x7528;vagrant+box&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x88C5;&#x4E2A;centos&#x548C;&#x81EA;&#x5DF1;&#x7684;&#x4E91;&#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;&#x4E00;&#x6837;&#xFF0C;&#x56E0;&#x4E3A;&#x4E91;&#x670D;&#x52A1;&#x5668;&#x786E;&#x5B9E;&#x88C5;&#x4E00;&#x6B21;&#x633A;&#x6298;&#x817E;&#x7684;&#x3002;&#x540E;&#x8BDD;&#x4E0D;&#x8BF4;&#x3002;</p>
+<h2 id="&#x4E3A;VS-Code&#x5B89;&#x88C5;php&#x5F00;&#x53D1;&#x73AF;&#x5883;"><a href="#&#x4E3A;VS-Code&#x5B89;&#x88C5;php&#x5F00;&#x53D1;&#x73AF;&#x5883;" class="headerlink" title="&#x4E3A;VS Code&#x5B89;&#x88C5;php&#x5F00;&#x53D1;&#x73AF;&#x5883;"></a>&#x4E3A;VS Code&#x5B89;&#x88C5;php&#x5F00;&#x53D1;&#x73AF;&#x5883;</h2><p>&#x6253;&#x5F00;VSC&#xFF0C;&#x6309;ctrl+shift+p&#xFF08;&#x8FD9;&#x4E2A;&#x5FEB;&#x6377;&#x952E;&#x548C;sublime&#x7684;&#x4E00;&#x6837;&#xFF09;&#xFF0C;&#x8F93;&#x5165;<code>ext install php</code>&#xFF0C;</p>
+<p>&#x6211;&#x8FD9;&#x91CC;&#x88C5;&#x7684;&#x662F;&#x4E2D;&#x6587;&#x7248;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x770B;&#x5230;&#x5B89;&#x88C5;&#x6269;&#x5C55;&#x7684;&#x9009;&#x9879;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;php&#x5148;&#x5173;&#x7684;&#x6269;&#x5C55;&#x6709;&#x4E0D;&#x5C11;&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x5B89;&#x88C5;&#x3002;</p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/vscextinst.jpg" alt="VSC&#x5B89;&#x88C5;&#x6269;&#x5C55;"></p>
+<p>&#x6211;&#x4E3B;&#x8981;&#x88C5;&#x4E86;debug&#x548C;format&#x3002;</p>
+<p>&#x7136;&#x540E;vsc&#x63D0;&#x793A;&#x5B89;&#x88C5;&#x6210;&#x529F;&#xFF0C;&#x91CD;&#x542F;vsc&#x4FBF;&#x53EF;&#x4EE5;&#x542F;&#x7528;&#x76F8;&#x5173;&#x6269;&#x5C55;&#x3002;</p>
+<h2 id="&#x6DFB;&#x52A0;php&#x8C03;&#x8BD5;&#x53C2;&#x6570;"><a href="#&#x6DFB;&#x52A0;php&#x8C03;&#x8BD5;&#x53C2;&#x6570;" class="headerlink" title="&#x6DFB;&#x52A0;php&#x8C03;&#x8BD5;&#x53C2;&#x6570;"></a>&#x6DFB;&#x52A0;php&#x8C03;&#x8BD5;&#x53C2;&#x6570;</h2><p>&#x91CD;&#x542F;&#x4E86;vsc&#xFF0C;&#x6253;&#x5F00;&#x4E00;&#x4E2A;Php,&#x4F1A;&#x770B;&#x5230;vsc&#x7684;&#x4E00;&#x4E2A;&#x63D0;&#x793A;&#x3002;</p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/phpconifig1.jpg" alt="vsc&#x63D0;&#x793A;&#x7F3A;&#x5C11;php&#x914D;&#x7F6E;"></p>
+<p>&#x9700;&#x8981;&#x5728;&#x7528;&#x6237;&#x8BBE;&#x7F6E;&#x91CC;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>php.validate.executablePath</code>&#xFF0C;&#x8BA9;php&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x627E;&#x5230;php.exe&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>&#x6309;&#x7167;&#x4E0A;&#x9762;&#x627E;&#x5230;<code>autosave</code>&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6253;&#x5F00;&#x7528;&#x6237;&#x8BBE;&#x7F6E;&#xFF0C;&#x5728;&#x53F3;&#x4FA7;&#x6DFB;&#x52A0;&#x4E00;&#x53E5;</p>
+<p><code>&quot;php.validate.executablePath&quot;: &quot;E:/xampp/php/php.exe&quot;</code></p>
+<p>&#x8BB0;&#x4F4F;&#x5982;&#x679C;&#x4EC5;&#x6709;&#x4E00;&#x6761;&#x914D;&#x7F6E;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;json&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x9017;&#x53F7;&#x3002;</p>
+<p>&#x4E0D;&#x89E3;&#x91CA;&#xFF0C;&#x76F4;&#x63A5;&#x4E0A;&#x56FE;&#x3002;</p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/usersetting.jpg" alt="&#x7528;&#x6237;&#x8BBE;&#x7F6E;"></p>
+<h2 id="&#x4E0B;&#x8F7D;xDebug"><a href="#&#x4E0B;&#x8F7D;xDebug" class="headerlink" title="&#x4E0B;&#x8F7D;xDebug"></a>&#x4E0B;&#x8F7D;xDebug</h2><p>&#x4ECE;&#x6253;&#x5F00;&#x4E2D;&#xFF0C;&#x9009;&#x62E9;<code>&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x5939;</code>&#xFF0C;&#x7136;&#x540E;&#x5207;&#x6362;&#x5230;DEBUG&#x6A21;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;&#x70B9;&#x51FB;&#x7EFF;&#x8272;&#x5C0F;&#x7BAD;&#x5934;&#xFF0C;&#x4F1A;&#x5F39;&#x51FA;&#x4E00;&#x4E2A;&#x63D0;&#x793A;&#xFF0C;&#x8BA9;&#x4F60;&#x8BBE;&#x7F6E;xDebug&#x7684;&#x53C2;&#x6570;&#x3002;<br>&#x8FD9;&#x662F;&#x56E0;&#x4E3A;vsc&#x4F7F;&#x7528;&#x7684;php debug&#x63D2;&#x4EF6;&#x7528;&#x5230;&#x4E86;xDebug&#xFF0C;xDebug&#x7684;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#x548C;&#x8BF4;&#x660E;&#xFF0C;&#x89C1;&#x4E0B;&#x6587;&#x7AE0;&#x8282;&#x3002;</p>
+<h3 id="&#x6982;&#x5FF5;&#x89E3;&#x91CA;"><a href="#&#x6982;&#x5FF5;&#x89E3;&#x91CA;" class="headerlink" title="&#x6982;&#x5FF5;&#x89E3;&#x91CA;"></a>&#x6982;&#x5FF5;&#x89E3;&#x91CA;</h3><h4 id="&#x4EC0;&#x4E48;&#x662F;xDebug"><a href="#&#x4EC0;&#x4E48;&#x662F;xDebug" class="headerlink" title="&#x4EC0;&#x4E48;&#x662F;xDebug"></a>&#x4EC0;&#x4E48;&#x662F;xDebug</h4><blockquote>
+<p>Xdebug&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x653E;&#x6E90;&#x4EE3;&#x7801;&#x7684;PHP&#x7A0B;&#x5E8F;&#x8C03;&#x8BD5;&#x5668;(&#x5373;&#x4E00;&#x4E2A;Debug&#x5DE5;&#x5177;)&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x8DDF;&#x8E2A;&#xFF0C;&#x8C03;&#x8BD5;&#x548C;&#x5206;&#x6790;PHP&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x51B5;&#x3002;Xdebug&#x73B0;&#x5728;&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;&#x662F;Xdebug 2.4.0RC4,release&#x65E5;&#x671F; 2016-01-25&#xFF0C;&#x6DFB;&#x52A0;&#x4E86;&#x5BF9;PHP7&#x7684;&#x652F;&#x6301;&#x3002;</p>
+</blockquote>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5148;&#x82B1;&#x4E00;&#x70B9;&#x65F6;&#x95F4;&#x6765;&#x4E0B;&#x8F7D;&#x548C;&#x5B89;&#x88C5;xDebug&#xFF0C;<a href="https://xdebug.org/download.php" target="_blank" rel="external">&#x4E0B;&#x8F7D;&#x5730;&#x5740;</a>&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x7248;&#x672C;&#x5E26;&#x6709;Non-thread-safe&#x548C;&#x4E0D;&#x5E26;&#x6709;Non-thread-safe&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x770B;&#x4F60;&#x7684;php&#x7248;&#x672C;&#x662F;&#x5426;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7248;&#x672C;&#x3002;Windows&#x4E0B;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x975E;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;32&#x4F4D;&#x7248;&#x672C;&#x3002;</p>
+<p>&#x4E0A;&#x56FE;&#x8BF4;&#x8BDD;&#x3002;</p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/xdebugdownload.jpg" alt="&#x4F17;&#x591A;&#x7684;XDEBUG&#x4E0B;&#x8F7D;&#x9009;&#x62E9;&#x8BA9;&#x6211;&#x773C;&#x82B1;&#x7F2D;&#x4E71;"></p>
+<p>&#x56FE;&#x7247;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x7EA2;&#x6846;&#x4E2D;&#xFF0C;&#x662F;&#x6309;&#x7167;&#x4F60;&#x6240;&#x5B89;&#x88C5;&#x7684;php.exe&#x7684;&#x7248;&#x672C;&#x9009;&#x62E9;&#xFF0C;&#x4EC0;&#x4E48;&#xFF1F;&#x4F60;&#x4E0D;&#x8BB0;&#x5F97;&#x4F60;&#x5B89;&#x88C5;&#x7684;php&#x7248;&#x672C;&#x4E86;&#xFF1F;&#x53BB;&#x4F60;&#x7684;&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x5305;&#x4E2D;&#x770B;&#x90FD;&#x96C6;&#x6210;&#x7684;appache php&#x548C;mysql&#x5206;&#x522B;&#x662F;&#x4EC0;&#x4E48;&#x7248;&#x672C;&#x5427;&#x3002;&#x4EC0;&#x4E48;&#xFF1F;&#x4F60;&#x4E5F;&#x89C9;&#x5F97;&#x8D39;&#x52B2;&#xFF1F;&#x90A3;&#x5C31;&#x6765;&#x4E2A;&#x66F4;&#x7701;&#x4E8B;&#x7684;&#xFF0C;&#x76F4;&#x63A5;localhost/phpinfo.php&#x6765;&#x770B;&#x5427;&#xFF0C;&#x4EC0;&#x4E48;&#xFF1F;&#x4F60;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x6CA1;&#x4E86;&#xFF1F;&#x90A3;&#x4E48;&#xFF0C;&#x81EA;&#x5DF1;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x5427;&#xFF0C;&#x4EC0;&#x4E48;&#xFF1F;&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</p>
+<p>&#x6211;&#x3002;&#x3002;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x6700;&#x57FA;&#x672C;&#x7684;phpinfo()&#x3002;<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x663E;&#x793A;&#x6240;&#x6709;&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x663E;&#x793A; INFO_ALL</span></span><br><span class="line">phpinfo();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Show just the module information. &#x4EC5;&#x4EC5;&#x663E;&#x793A;PHP&#x6A21;&#x5757;&#x4FE1;&#x606F;&#xFF0C;</span></span><br><span class="line"><span class="comment">// phpinfo(8) &#x8FD4;&#x56DE;&#x540C;&#x6837;&#x7684;&#x7ED3;&#x679C;&#x3002;</span></span><br><span class="line">phpinfo(INFO_MODULES);</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;PHP&#x7684;&#x5B98;&#x65B9;&#x8BF4;&#x660E;&#xFF0C;&#x5730;&#x5740;&#x5728;<a href="http://php.net/manual/zh/function.phpinfo.php" target="_blank" rel="external">&#x8FD9;&#x91CC;</a>&#x3002;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;phpinfo.php&#x7136;&#x540E;&#x628A;&#x4E0A;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x5199;&#x8FDB;&#x53BB;&#xFF0C;&#x7136;&#x540E;&#x653E;&#x5728;&#x4F60;&#x7684;localhost&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x6253;&#x5F00;<a href="http://localhost/phpinfo.php&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6267;&#x884C;&#x6548;&#x679C;&#x4E86;&#x3002;" target="_blank" rel="external">http://localhost/phpinfo.php&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6267;&#x884C;&#x6548;&#x679C;&#x4E86;&#x3002;</a></p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/phpversion.jpg" alt="&#x901A;&#x8FC7;phpinfo&#x67E5;&#x770B;php&#x7248;&#x672C;&#x4FE1;&#x606F;"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x81EA;&#x5DF1;&#x7535;&#x8111;&#x4E0A;&#x5B89;&#x88C5;&#x7684;php&#x7248;&#x672C;&#x53F7;&#x662F;5.6&#x3002;</p>
+<blockquote>
+<ul>
+<li>PHP&#x7684;&#x5927;&#x7248;&#x672C;&#x4E3B;&#x8981;&#x5206;&#x652F;&#xFF1A;PHP4/PHP5/PHP7(PHP6&#x5B98;&#x65B9;&#x6CA1;&#x6709;&#xFF09;</li>
+</ul>
+<p>&#x5176;&#x4E2D;&#xFF0C;PHP4&#x7531;&#x4E8E;&#x592A;&#x53E4;&#x8001;&#x3001;&#x5BF9;OO&#x652F;&#x6301;&#x4E0D;&#x529B;&#x5DF2;&#x57FA;&#x672C;&#x88AB;&#x6DD8;&#x6C70;&#xFF0C;&#x8BF7;&#x65E0;&#x89C6;PHP4&#x3002;</p>
+<p>PHP6/PHP7&#x7531;&#x4E8E;&#x57FA;&#x672C;&#x6CA1;&#x6709;&#x751F;&#x4EA7;&#x7EBF;&#x4E0A;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x8FD8;&#x57FA;&#x672C;&#x53EA;&#x662F;&#x4E00;&#x6B3E;&#x6982;&#x5FF5;&#x4EA7;&#x54C1;&#xFF0C;&#x5F88;&#x591A;&#x529F;&#x80FD;&#x5DF2;&#x5728;PHP5.3.3&#x4E0A;&#x5B9E;&#x73B0;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x4E0D;&#x8BE6;&#x8FF0;&#xFF0C;&#x8BF7;&#x65E0;&#x89C6;PHP6/7&#x3002;</p>
+<p>PHP5&#x7684;&#x7248;&#x672C;&#x4E3B;&#x8981;&#x5206;&#x56DB;&#x652F;&#xFF1A;PHP5.2&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#x3001;PHP5.2.X&#x3001;PHP5.3&#x548C;&#x65E5;&#x524D;&#x53D1;&#x5E03;&#x7684;PHP5.4&#x3002;</p>
+<ul>
+<li>&#x90A3;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x9009;&#x62E9;&#x9002;&#x7528;&#x81EA;&#x5DF1;&#x9879;&#x76EE;&#x7684;&#x7248;&#x672C;&#x5462;&#xFF1F;</li>
+</ul>
+<p>PHP5.2&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#x4E0D;&#x503C;&#x5F97;&#x8003;&#x8651;&#xFF0C;&#x56E0;&#x4E3A;&#x67D0;&#x4E9B;&#x529F;&#x80FD;&#x7F3A;&#x9677;&#x6216;&#x8005;BUG&#xFF0C;PHP5.2&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#x3002;PHP5.4&#x8FD8;&#x5904;&#x4E8E;Beta&#x8BD5;&#x7528;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x975E;&#x7A33;&#x5B9A;&#x7248;&#x672C;&#xFF0C;&#x8BF7;&#x65E0;&#x89C6;PHP5.4&#x3002;</p>
+<p>&#x4E3B;&#x6D41;PHP&#x7A0B;&#x5E8F;&#x5BF9;PHP5.2.X&#x7684;&#x517C;&#x5BB9;&#x6027;&#x6700;&#x597D;&#xFF0C;&#x800C;&#x6BCF;&#x6B21;&#x7248;&#x672C;&#x53F7;&#x7684;&#x5347;&#x7EA7;&#x5E26;&#x6765;&#x7684;&#x90FD;&#x662F;&#x5B89;&#x5168;&#x6027;&#x548C;&#x7A33;&#x5B9A;&#x6027;&#x7684;&#x6539;&#x5584;&#xFF0C;&#x6240;&#x4EE5;&#x5B9C;&#x6311;&#x9009;&#x6700;&#x65B0;&#x7684;&#x7248;&#x672C;&#x3002;&#x76EE;&#x524D;PHP5.2&#x7CFB;&#x5217;&#x6700;&#x65B0;&#x7684;&#x662F;PHP5.2.17&#x3002;</p>
+<p>&#x800C;&#x5982;&#x679C;&#x4EA7;&#x54C1;&#x662F;&#x81EA;&#x5DF1;&#x5F00;&#x53D1;&#x81EA;&#x5DF1;&#x4F7F;&#x7528;&#xFF0C;PHP5.3&#x5728;&#x67D0;&#x4E9B;&#x65B9;&#x9762;&#x66F4;&#x5177;&#x4F18;&#x52BF;&#xFF0C;&#x5728;&#x7A33;&#x5B9A;&#x6027;&#x4E0A;&#x66F4;&#x80DC;&#x4E00;&#x7B79;&#xFF0C;&#x589E;&#x52A0;&#x4E86;&#x5F88;&#x591A;PHP5.2&#x6240;&#x4E0D;&#x5177;&#x6709;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x6BD4;&#x5982;&#x5185;&#x7F6E;php-fpm&#x3001;&#x66F4;&#x5B8C;&#x5584;&#x7684;&#x5783;&#x573E;&#x56DE;&#x6536;&#x7B97;&#x6CD5;&#x3001;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x5F15;        &#x5165;&#x3001;sqlite3&#x7684;&#x652F;&#x6301;&#x7B49;&#x7B49;&#xFF0C;&#x662F;&#x90E8;&#x7F72;&#x9879;&#x76EE;&#x503C;&#x5F97;&#x8003;&#x8651;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x5F3A;&#x70C8;&#x63A8;&#x8350;PHP5.3.29&#x3002;&#xFF08;&#x8FD9;&#x662F;5.3 &#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7248;&#x672C;)</p>
+</blockquote>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x6BB5;&#x6587;&#x4EF6;&#x662F;&#x8F6C;&#x8F7D;&#x522B;&#x4EBA;&#x535A;&#x5BA2;&#x4E0A;&#x7684;&#xFF0C;&#x5927;&#x5BB6;&#x53C2;&#x8003;&#x5C31;&#x597D;&#x3002;</p>
+<h4 id="&#x5982;&#x4F55;&#x9009;&#x62E9;VC9-VC11-VC14&#xFF1F;"><a href="#&#x5982;&#x4F55;&#x9009;&#x62E9;VC9-VC11-VC14&#xFF1F;" class="headerlink" title="&#x5982;&#x4F55;&#x9009;&#x62E9;VC9/VC11/VC14&#xFF1F;"></a>&#x5982;&#x4F55;&#x9009;&#x62E9;VC9/VC11/VC14&#xFF1F;</h4><p>php 7.0&#x5BF9;&#x5E94;vc14&#xFF0C;php 5.5 &#x548C; 5.6 &#x5BF9;&#x5E94;vc11&#xFF0C;php 5.4&#x5BF9;&#x5E94;vc9&#x3002;</p>
+<h4 id="TS&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#xFF1F;"><a href="#TS&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#xFF1F;" class="headerlink" title="TS&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#xFF1F;"></a>TS&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#xFF1F;</h4><p>TS&#x6307;Thread Safety&#xFF0C;&#x5373;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#xFF0C;&#x4E00;&#x822C;&#x5728;IIS&#x4EE5;ISAPI&#x65B9;&#x5F0F;&#x52A0;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#x9009;&#x62E9;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x3002;</p>
+<p>NTS&#x5373;None-Thread Safe&#xFF0C;&#x4E00;&#x822C;&#x4EE5;fast cgi&#x65B9;&#x5F0F;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x9009;&#x62E9;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#xFF0C;&#x5177;&#x6709;&#x66F4;&#x597D;&#x7684;&#x6027;&#x80FD;&#x3002;</p>
+<blockquote>
+<p>&#x4ECE;2000&#x5E74;10&#x6708;20&#x65E5;&#x53D1;&#x5E03;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;Windows&#x7248;&#x7684;PHP3.0.17&#x5F00;&#x59CB;&#x7684;&#x90FD;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x8FD9;&#x662F;&#x7531;&#x4E8E;&#x4E0E;Linux/Unix&#x7CFB;&#x7EDF;&#x662F;&#x91C7;&#x7528;&#x591A;&#x8FDB;&#x7A0B;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;&#x4E0D;&#x540C;&#x7684;&#x662F;Windows&#x7CFB;&#x7EDF;&#x662F;&#x91C7;&#x7528;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;&#x3002;&#x5982;&#x679C;&#x5728;IIS&#x4E0B;&#x4EE5;CGI&#x65B9;&#x5F0F;&#x8FD0;&#x884C;PHP&#x4F1A;&#x975E;&#x5E38;&#x6162;&#xFF0C;&#x8FD9;&#x662F;&#x7531;&#x4E8E;CGI&#x6A21;&#x5F0F;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x591A;&#x8FDB;&#x7A0B;&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#x7684;&#xFF0C;&#x800C;&#x975E;&#x591A;&#x7EBF;&#x7A0B;&#x3002;&#x4E00;&#x822C;&#x6211;&#x4EEC;&#x4F1A;&#x628A;PHP&#x914D;&#x7F6E;&#x6210;&#x4EE5;ISAPI&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8FD0;&#x884C;&#xFF0C;ISAPI&#x662F;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x5FEB;&#x591A;&#x4E86;&#x3002;&#x4F46;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5F88;&#x591A;&#x5E38;&#x7528;&#x7684;PHP&#x6269;&#x5C55;&#x662F;&#x4EE5;Linux/Unix&#x7684;&#x591A;&#x8FDB;&#x7A0B;&#x601D;&#x60F3;&#x6765;&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x8FD9;&#x4E9B;&#x6269;&#x5C55;&#x5728;ISAPI&#x7684;&#x65B9;&#x5F0F;&#x8FD0;&#x884C;&#x65F6;&#x5C31;&#x4F1A;&#x51FA;&#x9519;&#x641E;&#x57AE;IIS&#x3002;&#x56E0;&#x6B64;&#x5728;IIS&#x4E0B;CGI&#x6A21;&#x5F0F;&#x624D;&#x662F; PHP&#x8FD0;&#x884C;&#x7684;&#x6700;&#x5B89;&#x5168;&#x65B9;&#x5F0F;&#xFF0C;&#x4F46;CGI&#x6A21;&#x5F0F;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;HTTP&#x8BF7;&#x6C42;&#x90FD;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x548C;&#x5378;&#x8F7D;&#x6574;&#x4E2A;PHP&#x73AF;&#x5883;&#xFF0C;&#x5176;&#x6D88;&#x8017;&#x662F;&#x5DE8;&#x5927;&#x7684;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x517C;&#x987E;IIS&#x4E0B;PHP&#x7684;&#x6548;&#x7387;&#x548C;&#x5B89;&#x5168;&#xFF0C;&#x5FAE;&#x8F6F;&#x7ED9;&#x51FA;&#x4E86;FastCGI&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;FastCGI&#x53EF;&#x4EE5;&#x8BA9;PHP&#x7684;&#x8FDB;&#x7A0B;&#x91CD;&#x590D;&#x5229;&#x7528;&#x800C;&#x4E0D;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8BF7;&#x6C42;&#x5C31;&#x91CD;&#x5F00;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x3002;&#x540C;&#x65F6;FastCGI&#x4E5F;&#x53EF;&#x4EE5;&#x5141;&#x8BB8;&#x51E0;&#x4E2A;&#x8FDB;&#x7A0B;&#x540C;&#x65F6;&#x6267;&#x884C;&#x3002;&#x8FD9;&#x6837;&#x65E2;&#x89E3;&#x51B3;&#x4E86;CGI&#x8FDB;&#x7A0B;&#x6A21;&#x5F0F;&#x6D88;&#x8017;&#x592A;&#x5927;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x53C8;&#x5229;&#x7528;&#x4E0A;&#x4E86;CGI&#x8FDB;&#x7A0B;&#x6A21;&#x5F0F;&#x4E0D;&#x5B58;&#x5728;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x95EE;&#x9898;&#x7684;&#x4F18;&#x52BF;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4F7F;&#x7528;ISAPI&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8FD0;&#x884C;PHP&#x5C31;&#x5FC5;&#x987B;&#x7528;Thread Safe(&#x7EBF;&#x7A0B;&#x5B89;&#x5168;)&#x7684;&#x7248;&#x672C;&#xFF1B;&#x800C;&#x7528;FastCGI&#x6A21;&#x5F0F;&#x8FD0;&#x884C;PHP&#x7684;&#x8BDD;&#x5C31;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x7528;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x68C0;&#x67E5;&#x4E86;&#xFF0C;&#x7528;None Thread Safe(NTS&#xFF0C;&#x975E;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;)&#x7684;&#x7248;&#x672C;&#x80FD;&#x591F;&#x66F4;&#x597D;&#x7684;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#x3002;</p>
+</blockquote>
+<p>&#x4E0A;&#x9762;&#x770B;&#x5B8C;&#x4E86;&#xFF0C;&#x6309;&#x7167;&#x4F60;&#x7684;PHP&#x7248;&#x672C;&#xFF0C;&#x4E0B;&#x8F7D;&#x5BF9;&#x5E94;&#x7684;xDebug&#x6587;&#x4EF6;&#xFF0C;&#x4E0B;&#x8F7D;&#x4E4B;&#x540E;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;dll&#x6587;&#x4EF6;&#xFF0C;&#x628A;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x590D;&#x5236;&#x5230;&#x4F60;&#x7684;php&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x7684;&#x76EE;&#x5F55;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x6211;&#x4F7F;&#x7528;&#x7684;XMAPP&#xFF0C;&#x653E;&#x5728;&#x4E86;E&#x76D8;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x628A;&#x8FD9;&#x4E2A;dll&#x6587;&#x4EF6;&#x590D;&#x5236;&#x5230;&#x4E86;e:\xmapp\php\etc&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x662F;Php&#x7684;&#x62D3;&#x5C55;&#x76EE;&#x5F55;&#x3002;</p>
+<h3 id="&#x4FEE;&#x6539;php-ini"><a href="#&#x4FEE;&#x6539;php-ini" class="headerlink" title="&#x4FEE;&#x6539;php.ini"></a>&#x4FEE;&#x6539;php.ini</h3><p>&#x5728;e:\xmapp\php&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x627E;&#x5230;&#x4F60;&#x7684;php.ini&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x672B;&#x5C3E;&#xFF0C;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[XDebug]</span><br><span class="line">zend_extension = E:\xampp\php\ext\php_xdebug-2.4.0-5.6-vc11.dll</span><br><span class="line">xdebug.remote_enable=1</span><br><span class="line">xdebug.remote_autostart=1</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">&#x8FD9;&#x91CC;&#xFF0C;&#x6709;&#x51E0;&#x4E2A;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x5148;&#x8BF4;`zend_extension`&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4E0B;&#x8F7D;&#x7684;&#x662F;TS&#x7248;&#x672C;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x9700;&#x8981;&#x6539;&#x4E3A;`zend_extension_ts`&#x3002;</span><br><span class="line"></span><br><span class="line">&#x5E76;&#x4E14;&#xFF0C;&#x7531;&#x4E8E;xDebug&#x548C;Zend&#x6709;&#x51B2;&#x7A81;&#xFF0C;&#x6240;&#x4EE5;&#x8BF7;&#x628A;zend&#x7684;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x8981;&#x6CE8;&#x91CA;&#x6389;&#x3002;</span><br><span class="line"></span><br><span class="line">&#x5178;&#x578B;&#x5C31;&#x662F;&#x5982;&#x4E0B;&#x51E0;&#x6761;&#xFF1A;</span><br></pre></td></tr></table></figure>
+<p>[Zend]<br>;zend_extension_ts = &#x201C;C:\Program Files\xampp\php\zendOptimizer\lib\ZendExtensionManager.dll&#x201D;<br>;zend_extension_manager.optimizer_ts = &#x201C;C:\Program Files\xampplite\php\zendOptimizer\lib\Optimizer&#x201D;<br>;zend_optimizer.enable_loader = 0<br>;zend_optimizer.optimization_level=15<br>;zend_optimizer.license_path =<br>```</p>
+<p>&#x6211;&#x4F7F;&#x7528;&#x7684;XMAPP 2015&#x5E74;11&#x6708;12&#x65E5;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x53D1;&#x73B0;&#x4E0A;&#x8FF0;&#x4FEE;&#x6539;&#x5728;&#x6211;&#x8FD9;&#x91CC;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x7684;&#xFF0C;&#x76F4;&#x63A5;&#x6DFB;&#x52A0;xDebug&#x7684;&#x4E09;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x4FDD;&#x5B58;PHP.INI&#xFF0C;&#x7136;&#x540E;&#x56DE;&#x5230;XMAPP&#x7684;&#x63A7;&#x5236;&#x9762;&#x677F;&#xFF0C;&#x628A;APACHE&#x5148;STOP&#x7136;&#x540E;&#x518D;START&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<p>&#x5982;&#x4F55;&#x6D4B;&#x8BD5;&#x5462;&#xFF1F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00;<a href="http://localhost/phpinfo.php" target="_blank" rel="external">http://localhost/phpinfo.php</a></p>
+<p>&#x5982;&#x679C;&#x770B;&#x5230;&#x914D;&#x7F6E;&#x91CC;&#x9762;&#xFF0C;&#x6709;xDebug&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x5C31;&#x8BF4;&#x660E;&#x914D;&#x7F6E;&#x6210;&#x529F;&#x4E86;&#xFF0C;&#x6700;&#x7B80;&#x5355;&#x7684;&#x5C31;&#x662F;&#x76F4;&#x63A5;CTRL+F&#x641C;&#x7D22;XDEBUG&#xFF0C;&#x6CA1;&#x6709;&#x5C31;&#x8BF4;&#x660E;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x6211;&#x5728;&#x7F51;&#x4E0A;&#x5B66;&#x4E60;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x627E;&#x5230;&#x4E86;&#x4E00;&#x7BC7;&#x975E;&#x5E38;&#x6709;&#x53C2;&#x8003;&#x4EF7;&#x503C;&#x7684;&#x535A;&#x6587;&#xFF0C;&#x91CC;&#x9762;&#x4ECB;&#x7ECD;&#x4E86;XDEBUG&#x5B98;&#x65B9;&#x7684;&#x4E00;&#x79CD;&#x201D;&#x8D34;&#x5FC3;&#x201D;&#x7684;&#x914D;&#x7F6E;php.ini&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x535A;&#x6587;&#x539F;&#x6587;&#x5730;&#x5740;&#x5728;<a href="http://www.blogdaren.com/m/?post=2062" target="_blank" rel="external">&#x8FD9;&#x91CC;</a>&#xFF0C;&#x6211;&#x8FD9;&#x91CC;&#x5F15;&#x7528;&#x5176;&#x4E2D;&#x4E00;&#x6BB5;&#x5373;&#x53EF;&#x3002;</p>
+<blockquote>
+<p>&#x518D;&#x6B21;&#x6D4F;&#x89C8; Xdebug &#x5B98;&#x7F51;&#xFF0C;&#x53D1;&#x73B0;&#x6709;&#x4E00;&#x4E2A;&#x8D34;&#x5FC3;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x5C31;&#x662F;&#xFF1A;&#x63D0;&#x53D6;&#x7528;&#x6237;&#x7684; phpinfo &#x4FE1;&#x606F;&#xFF0C;&#x63D0;&#x4EA4;&#x7ED9; Xdebug &#x5B98;&#x7F51;&#x7684;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x7ACB;&#x5373;&#x5206;&#x6790; PHP &#x73AF;&#x5883;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5373;&#x523B;&#x7ED9;&#x51FA;&#x4E0B;&#x8F7D; Xdebug &#x67D0;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x5EFA;&#x8BAE;&#x3002;&#x7ACB;&#x7B49;&#x53EF;&#x53D6;&#xFF0C;&#x6709;&#x70B9;&#x610F;&#x601D;&#xFF01;</p>
+<p>&#x4E8E;&#x662F;&#x63D0;&#x4EA4;&#x6211;&#x7684; phpinfo &#x4FE1;&#x606F;&#xFF0C;&#x4ECE; <a href="http://www.xdebug.org/find-binary.php" target="_blank" rel="external">http://www.xdebug.org/find-binary.php</a> &#x9875;&#x9762;&#x63D0;&#x4EA4;&#xFF0C;&#x5F97;&#x5230;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#xFF1A;</p>
+</blockquote>
+<p>&#x4E0B;&#x9762;&#x7528;&#x6211;&#x81EA;&#x5DF1;&#x8FD4;&#x56DE;&#x7684;&#x914D;&#x7F6E;&#x590D;&#x5236;&#x9ECF;&#x8D34;&#x5230;&#x4E0A;&#x6587;&#x4E2D;&#x7684;<a href="http://www.xdebug.org/find-binary.php" target="_blank" rel="external">&#x5B98;&#x65B9;&#x5730;&#x5740;</a>&#x3002;</p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/xdebugofficialdiag.jpg" alt="XDEBUG&#x5B98;&#x65B9;&#x7ED9;&#x51FA;&#x7684;&#x7B54;&#x590D;"></p>
+<p>&#x7136;&#x540E;&#x5C31;&#x770B;&#x5230;&#x4E86;&#x5B98;&#x65B9;&#x7ED9;&#x51FA;&#x7684;&#x5EFA;&#x8BAE;&#xFF1A;</p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/xdebugofficialanswer.jpg" alt="XDEBUG&#x5B98;&#x65B9;&#x7ED9;&#x51FA;&#x7684;&#x7B54;&#x590D;"></p>
+<p>&#x6309;&#x7167;&#x8FD9;&#x4E2A;&#x6307;&#x5BFC;&#xFF0C;&#x5706;&#x6EE1;&#x7684;&#x5B8C;&#x6210;&#x4E86;&#x6211;&#x7684;xDebug&#x914D;&#x7F6E;&#xFF0C;&#x771F;&#x662F;&#x975E;&#x5E38;&#x8D34;&#x5FC3;&#xFF01;&#x8FD9;&#x4E2A;&#x529E;&#x6CD5;&#xFF0C;&#x5BF9;&#x4E8E;&#x5F00;&#x53D1;&#x8005;&#x4E5F;&#x975E;&#x5E38;&#x7ED9;&#x529B;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7EE7;&#x7EED;&#x56DE;&#x5230;VSCode&#x3002;</p>
+<h3 id="&#x4FEE;&#x6539;VSC-DEBUG&#x8BBE;&#x7F6E;"><a href="#&#x4FEE;&#x6539;VSC-DEBUG&#x8BBE;&#x7F6E;" class="headerlink" title="&#x4FEE;&#x6539;VSC DEBUG&#x8BBE;&#x7F6E;"></a>&#x4FEE;&#x6539;VSC DEBUG&#x8BBE;&#x7F6E;</h3><p>&#x76F4;&#x63A5;&#x4E0A;&#x56FE;</p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/debuginvsc.jpg" alt="VSC&#x4E2D;&#x914D;&#x7F6E;DEBUG&#x6A21;&#x5F0F;"></p>
+<ol>
+<li>&#x70B9;&#x5DE6;&#x4FA7;&#x7684;DEBUG&#x6309;&#x94AE;&#xFF08;&#x866B;&#x5B50;&#x90A3;&#x4E2A;&#xFF09;</li>
+<li>&#x5728;&#x7EFF;&#x8272;&#x7BAD;&#x5934;&#x53F3;&#x4FA7;&#xFF0C;&#x9009;&#x62E9;LISTEN FOR XDEBUG</li>
+<li>&#x5728;&#x53F3;&#x4FA7;&#x4F60;&#x7684;PHP&#x7684;&#x4EE3;&#x7801;&#x4E0A;&#xFF0C;&#x968F;&#x4FBF;&#x67D0;&#x4E00;&#x884C;&#x6253;&#x4E0A;&#x4E2A;&#x65AD;&#x70B9;</li>
+<li>&#x70B9;F5&#xFF0C;&#x4F1A;&#x770B;&#x5230;VSC&#x7F16;&#x8F91;&#x5668;&#x4E0A;&#x65B9;&#xFF0C;&#x51FA;&#x73B0;&#x4E86;&#x719F;&#x6089;&#x7684;&#x201D;&#x7EE7;&#x7EED;&#x201D;&#x3001;&#x201D;&#x5355;&#x6B65;&#x8DF3;&#x8FC7;&#x201D;&#x7B49;&#x5FAE;&#x8F6F;&#x98CE;&#x683C;&#x7684;&#x8C03;&#x8BD5;&#x6309;&#x94AE;&#x3002;</li>
+<li>&#x7136;&#x540E;&#xFF0C;&#x8BF7;&#x5230;&#x4F60;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#x9762;&#xFF0C;&#x8F93;&#x5165;<a href="http://localhost&#xFF0C;&#x6216;&#x8005;http://127.0.0.1&#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#x4F60;&#x5728;VSC&#x4E2D;&#x6253;&#x4E86;&#x65AD;&#x70B9;&#x7684;php&#x7A0B;&#x5E8F;&#x3002;" target="_blank" rel="external">http://localhost&#xFF0C;&#x6216;&#x8005;http://127.0.0.1&#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#x4F60;&#x5728;VSC&#x4E2D;&#x6253;&#x4E86;&#x65AD;&#x70B9;&#x7684;php&#x7A0B;&#x5E8F;&#x3002;</a></li>
+<li>&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x76F4;&#x63A5;&#x5207;&#x6362;&#x56DE;&#x5230;VSC&#xFF0C;&#x5E76;&#x4E14;&#x505C;&#x7559;&#x5728;&#x4E86;&#x4F60;&#x7684;&#x65AD;&#x70B9;&#x4F4D;&#x7F6E;&#x3002;</li>
+<li>GAME OVER~</li>
+</ol>
+<p>&#x518D;&#x4E0A;&#x4E2A;&#x56FE;</p>
+<p><img src="/post/install_vscode_on_mac_with_php_and_git/breakpointinvsc.jpg" alt="VSC&#x4E2D;&#x7684;DEBUG&#x65AD;&#x70B9;"></p>
+<p>&#x597D;&#x4E86;&#xFF0C;&#x7EC8;&#x4E8E;&#x641E;&#x5B8C;&#x4E86;WINDOWS&#x4E0B;&#x7684;PHP&#x73AF;&#x5883;&#x642D;&#x5EFA;&#xFF0C;&#x6709;&#x5565;&#x95EE;&#x9898;&#x6216;&#x8005;&#x535A;&#x5BA2;&#x4E2D;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x9EBB;&#x70E6;&#x5C0F;&#x4F19;&#x4F34;&#x76F4;&#x63A5;&#x6062;&#x590D;&#x5427;&#xFF0C;&#x6709;&#x95EE;&#x5FC5;&#x56DE;&#xFF0C;&#x4E0B;&#x73ED;~</p>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;" class="headerlink" title="&#x53C2;&#x8003;&#x8D44;&#x6599;"></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h2><p><a href="http://www.bubuko.com/infodetail-1331103.html" target="_blank" rel="external">PHP&#x4E0E;VC&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#x3001;TS&#x548C;NTS&#x7684;&#x533A;&#x522B;</a><br><a href="http://baike.baidu.com/view/1823486.htm" target="_blank" rel="external">xDebug&#x767E;&#x5EA6;&#x767E;&#x79D1;&#x8BCD;&#x6761;</a><br><a href="https://netbeans.org/kb/docs/php/configure-php-environment-windows_zh_CN.html" target="_blank" rel="external">NETBEANS&#x5B98;&#x65B9;&#x51FA;&#x7684;XMAPP&#x914D;&#x7F6E;XDEBUG&#x8BF4;&#x660E;</a><br><a href="http://www.blogdaren.com/m/?post=2062" target="_blank" rel="external">&#x8FD9;&#x91CC;&#x63D0;&#x4F9B;&#x4E86;XDEBUG&#x5B98;&#x65B9;&#x4E00;&#x79CD;&#x8D34;&#x5FC3;&#x7684;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;</a></p>
+<hr>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag">#php</a>
+          
+            <a href="/tags/git/" rel="tag">#git</a>
+          
+            <a href="/tags/visual-studio-code/" rel="tag">#visual studio code</a>
+          
+            <a href="/tags/vsc/" rel="tag">#vsc</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/user_management_in_linux/" rel="next" title="LINUX下的用户管理">
+                <i class="fa fa-chevron-left"></i> LINUX下的用户管理
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="post/install_vscode_on_mac_with_php_and_git/"
+           data-title="20160620-MAC下配置VSC的PHP开发环境" data-url="http://www.wuliaole.com/post/install_vscode_on_mac_with_php_and_git/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/150694?v=3&s=140"
+               alt="节约用爱" />
+          <p class="site-author-name" itemprop="name">节约用爱</p>
+          <p class="site-description motion-element" itemprop="description">随笔 随心</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">49</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">109</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tinyvane" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/tinyvane" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/tinyvane" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/2705283/" target="_blank" title="DouBan">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  DouBan
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/wang-yi-80" target="_blank" title="ZhiHu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.jerryzhang.net/" title="JerrySher's blog" target="_blank">JerrySher's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://3toptop.top/" title="山上" target="_blank">山上</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Visual-Studio-Code"><span class="nav-number">1.</span> <span class="nav-text">安装Visual Studio Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装PHP集成开发环境"><span class="nav-number">2.</span> <span class="nav-text">安装PHP集成开发环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为VS-Code安装php开发环境"><span class="nav-number">3.</span> <span class="nav-text">为VS Code安装php开发环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加php调试参数"><span class="nav-number">4.</span> <span class="nav-text">添加php调试参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载xDebug"><span class="nav-number">5.</span> <span class="nav-text">下载xDebug</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念解释"><span class="nav-number">5.1.</span> <span class="nav-text">概念解释</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是xDebug"><span class="nav-number">5.1.1.</span> <span class="nav-text">什么是xDebug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何选择VC9-VC11-VC14？"><span class="nav-number">5.1.2.</span> <span class="nav-text">如何选择VC9/VC11/VC14？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TS是什么意思？"><span class="nav-number">5.1.3.</span> <span class="nav-text">TS是什么意思？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改php-ini"><span class="nav-number">5.2.</span> <span class="nav-text">修改php.ini</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改VSC-DEBUG设置"><span class="nav-number">5.3.</span> <span class="nav-text">修改VSC DEBUG设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">节约用爱</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wuliaole"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
