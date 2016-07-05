@@ -115,7 +115,7 @@
     motion: true,
     duoshuo: {
       userId: 0,
-      author: 'Author'
+      author: '博主'
     }
   };
 </script>
@@ -128,7 +128,7 @@
   <title> HEXO的站内链接和永久链接 | FOOLMAN 一个人的修行 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -199,7 +199,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -209,7 +219,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -219,7 +229,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -272,7 +282,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-06-17T13:55:14+08:00" content="2016-06-17">
               2016-06-17
             </time>
@@ -329,7 +339,7 @@
 <p>&#x5176;&#x6B21;&#xFF0C;&#x6709;&#x7684;&#x5E16;&#x5B50;&#x91CC;&#xFF0C;&#x52A0;&#x4E0A;&#x4E86; <code>:category/:english_title/</code> &#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x6211;&#x6CA1;&#x6709;&#x8FD9;&#x6837;&#x505A;&#xFF0C;&#x4E00;&#x6765;&#x662F;&#x6211;&#x89C9;&#x5F97;&#x5728; <code>public</code> &#x76EE;&#x5F55;&#x4E0B;&#x90A3;&#x4E48;&#x591A;&#x5206;&#x7C7B;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x672C;&#x8EAB;&#x6211;&#x5C31;&#x89C9;&#x5F97;&#x4E71;&#xFF0C;&#x4E8C;&#x6765;&#xFF0C;&#x6211;&#x7684;MD&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x6267;&#x884C; <code>hexo new</code> &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x5199;&#x4E0A;&#x65E5;&#x671F;&#xFF0C;&#x6BD4;&#x5982;&#x8FD9;&#x6837; <code>hexo new 20160616-&#x65B0;&#x6587;&#x7AE0;</code>&#xFF0C;&#x7136;&#x540E;&#x6211;&#x5728;&#x7528; sublime &#x6253;&#x5F00;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7F16;&#x8F91;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x628A;title&#x4E2D;&#x7684; <code>20160616-</code> &#x53BB;&#x6389;&#xFF0C;&#x8FD9;&#x6837;&#x5E16;&#x5B50;&#x5C55;&#x793A;&#x5728;&#x8BFB;&#x8005;&#x9762;&#x524D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6807;&#x9898;&#x5C31;&#x4E0D;&#x4F1A;&#x8FD8;&#x5E26;&#x7740;&#x4E2A;&#x65E5;&#x671F;&#x4E86;&#xFF0C;&#x4E09;&#x6765;&#xFF0C;&#x6211;&#x5C31;&#x7B97;&#x53BB;&#x6389;&#x4E86; <code>title</code> &#x4E2D;&#x7684;&#x65E5;&#x671F;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;md&#x6587;&#x4EF6;&#x672C;&#x8EAB;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5728; <code>_post</code> &#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x6211;&#x7684;&#x6587;&#x7AE0;&#x8FD8;&#x662F;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;&#x7684;&#x3002;</p>
 <p><img src="/post/permalink_and_internal_link_in_hexo/files-in-post-dir.png" alt="post&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x547D;&#x540D;&#x6837;&#x5F0F;"></p>
 <p>&#x8FD9;&#x6837;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x9996;&#x5148;&#x6587;&#x4EF6;&#x7684;&#x6392;&#x5217;&#x662F;&#x6309;&#x7167;&#x65F6;&#x95F4;&#x987A;&#x5E8F;&#xFF0C;&#x6211;&#x53EF;&#x4EE5;&#x4E86;&#x89E3;&#x6211;&#x6BCF;&#x4E2A;&#x6587;&#x7AE0;&#x5927;&#x6982;&#x4EC0;&#x4E48;&#x65F6;&#x95F4;&#x5199;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x5C31;&#x7B97;&#x662F;&#x6587;&#x7AE0;&#x7ECF;&#x8FC7;&#x4E86;&#x591A;&#x6B21;&#x4FEE;&#x6539;&#xFF0C;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x6587;&#x7AE0;&#x7B2C;&#x4E00;&#x6B21;&#x7684;&#x751F;&#x6210;&#x65F6;&#x95F4;&#x3002;&#x5176;&#x6B21;&#xFF0C;&#x6BCF;&#x4E2A;MD&#x6587;&#x4EF6;&#x5728; <code>new</code> &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x540C;&#x65F6;&#x4F1A;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x548C;&#x6587;&#x4EF6;&#x540D;&#x5B57;&#x76F8;&#x540C;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x8FD9;&#x6837;&#xFF0C;&#x6211;&#x53EF;&#x4EE5;&#x628A;&#x6BCF;&#x4E2A;&#x5E16;&#x5B50;&#x91CC;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x76F4;&#x63A5;&#x6254;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x91CC;&#x9762;&#x53BB;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x6587;&#x7AE0;&#x91CC;&#x60F3;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x7684;&#x8BED;&#x6CD5;&#x6765;&#x663E;&#x793A;&#x3002;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![post&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x547D;&#x540D;&#x6837;&#x5F0F;](files-in-post-dir.png)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![post&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x547D;&#x540D;&#x6837;&#x5F0F;](files-in-post-dir.png)</div></pre></td></tr></table></figure>
 <p>&#x600E;&#x4E48;&#x6837;&#xFF1F;&#x8F7B;&#x677E;&#x52A0;&#x6109;&#x5FEB;&#x5427;&#x3002;&#x5BF9;&#x4E86;&#xFF0C;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x9700;&#x8981;&#x63D2;&#x4EF6;&#x7684;&#x914D;&#x5408;&#xFF0C;&#x5DEE;&#x70B9;&#x5FD8;&#x8BB0;&#x8BF4;&#x4E86;&#xFF0C;&#x540D;&#x5B57;&#x53EB; <code>hexo-asset-imagean</code>&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x770B;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x300A;<a href="http://www.wuliaole.com/post/the_tips_makes_markdown_writing_happier">&#x8BA9;Markdown&#x7684;&#x4E66;&#x5199;&#x66F4;&#x52A0;&#x987A;&#x7545;&#x7684;&#x6280;&#x5DE7;</a>&#x300B;&#xFF0C;&#x6709;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;</p>
 <p>&#x597D;&#x4E86;&#xFF0C;&#x7ECF;&#x8FC7;&#x7684;&#x4FEE;&#x6539;&#xFF0C;<code>hexo g</code> &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x751F;&#x6210;&#x7684;&#x6587;&#x7AE0;url&#x5C31;&#x975E;&#x5E38;&#x6E05;&#x723D;&#x4E86;&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x770B;&#x4E0B;&#x56FE;&#x611F;&#x53D7;&#x4E00;&#x4E0B;&#x3002;</p>
 <p><img src="/post/permalink_and_internal_link_in_hexo/new-style-files.png" alt="&#x65B0;&#x7684;&#x751F;&#x6210;&#x6587;&#x4EF6;"></p>
@@ -431,10 +441,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -450,25 +460,25 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">52</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">56</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
             <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">categories</span>
-              
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
             </div>
           
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">118</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-count">123</span>
+                <span class="site-state-item-name">标签</span>
               </a>
             </div>
           
@@ -598,11 +608,11 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>

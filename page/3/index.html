@@ -107,7 +107,7 @@
     motion: true,
     duoshuo: {
       userId: 0,
-      author: 'Author'
+      author: '博主'
     }
   };
 </script>
@@ -120,7 +120,7 @@
   <title> FOOLMAN 一个人的修行 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -193,7 +193,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -203,7 +213,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -213,7 +223,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -256,6 +266,416 @@
             
               
                 
+                <a class="post-title-link" href="/post/the_startup_problem_when_installing_centos7/" itemprop="url">
+                  安装CENTOS7遇到启动问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-27T00:09:30+08:00" content="2016-04-27">
+              2016-04-27
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/the_startup_problem_when_installing_centos7/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/the_startup_problem_when_installing_centos7/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;</h2><p>&#x9996;&#x5148;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x60F3;&#x7ED9;&#x81EA;&#x5DF1;&#x7684;&#x4E1C;&#x829D;&#x7B14;&#x8BB0;&#x672C;&#x6362;&#x4E2A;&#x7CFB;&#x7EDF;&#xFF0C;&#x9ED1;&#x82F9;&#x679C;&#x4EE5;&#x524D;&#x6298;&#x817E;&#x8FC7;&#xFF0C;&#x592A;&#x9EBB;&#x70E6;&#xFF0C;&#x663E;&#x5361;&#x9A71;&#x52A8;&#x88C5;&#x4E0D;&#x597D;&#x5F88;&#x4E0D;&#x723D;&#xFF0C;&#x73B0;&#x5728;&#x4E5F;&#x4E0D;&#x5927;&#x60F3;&#x91CD;&#x65B0;&#x518D;&#x56DE;&#x987E;&#x4E00;&#x904D;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x81EA;&#x5DF1;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;MBP&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x9009;&#x62E9;&#x4E86;LINUX&#x7CFB;&#x7EDF;&#xFF0C;&#x770B;&#x6765;&#x770B;&#x53BB;&#xFF0C;&#x60F3;&#x627E;&#x4E2A;&#x6DF1;&#x5EA6;LINUX&#x4F5C;&#x4E3A;&#x5165;&#x95E8;&#xFF0C;&#x636E;&#x8BF4;&#x754C;&#x9762;&#x548C;XP&#x5F88;&#x50CF;&#xFF0C;&#x4F46;&#x662F;&#x65E0;&#x5948;&#xFF0C;&#x523B;&#x5F55;&#x7684;U&#x76D8;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x5B89;&#x88C5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4E0D;&#x77E5;&#x9053;&#x51FA;&#x4E86;&#x5565;&#x95EE;&#x9898;&#xFF0C;&#x5728;&#x5B89;&#x88C5;&#x754C;&#x9762;&#x5C31;&#x51FA;&#x4E86;&#x95EE;&#x9898;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x770B;&#x4E86;&#x4E0B;&#x5176;&#x4ED6;&#x7684;&#x5E26;UI&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x6709;&#x4EBA;&#x63A8;&#x8350;UBUNTU&#xFF0C;&#x4F46;&#x662F;&#x65E0;&#x610F;&#x4E2D;&#x53D1;&#x73B0;CENTOS&#x4E5F;&#x6709;UI&#xFF0C;&#x56E0;&#x4E3A;&#x81EA;&#x5DF1;&#x4F7F;&#x7528;&#x8FC7;&#x963F;&#x91CC;&#x4E91;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5BF9;CENTOS&#x642D;&#x5EFA;PHP&#x73AF;&#x5883;&#x76F8;&#x5BF9;&#x719F;&#x6089;&#xFF0C;&#x5C31;&#x9009;&#x62E9;&#x4E86;CENTOS 7&#x6765;&#x5B89;&#x88C5;&#x3002;</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/post/the_startup_problem_when_installing_centos7/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/post/how_to_config_php_development_environment_on_mac/" itemprop="url">
+                  20160515-MAC下配置PHP开发环境
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-15T18:25:49+08:00" content="2016-04-15">
+              2016-04-15
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/how_to_config_php_development_environment_on_mac/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/how_to_config_php_development_environment_on_mac/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/post/how_to_install_php_development_environment_in_visual_studio_code/" itemprop="url">
+                  在VSC下配置PHP开发环境（Windows平台）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-15T08:57:42+08:00" content="2016-04-15">
+              2016-04-15
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/how_to_install_php_development_environment_in_visual_studio_code/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/how_to_install_php_development_environment_in_visual_studio_code/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="&#x5B89;&#x88C5;Visual-Studio-Code"><a href="#&#x5B89;&#x88C5;Visual-Studio-Code" class="headerlink" title="&#x5B89;&#x88C5;Visual Studio Code"></a>&#x5B89;&#x88C5;Visual Studio Code</h2><p>&#x5FAE;&#x8F6F;&#x5B98;&#x65B9;<a href="https://www.visualstudio.com/en-us/products/code-vs.aspx">&#x4E0B;&#x8F7D;&#x5730;&#x5740;</a></p>
+<p><img src="/post/how_to_install_php_development_environment_in_visual_studio_code/vscdownload.jpg" alt="&#x4E0B;&#x8F7D;&#x9875;&#x9762;"></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/post/how_to_install_php_development_environment_in_visual_studio_code/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/post/change_bizarra_japanese_pattern_keyboard_to_command_international_layout/" itemprop="url">
+                  日本购买的mac电脑改键成习惯的英文键位
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-10T18:20:13+08:00" content="2016-04-10">
+              2016-04-10
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/change_bizarra_japanese_pattern_keyboard_to_command_international_layout/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/change_bizarra_japanese_pattern_keyboard_to_command_international_layout/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x7AE0;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x7AE0;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x7AE0;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x7AE0;</h2><p>&#x4E4B;&#x524D;&#x53BB;&#x65E5;&#x672C;&#x65C5;&#x6E38;&#xFF0C;&#x8DD1;&#x5230;&#x5546;&#x573A;&#x91CC;&#xFF0C;&#x770B;&#x5230;&#x82F9;&#x679C;&#x5E97;&#x91CC;&#x7684;mbp&#x4EF7;&#x683C;&#x6BD4;&#x56FD;&#x5185;&#x8981;&#x4FBF;&#x5B9C;1000&#x591A;&#xFF0C;&#x76F4;&#x63A5;&#x5C31;&#x4ED8;&#x6B3E;&#x4E70;&#x4E86;&#x4E00;&#x53F0;&#xFF0C;&#x56DE;&#x56FD;&#x540E;&#x62C6;&#x673A;&#x5C31;&#x50BB;&#x773C;&#x4E86;&#xFF0C;&#x6211;&#x9760;&#xFF0C;&#x952E;&#x76D8;&#x4E0A;&#x8FD9;&#x90FD;&#x662F;&#x5565;&#x73A9;&#x610F;&#xFF01;</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/post/change_bizarra_japanese_pattern_keyboard_to_command_international_layout/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/post/my_first_electon_program/" itemprop="url">
                   我的第一个electon程序
                 </a>
@@ -269,7 +689,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-04-08T18:37:45+08:00" content="2016-04-08">
               2016-04-08
             </time>
@@ -312,7 +732,7 @@
 </blockquote>
 <h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5F04;&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5F04;&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5F04;&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5F04;&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;</h2><p>&#x8FD9;&#x662F;&#x5076;&#x5C14;&#x4E00;&#x6B21;&#x5728;v2ex&#x4E0A;&#x770B;&#x5230;&#x6709;&#x4EBA;&#x63D0;&#x95EE;&#xFF0C;&#x7528;&#x4EC0;&#x4E48;&#x6280;&#x672F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x6700;&#x5FEB;&#x7684;&#x5168;&#x5E73;&#x53F0;&#x8986;&#x76D6;&#xFF0C;&#x56DE;&#x590D;&#x91CC;&#x6709;&#x4EBA;&#x8BF4;&#x9053;&#x7528;react+electon&#x8986;&#x76D6;mac/pc&#x548C;unix&#xFF0C;&#x7528;&#x5565;&#x5565;&#x5565;&#x6765;&#x8986;&#x76D6;Ios&#x548C;&#x5B89;&#x5353;&#xFF0C;&#x56E0;&#x4E3A;&#x5929;&#x5929;&#x6548;&#x7387;&#x7279;&#x522B;&#x4F4E;&#xFF0C;&#x4EE3;&#x7801;&#x6572;&#x5F97;&#x5B9E;&#x5728;&#x6CA1;&#x5565;&#x52A8;&#x529B;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x60F3;&#x591A;&#x63A5;&#x89E6;&#x63A5;&#x89E6;&#x65B0;&#x73A9;&#x5177;&#x3002;</p>
 <h2 id="&#x51C6;&#x5907;&#x5DE5;&#x4F5C;"><a href="#&#x51C6;&#x5907;&#x5DE5;&#x4F5C;" class="headerlink" title="&#x51C6;&#x5907;&#x5DE5;&#x4F5C;"></a>&#x51C6;&#x5907;&#x5DE5;&#x4F5C;</h2><p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x662F;&#x53C2;&#x8003;&#x7F51;&#x4E0A;&#x7684;&#x4E00;&#x4E9B;&#x524D;&#x8F88;&#x5199;&#x8FC7;&#x7684;&#x8D44;&#x6599;&#xFF0C;&#x6309;&#x7167;&#x81EA;&#x5DF1;&#x7684;&#x5B9E;&#x8DF5;&#x6C47;&#x603B;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x7B97;&#x4E0D;&#x4E0A;&#x4EC0;&#x4E48;&#x5206;&#x4EAB;&#xFF0C;&#x9876;&#x591A;&#x7B97;&#x4E2A;&#x8BB0;&#x5F55;&#x3002;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$git</span> <span class="built_in">clone</span> https;//github.com/xxx</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$git</span> <span class="built_in">clone</span> https;//github.com/xxx</div></pre></td></tr></table></figure>
 <p>&#x53C2;&#x8003;&#x8D44;&#x6599;</p>
 <p>test </p>
 
@@ -377,7 +797,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-04-08T12:55:38+08:00" content="2016-04-08">
               2016-04-08
             </time>
@@ -497,7 +917,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-04-08T12:48:40+08:00" content="2016-04-08">
               2016-04-08
             </time>
@@ -711,7 +1131,7 @@ prt
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-04-06T12:01:33+08:00" content="2016-04-06">
               2016-04-06
             </time>
@@ -766,18 +1186,18 @@ prt
 <p>&#x8FD9;&#x6837;&#xFF0C;&#x518D;&#x6B21;cmd&#x6267;&#x884C;netstat -ano | findstr 4000&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x6CA1;&#x6709;&#x8FDB;&#x7A0B;&#x5360;&#x7528;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x6B63;&#x5927;&#x5149;&#x660E;&#x7684;hexo s&#x4E86;&#x3002;</p>
 <p>PS: &#x5982;&#x679C;&#x5728;&#x670D;&#x52A1;&#x6216;&#x8005;&#x4EFB;&#x52A1;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x90FD;&#x627E;&#x4E0D;&#x5230;&#x8BE5;&#x7A0B;&#x5E8F;&#xFF0C;&#x624B;&#x52A8;&#x6740;&#x6B7B;&#x5373;&#x53EF;&#x3002;</p>
 <p>&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill -PID &lt;&#x8FDB;&#x7A0B;&#x53F7;&gt; -F //&#x5F3A;&#x5236;&#x5173;&#x95ED;&#x67D0;&#x4E2A;&#x8FDB;&#x7A0B;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">taskkill -PID &lt;&#x8FDB;&#x7A0B;&#x53F7;&gt; -F //&#x5F3A;&#x5236;&#x5173;&#x95ED;&#x67D0;&#x4E2A;&#x8FDB;&#x7A0B;</div></pre></td></tr></table></figure>
 <h2 id="Hexo-g&#x7684;&#x65F6;&#x5019;&#x9047;&#x5230;Warn-No-layout"><a href="#Hexo-g&#x7684;&#x65F6;&#x5019;&#x9047;&#x5230;Warn-No-layout" class="headerlink" title="Hexo g&#x7684;&#x65F6;&#x5019;&#x9047;&#x5230;Warn: No layout"></a>Hexo g&#x7684;&#x65F6;&#x5019;&#x9047;&#x5230;Warn: No layout</h2><p><img src="/post/the_error_met_during_the_installation_of_hexo/warnnolayout.jpg" alt="Warn no layout"></p>
 <p>&#x56E0;&#x4E3A;&#x7F3A;&#x5C11;&#x6A21;&#x677F;&#xFF0C;&#x8FDB;&#x5165;Hexo&#x76EE;&#x5F55;&#xFF0C;&#x6267;&#x884C;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
 <p>&#x5373;&#x53EF;&#xFF0C;&#x4E0D;&#x8FC7;&#x8981;&#x770B;&#x770B;_config.yml&#x6587;&#x4EF6;&#x91CC;&#x6A21;&#x677F;&#x6307;&#x5B9A;&#x548C;&#x4E0B;&#x8F7D;&#x7684;&#x4E3B;&#x9898;&#x662F;&#x5426;&#x4E00;&#x81F4;&#x3002;</p>
 <h2 id="ERROR-Deployer-not-found-git"><a href="#ERROR-Deployer-not-found-git" class="headerlink" title="ERROR Deployer not found: git"></a>ERROR Deployer not found: git</h2><p>&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x4E5F;&#x662F;&#x6700;&#x8FD1;&#x6298;&#x817E;&#x7684;&#x65F6;&#x5019;&#x624D;&#x53D1;&#x73B0;&#x7684;&#xFF0C;&#x6211;&#x5C31;&#x4E0D;&#x8BF4;&#x5177;&#x4F53;&#x600E;&#x4E48;&#x5F04;&#x660E;&#x767D;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x4E0A;&#x65B9;&#x6CD5;</p>
 <ol>
 <li>&#x786E;&#x5B9A;&#x4F60;&#x7684;_config.yml&#x4E0B;deploy : &#x540E;&#x9762;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x534A;&#x89D2;&#x7A7A;&#x683C;</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: <span class="comment">#&#x8FD9;&#x4E2A;&#x7A7A;&#x683C;&#xFF0C;&#x5C31;&#x662F;&#x9700;&#x8981;&#x5728;&#x524D;&#x9762;&#x8FD9;&#x53E5;&#x8BDD;&#x540E;&#x7684;&#x5192;&#x53F7;&#x7684;&#x540E;&#x9762;&#xFF0C;yml&#x8BED;&#x6CD5;&#x95EE;&#x9898;&#xFF0C;&#x53D8;&#x6001;</span></span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:&lt;your github username&gt;/&lt;your github username&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>&#x5982;&#x679C;&#x8FD8;&#x62A5;&#x9519;&#xFF0C;&#x5E94;&#x8BE5;&#x5C31;&#x662F;&#x6CA1;&#x6709;&#x88C5;hexo-deployer-git&#x3002;<br>&#x600E;&#x4E48;&#x5B89;&#x88C5;&#xFF1A;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p>&#x7136;&#x540E;&#x518D;&#xFF1A;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy: <span class="comment">#&#x8FD9;&#x4E2A;&#x7A7A;&#x683C;&#xFF0C;&#x5C31;&#x662F;&#x9700;&#x8981;&#x5728;&#x524D;&#x9762;&#x8FD9;&#x53E5;&#x8BDD;&#x540E;&#x7684;&#x5192;&#x53F7;&#x7684;&#x540E;&#x9762;&#xFF0C;yml&#x8BED;&#x6CD5;&#x95EE;&#x9898;&#xFF0C;&#x53D8;&#x6001;</span></div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: git@github.com:&lt;your github username&gt;/&lt;your github username&gt;.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x8FD8;&#x62A5;&#x9519;&#xFF0C;&#x5E94;&#x8BE5;&#x5C31;&#x662F;&#x6CA1;&#x6709;&#x88C5;hexo-deployer-git&#x3002;<br>&#x600E;&#x4E48;&#x5B89;&#x88C5;&#xFF1A;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>&#x7136;&#x540E;&#x518D;&#xFF1A;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
 <p>&#x597D;&#x4E86;</p>
 <h2 id="Permission-denied-publickey"><a href="#Permission-denied-publickey" class="headerlink" title="Permission denied (publickey)."></a>Permission denied (publickey).</h2><p>&#x5728;&#x90E8;&#x7F72;HEXO&#x5230;GITHUB&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x624D;&#x4F1A;&#x51FA;&#x73B0;&#x8FD9;&#x4E2A;&#x63D0;&#x793A;&#xFF0C;&#x6211;&#x7684;&#x535A;&#x5BA2;&#x662F;GITHUB&#x548C;CODING.NET&#x4E24;&#x4E2A;&#x7F51;&#x7AD9;&#x4E00;&#x8D77;&#x90E8;&#x7F72;&#x7684;&#xFF0C;CODING.NET&#x5E76;&#x4E0D;&#x4F1A;&#x63D0;&#x793A;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x5F39;&#x51FA;&#x5BF9;&#x8BDD;&#x6846;&#x8BA9;&#x4F60;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x3002;</p>
 <p>&#x9047;&#x5230;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;GITHUB&#x53EA;&#x5141;&#x8BB8;&#x6DFB;&#x52A0;&#x672C;&#x7535;&#x8111;&#x7684;SSH KEY&#x5230;GITHUB&#x7684;&#x7F51;&#x7AD9;&#x7BA1;&#x7406;&#x8BBE;&#x7F6E;&#xFF0C;&#x8BA9;&#x5B83;&#x8BB0;&#x4F4F;&#xFF0C;&#x4F60;&#x624D;&#x80FD;&#x8FD9;&#x6837;&#x90E8;&#x7F72;&#x535A;&#x5BA2;&#x3002;</p>
@@ -876,7 +1296,7 @@ prt
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-04-06T02:15:20+08:00" content="2016-04-06">
               2016-04-06
             </time>
@@ -922,37 +1342,31 @@ prt
 <p>&#x8FD9;&#x91CC;PC&#x5F53;&#x505A;&#x7535;&#x8111;A&#xFF0C;MAC&#x7535;&#x8111;&#x4F5C;&#x4E3A;&#x7535;&#x8111;B&#x3002;</p>
 <h3 id="&#x7535;&#x8111;A&#x5199;HEXO&#x63A8;&#x9001;&#x5230;&#x4ED3;&#x5E93;"><a href="#&#x7535;&#x8111;A&#x5199;HEXO&#x63A8;&#x9001;&#x5230;&#x4ED3;&#x5E93;" class="headerlink" title="&#x7535;&#x8111;A&#x5199;HEXO&#x63A8;&#x9001;&#x5230;&#x4ED3;&#x5E93;"></a>&#x7535;&#x8111;A&#x5199;HEXO&#x63A8;&#x9001;&#x5230;&#x4ED3;&#x5E93;</h3><p>&#x9996;&#x5148;&#xFF0C;&#x5047;&#x5982;&#x81EA;&#x5DF1;&#x5728;&#x7535;&#x8111;A&#x4E0A;&#x5DF2;&#x7ECF;&#x5EFA;&#x7ACB;&#x597D;&#x4E86;HEXO&#xFF0C;&#x5199;&#x4E86;&#x4E00;&#x4E9B;&#x6587;&#x7AE0;&#xFF0C;&#x5982;&#x4F55;&#x63A8;&#x9001;&#x5230;coding.net&#x4E0A;&#x5462;&#xFF1F;</p>
 <p>&#x5148;&#x8981;&#x53BB;coding.net&#x4E0A;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x5E93;&#xFF0C;&#x8FD9;&#x91CC;&#x540D;&#x5B57;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x4E86;hexo&#x540D;&#x5B57;&#x3002;&#x7136;&#x540E;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init <span class="comment">#&#x8FD9;&#x53E5;&#x8BDD;&#x5F88;&#x91CD;&#x8981;&#x54E6;</span></span><br><span class="line">git remote add origin &lt;server&gt; <span class="comment">#&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x548C;&#x4E91;&#x7AEF;&#x4ED3;&#x5E93;&#x6620;&#x5C04;&#x8D77;&#x6765;&#xFF0C;&#x8FD9;&#x6B65;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x8FD9;&#x91CC;&lt;server&gt;&#x5E94;&#x8BE5;&#x5199;&#x7C7B;&#x5982;https://git.coding.net/tinyvane/hexo.git&#x8FD9;&#x6837;&#x7684;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5730;&#x5740;</span></span><br><span class="line">git add * <span class="comment">#&#x5C06;&#x672C;&#x5730;&#x4FEE;&#x6539;&#x6DFB;&#x52A0;&#x5230;&#x7F13;&#x5B58;&#x533A;</span></span><br><span class="line">git commit -m <span class="string">&apos;&#x5199;&#x4E86;&#x51E0;&#x4E2A;&#x65B0;&#x5E16;&#x5B50;&apos;</span></span><br><span class="line">git push origin master <span class="comment">#&#x5982;&#x679C;&#x9047;&#x5230;&#x9519;&#x8BEF;&#xFF0C;&#x91C7;&#x7528;git push -f&#x53C2;&#x6570;&#xFF0C;&#x5F3A;&#x5236;&#x4E0A;&#x4F20;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git init <span class="comment">#&#x8FD9;&#x53E5;&#x8BDD;&#x5F88;&#x91CD;&#x8981;&#x54E6;</span></div><div class="line">git remote add origin &lt;server&gt; <span class="comment">#&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x548C;&#x4E91;&#x7AEF;&#x4ED3;&#x5E93;&#x6620;&#x5C04;&#x8D77;&#x6765;&#xFF0C;&#x8FD9;&#x6B65;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x8FD9;&#x91CC;&lt;server&gt;&#x5E94;&#x8BE5;&#x5199;&#x7C7B;&#x5982;https://git.coding.net/tinyvane/hexo.git&#x8FD9;&#x6837;&#x7684;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5730;&#x5740;</span></div><div class="line">git add * <span class="comment">#&#x5C06;&#x672C;&#x5730;&#x4FEE;&#x6539;&#x6DFB;&#x52A0;&#x5230;&#x7F13;&#x5B58;&#x533A;</span></div><div class="line">git commit -m <span class="string">&apos;&#x5199;&#x4E86;&#x51E0;&#x4E2A;&#x65B0;&#x5E16;&#x5B50;&apos;</span></div><div class="line">git push origin master <span class="comment">#&#x5982;&#x679C;&#x9047;&#x5230;&#x9519;&#x8BEF;&#xFF0C;&#x91C7;&#x7528;git push -f&#x53C2;&#x6570;&#xFF0C;&#x5F3A;&#x5236;&#x4E0A;&#x4F20;</span></div></pre></td></tr></table></figure>
 <p>&#x597D;&#x4E86;&#xFF0C;&#x7535;&#x8111;A&#x4E0A;&#x7684;&#x5DE5;&#x4F5C;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x3002;</p>
 <h3 id="&#x7535;&#x8111;B&#x540C;&#x6B65;&#x914D;&#x7F6E;"><a href="#&#x7535;&#x8111;B&#x540C;&#x6B65;&#x914D;&#x7F6E;" class="headerlink" title="&#x7535;&#x8111;B&#x540C;&#x6B65;&#x914D;&#x7F6E;"></a>&#x7535;&#x8111;B&#x540C;&#x6B65;&#x914D;&#x7F6E;</h3><p>&#x7136;&#x540E;&#x5207;&#x6362;&#x5230;MAC&#x7535;&#x8111;B&#xFF0C;&#x5148;&#x5EFA;&#x7ACB;hexo&#x76EE;&#x5F55;&#xFF0C;&#x6211;&#x5728;&#x684C;&#x9762;&#x4E0A;&#x5EFA;&#x7ACB;&#x7684;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://git.coding.net/tinyvane/hexo.git hexo <span class="comment"># </span></span><br><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br><span class="line">git submodule add https://github.com/iissnan/hexo-theme-next themes/next <span class="comment"># &#x8BF4;&#x660E;1</span></span><br><span class="line">cp _config_theme.yml themes/next/_config.yml <span class="comment"># &#x8BF4;&#x660E;2</span></span><br><span class="line"><span class="built_in">cd</span> themes/next</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&apos;overwrite the _config.yml files from hexo repo&apos;</span></span><br><span class="line"><span class="built_in">cd</span> ../..</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://git.coding.net/tinyvane/hexo.git hexo <span class="comment"># </span></div><div class="line">npm install hexo</div><div class="line">npm install</div><div class="line">npm install hexo-deployer-git</div><div class="line">git submodule add https://github.com/iissnan/hexo-theme-next themes/next <span class="comment"># &#x8BF4;&#x660E;1</span></div><div class="line">cp _config_theme.yml themes/next/_config.yml <span class="comment"># &#x8BF4;&#x660E;2</span></div><div class="line"><span class="built_in">cd</span> themes/next</div><div class="line">git add .</div><div class="line">git commit -m <span class="string">&apos;overwrite the _config.yml files from hexo repo&apos;</span></div><div class="line"><span class="built_in">cd</span> ../..</div></pre></td></tr></table></figure>
 <p>&#x8BF4;&#x660E;1&#xFF1A;&#x5982;&#x679C;&#x5728;git submodule&#x90A3;&#x53E5;&#x7684;&#x65F6;&#x5019;,&#x9047;&#x5230; <code>already exists in the index</code> &#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x5148;&#x6267;&#x884C; <code>git rm --cached themes/next</code> &#x7136;&#x540E;&#x518D;&#x6267;&#x884C; <code>git submodule add</code>&#x3002;</p>
 <p>&#x8BF4;&#x660E;2&#xFF1A;&#x56E0;&#x4E3A;Next&#x8FD9;&#x4E2A;theme&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4F1A;&#x53D8;&#x52A8;&#xFF0C;&#x5C31;&#x662F;next&#x76EE;&#x5F55;&#x4E0B;&#x7684;_config.yml,&#x6240;&#x4EE5;&#x6211;&#x5728;hexo&#x4ED3;&#x5E93;&#x4E2D;&#x5907;&#x4EFD;&#x4E86;&#x4E00;&#x4E2A;next&#x4E0B;&#x914D;&#x7F6E;&#x597D;&#x7684;_config.yml&#x5230;hexo repo&#x4E0B;&#xFF0C;&#x6539;&#x540D;&#x4E3A;_config_theme.yml&#xFF0C;&#x5E76;&#x4E14; <code>git add _config_theme.yml</code> &#x4F5C;&#x7528;&#x6211;&#x60F3;&#x5927;&#x5BB6;&#x90FD;&#x660E;&#x767D;&#x5C31;&#x4E0D;&#x591A;&#x8BF4;&#x4E86;&#x3002;</p>
 <p>&#x7136;&#x540E;&#x5F00;&#x59CB;&#x5199;&#x6587;&#x7AE0;&#xFF0C;&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&apos;&#x5199;&#x4E86;&#x51E0;&#x4E2A;&#x65B0;&#x5E16;&#x5B50;&apos;</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m <span class="string">&apos;&#x5199;&#x4E86;&#x51E0;&#x4E2A;&#x65B0;&#x5E16;&#x5B50;&apos;</span></div><div class="line">git push origin master</div></pre></td></tr></table></figure>
 <p>&#x8FD9;&#x91CC;&#x8BF4;&#x4E00;&#x4E2A;&#x9898;&#x5916;&#x8BDD;&#xFF0C;&#x8FD9;&#x6837;Push&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x95EE;&#x8D26;&#x53F7;&#x548C;&#x5BC6;&#x7801;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;clone repo&#x7684;&#x65F6;&#x5019;&#x91C7;&#x7528;&#x4E86;https&#x800C;&#x4E0D;&#x662F;ssh&#x65B9;&#x5F0F;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x770B;<a href="http://yansu.org/2013/04/22/ignore-password-in-git-push.html" target="_blank" rel="external">&#x8FD9;&#x91CC;</a>&#x3002;</p>
 <p>&#x9700;&#x8981;&#x8FDB;&#x5165;.git&#x76EE;&#x5F55;&#xFF0C;&#x4FEE;&#x6539;config&#x6587;&#x4EF6;&#xFF0C;&#x5C06; <code>url = http://git.coding.net/tinyvane/hexo.git</code>&#xFF0C;&#x4FEE;&#x6539;&#x4E3A; <code>url = git@git.coding.net:tinyvane/hexo.git</code> &#x5373;&#x53EF;&#x3002; </p>
 <h3 id="&#x7535;&#x8111;B&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x4E3B;&#x9898;&#x548C;&#x5176;&#x4ED6;&#x5FC5;&#x5907;&#x63D2;&#x4EF6;"><a href="#&#x7535;&#x8111;B&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x4E3B;&#x9898;&#x548C;&#x5176;&#x4ED6;&#x5FC5;&#x5907;&#x63D2;&#x4EF6;" class="headerlink" title="&#x7535;&#x8111;B&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x4E3B;&#x9898;&#x548C;&#x5176;&#x4ED6;&#x5FC5;&#x5907;&#x63D2;&#x4EF6;"></a>&#x7535;&#x8111;B&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x4E3B;&#x9898;&#x548C;&#x5176;&#x4ED6;&#x5FC5;&#x5907;&#x63D2;&#x4EF6;</h3><p>&#x5B89;&#x88C5;hexo-asset-imagean&#x548C;&#x6A21;&#x677F;</p>
 <p>&#x9996;&#x5148;&#x786E;&#x8BA4; _config.yml &#x4E2D;&#x6709; <code>post_asset_folder:true</code> &#x3002;</p>
 <p>&#x7136;&#x540E;&#x6267;&#x884C;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save <span class="comment">#&#x56FE;&#x7247;&#x63D2;&#x4EF6;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save <span class="comment">#&#x56FE;&#x7247;&#x63D2;&#x4EF6;</span></div></pre></td></tr></table></figure>
 <p>20160517 &#x4FEE;&#x6539;&#x4E86;&#x4E4B;&#x524D;&#x7528;#git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next&#x7684;&#x65B9;&#x5F0F;</p>
 <h2 id="&#x4E4B;&#x540E;&#x6BCF;&#x6B21;&#x540C;&#x6B65;&#x7684;&#x6B65;&#x9AA4;"><a href="#&#x4E4B;&#x540E;&#x6BCF;&#x6B21;&#x540C;&#x6B65;&#x7684;&#x6B65;&#x9AA4;" class="headerlink" title="&#x4E4B;&#x540E;&#x6BCF;&#x6B21;&#x540C;&#x6B65;&#x7684;&#x6B65;&#x9AA4;"></a>&#x4E4B;&#x540E;&#x6BCF;&#x6B21;&#x540C;&#x6B65;&#x7684;&#x6B65;&#x9AA4;</h2><p>&#x5982;&#x679C;&#x4E0A;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#x8FD0;&#x884C;&#x4E86;&#x4E00;&#x6B21;&#xFF0C;&#x4E4B;&#x540E;&#x5C31;&#x4E0D;&#x7528;&#x8FD9;&#x4E48;&#x8D39;&#x52B2;&#x4E86;&#x3002;&#x52A0;&#x5165;&#x4F60;&#x5728;&#x4E24;&#x8FB9;&#x7684;&#x7535;&#x8111;&#x4E0A;&#xFF0C;&#x90FD;&#x540C;&#x6B65;&#x5B8C;&#x4E86;&#xFF0C;&#x4E0B;&#x6B21;&#x5230;A&#x7535;&#x8111;&#x4E0A;&#xFF0C;&#x5F00;&#x59CB;&#x5199;&#x6587;&#x7AE0;&#xFF0C;&#x7136;&#x540E;&#x9700;&#x8981;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&apos;the articles updates on this machine this time&apos;</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m <span class="string">&apos;the articles updates on this machine this time&apos;</span></div><div class="line">git push origin master</div></pre></td></tr></table></figure>
 <p>Done!</p>
 <p>&#x7136;&#x540E;B&#x7535;&#x8111;&#x4E0A;&#x8981;&#x5199;&#x4E86;&#x5462;&#xFF1F;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --all <span class="comment">#&#x540E;&#x6765;&#x8FD8;&#x662F;&#x4F7F;&#x7528;&#x4E86;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull --all <span class="comment">#&#x540E;&#x6765;&#x8FD8;&#x662F;&#x4F7F;&#x7528;&#x4E86;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;</span></div></pre></td></tr></table></figure>
 <p>&#x5F00;&#x59CB;&#x5199;&#x5427;&#xFF0C;&#x5199;&#x5B8C;&#x4E8B;&#x4E86;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&apos;the articles updates on this machine this time&apos;</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m <span class="string">&apos;the articles updates on this machine this time&apos;</span></div><div class="line">git push origin master</div></pre></td></tr></table></figure>
 <p>Done!</p>
-<p>20160518 &#x4FEE;&#x6539;&#x4E86;&#x4E4B;&#x524D;&#x7528;<code>git fetch --all</code> + <code>git reset --hard</code>&#x7684;&#x65B9;&#x5F0F;</p>
-<p>&#x6211;&#x56E0;&#x4E3A;&#x5B66;git&#x65F6;&#x95F4;&#x4E0D;&#x957F;&#xFF0C;&#x5F88;&#x591A;&#x6982;&#x5FF5;&#x8FD8;&#x5728;&#x6162;&#x6162;&#x7406;&#x89E3;&#x4E2D;&#xFF0C;&#x4E00;&#x76F4;&#x90FD;&#x77E5;&#x9053;<code>git reset --hard</code>&#x4E0D;&#x597D;&#xFF0C;&#x4F46;&#x662F;&#x5177;&#x4F53;&#x600E;&#x4E48;&#x4E0D;&#x597D;&#xFF0C;&#x4E5F;&#x8BF4;&#x4E0D;&#x6E05;&#x695A;&#x3002;</p>
-<p>&#x76F4;&#x5230;&#x770B;&#x5230;&#x4E86;stackoverflow&#x4E0A;&#x7684;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#xFF0C;&#x5730;&#x5740;&#x5728;<a href="http://stackoverflow.com/questions/1125968/force-git-to-overwrite-local-files-on-pull" target="_blank" rel="external">&#x8FD9;&#x91CC;</a></p>
-<p>&#x6587;&#x7AE0;&#x8BF4;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5C31;&#x662F;&#x4E00;&#x822C;&#x672C;&#x5730;&#x4EE3;&#x7801;&#x90FD;&#x662F;Pull&#x6765;&#x64CD;&#x4F5C;&#x7684;&#xFF0C;&#x5B89;&#x5168;&#x53EF;&#x9760;&#xFF0C;&#x4F46;&#x662F;&#x53D1;&#x751F;&#x4E86;&#x672C;&#x5730;&#x4EE3;&#x7801;&#x548C;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x6709;&#x6240;&#x4E0D;&#x540C;&#xFF0C;&#x7136;&#x540E;&#x672C;&#x5730;&#x7684;&#x7A0B;&#x5E8F;&#x5458;&#x5C31;&#x628A;&#x81EA;&#x5DF1;&#x7684;&#x4EE3;&#x7801;&#x53D1;&#x7ED9;&#x4E86;&#x4ED3;&#x5E93;&#x7BA1;&#x7406;&#x8005;&#xFF08;&#x6682;&#x4E14;&#x8FD9;&#x4E48;&#x8BF4;&#x5427;&#xFF09;&#xFF0C;&#x8BA9;&#x540E;&#x8005;&#x6765;&#x66F4;&#x65B0;&#xFF0C;&#x540E;&#x8005;&#x66F4;&#x65B0;&#x4E86;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x4EE3;&#x7801;&#xFF0C;&#x4F46;&#x662F;&#x672C;&#x5730;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x53D1;&#x73B0;Pull&#x5C31;&#x4E0D;&#x597D;&#x7528;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x63D0;&#x95EE;&#x8005;&#x7684;&#x4EBA;&#xFF0C;&#x60F3;&#x77E5;&#x9053;&#x5426;&#x662F;&#x53EF;&#x4EE5;force pull&#xFF0C;&#x5C31;&#x662F;&#x5F3A;&#x5236;&#x7528;&#x8FDC;&#x7A0B;&#x4EE3;&#x7801;&#x8986;&#x76D6;&#x672C;&#x5730;&#x4EE3;&#x7801;&#x3002;</p>
-<p>&#x7B54;&#x6848;&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x8BF4;&#x7684;fetch &#x2013;all&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x9700;&#x8981;&#x914D;&#x5408;reset &#x2013;hard&#xFF0C;&#x8FD9;&#x6837;&#x672C;&#x5730;&#x6240;&#x6709;&#x672A;&#x63D0;&#x4EA4;&#x7684;commit&#x5C31;&#x4F1A;&#x4E22;&#x5931;&#xFF0C;&#x90A3;&#x4E48;&#x5F53;&#x65F6;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x975E;&#x5E38;&#x9002;&#x5408;&#x6211;&#x8FD9;&#x79CD;&#x4E00;&#x4E2A;&#x4EBA;&#x7528;git&#x7BA1;&#x7406;hexo&#x535A;&#x5BA2;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4E24;&#x8FB9;&#x540C;&#x4E8B;&#x6709;&#x4EBA;&#x5728;&#x5199;&#x4EE3;&#x7801;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E0D;&#x5408;&#x9002;&#x4E86;&#x3002;</p>
-<p>&#x6240;&#x4EE5;&#xFF0C;&#x5728;&#x90A3;&#x4E2A;&#x5E16;&#x5B50;&#x7684;&#x9AD8;&#x7968;&#x7B54;&#x6848;&#x4E2D;&#xFF0C;&#x63D0;&#x51FA;&#x4E86;checkout master&#x5206;&#x652F;&#x5230;&#x53E6;&#x5916;&#x5206;&#x652F;&#xFF0C;&#x7136;&#x540E;&#x5728;clone&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;master&#x5206;&#x652F;&#x5230;&#x672C;&#x5730;&#xFF0C;&#x7136;&#x540E;&#x91C7;&#x7528;&#x5408;&#x5E76;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x8FD9;&#x6837;&#x65E2;&#x53EF;&#x4EE5;&#x8DDF;&#x8E2A;&#x6700;&#x65B0;&#x7684;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x6E90;&#x4EE3;&#x7801;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x672C;&#x5730;&#x7684;commit&#x3002;</p>
-<p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x4E5F;&#x8BA9;&#x6211;&#x5B66;&#x4E60;&#x4E86;checkout&#x7684;&#x7528;&#x6CD5;&#x3002;&#x987A;&#x4FBF;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x3002;</p>
-<h3 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;"><a href="#&#x53C2;&#x8003;&#x6587;&#x7AE0;" class="headerlink" title="&#x53C2;&#x8003;&#x6587;&#x7AE0;"></a>&#x53C2;&#x8003;&#x6587;&#x7AE0;</h3><p><a href="http://chitanda.me/2015/06/18/hexo-sync-in-multiple-pc/" target="_blank" rel="external">&#x5229;&#x7528;git&#x89E3;&#x51B3;hexo&#x535A;&#x5BA2;&#x591A;PC&#x95F4;&#x540C;&#x6B65;&#x95EE;&#x9898;</a></p>
+<p>20160518 &#x4FEE;&#x6539;&#x4E86;&#x4E4B;&#x524D;&#x7528;<figure class="highlight plain"><figcaption><span>fetch --all``` + ```git reset --hard```&#x7684;&#x65B9;&#x5F0F;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#x6211;&#x56E0;&#x4E3A;&#x5B66;git&#x65F6;&#x95F4;&#x4E0D;&#x957F;&#xFF0C;&#x5F88;&#x591A;&#x6982;&#x5FF5;&#x8FD8;&#x5728;&#x6162;&#x6162;&#x7406;&#x89E3;&#x4E2D;&#xFF0C;&#x4E00;&#x76F4;&#x90FD;&#x77E5;&#x9053;```git reset --hard```&#x4E0D;&#x597D;&#xFF0C;&#x4F46;&#x662F;&#x5177;&#x4F53;&#x600E;&#x4E48;&#x4E0D;&#x597D;&#xFF0C;&#x4E5F;&#x8BF4;&#x4E0D;&#x6E05;&#x695A;&#x3002;</div><div class="line"></div><div class="line">&#x76F4;&#x5230;&#x770B;&#x5230;&#x4E86;stackoverflow&#x4E0A;&#x7684;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#xFF0C;&#x5730;&#x5740;&#x5728;[&#x8FD9;&#x91CC;](http://stackoverflow.com/questions/1125968/force-git-to-overwrite-local-files-on-pull)</div><div class="line"></div><div class="line">&#x6587;&#x7AE0;&#x8BF4;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5C31;&#x662F;&#x4E00;&#x822C;&#x672C;&#x5730;&#x4EE3;&#x7801;&#x90FD;&#x662F;Pull&#x6765;&#x64CD;&#x4F5C;&#x7684;&#xFF0C;&#x5B89;&#x5168;&#x53EF;&#x9760;&#xFF0C;&#x4F46;&#x662F;&#x53D1;&#x751F;&#x4E86;&#x672C;&#x5730;&#x4EE3;&#x7801;&#x548C;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x6709;&#x6240;&#x4E0D;&#x540C;&#xFF0C;&#x7136;&#x540E;&#x672C;&#x5730;&#x7684;&#x7A0B;&#x5E8F;&#x5458;&#x5C31;&#x628A;&#x81EA;&#x5DF1;&#x7684;&#x4EE3;&#x7801;&#x53D1;&#x7ED9;&#x4E86;&#x4ED3;&#x5E93;&#x7BA1;&#x7406;&#x8005;&#xFF08;&#x6682;&#x4E14;&#x8FD9;&#x4E48;&#x8BF4;&#x5427;&#xFF09;&#xFF0C;&#x8BA9;&#x540E;&#x8005;&#x6765;&#x66F4;&#x65B0;&#xFF0C;&#x540E;&#x8005;&#x66F4;&#x65B0;&#x4E86;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x4EE3;&#x7801;&#xFF0C;&#x4F46;&#x662F;&#x672C;&#x5730;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x53D1;&#x73B0;Pull&#x5C31;&#x4E0D;&#x597D;&#x7528;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x63D0;&#x95EE;&#x8005;&#x7684;&#x4EBA;&#xFF0C;&#x60F3;&#x77E5;&#x9053;&#x5426;&#x662F;&#x53EF;&#x4EE5;force pull&#xFF0C;&#x5C31;&#x662F;&#x5F3A;&#x5236;&#x7528;&#x8FDC;&#x7A0B;&#x4EE3;&#x7801;&#x8986;&#x76D6;&#x672C;&#x5730;&#x4EE3;&#x7801;&#x3002;</div><div class="line"></div><div class="line">&#x7B54;&#x6848;&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x8BF4;&#x7684;fetch --all&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x9700;&#x8981;&#x914D;&#x5408;reset --hard&#xFF0C;&#x8FD9;&#x6837;&#x672C;&#x5730;&#x6240;&#x6709;&#x672A;&#x63D0;&#x4EA4;&#x7684;commit&#x5C31;&#x4F1A;&#x4E22;&#x5931;&#xFF0C;&#x90A3;&#x4E48;&#x5F53;&#x65F6;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x975E;&#x5E38;&#x9002;&#x5408;&#x6211;&#x8FD9;&#x79CD;&#x4E00;&#x4E2A;&#x4EBA;&#x7528;git&#x7BA1;&#x7406;hexo&#x535A;&#x5BA2;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4E24;&#x8FB9;&#x540C;&#x4E8B;&#x6709;&#x4EBA;&#x5728;&#x5199;&#x4EE3;&#x7801;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E0D;&#x5408;&#x9002;&#x4E86;&#x3002;</div><div class="line"></div><div class="line">&#x6240;&#x4EE5;&#xFF0C;&#x5728;&#x90A3;&#x4E2A;&#x5E16;&#x5B50;&#x7684;&#x9AD8;&#x7968;&#x7B54;&#x6848;&#x4E2D;&#xFF0C;&#x63D0;&#x51FA;&#x4E86;checkout master&#x5206;&#x652F;&#x5230;&#x53E6;&#x5916;&#x5206;&#x652F;&#xFF0C;&#x7136;&#x540E;&#x5728;clone&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;master&#x5206;&#x652F;&#x5230;&#x672C;&#x5730;&#xFF0C;&#x7136;&#x540E;&#x91C7;&#x7528;&#x5408;&#x5E76;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x8FD9;&#x6837;&#x65E2;&#x53EF;&#x4EE5;&#x8DDF;&#x8E2A;&#x6700;&#x65B0;&#x7684;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x6E90;&#x4EE3;&#x7801;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x672C;&#x5730;&#x7684;commit&#x3002;</div><div class="line"></div><div class="line">&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x4E5F;&#x8BA9;&#x6211;&#x5B66;&#x4E60;&#x4E86;checkout&#x7684;&#x7528;&#x6CD5;&#x3002;&#x987A;&#x4FBF;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x3002;</div><div class="line"></div><div class="line">## &#x5982;&#x4F55;&#x66F4;&#x65B0;&#x672C;&#x5730;&#x7684;HEXO</div><div class="line"></div><div class="line">&#x547D;&#x4EE4;</div><div class="line"></div><div class="line">``` bash</div><div class="line">npm update</div></pre></td></tr></table></figure></p>
+<h2 id="&#x5982;&#x4F55;&#x66F4;&#x65B0;&#x4E3B;&#x9898;"><a href="#&#x5982;&#x4F55;&#x66F4;&#x65B0;&#x4E3B;&#x9898;" class="headerlink" title="&#x5982;&#x4F55;&#x66F4;&#x65B0;&#x4E3B;&#x9898;"></a>&#x5982;&#x4F55;&#x66F4;&#x65B0;&#x4E3B;&#x9898;</h2><h3 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;"><a href="#&#x53C2;&#x8003;&#x6587;&#x7AE0;" class="headerlink" title="&#x53C2;&#x8003;&#x6587;&#x7AE0;"></a>&#x53C2;&#x8003;&#x6587;&#x7AE0;</h3><p><a href="http://chitanda.me/2015/06/18/hexo-sync-in-multiple-pc/" target="_blank" rel="external">&#x5229;&#x7528;git&#x89E3;&#x51B3;hexo&#x535A;&#x5BA2;&#x591A;PC&#x95F4;&#x540C;&#x6B65;&#x95EE;&#x9898;</a></p>
 
           
         
@@ -1015,7 +1429,7 @@ prt
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-04-04T19:43:48+08:00" content="2016-04-04">
               2016-04-04
             </time>
@@ -1054,487 +1468,6 @@ prt
         
           
             
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/post/how_to_solve_bonjor_service_on_windows_10_64bit/" itemprop="url">
-                  Win10 64位操作系统无法开启BONJOR服务
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-04T19:22:53+08:00" content="2016-04-04">
-              2016-04-04
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/post/how_to_solve_bonjor_service_on_windows_10_64bit/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="post/how_to_solve_bonjor_service_on_windows_10_64bit/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>FOOLMAN&#x4E00;&#x76F4;&#x4E0D;&#x77E5;&#x9053;&#x81EA;&#x5DF1;&#x60F3;&#x8981;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x65E0;&#x610F;&#x4E2D;&#x624D;&#x53D1;&#x73B0;&#xFF0C;&#x81EA;&#x5DF1;&#x60F3;&#x8981;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x4E0D;&#x53D7;&#x5230;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x675F;&#x7F1A;</p>
-</blockquote>
-<h2 id="&#x8D77;&#x56E0;"><a href="#&#x8D77;&#x56E0;" class="headerlink" title="&#x8D77;&#x56E0;"></a>&#x8D77;&#x56E0;</h2><p>&#x6700;&#x8FD1;&#x770B;&#x4E86;&#x5FAE;&#x8F6F;BUILD 2016, &#x7B2C;&#x4E8C;&#x5929;&#x5FAE;&#x8F6F;&#x5BA3;&#x5E03;&#x5FAE;&#x8F6F;&#x4E4B;&#x524D;&#x6536;&#x8D2D;&#x7684;&#x6B3E;&#x5E73;&#x53F0;&#x5F00;&#x53D1;&#x5DE5;&#x5177;XARMAIN&#x793E;&#x533A;&#x7248;&#x514D;&#x8D39;&#x4E86;&#xFF0C;&#x8FD9;&#x65E0;&#x7591;&#x5BF9;&#x4E4B;&#x524D;&#x4F7F;&#x7528;C#.NET&#x7684;&#x7A0B;&#x5E8F;&#x5458;&#x6765;&#x8BF4;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x91CD;&#x5927;&#x7684;&#x5229;&#x597D;&#xFF0C;&#x867D;&#x7136;XARMAIN&#x4F7F;&#x7528;&#x7684;WRAPPER&#x6280;&#x672F;&#xFF0C;&#x5C01;&#x88C5;&#x4E86;&#x5B89;&#x5353;&#x548C;IOS&#x5E95;&#x5C42;&#x7684;API&#x800C;&#x5DF2;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x6211;&#x8FD9;&#x79CD;&#x7A0B;&#x5E8F;&#x5458;&#x7231;&#x597D;&#x8005;&#x6765;&#x8BF4;&#xFF0C;&#x4F7F;&#x7528;C#&#x65E0;&#x7591;&#x5927;&#x5E45;&#x5EA6;&#x964D;&#x4F4E;&#x4E86;&#x8DE8;&#x5E73;&#x53F0;&#x5F00;&#x53D1;&#x7684;&#x96BE;&#x5EA6;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x7B2C;&#x4E8C;&#x5929;&#x5C31;&#x8D76;&#x7D27;&#x53BB;&#x4E0B;&#x8F7D;&#x4E86;VS2015 UPDATE2&#x3002;</p>
-<p>XARMAIN&#x8FD9;&#x4E1C;&#x897F;&#x597D;&#x50CF;&#x5E76;&#x4E0D;&#x662F;&#x50CF;&#x5F00;&#x53D1;&#x4E2A;WINFORM&#x90A3;&#x6837;&#x76F4;&#x63A5;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x5C31;&#x641E;&#x5B9A;&#x90A3;&#x4E48;&#x7B80;&#x5355;&#xFF0C;&#x800C;&#x662F;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x63D2;&#x4EF6;&#x5F62;&#x5F0F;&#xFF0C;&#x4E0D;&#x8FC7;&#x5FAE;&#x8F6F;&#x8BF4;&#x8FC7;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x4E0D;&#x79BB;&#x5F00;VS&#x5C31;&#x80FD;&#x8DE8;&#x5E73;&#x53F0;&#x5199;&#x7A0B;&#x5E8F;&#xFF0C;&#x60F3;&#x60F3;&#x5E94;&#x8BE5;&#x4E5F;&#x4E0D;&#x4F1A;&#x5DEE;&#x592A;&#x591A;&#x3002;&#x5E9F;&#x8BDD;&#x4E0D;&#x591A;&#x8BF4;&#x4E86;&#xFF0C;&#x7EE7;&#x7EED;&#x3002;</p>
-<h2 id="&#x63A2;&#x7D22;&#x8FC7;&#x7A0B;"><a href="#&#x63A2;&#x7D22;&#x8FC7;&#x7A0B;" class="headerlink" title="&#x63A2;&#x7D22;&#x8FC7;&#x7A0B;"></a>&#x63A2;&#x7D22;&#x8FC7;&#x7A0B;</h2><p>UPDATE2&#x7684;&#x5B89;&#x88C5;&#x5305;&#x5DF2;&#x7ECF;&#x5230;&#x4E86;7G&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x800C;&#x4E14;&#x76F4;&#x63A5;&#x4E0B;&#x8F7D;UPDATE2&#x7684;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#x4F1A;&#x5361;&#x6B7B;&#x5728;&#x542F;&#x52A8;&#x754C;&#x9762;&#xFF0C;&#x65E0;&#x5948;&#x53EA;&#x597D;&#x5148;&#x5378;&#x8F7D;&#x4E86;UPDATE1&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5B89;&#x88C5;&#x3002;</p>
-<p>&#x4E0D;&#x8FC7;&#x8FD9;&#x6837;&#x6298;&#x817E;&#x4E0B;&#x6765;&#xFF0C;&#x53D1;&#x73B0;&#x81EA;&#x5DF1;&#x7684;C&#x76D8;&#x786E;&#x5B9E;&#x5927;&#x5C0F;&#x6709;&#x70B9;&#x5403;&#x7D27;&#xFF0C;&#x672C;&#x6765;&#x60F3;&#x7528;ADDS&#xFF08;Acronis Disk Director Suite&#xFF09;&#x628A;C&#x76D8;&#x7A7A;&#x95F4;&#x817E;&#x51FA;&#x6765;&#x4E00;&#x4E9B;&#xFF0C;&#x4F46;&#x662F;&#x53D1;&#x73B0;11&#x7248;&#x548C;12&#x7248;&#x7684;&#x5B89;&#x88C5;&#x548C;&#x7834;&#x89E3;&#x597D;&#x50CF;&#x975E;&#x5E38;&#x7684;&#x9EBB;&#x70E6;&#xFF0C;&#x627E;&#x51FA;&#x6765;&#x4E86;&#x4EE5;&#x524D;&#x7528;&#x8FC7;&#x7684;10&#xFF0C;&#x4F46;&#x662F;&#x5B89;&#x88C5;&#x4E4B;&#x540E;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x91CD;&#x542F;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x4E00;&#x4E2A;Abnormal&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x4F30;&#x8BA1;ADDS 10&#x5BF9;WIN10&#x7684;&#x517C;&#x5BB9;&#x6027;&#x5E76;&#x4E0D;&#x597D;&#xFF0C;&#x6BD5;&#x7ADF;ADDS10&#x51FA;&#x6765;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD8;&#x6CA1;WIN10&#x5462;&#xFF0C;&#x53EA;&#x597D;&#x5C31;&#x6B64;&#x4F5C;&#x7F62;&#xFF0C;&#x7B49;&#x5230;&#x4E0B;&#x4E00;&#x6B21;&#x5B89;&#x88C5;11&#x6216;&#x8005;12&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x518D;&#x6765;&#x5199;&#x5E16;&#x5B50;&#x4E86;&#x3002;</p>
-<p>&#x5B89;&#x88C5;&#x597D;&#x4E86;UPDATE2&#x4E4B;&#x540E;&#xFF0C;&#x4ECE;XARMAIN&#x7684;&#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#x4E0B;&#x8F7D;&#x4E86;&#x5B89;&#x88C5;&#x5305;&#xFF0C;&#x4E00;&#x770B;&#x624D;2M&#x591A;&#xFF0C;&#x660E;&#x663E;&#x53EA;&#x662F;&#x4E2A;&#x5F15;&#x5BFC;&#x7A0B;&#x5E8F;&#xFF0C;&#x542F;&#x52A8;&#x5B89;&#x88C5;&#x4E4B;&#x540E;&#xFF0C;&#x53D1;&#x73B0;&#x4E0D;&#x6210;&#x529F;&#xFF0C;&#x800C;&#x662F;&#x5F39;&#x51FA;&#x4E86;&#x4E0B;&#x9762;&#x7684;&#x754C;&#x9762;</p>
-<p><img src="/post/how_to_solve_bonjor_service_on_windows_10_64bit/xarmain-install.jpg" alt="XARMAIN&#x5B89;&#x88C5;&#x754C;&#x9762;"></p>
-<p>&#x7A0B;&#x5E8F;&#x8981;&#x6C42;&#x5355;&#x72EC;&#x4E0B;&#x8F7D;JAVA SDK, ANDROID SDK&#x4EE5;&#x53CA;XARMAIN&#xFF0C;&#x6CA1;&#x529E;&#x6CD5;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x88C5;&#x5427;&#x3002;</p>
-<p>&#x524D;&#x4E24;&#x4E2A;&#x7684;&#x5B89;&#x88C5;&#x8FD8;&#x7B97;&#x987A;&#x5229;&#xFF0C;&#x4F46;&#x662F;&#x5230;&#x4E86;XARMAIN&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9047;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x5F88;&#x9EBB;&#x70E6;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
-<p><img src="/post/how_to_solve_bonjor_service_on_windows_10_64bit/bonjor-servier-problem.jpg" alt="Bonjor&#x670D;&#x52A1;&#x65E0;&#x6CD5;&#x5F00;&#x542F;"></p>
-<p>GOOGLE&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x53D1;&#x73B0;&#x6709;&#x4EBA;&#x53CD;&#x5E94;&#x5728;WINDOWS 10 64&#x4F4D;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0B;&#x9762;&#xFF0C;BONJOUR&#x670D;&#x52A1;&#x4E0D;&#x88AB;&#x652F;&#x6301;&#xFF1F;WTF!&#x4EC0;&#x4E48;&#x9B3C;&#xFF0C;&#x8FD9;&#x90FD;&#x4EC0;&#x4E48;&#x5E74;&#x4EE3;&#x4E86;&#xFF0C;APPLE&#x8FDE;&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#x90FD;&#x641E;&#x4E0D;&#x5B9A;&#xFF0C;&#x90A3;&#x4E48;&#x8BA9;&#x4EBA;&#x4EEC;&#x5982;&#x4F55;&#x5728;WIN10+8G&#x5185;&#x5B58;&#x4E0B;&#x5B89;&#x88C5;XARMAIN&#xFF1F;&#x4E0D;&#x662F;&#x5F00;&#x73A9;&#x7B11;&#x5427;&#x3002;</p>
-<p>&#x53BB;<code>SERVICES.MSC</code>&#x91CC;&#xFF0C;&#x53D1;&#x73B0;&#x5E76;&#x6CA1;&#x6709;&#x770B;&#x5230;&#x719F;&#x6089;&#x7684;BONJOR&#x670D;&#x52A1;&#x9879;&#x76EE;&#xFF0C;&#x53D1;&#x73B0;&#x7F51;&#x4E0A;&#x6709;&#x4EBA;&#x8BF4;&#xFF0C;&#x901A;&#x8FC7;&#x5B89;&#x88C5;ITOOLS&#x7684;&#x5F55;&#x5C4F;&#x5927;&#x5E08;&#x529F;&#x80FD;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5B89;&#x88C5;<code>BONJOUR</code>&#x670D;&#x52A1;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x8981;&#x8BF4;&#x7684;&#x662F;&#xFF1A;&#x7136;&#x5E76;&#x5375;&#xFF01;&#xFF01;&#xFF01;&#x5F55;&#x5C4F;&#x5927;&#x5E08;&#x786E;&#x5B9E;&#x8BF4;&#x6211;&#x7CFB;&#x7EDF;&#x7F3A;&#x5C11;&#x5FC5;&#x5907;&#x7EC4;&#x4EF6;&#xFF0C;&#x4E5F;&#x4E0B;&#x8F7D;&#x5E76;&#x4E14;&#x5B89;&#x88C5;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x91CD;&#x542F;&#x4F1A;&#x540E;&#xFF0C;&#x4F9D;&#x7136;&#x6CA1;&#x6709;<code>BONJOUR&#x7684;</code>&#x5F71;&#x5B50;&#xFF0C;WTF!AGAIN!</p>
-<h2 id="&#x89E3;&#x51B3;&#x529E;&#x6CD5;"><a href="#&#x89E3;&#x51B3;&#x529E;&#x6CD5;" class="headerlink" title="&#x89E3;&#x51B3;&#x529E;&#x6CD5;"></a>&#x89E3;&#x51B3;&#x529E;&#x6CD5;</h2><p>&#x6DD8;&#x5B9D;&#x4E0A;&#x627E;&#x4E86;&#x4E2A;&#x4FEE;&#x7535;&#x8111;&#x7684;&#x5927;&#x795E;&#xFF0C;&#x8FDC;&#x7A0B;&#x6307;&#x5BFC;&#x6211;&#x641E;&#x5B9A;&#x4E86;&#x3002;&#x5378;&#x8F7D;&#x6389;&#x6240;&#x6709;apple&#x76F8;&#x5173;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x4E14;&#x4ECE;apple.com&#x91CD;&#x65B0;&#x4E0B;&#x8F7D;itunes&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x54C8;&#x54C8;&#xFF0C;&#x771F;&#x662F;&#x8D39;&#x5C3D;&#x5468;&#x6298;&#x3002;</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/post/how_to_comple_c_sharp_code_on_osx/" itemprop="url">
-                  如何在OSX上编译C#程序
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-11T02:23:01+08:00" content="2016-03-11">
-              2016-03-11
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/post/how_to_comple_c_sharp_code_on_osx/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="post/how_to_comple_c_sharp_code_on_osx/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>&#x559C;&#x6B22;&#x8FFD;&#x6C42;&#x5B8C;&#x7F8E;&#xFF0C;&#x662F;FOOLMAN&#x9AA8;&#x5B50;&#x91CC;&#x5014;&#x5F3A;</p>
-</blockquote>
-<p><a href="http://www.cnblogs.com/n-pei/p/4263148.html" target="_blank" rel="external">http://www.cnblogs.com/n-pei/p/4263148.html</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/post/use_hexo_on_github/" itemprop="url">
-                  如何在GitHub挂上HEXO博客
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-11T02:23:01+08:00" content="2016-03-11">
-              2016-03-11
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/post/use_hexo_on_github/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="post/use_hexo_on_github/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>&#x559C;&#x6B22;&#x8FFD;&#x6C42;&#x5B8C;&#x7F8E;&#xFF0C;&#x662F;FOOLMAN&#x9AA8;&#x5B50;&#x91CC;&#x5014;&#x5F3A;</p>
-</blockquote>
-<h2 id="&#x6709;&#x7528;&#x7684;&#x8D44;&#x6599;"><a href="#&#x6709;&#x7528;&#x7684;&#x8D44;&#x6599;" class="headerlink" title="&#x6709;&#x7528;&#x7684;&#x8D44;&#x6599;"></a>&#x6709;&#x7528;&#x7684;&#x8D44;&#x6599;</h2><p><a href="http://yanliu.org/2015/08/07/Hexo&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;/" target="_blank" rel="external">http://yanliu.org/2015/08/07/Hexo&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;/</a></p>
-<h2 id="&#x5728;GITHUB&#x4E0A;&#x6DFB;&#x52A0;SSH-Key"><a href="#&#x5728;GITHUB&#x4E0A;&#x6DFB;&#x52A0;SSH-Key" class="headerlink" title="&#x5728;GITHUB&#x4E0A;&#x6DFB;&#x52A0;SSH Key"></a>&#x5728;GITHUB&#x4E0A;&#x6DFB;&#x52A0;SSH Key</h2><p><a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/" target="_blank" rel="external">https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/</a></p>
-<p>&#x8FD9;&#x91CC;&#x6709;&#x4E2A;&#x5751;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x662F;&#x4E0D;&#x662F;&#x56E0;&#x4E3A;&#x7248;&#x672C;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x770B;&#x7F51;&#x4E0A;&#x5F88;&#x591A;&#x5730;&#x65B9;&#x8BF4;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x4F4D;&#x7F6E;&#x4E0D;&#x5BF9;&#xFF0C;&#x4F30;&#x8BA1;&#x662F;&#x56E0;&#x4E3A;GITHUB&#x6539;&#x7248;&#x7684;&#x539F;&#x56E0;&#x3002;</p>
-<h2 id="&#x63A8;&#x9001;&#x5230;GitHub&#x4E0A;"><a href="#&#x63A8;&#x9001;&#x5230;GitHub&#x4E0A;" class="headerlink" title="&#x63A8;&#x9001;&#x5230;GitHub&#x4E0A;"></a>&#x63A8;&#x9001;&#x5230;GitHub&#x4E0A;</h2><p><a href="http://daimarushi.com/2015/11/29/%E4%BD%BF%E7%94%A8Hexo%E5%9C%A8Github%E4%B8%8A%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">http://daimarushi.com/2015/11/29/%E4%BD%BF%E7%94%A8Hexo%E5%9C%A8Github%E4%B8%8A%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</a><br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">http://ibruce.info/2013/11/22/hexo-your-blog/</a></p>
-<h2 id="&#x4E3A;GitHub-Pages&#x7ED1;&#x5B9A;&#x72EC;&#x7ACB;&#x57DF;&#x540D;"><a href="#&#x4E3A;GitHub-Pages&#x7ED1;&#x5B9A;&#x72EC;&#x7ACB;&#x57DF;&#x540D;" class="headerlink" title="&#x4E3A;GitHub Pages&#x7ED1;&#x5B9A;&#x72EC;&#x7ACB;&#x57DF;&#x540D;"></a>&#x4E3A;GitHub Pages&#x7ED1;&#x5B9A;&#x72EC;&#x7ACB;&#x57DF;&#x540D;</h2><p><a href="http://iread.io/2015/09/hexo-guide-4/" target="_blank" rel="external">http://iread.io/2015/09/hexo-guide-4/</a></p>
-<h2 id="&#x6269;&#x5C55;&#x9605;&#x8BFB;"><a href="#&#x6269;&#x5C55;&#x9605;&#x8BFB;" class="headerlink" title="&#x6269;&#x5C55;&#x9605;&#x8BFB;"></a>&#x6269;&#x5C55;&#x9605;&#x8BFB;</h2><p>&#x5982;&#x4F55;&#x8FC1;&#x79FB;&#x539F;&#x535A;&#x5BA2;&#x7A0B;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x5230;HEXO</p>
-<p><a href="https://hexo.io/zh-cn/docs/migration.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/migration.html</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/post/the_tips_makes_markdown_writing_happier/" itemprop="url">
-                  让Markdown的书写更加顺畅的技巧
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-11T02:22:34+08:00" content="2016-03-11">
-              2016-03-11
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/post/the_tips_makes_markdown_writing_happier/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="post/the_tips_makes_markdown_writing_happier/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>&#x559C;&#x6B22;&#x952E;&#x76D8;&#x7684;&#x6572;&#x51FB;&#x58F0;&#xFF0C;&#x6BCF;&#x4E00;&#x4E0B;&#x90FD;&#x63B7;&#x5730;&#x6709;&#x58F0;&#xFF0C;&#x6B63;&#x4E2D;&#x4E86;&#x90A3;&#x53E5;&#x8BDD;&#xFF0C;&#x5FF5;&#x5FF5;&#x4E0D;&#x5FD8;&#xFF0C;&#x5FC5;&#x6709;&#x56DE;&#x54CD;&#x3002;</p>
-</blockquote>
-<h2 id="Sublime-Text-3&#x5B89;&#x88C5;"><a href="#Sublime-Text-3&#x5B89;&#x88C5;" class="headerlink" title="Sublime Text 3&#x5B89;&#x88C5;"></a>Sublime Text 3&#x5B89;&#x88C5;</h2><p>Sublime Text 3&#x6211;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x7EFF;&#x8272;&#x7248;&#x672C;&#xFF0C;&#x5DF2;&#x7ECF;&#x9ED8;&#x8BA4;&#x88AB;&#x7834;&#x89E3;&#x4E86;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x8F93;&#x5165;&#x5E8F;&#x5217;&#x53F7;&#x3002;&#x81F3;&#x4E8E;&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9;&#x7EFF;&#x8272;&#x7248;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x56E0;&#x4E3A;&#x643A;&#x5E26;&#x65B9;&#x4FBF;&#xFF0C;&#x6211;&#x81EA;&#x5DF1;&#x4F7F;&#x7528;&#x4E00;&#x5757;SSD&#x79FB;&#x52A8;&#x786C;&#x76D8;&#x6765;&#x540C;&#x6B65;&#x81EA;&#x5DF1;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x4F7F;&#x7528;FreeFileSync&#x6765;&#x505A;&#x5177;&#x4F53;&#x7684;&#x540C;&#x6B65;&#x5DE5;&#x4F5C;&#xFF0C;&#x575A;&#x6301;&#x4E86;&#x4E00;&#x5E74;&#x591A;&#x4E86;&#xFF0C;&#x6548;&#x679C;&#x8FD8;&#x4E0D;&#x9519;&#x3002;</p>
-<p>&#x7EFF;&#x8272;&#x7248;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#x5927;&#x5BB6;&#x81EA;&#x5DF1;GOOGLE&#x5C31;&#x597D;&#x3002;</p>
-<h2 id="&#x5B89;&#x88C5;MARKDOWN&#x652F;&#x6301;&#x63D2;&#x4EF6;"><a href="#&#x5B89;&#x88C5;MARKDOWN&#x652F;&#x6301;&#x63D2;&#x4EF6;" class="headerlink" title="&#x5B89;&#x88C5;MARKDOWN&#x652F;&#x6301;&#x63D2;&#x4EF6;"></a>&#x5B89;&#x88C5;MARKDOWN&#x652F;&#x6301;&#x63D2;&#x4EF6;</h2><p>&#x9ED8;&#x8BA4;Sublime Text&#x662F;&#x4E0D;&#x652F;&#x6301;Markdown&#x8BED;&#x6CD5;&#x9AD8;&#x4EAE;&#x548C;&#x9884;&#x89C8;&#x7684;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E07;&#x80FD;&#x7684;Sublime Text&#xFF0C;&#x8FD9;&#x70B9;&#x4E8B;&#x60C5;&#x4E00;&#x5B9A;&#x6709;&#x63D2;&#x4EF6;&#x80FD;&#x89E3;&#x51B3;&#x3002;</p>
-<p>Sublime Text 3 &#x5B89;&#x88C5;Package Control&#xFF0C;&#x633A;&#x4E0D;&#x80FD;&#x7406;&#x89E3;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x9ED8;&#x8BA4;&#x542B;&#x5728;app&#x91CC;<br>&#x5FEB;&#x6377;&#x952E;ctrl+`&#x6216;&#x8005; View &gt; Show Console &#x83DC;&#x5355;&#x6253;&#x5F00;&#x63A7;&#x5236;&#x53F0;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os;</span><br><span class="line">pf=<span class="string">&apos;Package Control.sublime-package&apos;</span>;</span><br><span class="line">ipp=sublime.installed_packages_path();</span><br><span class="line">urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));</span><br><span class="line">open(os.path.join(ipp,pf),<span class="string">&apos;wb&apos;</span>).write(urllib.request.urlopen(<span class="string">&apos;http://sublime.wbond.net/&apos;</span>+pf.replace(<span class="string">&apos; &apos;</span>,<span class="string">&apos;%20&apos;</span>)).read())</span><br></pre></td></tr></table></figure>
-<p>&#x4E0A;&#x9762;&#x8FD9;&#x51E0;&#x884C;&#x662F;&#x9700;&#x8981;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x91CC;&#x4E00;&#x884C;&#x4E00;&#x884C;&#x8F93;&#x5165;&#x7684;&#xFF0C;Sublime&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x8FC7;&#x4E86;&#x4E00;&#x4E2A;&#x4E00;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x65B9;&#x5F0F;&#xFF0C;<a href="https://packagecontrol.io/installation" target="_blank" rel="external">&#x5730;&#x5740;&#x89C1;&#x8FD9;&#x91CC;</a>&#xFF0C;&#x91CC;&#x9762;&#x5BF9;&#x7248;&#x672C;3&#x548C;2&#x6709;&#x4E0D;&#x540C;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x518D;&#x6B21;&#x4E0D;&#x591A;&#x8BF4;&#x4E86;&#x3002;&#x56E0;&#x4E3A;&#x5B98;&#x65B9;&#x5EFA;&#x8BAE;&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x53EF;&#x80FD;&#x4F1A;&#x968F;&#x65F6;&#x66F4;&#x65B0;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x5EFA;&#x8BAE;&#x5176;&#x4ED6;&#x7F51;&#x7AD9;&#x8F6C;&#x8F7D;&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x3002;</p>
-<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x81EA;&#x540E;&#xFF0C;&#x4F1A;&#x770B;&#x5230;&#x4E0B;&#x9762;&#x7684;&#x56FE;</p>
-<p><img src="/post/the_tips_makes_markdown_writing_happier/QQ&#x622A;&#x56FE;20160331224216.jpg" alt="logo"></p>
-<p>&#x5982;&#x679C;&#x7F51;&#x7EDC;&#x6761;&#x4EF6;&#x4E0D;&#x597D;&#xFF0C;&#x5B89;&#x88C5;&#x5931;&#x8D25;&#x7684;&#x8BDD;&#xFF0C;&#x53EA;&#x80FD;&#x91C7;&#x53D6;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x5305;&#x7684;&#x65B9;&#x5F0F;</p>
-<ol>
-<li>&#x70B9;&#x51FB; <code>Preferences</code>&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9; <code>Browse Packages&#x2026;</code>&#x3002;</li>
-<li>&#x8FDB;&#x5165;&#x4E0A;&#x4E00;&#x7EA7;&#x76EE;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x5165; <code>Installed Packages</code> &#x76EE;&#x5F55;&#x3002;</li>
-<li>&#x5728;&#x8FD9;&#x91CC;&#x4E0B;&#x8F7D; <a href="https://packagecontrol.io/Package%20Control.sublime-package" target="_blank" rel="external">Package Control.sublime-package</a>&#xFF0C;&#x7136;&#x540E;&#x590D;&#x5236;&#x5230;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x3002;</li>
-<li>&#x91CD;&#x542F; Sublime Text&#x3002;</li>
-</ol>
-<p>&#x5B89;&#x597D;&#x91CD;&#x542F;&#x540E;&#xFF0C;&#x7528;&#x4E07;&#x80FD;&#x5FEB;&#x6377;&#x952E;Ctrl+Shift+P&#xFF0C;&#x8C03;&#x51FA;&#x83DC;&#x5355;&#xFF0C;&#x8F93;&#x5165;<code>pcip</code>&#xFF0C;</p>
-<p><img src="/post/the_tips_makes_markdown_writing_happier/QQ&#x622A;&#x56FE;20160331095029.jpg" alt="logo"></p>
-<p>&#x9009;&#x62E9;<code>Package Control: Install Package</code>&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x754C;&#x9762;</p>
-<p><img src="/post/the_tips_makes_markdown_writing_happier/intpu-omnimark.jpg" alt="logo"></p>
-<p>&#x5728;&#x8FD9;&#x91CC;&#x8F93;&#x5165;omnimark&#x5C31;&#x80FD;&#x770B;&#x5230;omnimarkdown&#x63D2;&#x4EF6;&#xFF0C;&#x56DE;&#x8F66;&#x5B89;&#x88C5;&#xFF0C;&#x91CD;&#x542F;Sublime&#x5373;&#x53EF;&#x3002;</p>
-<p>OmniMarkdown&#x63D2;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x5B9E;&#x65F6;&#x9884;&#x89C8;&#x8F93;&#x5165;&#x7684;MARKDOWN&#x6587;&#x6863;&#x6548;&#x679C;&#x3002;</p>
-<p>&#x5FEB;&#x6377;&#x952E;&#xFF08;MAC&#xFF09;<br>Command + Option + O: &#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x9884;&#x89C8;<br>Command + Option + X: &#x5BFC;&#x51FA;HTML<br>&#x5FEB;&#x6377;&#x952E;&#xFF08;PC&#xFF09;<br>Ctrl + Alt + O: &#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x9884;&#x89C8;<br>Ctrl + Alt + X: &#x5BFC;&#x51FA;HTML</p>
-<h2 id="&#x5982;&#x4F55;&#x8212;&#x9002;&#x7684;&#x63D2;&#x5165;&#x56FE;&#x7247;"><a href="#&#x5982;&#x4F55;&#x8212;&#x9002;&#x7684;&#x63D2;&#x5165;&#x56FE;&#x7247;" class="headerlink" title="&#x5982;&#x4F55;&#x8212;&#x9002;&#x7684;&#x63D2;&#x5165;&#x56FE;&#x7247;"></a>&#x5982;&#x4F55;&#x8212;&#x9002;&#x7684;&#x63D2;&#x5165;&#x56FE;&#x7247;</h2><p>&#x5982;&#x679C;&#x4F60;&#x7528;&#x4E86;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#xFF0C;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x7528;<code>![]()</code>&#x7684;&#x65B9;&#x5F0F;&#x63D2;&#x5165;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x548C;&#x751F;&#x6210;&#x4E4B;&#x540E;&#x7684;&#x7F51;&#x9875;&#x603B;&#x662F;&#x5F88;&#x591A;&#x522B;&#x626D;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#x63A8;&#x8350;&#x4E00;&#x4E2A;<code>hexo-asset-image</code>&#x5E93;</p>
-<h3 id="hexo-asset-imagean&#x7684;&#x5B89;&#x88C5;"><a href="#hexo-asset-imagean&#x7684;&#x5B89;&#x88C5;" class="headerlink" title="hexo-asset-imagean&#x7684;&#x5B89;&#x88C5;"></a>hexo-asset-imagean&#x7684;&#x5B89;&#x88C5;</h3><p>&#x9996;&#x5148;&#x786E;&#x8BA4; _config.yml &#x4E2D;&#x6709; <code>post_asset_folder:true</code> &#x3002;</p>
-<p>&#x5728; hexo &#x76EE;&#x5F55;&#xFF0C;&#x6267;&#x884C;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-<h3 id="hexo-asset-imagean&#x7684;&#x4F7F;&#x7528;"><a href="#hexo-asset-imagean&#x7684;&#x4F7F;&#x7528;" class="headerlink" title="hexo-asset-imagean&#x7684;&#x4F7F;&#x7528;"></a>hexo-asset-imagean&#x7684;&#x4F7F;&#x7528;</h3><p>&#x5047;&#x8BBE;&#x5728;</p>
-<p>MacGesture2-Publish<br>&#x251C;&#x2500;&#x2500; apppicker.jpg<br>&#x251C;&#x2500;&#x2500; logo.jpg<br>&#x2514;&#x2500;&#x2500; rules.jpg<br>MacGesture2-Publish.md<br>&#x8FD9;&#x6837;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF08;&#x76EE;&#x5F55;&#x540D;&#x548C;&#x6587;&#x7AE0;&#x540D;&#x4E00;&#x81F4;&#xFF09;&#xFF0C;&#x53EA;&#x8981;&#x4F7F;&#x7528; <code>![logo](logo.jpg)</code> &#x5C31;&#x53EF;&#x4EE5;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x3002;&#x751F;&#x6210;&#x7684;&#x7ED3;&#x6784;&#x4E3A;</p>
-<p>public/2015/10/18/MacGesture2-Publish<br>&#x251C;&#x2500;&#x2500; apppicker.jpg<br>&#x251C;&#x2500;&#x2500; index.html<br>&#x251C;&#x2500;&#x2500; logo.jpg<br>&#x2514;&#x2500;&#x2500; rules.jpg<br>&#x540C;&#x65F6;&#xFF0C;&#x751F;&#x6210;&#x7684; html &#x662F;</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2015/10/18/MacGesture2-Publish/logo.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;logo&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>&#x800C;&#x4E0D;&#x662F;&#x611A;&#x8822;&#x7684;</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;MacGesture2-Publish/logo.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;logo&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x6539;&#x52A8;&#xFF0C;&#x56FE;&#x7247;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4FDD;&#x5B58;&#x5728;&#x548C;MD&#x6587;&#x4EF6;&#x540C;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;</p>
-<p><img src="/post/the_tips_makes_markdown_writing_happier/pics-postion.jpg" alt="&#x56FE;&#x7247;&#x53EF;&#x4EE5;&#x548C;MD&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;"></p>
-<p>&#x5E76;&#x4E14;&#xFF0C;&#x5728;MD&#x7F16;&#x8F91;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F9D;&#x7136;&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#x7684;&#x683C;&#x5F0F;&#x6765;&#x63D2;&#x5165;&#x56FE;&#x7247;</p>
-<p><img src="/post/the_tips_makes_markdown_writing_happier/same-image-reference-style.jpg" alt="&#x56FE;&#x7247;&#x5F15;&#x7528;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x540C;&#x6837;&#x7684;&#x683C;&#x5F0F;"></p>
-<p>&#x4E0D;&#x8FC7;&#x8FD9;&#x4E2A;&#x5E93;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x662F;&#x5728;<code>http://localhost:4000</code>&#x9884;&#x89C8;&#x7684;&#x65F6;&#x5019;&#x662F;&#x6B63;&#x5E38;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x4F7F;&#x7528;Sublime&#x914D;&#x5408;OmniMarkdown&#x63D2;&#x4EF6;&#x7684;&#x5B9E;&#x65F6;&#x9884;&#x89C8;&#xFF0C;&#x56FE;&#x7247;&#x5C31;&#x4E0D;&#x6B63;&#x5E38;&#x4E86;&#x3002;&#x6CA1;&#x529E;&#x6CD5;&#xFF0C;&#x6682;&#x65F6;&#x53EA;&#x80FD;&#x8FD9;&#x6837;&#x4E86;&#x3002;</p>
-<h2 id="&#x5176;&#x4ED6;&#x5DE5;&#x5177;"><a href="#&#x5176;&#x4ED6;&#x5DE5;&#x5177;" class="headerlink" title="&#x5176;&#x4ED6;&#x5DE5;&#x5177;"></a>&#x5176;&#x4ED6;&#x5DE5;&#x5177;</h2><h3 id="&#x79BB;&#x7EBF;&#x4E66;&#x5199;Markdown&#x6587;&#x6863;"><a href="#&#x79BB;&#x7EBF;&#x4E66;&#x5199;Markdown&#x6587;&#x6863;" class="headerlink" title="&#x79BB;&#x7EBF;&#x4E66;&#x5199;Markdown&#x6587;&#x6863;"></a>&#x79BB;&#x7EBF;&#x4E66;&#x5199;Markdown&#x6587;&#x6863;</h3><p>Cmd Markdown &#x8FD8;&#x4E0D;&#x9519;&#x7684;&#x4E00;&#x4E2A;Windows&#x5E73;&#x53F0;&#x4E0B;&#x7684;Mark Down &#x8BED;&#x8A00;&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x652F;&#x6301;&#x540C;&#x6B65;&#x6587;&#x7AE0;&#x5230;GITHUB&#x6216;&#x8005;CODING&#x7B49;&#x6258;&#x7BA1;&#x7A7A;&#x95F4;</p>
-<h3 id="&#x5728;&#x7EBF;Markdown&#x5DE5;&#x5177;"><a href="#&#x5728;&#x7EBF;Markdown&#x5DE5;&#x5177;" class="headerlink" title="&#x5728;&#x7EBF;Markdown&#x5DE5;&#x5177;"></a>&#x5728;&#x7EBF;Markdown&#x5DE5;&#x5177;</h3><ol>
-<li><a href="https://stackedit.io" target="_blank" rel="external">https://stackedit.io</a></li>
-<li><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">https://www.zybuluo.com/mdeditor</a> &#x6BD4;&#x8F83;&#x63A8;&#x8350;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x5FD8;&#x8BB0;&#x8BED;&#x6CD5;&#x4E86;&#xFF0C;&#x6253;&#x5F00;&#x8FD9;&#x4E2A;&#x7F51;&#x9875;&#x5C31;&#x80FD;&#x5F88;&#x76F4;&#x89C2;&#x7684;&#x53C2;&#x8003;&#x4E00;&#x4E0B;&#x3002;</li>
-</ol>
-<h3 id="&#x5728;iTerm&#x91CC;&#x4F7F;&#x7528;sublime"><a href="#&#x5728;iTerm&#x91CC;&#x4F7F;&#x7528;sublime" class="headerlink" title="&#x5728;iTerm&#x91CC;&#x4F7F;&#x7528;sublime"></a>&#x5728;iTerm&#x91CC;&#x4F7F;&#x7528;sublime</h3><p>&#x4E00;&#x53E5;&#x8BDD;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> subl=<span class="string">&apos;open -a &quot;Sublime Text&quot;&apos;</span></span><br></pre></td></tr></table></figure>
-<p>&#x8FD9;&#x6837;&#xFF0C;&#x5728;iTerm&#x4E2D;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;subl&#xFF0C;&#x6109;&#x5FEB;&#x7684;&#x8C03;&#x7528;sublime&#x6765;&#x8FDB;&#x884C;&#x7F16;&#x8F91;&#x6587;&#x4EF6;&#x4E86;&#x3002;</p>
-<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;" class="headerlink" title="&#x53C2;&#x8003;&#x8D44;&#x6599;"></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h2><ol>
-<li><a href="http://blog.sunnyxx.com/2014/03/16/sublime_text_markdown/" target="_blank" rel="external">http://blog.sunnyxx.com/2014/03/16/sublime_text_markdown/</a></li>
-<li><a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="external">https://github.com/CodeFalling/hexo-asset-image</a></li>
-</ol>
-
           
         
       
@@ -1607,25 +1540,25 @@ prt
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">52</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">56</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
             <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">categories</span>
-              
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
             </div>
           
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">118</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-count">123</span>
+                <span class="site-state-item-name">标签</span>
               </a>
             </div>
           
@@ -1744,11 +1677,11 @@ prt
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
