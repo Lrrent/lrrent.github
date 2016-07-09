@@ -266,6 +266,578 @@
             
               
                 
+                <a class="post-title-link" href="/post/the_encryption_algorithms_and_implementation/" itemprop="url">
+                  网络通信加密算法介绍及C#实现
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-10T21:07:24+08:00" content="2016-03-10">
+              2016-03-10
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/the_encryption_algorithms_and_implementation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/the_encryption_algorithms_and_implementation/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="&#x672C;&#x6587;&#x4E3B;&#x8981;&#x5728;&#x8BF4;&#x4EC0;&#x4E48;&#xFF1F;"><a href="#&#x672C;&#x6587;&#x4E3B;&#x8981;&#x5728;&#x8BF4;&#x4EC0;&#x4E48;&#xFF1F;" class="headerlink" title="&#x672C;&#x6587;&#x4E3B;&#x8981;&#x5728;&#x8BF4;&#x4EC0;&#x4E48;&#xFF1F;"></a>&#x672C;&#x6587;&#x4E3B;&#x8981;&#x5728;&#x8BF4;&#x4EC0;&#x4E48;&#xFF1F;</h1><p>&#x6700;&#x8FD1;&#x5728;&#x505A;Winform&#x7A0B;&#x5E8F;&#x548C;PHP&#x7684;&#x4EA4;&#x4E92;&#xFF0C;&#x4E2D;&#x95F4;&#x63A5;&#x89E6;&#x4E86;&#x4E0D;&#x5C11;&#x52A0;&#x5BC6;&#x89E3;&#x5BC6;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x7B80;&#x5355;&#x505A;&#x4E2A;&#x603B;&#x7ED3;&#x3002;</p>
+<p>#&#x51E0;&#x4E2A;&#x6982;&#x5FF5;</p>
+<h2 id="&#x6563;&#x5217;&#x52A0;&#x5BC6;&#xFF0C;"><a href="#&#x6563;&#x5217;&#x52A0;&#x5BC6;&#xFF0C;" class="headerlink" title="&#x6563;&#x5217;&#x52A0;&#x5BC6;&#xFF0C;"></a>&#x6563;&#x5217;&#x52A0;&#x5BC6;&#xFF0C;</h2><h2 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h2><h2 id="DES"><a href="#DES" class="headerlink" title="DES"></a>DES</h2><p>&#x6570;&#x636E;&#x52A0;&#x5BC6;&#x6807;&#x51C6;&#xFF08;DES&#xFF09;&#x662F;&#x7F8E;&#x56FD;&#x7684;&#x4E00;&#x79CD;&#x7531;&#x6765;&#x5DF2;&#x4E45;&#x7684;&#x52A0;&#x5BC6;&#x6807;&#x51C6;&#xFF0C;&#x5B83;&#x4F7F;&#x7528;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;&#x52A0;&#x5BC6;&#x6CD5;&#xFF0C;&#x5E76;&#x4E8E;1981&#x5E74;&#x88AB;ANSI&#x7EC4;&#x7EC7;&#x89C4;&#x8303;&#x4E3A;ANSI X.3.92&#x3002;DES&#x4F7F;&#x7528;56&#x4F4D;&#x5BC6;&#x94A5;&#x548C;&#x5BC6;&#x7801;&#x5757;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x5728;&#x5BC6;&#x7801;&#x5757;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x6587;&#x672C;&#x88AB;&#x5206;&#x6210;64&#x4F4D;&#x5927;&#x5C0F;&#x7684;&#x6587;&#x672C;&#x5757;&#x7136;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x3002;</p>
+<h2 id="3DES"><a href="#3DES" class="headerlink" title="3DES"></a>3DES</h2><p>3DES&#xFF08;&#x6216;&#x79F0;&#x4E3A;Triple DES&#xFF09;&#x662F;&#x4E09;&#x91CD;&#x6570;&#x636E;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#xFF08;TDEA&#xFF0C;Triple Data Encryption Algorithm&#xFF09;&#x5757;&#x5BC6;&#x7801;&#x7684;&#x901A;&#x79F0;&#x3002;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x5BF9;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x5757;&#x5E94;&#x7528;&#x4E09;&#x6B21;DES&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x3002;&#x7531;&#x4E8E;&#x8BA1;&#x7B97;&#x673A;&#x8FD0;&#x7B97;&#x80FD;&#x529B;&#x7684;&#x589E;&#x5F3A;&#xFF0C;&#x539F;&#x7248;DES&#x5BC6;&#x7801;&#x7684;&#x5BC6;&#x94A5;&#x957F;&#x5EA6;&#x53D8;&#x5F97;&#x5BB9;&#x6613;&#x88AB;&#x66B4;&#x529B;&#x7834;&#x89E3;&#xFF1B;3DES&#x5373;&#x662F;&#x8BBE;&#x8BA1;&#x7528;&#x6765;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x76F8;&#x5BF9;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5373;&#x901A;&#x8FC7;&#x589E;&#x52A0;DES&#x7684;&#x5BC6;&#x94A5;&#x957F;&#x5EA6;&#x6765;&#x907F;&#x514D;&#x7C7B;&#x4F3C;&#x7684;&#x653B;&#x51FB;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8BBE;&#x8BA1;&#x4E00;&#x79CD;&#x5168;&#x65B0;&#x7684;&#x5757;&#x5BC6;&#x7801;&#x7B97;&#x6CD5;&#x3002;</p>
+<p>3DES&#x662F;DES&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x7684;&#x4E00;&#x79CD;&#x6A21;&#x5F0F;&#xFF0C;&#x5B83;&#x4F7F;&#x7528;3&#x6761;56&#x4F4D;&#x7684;&#x5BC6;&#x94A5;&#x5BF9; 3DES 3DES &#x6570;&#x636E;&#x8FDB;&#x884C;&#x4E09;&#x6B21;&#x52A0;&#x5BC6;&#x3002;&#x6BD4;&#x8D77;&#x524D;&#x6587;&#x63D0;&#x5230;&#x7684;DES&#xFF0C;3DES&#x66F4;&#x4E3A;&#x5B89;&#x5168;&#x3002;</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/post/before_everything_started/" itemprop="url">
+                  在一切开始之前
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-10T20:57:34+08:00" content="2016-03-10">
+              2016-03-10
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/before_everything_started/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/before_everything_started/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>FOOLMAN&#xFF0C;&#x201C;&#x751F;&#x6D3B;&#x5728;&#x7AE5;&#x8BDD;&#x4E16;&#x754C;&#x4E2D;&#x7684;&#x7406;&#x60F3;&#x4E3B;&#x4E49;&#x8005;&#x201D;&#x2013;&#x5728;&#x4E00;&#x5207;&#x5F00;&#x59CB;&#x4E4B;&#x524D;</p>
+</blockquote>
+<p>&#x4E4B;&#x524D;&#x81EA;&#x5DF1;&#x7684;WP&#x535A;&#x5BA2;&#x56E0;&#x4E3A;&#x540E;&#x53F0;&#x603B;&#x662F;&#x65E0;&#x7F18;&#x65E0;&#x6545;&#x6253;&#x4E0D;&#x5F00;&#xFF0C;&#x88C5;&#x4E86;DISABLE GOOGLE FONT&#x63D2;&#x4EF6;&#x4E5F;&#x662F;&#x6CA1;&#x6709;&#x6539;&#x5584;&#xFF0C;&#x7528;CHROME&#x7684;DEVELOPER TOOLS&#x4E5F;&#x6CA1;&#x53D1;&#x73B0;&#x4EC0;&#x4E48;&#x4E0D;&#x59A5;&#xFF0C;&#x867D;&#x7136;&#x6709;&#x5904;&#x5973;[&#x5EA7;]&#x60C5;&#x8282;&#x7684;&#x6211;&#x5E94;&#x8BE5;&#x4E00;&#x7A76;&#x5230;&#x5E95;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x662F;&#x89C9;&#x5F97;KEEP THINGS SIMPLE&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#xFF0C;&#x9677;&#x5728;&#x590D;&#x6742;&#x7684;&#x4E8B;&#x60C5;&#x91CC;&#x9762;&#xFF0C;&#x81EA;&#x5DF1;&#x4E5F;&#x53D8;&#x5F97;&#x590D;&#x6742;&#x4E86;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x60F3;&#x5230;&#x4E86;&#x201C;&#x7EAF;&#x9759;&#x6001;&#x535A;&#x5BA2;&#x201D;&#xFF0C;&#x52A0;&#x4E0A;&#x81EA;&#x5DF1;&#x7684;&#x963F;&#x91CC;&#x4E91;&#x901F;&#x5EA6;&#x8FD8;&#x4E0D;&#x9519;&#xFF0C;&#x5C31;&#x5F00;&#x59CB;&#x641E;&#x4E86;&#x3002;</p>
+<p>&#x5148;&#x8BF4;&#x8FD9;&#x4E2A;HEXO&#xFF0C;&#x5176;&#x5B9E;&#x5E76;&#x4E0D;&#x662F;&#x552F;&#x4E00;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x53EA;&#x662F;&#x6BD4;&#x8F83;&#x6D41;&#x884C;&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x9009;&#x62E9;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x642D;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x9759;&#x6001;&#x535A;&#x5BA2;&#xFF0C;&#x9759;&#x6001;&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x7684;&#xFF1F;&#x901F;&#x5EA6;&#x98DE;&#x5FEB;&#xFF01;&#x8FD8;&#x6709;&#x5462;&#xFF1F;&#x8FD9;&#x4E2A;&#x7406;&#x7531;&#x8FD8;&#x4E0D;&#x591F;&#x4E48;&#xFF1F;</p>
+<p>&#x5F00;&#x59CB;&#x6B65;&#x9AA4;&#xFF0C;&#x8BF7;&#x89C1;<a href="">&#x8FD9;&#x91CC;</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/post/from_wordpress_to_hexo/" itemprop="url">
+                  从WordPress迁移到HEXO
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-10T19:56:40+08:00" content="2016-03-10">
+              2016-03-10
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/from_wordpress_to_hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/from_wordpress_to_hexo/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>FOOLMAN&#x559C;&#x6B22;&#x7B80;&#x5355;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x867D;&#x7136;&#x4E3A;&#x4E86;&#x8FBE;&#x5230;&#x7B80;&#x5355;&#x76EE;&#x6807;&#xFF0C;&#x4ED8;&#x51FA;&#x7684;&#x4EE3;&#x4EF7;&#x5374;&#x662F;&#x590D;&#x6742;&#x65E0;&#x6BD4;</p>
+</blockquote>
+<h2 id="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"><a href="#&#x6587;&#x7AE0;&#x66F4;&#x65B0;" class="headerlink" title="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"></a>&#x6587;&#x7AE0;&#x66F4;&#x65B0;</h2><p>20160310-&#x521D;&#x6B21;&#x6210;&#x6587;<br>20160704-&#x5DF2;&#x7ECF;&#x8FC7;&#x53BB;&#x4E86;4&#x4E2A;&#x6708;&#xFF0C;&#x66F4;&#x65B0;&#x4E86;MAC&#x4E0B;&#x7684;HEXO&#x5B89;&#x88C5;&#x65B9;&#x6CD5;</p>
+<p>WordPress&#x786E;&#x5B9E;&#x662F;&#x4E2A;&#x4F18;&#x79C0;&#x7684;&#x535A;&#x5BA2;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F46;&#x662F;&#x5374;&#x8D8A;&#x6765;&#x8D8A;&#x81C3;&#x80BF;&#xFF0C;&#x5E73;&#x5FC3;&#x800C;&#x8BBA;&#xFF0C;&#x5982;&#x679C;&#x8EAB;&#x5728;&#x5899;&#x5916;&#xFF0C;&#x80AF;&#x5B9A;&#x4F1A;&#x4E00;&#x76F4;&#x7528;&#x4E0B;&#x53BB;&#xFF0C;&#x8C01;&#x60F3;&#x5929;&#x5929;&#x6CA1;&#x4E8B;&#x597D;&#x597D;&#x65E5;&#x5B50;&#x4E0D;&#x8FC7;&#x778E;&#x6298;&#x817E;&#x5462;&#x3002;&#x5728;&#x4E0D;&#x77E5;&#x9053;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x603B;&#x770B;&#x5230;&#x7F51;&#x4E0A;&#x6709;&#x4E00;&#x4E9B;&#x535A;&#x5BA2;&#x4E0B;&#x9762;&#x5199;&#x7740;&#x4E00;&#x53E5;&#x8BDD;&#x201C;&#x7531;HEXO&#x5F3A;&#x529B;&#x9A71;&#x52A8;&#x201D;&#x3002;&#x5FC3;&#x60F3;&#x8FD9;&#x662F;&#x4EC0;&#x4E48;&#x9B3C;&#xFF1F;&#x4E0D;&#x8FC7;&#x5C31;&#x5728;&#x4E4B;&#x524D;WordPress&#x518D;&#x6B21;&#x8FDB;&#x4E0D;&#x53BB;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x8FD8;&#x662F;&#x51B3;&#x5B9A;&#x6362;&#x4E2A;&#x535A;&#x5BA2;&#x7CFB;&#x7EDF;&#x5427;&#xFF0C;&#x5927;&#x6982;&#x77E5;&#x9053;HEXO&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x7EAF;&#x9759;&#x6001;&#x535A;&#x5BA2;&#xFF0C;&#x4E00;&#x756A;&#x4E86;&#x89E3;&#x4E4B;&#x540E;&#xFF0C;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;&#x7B80;&#x7EA6;&#x5374;&#x4E0D;&#x7B80;&#x5355;&#x3002;</p>
+<p>&#x4ECA;&#x5929;&#x5728;&#x4E0A;&#x73ED;&#x7684;&#x8DEF;&#x4E0A;&#x6211;&#x8FD8;&#x5728;&#x60F3;&#xFF0C;&#x4E5F;&#x8BB8;&#x8FC7;&#x4E0D;&#x4E86;&#x591A;&#x4E45;&#xFF0C;HEXO&#x5C31;&#x4F1A;&#x53D8;&#x5F97;&#x81C3;&#x80BF;&#xFF0C;&#x4E5F;&#x8BB8;&#x5C31;&#x6709;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#x7684;&#x535A;&#x5BA2;&#x6846;&#x67B6;&#x51FA;&#x73B0;&#xFF0C;&#x4E0D;&#x8FC7;&#x7BA1;&#x4ED6;&#x5462;&#xFF0C;&#x6298;&#x817E;&#x4E00;&#x4E0B;&#x6CA1;&#x574F;&#x5904;&#x3002;</p>
+<blockquote>
+<p>&#x6211;&#x559C;&#x6B22;&#x5199;&#x6D41;&#x6C34;&#x8D26;&#x4F3C;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x89C9;&#x5F97;&#x53EA;&#x6709;&#x81EA;&#x5DF1;&#x6D88;&#x5316;&#x4E86;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x5199;&#x51FA;&#x6765;&#x7684;&#x5FC3;&#x5F97;&#xFF0C;&#x624D;&#x80FD;&#x662F;&#x7CBE;&#x534E;&#xFF0C;&#x624D;&#x503C;&#x5F97;&#x8BB0;&#x5F55;&#x3002;</p>
+</blockquote>
+<p>&#x53EF;&#x80FD;&#x81EA;&#x5DF1;&#x5199;&#x4F5C;&#x4E60;&#x60EF;&#x4E0D;&#x597D;&#xFF0C;&#x7ECF;&#x5E38;&#x5077;&#x61D2;&#xFF0C;&#x5F88;&#x591A;&#x4E1C;&#x897F;&#x5C31;&#x7B97;&#x8BB0;&#x4E0B;&#x6765;&#x4E86;&#xFF0C;&#x4E5F;&#x662F;&#x968F;&#x624B;&#x6254;&#x5728;&#x5370;&#x8C61;&#x7B14;&#x8BB0;&#x4E2D;&#xFF0C;&#x61D2;&#x5F97;&#x6574;&#x7406;&#x4E86;&#x3002;&#x4E0D;&#x8FC7;&#x65E2;&#x7136;&#x6709;&#x4E86;&#x8FD9;&#x4E2A;&#x5951;&#x673A;&#xFF0C;&#x53EF;&#x4EE5;&#x9002;&#x5F53;&#x6574;&#x7406;&#x4E00;&#x4E0B;&#x4E86;&#x3002;</p>
+<h2 id="&#x672C;&#x6587;&#x8BB2;&#x7684;&#x662F;&#x4EC0;&#x4E48;"><a href="#&#x672C;&#x6587;&#x8BB2;&#x7684;&#x662F;&#x4EC0;&#x4E48;" class="headerlink" title="&#x672C;&#x6587;&#x8BB2;&#x7684;&#x662F;&#x4EC0;&#x4E48;"></a>&#x672C;&#x6587;&#x8BB2;&#x7684;&#x662F;&#x4EC0;&#x4E48;</h2><p>&#x4E3B;&#x8981;&#x662F;WINDOWS&#x7528;&#x6237;&#x5982;&#x4F55;&#x5728;&#x672C;&#x5730;&#x4E0A;&#x8C03;&#x8BD5;&#xFF0C;&#x5E76;&#x4E14;&#x4E0A;&#x4F20;&#x5230;GITHUB&#x514D;&#x8D39;&#x7A7A;&#x95F4;&#xFF0C;&#x672C;&#x6765;&#x6211;&#x7684;&#x76EE;&#x6807;&#x662F;&#x4E0A;&#x4F20;&#x5230;&#x963F;&#x91CC;&#x4E91;&#x7684;&#xFF0C;&#x6298;&#x817E;&#x4E86;&#x4E24;&#x5929;&#x4E86;&#xFF0C;&#x53D1;&#x73B0;&#x8981;&#x603B;&#x7ED3;&#x7684;&#x4E1C;&#x897F;&#x592A;&#x591A;&#x4E86;&#xFF0C;&#x518D;&#x4E0D;&#x53CA;&#x65F6;&#x5199;&#x6210;&#x5E16;&#x5B50;&#xFF0C;&#x5C31;&#x8981;&#x5FCD;&#x4E0D;&#x4E86;&#x4E86;&#xFF0C;&#x4E0D;&#x662F;&#x6211;&#x5FCD;&#x4E0D;&#x4E86;&#xFF0C;&#x800C;&#x662F;&#x5370;&#x8C61;&#x7B14;&#x8BB0;&#x5FCD;&#x4E0D;&#x4E86;&#x6211;&#x4E86;&#xFF08;&#x6761;&#x76EE;&#x592A;&#x591A;&#x3001;&#x592A;&#x4E71;&#xFF09;&#x3002;</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/post/from_wordpress_to_hexo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/post/use_awesome_to_tile_all_windows_on_windows/" itemprop="url">
+                  Windows下的awesome让所有窗口平铺沾满桌面的工具bug.n
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-14T11:11:21+08:00" content="2016-01-14">
+              2016-01-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/use_awesome_to_tile_all_windows_on_windows/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/use_awesome_to_tile_all_windows_on_windows/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="&#x5E73;&#x94FA;&#x5F0F;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;"><a href="#&#x5E73;&#x94FA;&#x5F0F;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;" class="headerlink" title="&#x5E73;&#x94FA;&#x5F0F;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;"></a>&#x5E73;&#x94FA;&#x5F0F;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;</h2><blockquote>
+<p>&#x603B;&#x6709;&#x4E00;&#x4E9B;&#x4E1C;&#x897F;&#x662F;&#x4F60;&#x81EA;&#x5DF1;&#x4E0D;&#x77E5;&#x9053;&#x662F;&#x5426;&#x9700;&#x8981;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x770B;&#x5230;&#x7684;&#x90A3;&#x4E00;&#x5239;&#x90A3;&#xFF0C;&#x5C31;&#x89C9;&#x5F97;&#x76F8;&#x89C1;&#x6068;&#x665A;&#x7684;&#x3002;</p>
+</blockquote>
+<p>&#x56E0;&#x4E3A;&#x66FE;&#x7ECF;&#x5728;&#x77E5;&#x4E4E;&#x4E0A;&#xFF0C;&#x770B;&#x5230;&#x73A9;&#x591A;&#x5C4F;&#x7684;&#x4EBA;&#x4ECB;&#x7ECD;&#x8FC7;awesome&#xFF0C;&#x5C31;&#x4E00;&#x76F4;&#x5BFB;&#x627E;windows&#x4E0B;&#x80FD;&#x7528;&#x7684;&#x7C7B;&#x4F3C;&#x8F6F;&#x4EF6;&#xFF0C;&#x7ED3;&#x679C;&#x627E;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x540D;&#x53EB;bug.n&#x7684;&#x5C0F;&#x8F6F;&#x4EF6;&#xFF08;&#x540D;&#x5B57;&#x662F;&#x4E0D;&#x662F;&#x5F88;&#x62D7;&#x53E3;&#xFF1F;&#xFF09;&#x3002;</p>
+<p>&#x8F6F;&#x4EF6;&#x5728;GITHUB&#x4E0A;&#xFF0C;&#x8BE6;&#x89C1;<a href="https://github.com/fuhsjr00/bug.n" target="_blank" rel="external">&#x8FD9;&#x91CC;</a></p>
+<p>&#x5148;&#x770B;&#x4E00;&#x4E0B;&#x6211;&#x81EA;&#x5DF1;&#x5F00;&#x542F;bug.n&#x540E;&#x684C;&#x9762;&#x7684;&#x7A97;&#x53E3;&#x5E03;&#x5C40;&#xFF1A;</p>
+<p><img src="http://7xrpbc.com1.z0.glb.clouddn.com/img_569711fb30fc5.png" alt=""></p>
+<p>&#x503C;&#x5F97;&#x4E00;&#x63D0;&#x7684;&#x662F;&#xFF0C;&#x7A97;&#x53E3;&#x9876;&#x7AEF;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;banner&#xFF0C;&#x663E;&#x793A;&#x7684;&#x4FE1;&#x606F;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li>&#x865A;&#x62DF;&#x684C;&#x9762;&#x5217;&#x8868;</li>
+<li>&#x5F53;&#x524D;&#x865A;&#x62DF;&#x684C;&#x9762;&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x5E03;&#x5C40;</li>
+<li>&#x6D3B;&#x52A8;&#x7A97;&#x53E3;&#x7684;&#x6807;&#x9898;</li>
+<li>&#x65E5;&#x671F;&#x65F6;&#x95F4;</li>
+</ul>
+<p>bug.n&#x652F;&#x6301;&#x865A;&#x62DF;&#x684C;&#x9762;&#x3002;Windows&#x7CFB;&#x7EDF;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x684C;&#x9762;&#xFF0C;&#x4F46;&#x901A;&#x8FC7;bug.n&#x53EF;&#x4EE5;&#x865A;&#x62DF;&#x51FA;&#x5F88;&#x591A;&#x684C;&#x9762;&#x3002;&#x5982;&#x679C;&#x4F60;&#x6B63;&#x5728;&#x4E00;&#x4E2A;&#x684C;&#x9762;&#x4E0A;&#x73A9;&#x6E38;&#x620F;&#x6216;&#x770B;&#x789F;&#xFF0C;&#x770B;&#x5230;&#x8001;&#x677F;&#x6765;&#x4E86;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8FC5;&#x901F;&#x5207;&#x6362;&#x5230;&#x65E9;&#x5C31;&#x51C6;&#x5907;&#x597D;&#x7684;&#x5DE5;&#x4F5C;&#x684C;&#x9762;&#x3002;&#x8001;&#x677F;&#x5728;&#x4EFB;&#x52A1;&#x680F;&#x4E0A;&#x4E0D;&#x4F1A;&#x53D1;&#x73B0;&#x4EFB;&#x4F55;&#x4F60;&#x5A31;&#x4E50;&#x8FC7;&#x7684;&#x86DB;&#x4E1D;&#x9A6C;&#x8FF9;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x6309;Win+&#x52A0;&#x6570;&#x5B57;n&#xFF0C;&#x53EF;&#x4EE5;&#x5207;&#x6362;&#x5230;&#x7B2C;n&#x4E2A;&#x684C;&#x9762;&#x3002;&#x7528;&#x9F20;&#x6807;&#x76F4;&#x63A5;&#x70B9;&#x51FB;banner&#x4E0A;&#x7684;&#x865A;&#x62DF;&#x684C;&#x9762;&#x6309;&#x94AE;&#x4E5F;&#x53EF;&#x4EE5;&#x3002;&#x53E6;&#x5916;&#x7528;&#x9F20;&#x6807;&#x53F3;&#x952E;&#x70B9;&#x51FB;&#x67D0;&#x4E2A;&#x865A;&#x62DF;&#x684C;&#x9762;&#xFF0C;&#x4F1A;&#x628A;&#x5F53;&#x524D;&#x7684;&#x6D3B;&#x52A8;&#x7A97;&#x53E3;&#x9001;&#x5230;&#x90A3;&#x4E2A;&#x865A;&#x62DF;&#x684C;&#x9762;&#x53BB;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x684C;&#x9762;&#x652F;&#x6301;&#x4E09;&#x79CD;&#x5E03;&#x5C40;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>&#x5E73;&#x94FA;&#x6A21;&#x5F0F;(tiling): &#x6240;&#x6709;&#x7A97;&#x53E3;&#x5E73;&#x94FA;&#xFF0C;&#x5DE6;&#x8FB9;&#x662F;&#x4E3B;&#x7A97;&#x53E3;&#xFF0C;&#x53F3;&#x8FB9;&#x662F;&#x7A97;&#x53E3;&#x961F;&#x5217;&#x3002;&#x6309; Win+t &#x53EF;&#x4EE5;&#x5207;&#x6362;&#x5230;tiling&#x6A21;&#x5F0F;&#x3002;</li>
+<li>&#x6D6E;&#x52A8;&#x6A21;&#x5F0F;(floating): &#x6240;&#x6709;&#x7A97;&#x53E3;&#x6D6E;&#x52A8;&#xFF0C;&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x906E;&#x76D6;&#xFF0C;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x5E73;&#x5E38;&#x7528;&#x7684;&#x6A21;&#x5F0F;&#x3002;&#x6309; win+f&#x53EF;&#x4EE5;&#x5207;&#x6362;&#x5230;floating&#x6A21;&#x5F0F;&#x3002;</li>
+<li>&#x5168;&#x5C4F;&#x6A21;&#x5F0F;(monocle): &#x6240;&#x6709;&#x7A97;&#x53E3;&#x6700;&#x5927;&#x5316;&#xFF0C;&#x4E00;&#x6B21;&#x53EA;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x3002;&#x6309; Win+m &#x53EF;&#x4EE5;&#x5207;&#x6362;&#x5230; monocle &#x6A21;&#x5F0F;&#x3002;<br>&#x7528;&#x9F20;&#x6807;&#x53F3;&#x952E;&#x70B9;&#x51FB;banner&#x4E0A;&#x7684;&#x5E03;&#x5C40;&#x6309;&#x94AE;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E09;&#x79CD;&#x5E03;&#x5C40;&#x95F4;&#x5207;&#x6362;&#x3002;</li>
+</ul>
+<p>&#x901A;&#x8FC7;&#x7A97;&#x53E3;&#x952E;&#x52A0;&#x65B9;&#x5411;&#x952E;&#x53EF;&#x4EE5;&#x8C03;&#x6574;&#x4E3B;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#x548C;&#x6539;&#x53D8;&#x7A97;&#x53E3;&#x961F;&#x5217;&#xFF0C;&#x81EA;&#x5DF1;&#x8BD5;&#x8BD5;&#x5C31;&#x77E5;&#x9053;&#x3002;&#x5982;&#x679C;&#x4F60;&#x89C9;&#x5F97;&#x53D7;&#x4E0D;&#x4E86;&#x4E86;&#xFF0C;&#x6309; Win + Ctrl + q&#xFF0C;&#x53EF;&#x4EE5;&#x9000;&#x51FA;bug.n&#x3002;</p>
+<p>&#x6211;&#x5728;Win10&#x4E0A;&#x7528;bug.n&#xFF0C;&#x81EA;&#x5DF1;&#x7684;&#x914D;&#x7F6E;&#x5199;&#x5728; <code>C:\Users\Administrator\AppData\Roaming\bug.n\Config.ini</code> &#x4E2D;&#x3002;</p>
+<p>&#x91CD;&#x70B9;&#x4ECB;&#x7ECD;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x7684;&#x5FEB;&#x6377;&#x952E;</p>
+<p><code>Win+&#x5DE6;&#x53F3;&#x65B9;&#x5411;&#x952E;</code>&#xFF0C;&#x662F;&#x8C03;&#x6574;&#x5206;&#x5272;&#x6BD4;&#x4F8B;&#xFF0C;&#x8FD9;&#x4E2A;&#x5F88;&#x597D;&#x7528;&#xFF0C;&#x5DE6;&#x4FA7;&#x53EF;&#x4EE5;&#x8C03;&#x6574;&#x4E3A;&#x6B63;&#x597D;&#x4E00;&#x4E2A;&#x7F51;&#x9875;&#x7684;&#x5BBD;&#x5EA6;&#x3002;</p>
+<p><code>Win+&#x4E0A;&#x4E0B;</code>&#xFF0C;&#x53EF;&#x4EE5;&#x8C03;&#x6574;&#x6D3B;&#x52A8;&#x7A97;&#x53E3;&#x3002;</p>
+<p><code>Win+Shift+&#x4E0A;&#x4E0B;&#x952E;</code>&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x6D3B;&#x52A8;&#x7A97;&#x53E3;&#x5728;&#x4E0D;&#x540C;&#x4F4D;&#x7F6E;&#x4E4B;&#x95F4;&#x8DF3;&#x8F6C;&#x3002;</p>
+<p><code>Win+Shift+Enter</code>&#xFF0C;&#x8BA9;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x548C;&#x5DE6;&#x4FA7;&#x6D3B;&#x52A8;&#x4E3B;&#x7A97;&#x53E3;&#x5BF9;&#x8C03;&#x4F4D;&#x7F6E;&#x5F88;&#x65B9;&#x4FBF;&#x3002;</p>
+<p><code>Win+Ctrl+q</code>&#xFF0C;&#x9000;&#x51FA;bug.n&#x3002;</p>
+<p><code>Win+c</code>&#xFF0C;&#x5173;&#x95ED;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x3002;</p>
+<p>&#x914D;&#x5408;Chrome&#x7684;Vimium&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x4E0D;&#x5C11;&#x6548;&#x7387;&#x3002;</p>
+<p>&#x76EE;&#x524D;&#x6211;&#x6B63;&#x5728;&#x7814;&#x7A76;&#x7684;&#x662F;Config.ini&#x7684;&#x4E00;&#x6761;&#x89C4;&#x5219;&#xFF0C;</p>
+<p><code>Config_rule=WebChat*;.*;;1;0;0;0;0;0;</code></p>
+<p>&#x5C31;&#x662F;&#x6BD4;&#x5982;&#x50CF;&#x5FAE;&#x4FE1;&#x7535;&#x8111;&#x7248;&#x8FD9;&#x6837;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x5176;&#x7A97;&#x53E3;&#x7684;&#x6700;&#x5C0F;&#x662F;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x8BA9;&#x4ED6;&#x6309;&#x7167;&#x666E;&#x901A;&#x7A97;&#x53E3;&#x90A3;&#x6837;&#x6392;&#x5217;&#xFF0C;&#x57FA;&#x672C;&#x4EC0;&#x4E48;&#x4E5F;&#x770B;&#x4E0D;&#x5230;&#xFF0C;&#x76EE;&#x524D;&#x4EE3;&#x66FF;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;Win+c&#xFF0C;&#x7136;&#x540E;&#x770B;&#x5230;&#x65B0;&#x4FE1;&#x606F;&#xFF0C;Ctrl+Alt+w&#x53D6;&#x6D88;&#x606F;&#xFF0C;&#x56DE;&#x590D;&#x5B8C;&#x4E86;&#xFF0C;&#x518D;&#x5173;&#x95ED;&#x5FAE;&#x4FE1;&#xFF08;&#x6CE8;&#xFF1A;Ctrl+Alt+w&#x662F;&#x5FAE;&#x4FE1;&#x9ED8;&#x8BA4;&#x5FEB;&#x6377;&#x952E;&#xFF0C;&#x975E;bug.n&#xFF09;&#x3002;</p>
+<p>&#x90E8;&#x5206;&#x6587;&#x5B57;&#x6458;&#x6284;<a href="http://www.cnblogs.com/jiqingwu/p/4311202.html" target="_blank" rel="external">http://www.cnblogs.com/jiqingwu/p/4311202.html</a></p>
+<p>&#x7279;&#x6B64;&#x8BF4;&#x660E;&#x3002;</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/post/the_summary_of_decomplation_of_c_sharp/" itemprop="url">
+                  .net破解反编译资料汇总
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-11T17:10:24+08:00" content="2016-01-11">
+              2016-01-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/the_summary_of_decomplation_of_c_sharp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/the_summary_of_decomplation_of_c_sharp/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>&#x56FD;&#x5185;&#x7F51;&#x7AD9;</p>
+<p>1&#x3001;www.52pojie.cn &#x5514;&#x7231;&#x7834;&#x89E3;</p>
+<p>2&#x3001;<a href="http://www.17ky.net/" target="_blank" rel="external">http://www.17ky.net/</a> &#x5DE5;&#x5177;&#x6C47;&#x603B;</p>
+<p>&#x56FD;&#x5916;&#x7F51;&#x7AD9;</p>
+<p>1&#x3001;<a href="http://www.hackforum.net" target="_blank" rel="external">http://www.hackforum.net</a> &#x8457;&#x540D;&#x7684;HACK&#x8BBA;&#x575B;&#xFF0C;&#x56FD;&#x5185;IP&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#xFF0C;&#x6302;&#x4EE3;&#x7406;&#x6216;&#x8005;VPN&#x4E5F;&#x4E0D;&#x884C;</p>
+<p>2&#x3001;<a href="http://www.tuts.com" target="_blank" rel="external">http://www.tuts.com</a></p>
+<p>3&#x3001;<a href="http://www.nulled.io" target="_blank" rel="external">http://www.nulled.io</a> &#x73B0;&#x5728;&#x8C8C;&#x4F3C;&#x57DF;&#x540D;&#x7F16;&#x7A0B;nulled.cr&#x4E86;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;IO&#x51FA;&#x73B0;&#x4EC0;&#x4E48;&#x53D8;&#x6545;&#x4E86;</p>
+<p>4&#x3001;</p>
+<p>&#x6587;&#x6863;&#x3001;&#x8D44;&#x6599;</p>
+<p>&#xA0;</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/post/the_summary_of_decomplation_tools_for_c_sharp/" itemprop="url">
                   .Net反编译软件集合
                 </a>
@@ -1069,714 +1641,11 @@ k_hook.Start();//&#x5B89;&#x88C5;&#x952E;&#x76D8;&#x94A9;&#x5B50;</pre>
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/post/simulation_of_key_press_in_c_sharp_using_sendkey/" itemprop="url">
-                  C#模拟键盘操作--SendKey(),SendKeys()
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-10T13:58:22+08:00" content="2015-12-10">
-              2015-12-10
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/post/simulation_of_key_press_in_c_sharp_using_sendkey/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="post/simulation_of_key_press_in_c_sharp_using_sendkey/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>C#&#x5B9E;&#x73B0;&#x6A21;&#x62DF;&#x952E;&#x76D8;&#x8F93;&#x5165;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;2&#x4E2A;&#x8BED;&#x6CD5;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5206;&#x522B;&#x662F;&#xFF1A;<br>SendKeys.Send(string keys);  //&#x6A21;&#x62DF;&#x6C49;&#x5B57;(&#x6587;&#x672C;)&#x8F93;&#x5165;<br>SendKeys.SendWait(string keys); //&#x6A21;&#x62DF;&#x6309;&#x952E;&#x8F93;&#x5165;</p>
-<p>&#x5148;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;2&#x4E2A;&#x8BED;&#x6CD5;&#x7684;&#x7528;&#x6CD5;&#x5427;&#xFF01;</p>
-<p>&#xFF08;1&#xFF09;&#x6BCF;&#x4E2A;&#x6309;&#x952E;&#x7531;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x8868;&#x793A;&#x3002;&#x4E3A;&#x4E86;&#x6307;&#x5B9A;&#x5355;&#x4E00;&#x952E;&#x76D8;&#x5B57;&#x7B26;&#xFF0C;&#x5FC5;&#x987B;&#x6309;&#x5B57;&#x7B26;&#x672C;&#x8EAB;&#x7684;&#x952E;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x5B57;&#x6BCD; A&#xFF0C;&#x53EF;&#x4EE5;&#x7528; &#x201C;A&#x201D; &#x4F5C;&#x4E3A; string&#x3002;&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x5728;&#x5B57;&#x7B26;&#x540E;&#x9762;&#x76F4;&#x63A5;&#x52A0;&#x4E0A;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x8868;&#x793A; A&#x3001;B &#x53CA; C&#xFF0C;&#x53EF;&#x7528; &#x201C;ABC&#x201D; &#x4F5C;&#x4E3A; string&#x3002;<br>&#xFF08;2&#xFF09;&#x5BF9; SendKeys &#x6765;&#x8BF4;&#xFF0C;&#x52A0;&#x53F7; (+)&#x3001;&#x63D2;&#x5165;&#x7B26; (^)&#x3001;&#x767E;&#x5206;&#x6BD4;&#x7B26;&#x53F7; (%)&#x3001;&#x4E0A;&#x5212;&#x7EBF; (~) &#x53CA;&#x5706;&#x62EC;&#x53F7; ( ) &#x90FD;&#x5177;&#x6709;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#x3002;&#x4E3A;&#x4E86;&#x6307;&#x5B9A;&#x4E0A;&#x8FF0;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x8981;&#x5C06;&#x5B83;&#x653E;&#x5728;&#x5927;&#x62EC;&#x53F7; ({}) &#x5F53;&#x4E2D;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x6307;&#x5B9A;&#x6B63;&#x53F7;&#xFF0C;&#x53EF;&#x7528; {+} &#x8868;&#x793A;&#x3002;&#x65B9;&#x62EC;&#x53F7; ([ ]) &#x5BF9; SendKeys &#x6765;&#x8BF4;&#x5E76;&#x4E0D;&#x5177;&#x6709;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#xFF0C;&#x4F46;&#x5FC5;&#x987B;&#x5C06;&#x5B83;&#x4EEC;&#x653E;&#x5728;&#x5927;&#x62EC;&#x53F7;&#x4E2D;&#x3002;&#x5728;&#x5176;&#x5B83;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x65B9;&#x62EC;&#x53F7;&#x6709;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#xFF0C;&#x5728;&#x51FA;&#x73B0;&#x52A8;&#x6001;&#x6570;&#x636E;&#x4EA4;&#x6362; (DDE) &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B83;&#x53EF;&#x80FD;&#x5177;&#x6709;&#x91CD;&#x8981;&#x610F;&#x4E49;&#x3002;&#x4E3A;&#x4E86;&#x6307;&#x5B9A;&#x5927;&#x62EC;&#x53F7;&#x5B57;&#x7B26;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528; {}&#x3002;<br>&#xFF08;3&#xFF09;&#x4E3A;&#x4E86;&#x5728;&#x6309;&#x4E0B;&#x6309;&#x952E;&#x65F6;&#x6307;&#x5B9A;&#x90A3;&#x4E9B;&#x4E0D;&#x663E;&#x793A;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x4F8B;&#x5982; ENTER &#x6216; TAB &#x4EE5;&#x53CA;&#x90A3;&#x4E9B;&#x8868;&#x793A;&#x52A8;&#x4F5C;&#x800C;&#x975E;&#x5B57;&#x7B26;&#x7684;&#x6309;&#x952E;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x4E0B;&#x5217;&#x4EE3;&#x7801;&#xFF1A;</p>
-<p><table border="1" cellspacing="0" cellpadding="0"></table></p>
-<p><tbody></tbody></p>
-<p><tr></tr></p>
-<p><td>&#x6309;&#x952E;</td></p>
-<p><td>&#x4EE3;&#x7801;</td><br></p>
-<p><tr></tr></p>
-<p><td>BACKSPACE</td></p>
-<p><td>{BACKSPACE}, {BS}, &#x6216; {BKSP}</td><br></p>
-<p><tr></tr></p>
-<p><td>BREAK</td></p>
-<p><td>{BREAK}</td><br></p>
-<p><tr></tr></p>
-<p><td>CAPS LOCK</td></p>
-<p><td>{CAPSLOCK}</td><br></p>
-<p><tr></tr></p>
-<p><td>DEL or DELETE</td></p>
-<p><td>{DELETE} &#x6216; {DEL}</td><br></p>
-<p><tr></tr></p>
-<p><td>DOWN ARROW</td></p>
-<p><td>{DOWN}</td><br></p>
-<p><tr></tr></p>
-<p><td>END</td></p>
-<p><td>{END}</td><br></p>
-<p><tr></tr></p>
-<p><td>ENTER</td></p>
-<p><td>{ENTER}&#x6216; ~</td><br></p>
-<p><tr></tr></p>
-<p><td>ESC</td></p>
-<p><td>{ESC}</td><br></p>
-<p><tr></tr></p>
-<p><td>HELP</td></p>
-<p><td>{HELP}</td><br></p>
-<p><tr></tr></p>
-<p><td>HOME</td></p>
-<p><td>{HOME}</td><br></p>
-<p><tr></tr></p>
-<p><td>INS or INSERT</td></p>
-<p><td>{INSERT} &#x6216; {INS}</td><br></p>
-<p><tr></tr></p>
-<p><td>LEFT ARROW</td></p>
-<p><td>{LEFT}</td><br></p>
-<p><tr></tr></p>
-<p><td>NUM LOCK</td></p>
-<p><td>{NUMLOCK}</td><br></p>
-<p><tr></tr></p>
-<p><td>PAGE DOWN</td></p>
-<p><td>{PGDN}</td><br></p>
-<p><tr></tr></p>
-<p><td>PAGE UP</td></p>
-<p><td>{PGUP}</td><br></p>
-<p><tr></tr></p>
-<p><td>PRINT SCREEN</td></p>
-<p><td>{PRTSC}</td><br></p>
-<p><tr></tr></p>
-<p><td>RIGHT ARROW</td></p>
-<p><td>{RIGHT}</td><br></p>
-<p><tr></tr></p>
-<p><td>SCROLL LOCK</td></p>
-<p><td>{SCROLLLOCK}</td><br></p>
-<p><tr></tr></p>
-<p><td>TAB</td></p>
-<p><td>{TAB}</td><br></p>
-<p><tr></tr></p>
-<p><td>UP ARROW</td></p>
-<p><td>{UP}</td><br></p>
-<p><tr></tr></p>
-<p><td>F1</td></p>
-<p><td>{F1}</td><br></p>
-<p><tr></tr></p>
-<p><td>F2</td></p>
-<p><td>{F2}</td><br></p>
-<p><tr></tr></p>
-<p><td>F3</td></p>
-<p><td>{F3}</td><br></p>
-<p><tr></tr></p>
-<p><td>F4</td></p>
-<p><td>{F4}</td><br></p>
-<p><tr></tr></p>
-<p><td>F5</td></p>
-<p><td>{F5}</td><br></p>
-<p><tr></tr></p>
-<p><td>F6</td></p>
-<p><td>{F6}</td><br></p>
-<p><tr></tr></p>
-<p><td>F7</td></p>
-<p><td>{F7}</td><br></p>
-<p><tr></tr></p>
-<p><td>F8</td></p>
-<p><td>{F8}</td><br></p>
-<p><tr></tr></p>
-<p><td>F9</td></p>
-<p><td>{F9}</td><br></p>
-<p><tr></tr></p>
-<p><td>F10</td></p>
-<p><td>{F10}</td><br></p>
-<p><tr></tr></p>
-<p><td>F11</td></p>
-<p><td>{F1}</td><br></p>
-<p><tr></tr></p>
-<p><td>F12</td></p>
-<p><td>{F12}</td><br></p>
-<p><tr></tr></p>
-<p><td>F13</td></p>
-<p><td>{F13}</td><br></p>
-<p><tr></tr></p>
-<p><td>F14</td></p>
-<p><td>{F14}</td><br></p>
-<p><tr></tr></p>
-<p><td>F15</td></p>
-<p><td>{F15}</td><br></p>
-<p><tr></tr></p>
-<p><td>F16</td></p>
-<p><td>{F16}</td><br><br><br><br>&#xFF08;4&#xFF09;SHIFT&#x3001;CTRL &#x53CA; ALT &#x7B49;&#x6309;&#x952E;&#x7ED3;&#x5408;&#x7684;&#x7EC4;&#x5408;&#x952E;&#xFF0C;&#x53EF;&#x5728;&#x8FD9;&#x4E9B;&#x6309;&#x952E;&#x7801;&#x7684;&#x524D;&#x9762;&#x653E;&#x7F6E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x4EE3;&#x7801;&#xFF0C;&#x8FD9;&#x4E9B;&#x4EE3;&#x7801;&#x5217;&#x4E3E;&#x5982;&#x4E0B;&#xFF1A;</p>
-<p><table border="1" cellspacing="0" cellpadding="0"></table></p>
-<p><tbody></tbody></p>
-<p><tr></tr></p>
-<p><td>&#x6309;&#x952E;</td></p>
-<p><td>&#x4EE3;&#x7801;</td><br></p>
-<p><tr></tr></p>
-<p><td>Shift</td></p>
-<p><td>+</td><br></p>
-<p><tr></tr></p>
-<p><td>Ctrl</td></p>
-<p><td>^</td><br></p>
-<p><tr></tr></p>
-<p><td>Alt</td></p>
-<p><td>%</td><br><br><br><br>&#xFF08;5&#xFF09;&#x8F93;&#x5165;&#x6C49;&#x5B57;&#x7528;SendKeys.Send(&#x201C;&#x6C49;&#x5B57;&#x201D;);</p>
-<p>&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
-<p><pre class="lang:default decode:true ">using System;<br>using System.Collections.Generic;<br>using System.ComponentModel;<br>using System.Data;<br>using System.Drawing;<br>using System.Linq;<br>using System.Text;<br>using System.Windows.Forms;<br>namespace ApplicationForm<br>{<br>    public partial class Form1 : Form<br>    {<br>        public Form1()<br>        {<br>            InitializeComponent();<br>        }<br>        private void button1_Click(object sender, EventArgs e)<br>        {<br>            //&#x5149;&#x6807;&#x79FB;&#x81F3;richTextBox1<br>            richTextBox1.Focus();</pre></p>
-<pre><code>        //&#x6A21;&#x62DF;&#x6309;&#x4E0B;&quot;ABCDEFG&quot;
-        SendKeys.SendWait(&quot;(ABCDEFG)&quot;);
-        SendKeys.SendWait(&quot;{left 5}&quot;);
-        SendKeys.SendWait(&quot;{h 10}&quot;);
-        /*
-        &#x66F4;&#x591A;&#x4E3E;&#x4F8B;:
-        SendKeys.SendWait(&quot;^C&quot;);  //Ctrl+C &#x7EC4;&#x5408;&#x952E;
-        SendKeys.SendWait(&quot;+C&quot;);  //Shift+C &#x7EC4;&#x5408;&#x952E;
-        SendKeys.SendWait(&quot;%C&quot;);  //Alt+C &#x7EC4;&#x5408;&#x952E;
-        SendKeys.SendWait(&quot;+(AX)&quot;);  //Shift+A+X &#x7EC4;&#x5408;&#x952E;
-        SendKeys.SendWait(&quot;+AX&quot;);  //Shift+A &#x7EC4;&#x5408;&#x952E;,&#x4E4B;&#x540E;&#x6309;X&#x952E;
-        SendKeys.SendWait(&quot;{left 5}&quot;);  //&#x6309;&#x2190;&#x952E; 5&#x6B21;
-        SendKeys.SendWait(&quot;{h 10}&quot;);   //&#x6309;h&#x952E; 10&#x6B21;
-        SendKeys.Send(&quot;&#x6C49;&#x5B57;&quot;);  //&#x6A21;&#x62DF;&#x8F93;&#x5165;&quot;&#x6C49;&#x5B57;&quot;2&#x4E2A;&#x5B57;
-        */
-    }
-}
-</code></pre><p>}<br>&#x539F;&#x6587;&#x51FA;&#x5904;&#xFF1A;<a href="http://www.cnblogs.com/liujie1111/p/4268174.html" target="_blank" rel="external">http://www.cnblogs.com/liujie1111/p/4268174.html</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/post/wechat_tool/" itemprop="url">
-                  一个微信电脑版或者QQ浏览器的微信聊天辅助工具v0.1b
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-10T12:48:19+08:00" content="2015-12-10">
-              2015-12-10
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/post/wechat_tool/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="post/wechat_tool/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>&#x5DE5;&#x5177;&#x5B58;&#x5728;&#x7684;&#x76EE;&#x7684;&#xFF0C;&#x662F;&#x8BA9;&#x4F60;&#x7684;&#x751F;&#x6D3B;&#x66F4;&#x52A0;&#x7701;&#x5FC3;&#x3001;&#x7701;&#x529B;&#x3001;&#x7701;&#x94B1;</p>
-</blockquote>
-<p>&#x600E;&#x4E48;&#x8BF4;&#x5462;&#xFF0C;&#x4F30;&#x8BA1;&#x7528;&#x5230;&#x8FD9;&#x4E2A;&#x8F6F;&#x4EF6;&#x529F;&#x80FD;&#x7684;&#x4EBA;&#x4E0D;&#x662F;&#x592A;&#x591A;&#xFF0C;&#x5177;&#x4F53;&#x73AF;&#x5883;&#x5C31;&#x662F;&#x5982;&#x679C;&#x4F60;&#x65C1;&#x8FB9;&#x7684;&#x540C;&#x4E8B;&#x79BB;&#x4F60;&#x7684;&#x5DE5;&#x4F4D;&#x5F88;&#x8FD1;&#xFF0C;&#x4E0D;&#x60F3;&#x8BA9;&#x4ED6;&#x4EEC;&#x779F;&#x89C1;&#x4F60;&#x804A;&#x5929;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x597D;&#x53CB;&#x7684;&#x6700;&#x540E;&#x4E00;&#x53E5;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x9002;&#x5408;&#x4F60;&#x3002;</p>
-<p>&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF1A;VS2015</p>
-<p>&#x8BED;&#x8A00;&#xFF1A;C#</p>
-<p>&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="http://www.wuliaole.com/wp-content/uploads/2015/12/BlankChat-v0.1b1.rar">BlankChat v0.1b</a></p>
-<p>[<img src="http://7xrpbc.com1.z0.glb.clouddn.com/blankchatv0_1beta.jpg" alt="&#x8F6F;&#x4EF6;&#x8FD0;&#x884C;&#x622A;&#x56FE;)"></p>
-<p>&#x6700;&#x65B0;&#x7248;&#x672C;&#xFF1A;0.1beta</p>
-<p>&#x8F6F;&#x4EF6;&#x4ECB;&#x7ECD;&#xFF1A;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x5728;&#x804A;&#x5929;&#x8BB0;&#x5F55;&#x4E4B;&#x524D;&#x52A0;&#x4E0A;&#x4E00;&#x5806;&#x7A7A;&#x683C;&#xFF0C;&#x7136;&#x540E;&#x81EA;&#x52A8;&#x53D1;&#x51FA;&#x53BB;&#xFF0C;&#x5FEB;&#x6377;&#x952E;&#x662F;<code>CTRL+ENTER</code>&#x3002;</p>
-<p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;&#x9996;&#x5148;&#x8981;&#x4FEE;&#x6539;&#x4E00;&#x4E0B;&#x5FAE;&#x4FE1;&#x684C;&#x9762;&#x7248;&#x7684;&#x53D1;&#x9001;&#x5FEB;&#x6377;&#x65B9;&#x5F0F;&#xFF0C;&#x8981;&#x6539;&#x6210;ENTER&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x548C;&#x8F6F;&#x4EF6;&#x7684;&#x5FEB;&#x6377;&#x952E;&#x51B2;&#x7A81;&#x3002;</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/post/the_shell_detection_tools_of_c_sharp_decompling/" itemprop="url">
-                  几款查壳工具.net程序脱壳必备知识
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-10T01:15:32+08:00" content="2015-12-10">
-              2015-12-10
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/post/the_shell_detection_tools_of_c_sharp_decompling/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="post/the_shell_detection_tools_of_c_sharp_decompling/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>&#x67E5;&#x58F3;&#x662F;&#x89E3;&#x5BC6;&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x4ECB;&#x7ECD;&#x51E0;&#x4E2A;&#x5DE5;&#x5177;&#xFF0C;&#x4E00;&#x4E2A;&#x4E0D;&#x597D;&#x7528;&#xFF0C;&#x5C31;&#x6362;&#x4E00;&#x4E2A;&#x8BD5;&#x8BD5;&#xFF0C;&#x5176;&#x5B9E;&#x6211;&#x53EA;&#x77E5;&#x9053;PEiD&#xFF0C;&#x5176;&#x4ED6;&#x51E0;&#x4E2A;&#x6211;&#x53EA;&#x662F;&#x770B;&#x522B;&#x4EBA;&#x6709;&#x4ECB;&#x7ECD;&#xFF0C;&#x5C31;&#x5148;&#x7FFB;&#x8BD1;&#x4E86;&#x3002;&#x4E0D;&#x8FC7;PEiD&#x786E;&#x5B9E;&#x5DF2;&#x7ECF;&#x597D;&#x51E0;&#x5E74;&#x6CA1;&#x6709;&#x66F4;&#x65B0;&#x8FC7;&#x4E86;&#xFF0C;&#x5927;&#x5BB6;&#x81EA;&#x5DF1;&#x770B;&#x7740;&#x529E;&#x5427;&#x3002;</p>
-<h2 id="PEiD"><a href="#PEiD" class="headerlink" title="PEiD"></a>PEiD</h2><p><img src="http://3.bp.blogspot.com/-t-GjKMnx0Ug/T7UT9ftPKcI/AAAAAAAATFc/8kPy-6n0b4o/s1600/PEiD.png" alt="PEiD" title="PEiD"></p>
-<p>&#x8FD9;&#x662F;&#x6700;&#x8457;&#x540D;&#x7684;&#x67E5;&#x58F3;&#x5DE5;&#x5177;&#x4E86;&#x5427;&#xFF0C;&#x81F3;&#x5C11;&#x6211;&#x89C9;&#x5F97;&#x633A;&#x6709;&#x540D;&#x3002;&#x53EF;&#x4EE5;&#x67E5;&#x627E;&#x8D85;&#x8FC7;600&#x79CD;&#x4E0D;&#x540C;&#x58F3;&#x5B50;&#x7684;&#x7B7E;&#x540D;&#xFF0C;&#x53EF;&#x60DC;&#x3002;&#x3002;&#x4E0D;&#x66F4;&#x65B0;&#x4E86;&#x3002;</p>
-<p>&#x8F6F;&#x4EF6;&#x754C;&#x9762;&#x5C0F;&#x5DE7;&#x7B80;&#x5355;&#xFF0C;&#x6700;&#x7701;&#x4E8B;&#x7684;&#x529E;&#x6CD5;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x5427;EXE&#x6216;&#x8005;DLL&#x6587;&#x4EF6;&#x62D6;&#x5230;&#x8F6F;&#x4EF6;&#x754C;&#x9762;&#x91CC;&#x9762;&#x53BB;&#xFF0C;&#x5373;&#x53EF;&#x5B8C;&#x6210;&#x9ED8;&#x8BA4;&#x67E5;&#x58F3;&#x52A8;&#x4F5C;&#xFF0C;&#x8F6F;&#x4EF6;&#x754C;&#x9762;&#x4E0A;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x58F3;&#x5B50;&#x7684;&#x540D;&#x79F0;&#x3001;&#x5165;&#x53E3;&#x70B9;&#x5730;&#x5740;&#xFF08;entry point&#xFF09;&#x3001;&#x6587;&#x4EF6;&#x504F;&#x79FB;&#x91CF;&#xFF08;file offset&#xFF09;&#x3001;&#x94FE;&#x63A5;&#x4FE1;&#x606F;&#xFF08;linker information&#xFF09;&#x3001;EP&#x533A;&#x57DF;&#xFF08;&#x8FD9;&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#xFF0C;&#x6211;&#x76EE;&#x524D;&#x8FD8;&#x4E0D;&#x77E5;&#x9053;&#xFF09;&#xFF08;EP section&#xFF09;&#x3001;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#xFF08;first bytes&#xFF09;&#xFF0C;&#x4EE5;&#x53CA;&#x9009;&#x5B9A;&#x6587;&#x4EF6;&#x7684;&#x5B50;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;&#xFF08;subsystem information&#xFF09;&#x3002;</p>
-<p>PEiD&#x6709;&#x4E09;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x626B;&#x63CF;&#x6A21;&#x5F0F;&#xFF1A;</p>
-<ul>
-<li>&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF08;Normal Mode&#xFF09;&#xFF1A;&#x901A;&#x8FC7;&#x6587;&#x6863;&#x7B7E;&#x540D;&#x626B;&#x63CF;PE&#x6587;&#x4EF6;&#x7684;&#x5165;&#x53E3;&#x5730;&#x5740;&#x3002;</li>
-<li>&#x6DF1;&#x5EA6;&#x6A21;&#x5F0F;&#xFF08;Deep Mode&#xFF09;&#xFF1A;&#x901A;&#x8FC7;&#x6587;&#x6863;&#x7B7E;&#x540D;&#x626B;&#x63CF;&#x5165;&#x53E3;&#x5730;&#x5740;&#x901A;&#x5E38;&#x5B58;&#x5728;&#x7684;&#x533A;&#x57DF;&#x3002;</li>
-<li>&#x786C;&#x6C49;&#x6A21;&#x5F0F;&#xFF08;Hardcore Mode&#xFF09;&#xFF1A;&#x901A;&#x8FC7;&#x6587;&#x6863;&#x7B7E;&#x540D;&#x904D;&#x5386;&#x904D;&#x5386;&#x6587;&#x4EF6;&#x4EE5;&#x627E;&#x5230;PE&#x6587;&#x4EF6;&#x7684;&#x5165;&#x53E3;&#x5730;&#x5740;&#x3002;<br>&#x8F6F;&#x4EF6;&#x4E5F;&#x652F;&#x6301;&#x547D;&#x4EE4;&#x884C;&#x6A21;&#x5F0F;&#xFF0C;&#x62D6;&#x653E;&#x64CD;&#x4F5C;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x5C06;&#x7A0B;&#x5E8F;&#x7F6E;&#x4E8E;&#x684C;&#x9762;&#x9876;&#x90E8;&#x3002;</li>
-</ul>
-<p><strong>&#x4E0B;&#x8F7D;&#x5730;&#x5740;:</strong> <a href="http://www.softpedia.com/get/Programming/Packers-Crypters-Protectors/PEiD-updated.shtml" target="_blank" rel="external">PEiD</a></p>
-<h2 id="Exeinfo-PE"><a href="#Exeinfo-PE" class="headerlink" title="Exeinfo PE"></a><strong>Exeinfo PE</strong></h2><p><img src="http://1.bp.blogspot.com/-ImPTMsVdE8o/T7UT76kxv1I/AAAAAAAATFU/xP09LukRkvo/s1600/ExeinfoPE.png" alt="Exeinfo PE" title="Exeinfo PE"></p>
-<p>Exeinfo PE&#x76F8;&#x6BD4;PEiD&#x6765;&#x8BF4;&#x66F4;&#x52A0;&#x5F3A;&#x5927;&#xFF0C;&#x5149;&#x4ECE;&#x7EF4;&#x62A4;&#x4E0A;&#x8FD9;&#x4E00;&#x70B9;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x7529;PEiD&#x51E0;&#x6761;&#x8857;&#x554A;&#xFF0C;&#x8D77;&#x7801;&#x4EBA;&#x5BB6;2015&#x5E74;11&#x6708;&#x8FD8;&#x5728;&#x7EF4;&#x62A4;&#x66F4;&#x65B0;&#x3002;&#x5C31;&#x7B97;&#x529F;&#x80FD;&#x4E0A;&#x6CA1;&#x6709;&#x524D;&#x8005;&#x597D;&#xFF0C;&#x4F46;&#x662F;&#x3002;&#x4EBA;&#x5BB6;&#x4E5F;&#x53EF;&#x4EE5;&#x6539;&#x8FDB;&#x554A;&#x3002;&#x597D;&#x4E86;&#xFF0C;&#x5E9F;&#x8BDD;&#x592A;&#x591A;&#x4E86;&#xFF0C;Exeinfo PE&#x4E0D;&#x5355;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x58F3;&#x5B50;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x5165;&#x53E3;&#x70B9;&#xFF0C;&#x6587;&#x4EF6;&#x4FBF;&#x5B9C;&#x5730;&#x5740;&#xFF0C;&#x94FE;&#x63A5;&#x4FE1;&#x606F;&#xFF0C;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;EP&#x533A;&#x57DF;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x4F4D;&#x7F6E;&#xFF0C;&#x5B50;&#x7CFB;&#x7EDF;&#xFF0C;&#x4EE5;&#x53CA;EXE&#x6587;&#x4EF6;&#x7684;&#x8986;&#x76D6;&#x4FE1;&#x606F;&#xFF08;overlay&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x5176;&#x4ED6;&#x9009;&#x9879;&#x66F4;&#x4E3A;&#x4E30;&#x5BCC;&#x3002;</p>
-<p>&#x540C;&#x6837;Exeinfo PE&#x4E5F;&#x652F;&#x6301;&#x9009;&#x62E9;&#x6587;&#x4EF6;&#xFF0C;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x62D6;&#x8FDB;&#x53BB;&#x67E5;&#x58F3;&#x3002;&#x5728;&#x7A0B;&#x5E8F;&#x7684;&#x754C;&#x9762;&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8BA9;Exeinfo PE&#x8FDB;&#x884C;&#x5FEB;&#x901F;&#x67E5;&#x58F3;&#xFF0C;&#x6216;&#x8005;&#x5FFD;&#x7565;EXE&#x6267;&#x884C;&#x9519;&#x8BEF;&#xFF0C;&#x7A0B;&#x5E8F;&#x4E5F;&#x652F;&#x6301;&#x547D;&#x4EE4;&#x878D;&#x5408;&#x58F3;&#x6A21;&#x5F0F;&#xFF08;integrate into the shell&#xFF09;&#xFF0C;&#x548C;PEiD&#x4E00;&#x6837;&#xFF0C;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x7F6E;&#x9876;&#xFF0C;&#x6253;&#x5F00;&#x767B;&#x5F55;&#x6A21;&#x5F0F;&#xFF0C;&#x6216;&#x8005;&#x6539;&#x53D8;&#x76AE;&#x80A4;&#x548C;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x8BED;&#x8A00;&#x3002;</p>
-<p><strong>&#x4E0B;&#x8F7D;&#x5730;&#x5740;:</strong> <a href="http://www.softpedia.com/get/Programming/Packers-Crypters-Protectors/ExEinfo-PE.shtml" target="_blank" rel="external">Exeinfo PE</a></p>
-<h2 id="Language-2000"><a href="#Language-2000" class="headerlink" title="Language 2000"></a><strong>Language 2000</strong></h2><p><img src="http://1.bp.blogspot.com/-BnjxtyMtsq0/T7UT_E7EIiI/AAAAAAAATFk/SVZRh4TCHHs/s1600/language.png" alt="Language 2000" title="Language 2000"></p>
-<p>Language 2000&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x7684;&#x67E5;&#x58F3;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x7F16;&#x8BD1;&#x5668;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x8BED;&#x8A00;&#xFF0C;&#x4F5C;&#x8005;&#xFF0C;&#x8FD8;&#x6709;&#x4F5C;&#x8005;&#x7684;&#x5730;&#x5740;&#x3002;&#x8FD9;&#x4E5F;&#x8BB8;&#x6709;&#x52A9;&#x4E8E;&#x4F60;&#x786E;&#x5B9A;&#x58F3;&#x5B50;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x5C31;&#x90A3;&#x6837;&#x4E86;&#x3002;</p>
-<p>&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x63A2;&#x6D4B; EXE DLL&#x4EE5;&#x53CA;OCX&#x7C7B;&#x578B;&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x8BD1;&#x5668;/&#x52A0;&#x5BC6;&#x5668;/&#x58F3;&#x5B50;&#x3002;</p>
-<p><strong>&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;&#x6682;&#x65E0;&#x3002;</strong></p>
-<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;" class="headerlink" title="&#x53C2;&#x8003;&#x8D44;&#x6599;"></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h2><p><a href="http://sumtips.com/2012/05/detect-identify-exe-compiler-packer.html" target="_blank" rel="external">http://sumtips.com/2012/05/detect-identify-exe-compiler-packer.html</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/post/the_introduction_of_easy_watermark/" itemprop="url">
-                  Easy Watermark使用说明
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-09T01:40:54+08:00" content="2015-12-09">
-              2015-12-09
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/post/the_introduction_of_easy_watermark/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="post/the_introduction_of_easy_watermark/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>&#x6211;&#x4EEC;&#x4E0D;&#x80FD;&#x9632;&#x6B62;&#x522B;&#x4EBA;&#x6284;&#x88AD;&#x5E16;&#x5B50;&#xFF0C;&#x53EA;&#x80FD;&#x7559;&#x4E00;&#x70B9;&#x4F18;&#x96C5;&#x7684;&#x6807;&#x8BB0;&#xFF0C;&#x589E;&#x52A0;&#x4E0B;&#x522B;&#x4EBA;&#x6284;&#x88AD;&#x7684;&#x6210;&#x672C;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x4ECE;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x65B9;&#x9762;&#xFF0C;&#x672C;&#x6765;&#x77E5;&#x8BC6;&#x662F;&#x6284;&#x4E0D;&#x6765;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;&#x56FE;&#x7247;&#x662F;&#x4F60;&#x7684;&#x539F;&#x521B;&#xFF0C;&#x52A0;&#x4E0A;&#x4E2A;&#x6C34;&#x5370;&#xFF0C;&#x4E5F;&#x662F;&#x987A;&#x7406;&#x6210;&#x7AE0;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x4ECB;&#x7ECD;&#x6211;&#x7684;&#x535A;&#x5BA2;&#x4F7F;&#x7528;&#x7684;&#x6C34;&#x5370;&#x7A0B;&#x5E8F;&#xFF0C;<a href="http://www.lyoyoo.com/index.php/archives/1250" target="_blank" rel="external">&#x7ED9;wordpress&#x56FE;&#x7247;&#x52A0;&#x6C34;&#x5370;&#x7684;3&#x6B3E;&#x63D2;&#x4EF6;</a>&#xFF0C;&#x8FD9;&#x662F;&#x56FD;&#x5185;&#x4E00;&#x4E2A;&#x535A;&#x4E3B;&#x7684;&#x4ECB;&#x7ECD;&#x5E16;&#x5B50;&#xFF0C;&#x65E0;&#x5948;&#x6211;&#x53BB;&#x641C;&#x7D22;&#x8FD9;&#x51E0;&#x4E2A;&#x63D2;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B89;&#x88C5;&#x91CF;&#x592A;&#x5C11;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x662F;&#x61D2;&#x4EBA;&#xFF0C;&#x62C5;&#x5FC3;&#x5F00;&#x53D1;&#x8005;&#x7EF4;&#x62A4;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x4E0D;&#x7BA1;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x9009;&#x4E86;Easy Watermark&#x8FD9;&#x6B3E;&#x63D2;&#x4EF6;&#xFF0C;&#x5B89;&#x88C5;&#x91CF;&#x5F88;&#x5927;&#x4E86;&#xFF0C;&#x800C;&#x4E14;&#x770B;&#x8BC4;&#x8BBA;&#x91CC;&#x8BF4;&#x5DF2;&#x7ECF;&#x7528;&#x4E86;3-4&#x5E74;&#x4E86;&#xFF0C;&#x51B3;&#x5B9A;&#xFF0C;&#x5C31;&#x662F;&#x4ED6;&#x4E86;&#x3002;</p>
-<p>&#x9996;&#x5148;&#x662F;&#x5728;WORDPRESS&#x7684;&#x63D2;&#x4EF6;&#x5E02;&#x573A;&#x91CC;&#xFF0C;&#x641C;&#x7D22;<a href="http://wordpress.org/plugins/easy-watermark/" target="_blank" rel="external">Easy Watermark</a>&#xFF0C;&#x5B89;&#x88C5;&#x3002;</p>
-<p>&#x7136;&#x540E;&#xFF0C;&#x6FC0;&#x6D3B;&#x63D2;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;&#x8FDB;&#x5165;&#x8BBE;&#x7F6E; <strong>&#xBB; Easy Watermark </strong>&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;</p>
-<p><a href="http://www.wuliaole.com/wp-content/uploads/2015/12/QQ&#x622A;&#x56FE;20151209002617.png"><img src="http://www.wuliaole.com/wp-content/uploads/2015/12/QQ&#x622A;&#x56FE;20151209002617-300x260.png" alt="QQ&#x622A;&#x56FE;20151209002617"></a></p>
-<p>&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;Easy watermark&#x7684;&#x8BBE;&#x7F6E;&#x6709;3&#x4E2A;&#x9009;&#x9879;&#x5361;&#xFF08;Tab&#xFF09;&#xFF0C;&#x5728;General&#x9009;&#x9879;&#x5361;&#x91CC;&#xFF0C;&#x7B2C;&#x4E00;&#x9879; Add watermark when uploading images&#x662F;&#x5FC5;&#x987B;&#x9009;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x5C31;&#x662F;&#x8BF4;&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x540E;&#xFF0C;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#x6C34;&#x5370;&#x3002;&#x4F46;&#x662F;&#x522B;&#x7740;&#x6025;&#xFF0C;&#x6CA1;&#x6709;&#x6C34;&#x5370;&#x56FE;&#x7247;&#x52A0;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
-<p>&#x6240;&#x4EE5;&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x5165;&#x7B2C;&#x4E8C;&#x4E2A;&#x9009;&#x9879;&#x5361;Image&#xFF0C;&#x53BB;&#x6DFB;&#x52A0;&#x4E00;&#x5F20;PNG&#x6216;&#x8005;GIF&#x7684;&#x56FE;&#x7247;&#xFF08;&#x80CC;&#x666F;&#x900F;&#x660E;&#xFF0C;&#x4E0D;&#x900F;&#x660E;&#x7684;&#x6C34;&#x5370;&#xFF0C;&#x603B;&#x89C9;&#x5F97;&#x6548;&#x679C;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x597D;&#xFF09;&#x3002;&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x56FE;&#x7247;&#x7684;&#x900F;&#x660E;&#x5EA6;&#xFF0C;&#x4F4D;&#x7F6E;&#xFF0C;&#x4EE5;&#x53CA;&#x662F;&#x5426;&#x7F29;&#x653E;&#x4F60;&#x7684;&#x6C34;&#x5370;&#x56FE;&#x7247;&#x3002;</p>
-<p>&#x56DE;&#x6765;&#x8BF4;&#x7B2C;&#x4E00;&#x4E2A;General&#x9009;&#x9879;&#x5361;&#xFF0C;&#x5728;Image Sizes&#x91CC;&#xFF0C;&#x9ED8;&#x8BA4;&#x9009;&#x4E86;&#x51E0;&#x9879;&#x5E94;&#x8BE5;&#x6EE1;&#x8DB3;&#x4F60;&#x7684;&#x8981;&#x6C42;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E00;&#x70B9;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B;&#x628A;&#x6587;&#x7AE0;&#x91CC;&#x7684;Featured image&#x4E5F;&#x52A0;&#x4E0A;&#x6C34;&#x5370;&#xFF0C;&#x5C31;&#x8981;&#x52FE;&#x9009;post-thumbnail&#x8FD9;&#x4E00;&#x9879;&#x3002;</p>
-<p>&#x6069;&#xFF0C;&#x7136;&#x540E;&#x8FD8;&#x6709;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x70B9;&#xFF0C;&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x4F60;&#x4E0A;&#x4F20;&#x7684;&#x539F;&#x59CB;&#x56FE;&#x7247;&#xFF0C;&#x6240;&#x4EE5;&#x90A3;&#x4E2A;Backup&#x9009;&#x9879;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x670D;&#x52A1;&#x5668;&#x7A7A;&#x95F4;&#x6BD4;&#x8F83;&#x5BCC;&#x88D5;&#xFF0C;&#x6700;&#x597D;&#x4E5F;&#x4E00;&#x8D77;&#x52FE;&#x4E0A;&#x3002;</p>
-<p><img src="http://cdn2.wpbeginner.com/wp-content/uploads/2014/06/watermark-image.png" alt="Adding an image as a watermark on images in WordPress" title="Adding an image as a watermark on images in WordPress"></p>
-<p>If you don&#x2019;t want to add an image, but would rather add a text as watermark, then you need to click on the Text tab. You can enter the text you want to be displayed as watermark, choose font, font-size, opacity, and positioning of the watermark text.</p>
-<p>&#x4E5F;&#x8BB8;&#x5236;&#x4F5C;&#x4E00;&#x4E2A;&#x6C34;&#x5370;&#x56FE;&#x7247;&#x5BF9;&#x4F60;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#xFF0C;&#x6216;&#x8005;&#x4F60;&#x538B;&#x6839;&#x4E0D;&#x60F3;&#x7528;&#x56FE;&#x7247;&#x6C34;&#x5370;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9009;&#x62E9;&#x6587;&#x5B57;&#x6C34;&#x5370;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x9519;&#x7684;&#x9009;&#x62E9;&#x3002;&#x5728;&#x7B2C;&#x4E09;&#x4E2A;&#x9009;&#x9879;&#x5361;Text&#x91CC;&#x9762;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x6587;&#x5B57;&#x7684;&#x5B57;&#x4F53;&#xFF0C;&#x5B57;&#x53F7;&#xFF0C;&#x900F;&#x660E;&#x5EA6;&#xFF0C;&#x4EE5;&#x53CA;&#x4F4D;&#x7F6E;&#x7B49;&#x3002;</p>
-<p>&#x4E0B;&#x9762;&#x8981;&#x8BF4;&#x7684;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x6BD4;&#x8F83;&#x725B;X&#x7684;&#x5730;&#x65B9;&#x4E86;&#xFF0C;&#x6279;&#x91CF;&#x53BB;&#x9664;&#x6216;&#x8005;&#x6DFB;&#x52A0;&#x6C34;&#x5370;&#xFF01;</p>
-<h2 id="&#x5982;&#x4F55;&#x6279;&#x91CF;&#x6DFB;&#x52A0;&#x6C34;&#x5370;"><a href="#&#x5982;&#x4F55;&#x6279;&#x91CF;&#x6DFB;&#x52A0;&#x6C34;&#x5370;" class="headerlink" title="&#x5982;&#x4F55;&#x6279;&#x91CF;&#x6DFB;&#x52A0;&#x6C34;&#x5370;"></a>&#x5982;&#x4F55;&#x6279;&#x91CF;&#x6DFB;&#x52A0;&#x6C34;&#x5370;</h2><h4 id="Adding-Watermark-to-Your-Old-Images-in-WordPress"><a href="#Adding-Watermark-to-Your-Old-Images-in-WordPress" class="headerlink" title="Adding Watermark to Your Old Images in WordPress"></a>Adding Watermark to Your Old Images in WordPress</h4><p>&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B;&#x7ED9;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;&#x4E4B;&#x524D;&#x7684;&#x6240;&#x6709;&#x56FE;&#x7247;&#x6279;&#x91CF;&#x6DFB;&#x52A0;&#x6C34;&#x5370;&#x56FE;&#x7247;&#x7684;&#x8BDD;&#xFF0C;&#x8FDB;&#x5165; <strong>&#x5A92;&#x4F53;</strong> <strong>&#xBB; Easy Watermark </strong>&#x7136;&#x540E;&#x9009;&#x62E9; <em>Add watermark to all image</em> &#x6309;&#x94AE;&#x3002;</p>
-<p>&#x63D0;&#x9192;&#xFF0C;&#x8FD9;&#x4E2A;&#x6279;&#x91CF;&#x6DFB;&#x52A0;&#x6C34;&#x5370;&#x7684;&#x8FC7;&#x7A0B;&#x4E0D;&#x53EF;&#x9006;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6700;&#x597D;&#x5148;&#x5907;&#x4EFD;&#x597D;&#x4E86;&#x6574;&#x4E2A;&#x7F51;&#x7AD9;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x505A;&#x8FD9;&#x4E00;&#x6B65;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
-<p><img src="http://cdn2.wpbeginner.com/wp-content/uploads/2014/06/watermark-all-images.png" alt="Watermark all images on your WordPress site" title="Watermark all images on your WordPress site"></p>
-<h2 id="&#x5982;&#x4F55;&#x624B;&#x52A8;&#x6DFB;&#x52A0;&#x6C34;&#x5370;"><a href="#&#x5982;&#x4F55;&#x624B;&#x52A8;&#x6DFB;&#x52A0;&#x6C34;&#x5370;" class="headerlink" title="&#x5982;&#x4F55;&#x624B;&#x52A8;&#x6DFB;&#x52A0;&#x6C34;&#x5370;"></a>&#x5982;&#x4F55;&#x624B;&#x52A8;&#x6DFB;&#x52A0;&#x6C34;&#x5370;</h2><p>&#x9996;&#x5148;&#x8FDB;&#x5165; <strong>&#x8BBE;&#x7F6E; &#xBB; Easy Watermark</strong>&#xFF0C;&#x786E;&#x5B9A;&#x6CA1;&#x6709;&#x52FE;&#x9009; <em>Automatically add watermark to images</em></p>
-<p>&#xA0;</p>
-<p>&#x7136;&#x540E;&#x8FDB;&#x5165; <strong>&#x591A;&#x5A92;&#x4F53; &#xBB; &#x5A92;&#x4F53;&#x5E93;</strong> &#xFF0C;&#x8BB0;&#x5F97;&#x52FE;&#x9009;&#x5DE6;&#x4E0A;&#x89D2;&#x7684;&#x56FE;&#x7247;&#x663E;&#x793A;&#x65B9;&#x5F0F;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5217;&#x8868;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5426;&#x5219;&#x662F;&#x770B;&#x4E0D;&#x5230;&#x5982;&#x56FE;&#x4E0A;&#x9762;&#x7684;&#x5355;&#x72EC;&#x6DFB;&#x52A0;&#x6C34;&#x5370;&#x7684;&#x9009;&#x9879;&#x7684;&#x3002;</p>
-<p><a href="http://www.wuliaole.com/wp-content/uploads/2015/12/QQ&#x622A;&#x56FE;20151209013414.png"><img src="http://www.wuliaole.com/wp-content/uploads/2015/12/QQ&#x622A;&#x56FE;20151209013414-300x141.png" alt="QQ&#x622A;&#x56FE;20151209013414"></a></p>
-<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;" class="headerlink" title="&#x53C2;&#x8003;&#x8D44;&#x6599;"></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h2><p><a href="http://www.wpbeginner.com/plugins/how-to-automatically-add-watermark-to-images-in-wordpress/" target="_blank" rel="external">http://www.wpbeginner.com/plugins/how-to-automatically-add-watermark-to-images-in-wordpress/</a></p>
-<p>&#xA0;</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/post/what_need_to_be_done_after_installation_of_wordpress/" itemprop="url">
-                  wordpress博客做好之后要做的事情
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-08T21:58:04+08:00" content="2015-12-08">
-              2015-12-08
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/post/what_need_to_be_done_after_installation_of_wordpress/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="post/what_need_to_be_done_after_installation_of_wordpress/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="&#x5B89;&#x88C5;"><a href="#&#x5B89;&#x88C5;" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</h2><h3 id="&#x5F53;&#x7136;&#x662F;&#x5B89;&#x88C5;&#x4E86;&#xFF0C;&#x6CE8;&#x610F;&#x8C03;&#x6574;xshell&#x91CC;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x6BD4;&#x5982;www&#x548C;ftp&#x8D26;&#x53F7;&#x7684;"><a href="#&#x5F53;&#x7136;&#x662F;&#x5B89;&#x88C5;&#x4E86;&#xFF0C;&#x6CE8;&#x610F;&#x8C03;&#x6574;xshell&#x91CC;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x6BD4;&#x5982;www&#x548C;ftp&#x8D26;&#x53F7;&#x7684;" class="headerlink" title="&#x5F53;&#x7136;&#x662F;&#x5B89;&#x88C5;&#x4E86;&#xFF0C;&#x6CE8;&#x610F;&#x8C03;&#x6574;xshell&#x91CC;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x6BD4;&#x5982;www&#x548C;ftp&#x8D26;&#x53F7;&#x7684;"></a>&#x5F53;&#x7136;&#x662F;&#x5B89;&#x88C5;&#x4E86;&#xFF0C;&#x6CE8;&#x610F;&#x8C03;&#x6574;xshell&#x91CC;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x6BD4;&#x5982;www&#x548C;ftp&#x8D26;&#x53F7;&#x7684;</h3><h3 id="&#x88C5;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x8BB0;&#x5F97;&#x8C03;&#x6574;-htaccess&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;centos&#x4E0B;&#x662F;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;"><a href="#&#x88C5;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x8BB0;&#x5F97;&#x8C03;&#x6574;-htaccess&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;centos&#x4E0B;&#x662F;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;" class="headerlink" title="&#x88C5;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x8BB0;&#x5F97;&#x8C03;&#x6574;.htaccess&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;centos&#x4E0B;&#x662F;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;"></a>&#x88C5;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x8BB0;&#x5F97;&#x8C03;&#x6574;.htaccess&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;centos&#x4E0B;&#x662F;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;</h3><h3 id="&#x5B89;&#x88C5;theme&#xFF0C;&#x6211;&#x76EE;&#x524D;&#x7528;&#x7684;d8&#x7684;&#xFF0C;&#x8BB0;&#x5F97;&#x8981;&#x4FDD;&#x8BC1;theme&#x672C;&#x8EAB;&#x4E0D;&#x5E26;&#x4EC0;&#x4E48;&#x63D2;&#x4EF6;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x548C;&#x81EA;&#x5DF1;&#x540E;&#x6765;&#x88C5;&#x7684;&#x5BB9;&#x6613;&#x51B2;&#x7A81;&#x4E86;&#xFF0C;&#x540C;&#x65F6;&#x6362;&#x4E00;&#x4E0B;logo"><a href="#&#x5B89;&#x88C5;theme&#xFF0C;&#x6211;&#x76EE;&#x524D;&#x7528;&#x7684;d8&#x7684;&#xFF0C;&#x8BB0;&#x5F97;&#x8981;&#x4FDD;&#x8BC1;theme&#x672C;&#x8EAB;&#x4E0D;&#x5E26;&#x4EC0;&#x4E48;&#x63D2;&#x4EF6;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x548C;&#x81EA;&#x5DF1;&#x540E;&#x6765;&#x88C5;&#x7684;&#x5BB9;&#x6613;&#x51B2;&#x7A81;&#x4E86;&#xFF0C;&#x540C;&#x65F6;&#x6362;&#x4E00;&#x4E0B;logo" class="headerlink" title="&#x5B89;&#x88C5;theme&#xFF0C;&#x6211;&#x76EE;&#x524D;&#x7528;&#x7684;d8&#x7684;&#xFF0C;&#x8BB0;&#x5F97;&#x8981;&#x4FDD;&#x8BC1;theme&#x672C;&#x8EAB;&#x4E0D;&#x5E26;&#x4EC0;&#x4E48;&#x63D2;&#x4EF6;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x548C;&#x81EA;&#x5DF1;&#x540E;&#x6765;&#x88C5;&#x7684;&#x5BB9;&#x6613;&#x51B2;&#x7A81;&#x4E86;&#xFF0C;&#x540C;&#x65F6;&#x6362;&#x4E00;&#x4E0B;logo"></a>&#x5B89;&#x88C5;theme&#xFF0C;&#x6211;&#x76EE;&#x524D;&#x7528;&#x7684;d8&#x7684;&#xFF0C;&#x8BB0;&#x5F97;&#x8981;&#x4FDD;&#x8BC1;theme&#x672C;&#x8EAB;&#x4E0D;&#x5E26;&#x4EC0;&#x4E48;&#x63D2;&#x4EF6;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x548C;&#x81EA;&#x5DF1;&#x540E;&#x6765;&#x88C5;&#x7684;&#x5BB9;&#x6613;&#x51B2;&#x7A81;&#x4E86;&#xFF0C;&#x540C;&#x65F6;&#x6362;&#x4E00;&#x4E0B;logo</h3><h3 id="&#x5F00;&#x59CB;&#x88C5;&#x63D2;&#x4EF6;&#xFF0C;&#x5220;&#x6389;hello-dolly&#xFF0C;&#x542F;&#x52A8;akimest&#xFF0C;api&#x586B;&#x8FDB;&#x53BB;&#x5C31;ok&#x4E86;&#xFF0C;&#x5B89;&#x88C5;&#x4E86;&#x9AD8;&#x7EA7;&#x7248;&#x672C;&#x7684;TinyMCE&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x76EE;&#x524D;&#x9664;&#x4E86;&#x597D;&#x7528;&#x70B9;&#xFF0C;&#x6CA1;&#x53D1;&#x73B0;&#x5176;&#x4ED6;&#x7528;&#x5904;&#x3002;"><a href="#&#x5F00;&#x59CB;&#x88C5;&#x63D2;&#x4EF6;&#xFF0C;&#x5220;&#x6389;hello-dolly&#xFF0C;&#x542F;&#x52A8;akimest&#xFF0C;api&#x586B;&#x8FDB;&#x53BB;&#x5C31;ok&#x4E86;&#xFF0C;&#x5B89;&#x88C5;&#x4E86;&#x9AD8;&#x7EA7;&#x7248;&#x672C;&#x7684;TinyMCE&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x76EE;&#x524D;&#x9664;&#x4E86;&#x597D;&#x7528;&#x70B9;&#xFF0C;&#x6CA1;&#x53D1;&#x73B0;&#x5176;&#x4ED6;&#x7528;&#x5904;&#x3002;" class="headerlink" title="&#x5F00;&#x59CB;&#x88C5;&#x63D2;&#x4EF6;&#xFF0C;&#x5220;&#x6389;hello dolly&#xFF0C;&#x542F;&#x52A8;akimest&#xFF0C;api&#x586B;&#x8FDB;&#x53BB;&#x5C31;ok&#x4E86;&#xFF0C;&#x5B89;&#x88C5;&#x4E86;&#x9AD8;&#x7EA7;&#x7248;&#x672C;&#x7684;TinyMCE&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x76EE;&#x524D;&#x9664;&#x4E86;&#x597D;&#x7528;&#x70B9;&#xFF0C;&#x6CA1;&#x53D1;&#x73B0;&#x5176;&#x4ED6;&#x7528;&#x5904;&#x3002;"></a>&#x5F00;&#x59CB;&#x88C5;&#x63D2;&#x4EF6;&#xFF0C;&#x5220;&#x6389;hello dolly&#xFF0C;&#x542F;&#x52A8;akimest&#xFF0C;api&#x586B;&#x8FDB;&#x53BB;&#x5C31;ok&#x4E86;&#xFF0C;&#x5B89;&#x88C5;&#x4E86;&#x9AD8;&#x7EA7;&#x7248;&#x672C;&#x7684;TinyMCE&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x76EE;&#x524D;&#x9664;&#x4E86;&#x597D;&#x7528;&#x70B9;&#xFF0C;&#x6CA1;&#x53D1;&#x73B0;&#x5176;&#x4ED6;&#x7528;&#x5904;&#x3002;</h3><h3 id="&#x4E0D;&#x7528;&#x591A;&#x8BF4;&#x6216;&#x8005;&#x7545;&#x8A00;&#xFF0C;&#x8BC4;&#x8BBA;&#x5728;&#x7AD9;&#x7ACB;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x597D;&#xFF0C;&#x56E0;&#x4E3A;wordpress-4-3-1&#x9ED8;&#x8BA4;&#x5E26;&#x4E86;plupload&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x4E4B;&#x524D;&#x7684;&#x90A3;&#x4E2A;drag-and-drop&#x63D2;&#x4EF6;&#x4E86;"><a href="#&#x4E0D;&#x7528;&#x591A;&#x8BF4;&#x6216;&#x8005;&#x7545;&#x8A00;&#xFF0C;&#x8BC4;&#x8BBA;&#x5728;&#x7AD9;&#x7ACB;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x597D;&#xFF0C;&#x56E0;&#x4E3A;wordpress-4-3-1&#x9ED8;&#x8BA4;&#x5E26;&#x4E86;plupload&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x4E4B;&#x524D;&#x7684;&#x90A3;&#x4E2A;drag-and-drop&#x63D2;&#x4EF6;&#x4E86;" class="headerlink" title="&#x4E0D;&#x7528;&#x591A;&#x8BF4;&#x6216;&#x8005;&#x7545;&#x8A00;&#xFF0C;&#x8BC4;&#x8BBA;&#x5728;&#x7AD9;&#x7ACB;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x597D;&#xFF0C;&#x56E0;&#x4E3A;wordpress 4.3.1&#x9ED8;&#x8BA4;&#x5E26;&#x4E86;plupload&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x4E4B;&#x524D;&#x7684;&#x90A3;&#x4E2A;drag and drop&#x63D2;&#x4EF6;&#x4E86;"></a>&#x4E0D;&#x7528;&#x591A;&#x8BF4;&#x6216;&#x8005;&#x7545;&#x8A00;&#xFF0C;&#x8BC4;&#x8BBA;&#x5728;&#x7AD9;&#x7ACB;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x597D;&#xFF0C;&#x56E0;&#x4E3A;wordpress 4.3.1&#x9ED8;&#x8BA4;&#x5E26;&#x4E86;plupload&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x4E4B;&#x524D;&#x7684;&#x90A3;&#x4E2A;drag and drop&#x63D2;&#x4EF6;&#x4E86;</h3><h3 id="&#x63D2;&#x4E00;&#x53E5;&#xFF0C;&#x5173;&#x4E8E;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x7684;&#xFF0C;&#x6211;&#x5728;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#x91CC;&#x5199;&#x4E86;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF0C;&#x66F4;&#x65B0;wordpress&#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x201C;&#x65E0;&#x6CD5;&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x201D;&#x95EE;&#x9898;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#xFF1F;&#x603B;&#x4E4B;&#x5C31;&#x662F;chmod-777-&#x6216;&#x8005;755&#xFF0C;&#x4E0D;&#x591A;&#x8BF4;&#x4E86;&#xFF0C;&#x4F1A;&#x4E86;&#x5C31;&#x5F88;&#x65B9;&#x4FBF;&#x3002;"><a href="#&#x63D2;&#x4E00;&#x53E5;&#xFF0C;&#x5173;&#x4E8E;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x7684;&#xFF0C;&#x6211;&#x5728;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#x91CC;&#x5199;&#x4E86;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF0C;&#x66F4;&#x65B0;wordpress&#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x201C;&#x65E0;&#x6CD5;&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x201D;&#x95EE;&#x9898;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#xFF1F;&#x603B;&#x4E4B;&#x5C31;&#x662F;chmod-777-&#x6216;&#x8005;755&#xFF0C;&#x4E0D;&#x591A;&#x8BF4;&#x4E86;&#xFF0C;&#x4F1A;&#x4E86;&#x5C31;&#x5F88;&#x65B9;&#x4FBF;&#x3002;" class="headerlink" title="&#x63D2;&#x4E00;&#x53E5;&#xFF0C;&#x5173;&#x4E8E;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x7684;&#xFF0C;&#x6211;&#x5728;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#x91CC;&#x5199;&#x4E86;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF0C;&#x66F4;&#x65B0;wordpress&#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x201C;&#x65E0;&#x6CD5;&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x201D;&#x95EE;&#x9898;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#xFF1F;&#x603B;&#x4E4B;&#x5C31;&#x662F;chmod -777 &#x6216;&#x8005;755&#xFF0C;&#x4E0D;&#x591A;&#x8BF4;&#x4E86;&#xFF0C;&#x4F1A;&#x4E86;&#x5C31;&#x5F88;&#x65B9;&#x4FBF;&#x3002;"></a>&#x63D2;&#x4E00;&#x53E5;&#xFF0C;&#x5173;&#x4E8E;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x7684;&#xFF0C;&#x6211;&#x5728;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#x91CC;&#x5199;&#x4E86;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF0C;<a href="http://www.wuliaole.com/%e6%9b%b4%e6%96%b0wordpress%e8%bf%87%e7%a8%8b%e4%b8%ad%e9%81%87%e5%88%b0%e6%97%a0%e6%b3%95%e5%88%9b%e5%bb%ba%e7%9b%ae%e5%bd%95%e9%97%ae%e9%a2%98%e5%a6%82%e4%bd%95%e8%a7%a3%e5%86%b3/" title="&#x66F4;&#x65B0;wordpress&#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x201C;&#x65E0;&#x6CD5;&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x201D;&#x95EE;&#x9898;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#xFF1F; - &#x65E0;&#x804A;&#x5C0F;&#x535A;">&#x66F4;&#x65B0;wordpress&#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x201C;&#x65E0;&#x6CD5;&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x201D;&#x95EE;&#x9898;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#xFF1F;</a>&#x603B;&#x4E4B;&#x5C31;&#x662F;chmod -777 &#x6216;&#x8005;755&#xFF0C;&#x4E0D;&#x591A;&#x8BF4;&#x4E86;&#xFF0C;&#x4F1A;&#x4E86;&#x5C31;&#x5F88;&#x65B9;&#x4FBF;&#x3002;</h3><h3 id="&#x6C34;&#x5370;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x7528;&#x7684;Easy-Watermark-0-6-0&#xFF0C;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#xFF0C;&#x4ECB;&#x7ECD;&#x4E86;&#x4E0D;&#x5C11;&#x6C34;&#x5370;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x5427;&#x3002;&#x3002;&#x3002;&#x53EF;&#x80FD;&#x4F5C;&#x8005;&#x63A8;&#x8350;&#x7684;&#xFF0C;&#x6211;&#x8FD9;&#x91CC;&#x663E;&#x793A;&#x5B89;&#x88C5;&#x91CF;&#x548C;&#x6D3B;&#x8DC3;&#x5EA6;&#x6BD4;&#x8F83;&#x4F4E;&#xFF0C;&#x5C31;&#x7528;&#x4E86;&#x4E00;&#x4E2A;2&#x4E2A;&#x6708;&#x524D;&#x66F4;&#x65B0;&#x4E14;&#x7B26;&#x5408;4-3-1&#x7684;&#x6C34;&#x5370;&#x5DE5;&#x5177;&#xFF0C;&#x5927;&#x5BB6;&#x81EA;&#x5DF1;&#x9009;&#x62E9;&#x5427;-&#xFF0C;&#x7528;&#x7740;&#x987A;&#x624B;&#x5C31;&#x597D;&#x3002;&#x7ED9;wordpress&#x56FE;&#x7247;&#x52A0;&#x6C34;&#x5370;&#x7684;3&#x6B3E;&#x63D2;&#x4EF6;&#x3002;&#x6211;&#x81EA;&#x5DF1;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x4E2D;&#x6587;&#x7248;&#x7684;&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;&#x3002;"><a href="#&#x6C34;&#x5370;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x7528;&#x7684;Easy-Watermark-0-6-0&#xFF0C;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#xFF0C;&#x4ECB;&#x7ECD;&#x4E86;&#x4E0D;&#x5C11;&#x6C34;&#x5370;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x5427;&#x3002;&#x3002;&#x3002;&#x53EF;&#x80FD;&#x4F5C;&#x8005;&#x63A8;&#x8350;&#x7684;&#xFF0C;&#x6211;&#x8FD9;&#x91CC;&#x663E;&#x793A;&#x5B89;&#x88C5;&#x91CF;&#x548C;&#x6D3B;&#x8DC3;&#x5EA6;&#x6BD4;&#x8F83;&#x4F4E;&#xFF0C;&#x5C31;&#x7528;&#x4E86;&#x4E00;&#x4E2A;2&#x4E2A;&#x6708;&#x524D;&#x66F4;&#x65B0;&#x4E14;&#x7B26;&#x5408;4-3-1&#x7684;&#x6C34;&#x5370;&#x5DE5;&#x5177;&#xFF0C;&#x5927;&#x5BB6;&#x81EA;&#x5DF1;&#x9009;&#x62E9;&#x5427;-&#xFF0C;&#x7528;&#x7740;&#x987A;&#x624B;&#x5C31;&#x597D;&#x3002;&#x7ED9;wordpress&#x56FE;&#x7247;&#x52A0;&#x6C34;&#x5370;&#x7684;3&#x6B3E;&#x63D2;&#x4EF6;&#x3002;&#x6211;&#x81EA;&#x5DF1;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x4E2D;&#x6587;&#x7248;&#x7684;&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;&#x3002;" class="headerlink" title="&#x6C34;&#x5370;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x7528;&#x7684;Easy Watermark 0.6.0&#xFF0C;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#xFF0C;&#x4ECB;&#x7ECD;&#x4E86;&#x4E0D;&#x5C11;&#x6C34;&#x5370;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x5427;&#x3002;&#x3002;&#x3002;&#x53EF;&#x80FD;&#x4F5C;&#x8005;&#x63A8;&#x8350;&#x7684;&#xFF0C;&#x6211;&#x8FD9;&#x91CC;&#x663E;&#x793A;&#x5B89;&#x88C5;&#x91CF;&#x548C;&#x6D3B;&#x8DC3;&#x5EA6;&#x6BD4;&#x8F83;&#x4F4E;&#xFF0C;&#x5C31;&#x7528;&#x4E86;&#x4E00;&#x4E2A;2&#x4E2A;&#x6708;&#x524D;&#x66F4;&#x65B0;&#x4E14;&#x7B26;&#x5408;4.3.1&#x7684;&#x6C34;&#x5370;&#x5DE5;&#x5177;&#xFF0C;&#x5927;&#x5BB6;&#x81EA;&#x5DF1;&#x9009;&#x62E9;&#x5427; &#xFF0C;&#x7528;&#x7740;&#x987A;&#x624B;&#x5C31;&#x597D;&#x3002;&#x7ED9;wordpress&#x56FE;&#x7247;&#x52A0;&#x6C34;&#x5370;&#x7684;3&#x6B3E;&#x63D2;&#x4EF6;&#x3002;&#x6211;&#x81EA;&#x5DF1;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x4E2D;&#x6587;&#x7248;&#x7684;&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;&#x3002;"></a>&#x6C34;&#x5370;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x7528;&#x7684;Easy Watermark 0.6.0&#xFF0C;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#xFF0C;&#x4ECB;&#x7ECD;&#x4E86;&#x4E0D;&#x5C11;&#x6C34;&#x5370;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x5427;&#x3002;&#x3002;&#x3002;&#x53EF;&#x80FD;&#x4F5C;&#x8005;&#x63A8;&#x8350;&#x7684;&#xFF0C;&#x6211;&#x8FD9;&#x91CC;&#x663E;&#x793A;&#x5B89;&#x88C5;&#x91CF;&#x548C;&#x6D3B;&#x8DC3;&#x5EA6;&#x6BD4;&#x8F83;&#x4F4E;&#xFF0C;&#x5C31;&#x7528;&#x4E86;&#x4E00;&#x4E2A;2&#x4E2A;&#x6708;&#x524D;&#x66F4;&#x65B0;&#x4E14;&#x7B26;&#x5408;4.3.1&#x7684;&#x6C34;&#x5370;&#x5DE5;&#x5177;&#xFF0C;&#x5927;&#x5BB6;&#x81EA;&#x5DF1;&#x9009;&#x62E9;&#x5427; &#xFF0C;&#x7528;&#x7740;&#x987A;&#x624B;&#x5C31;&#x597D;&#x3002;<a href="http://www.lyoyoo.com/index.php/archives/1250" target="_blank" rel="external">&#x7ED9;wordpress&#x56FE;&#x7247;&#x52A0;&#x6C34;&#x5370;&#x7684;3&#x6B3E;&#x63D2;&#x4EF6;</a>&#x3002;&#x6211;&#x81EA;&#x5DF1;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x4E2D;&#x6587;&#x7248;&#x7684;&#x4F7F;&#x7528;&#x4ECB;&#x7ECD;&#x3002;</h3><h3 id="&#x9632;&#x76D7;&#x94FE;&#xFF0C;"><a href="#&#x9632;&#x76D7;&#x94FE;&#xFF0C;" class="headerlink" title="&#x9632;&#x76D7;&#x94FE;&#xFF0C;"></a>&#x9632;&#x76D7;&#x94FE;&#xFF0C;</h3><h3 id="&#x5907;&#x4EFD;"><a href="#&#x5907;&#x4EFD;" class="headerlink" title="&#x5907;&#x4EFD;"></a>&#x5907;&#x4EFD;</h3><h3 id="&#x6062;&#x590D;"><a href="#&#x6062;&#x590D;" class="headerlink" title="&#x6062;&#x590D;"></a>&#x6062;&#x590D;</h3><h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;" class="headerlink" title="&#x53C2;&#x8003;&#x8D44;&#x6599;"></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h2><p><a href="http://www.zhihu.com/question/22864602" target="_blank" rel="external">http://www.zhihu.com/question/22864602</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1817,7 +1686,7 @@ k_hook.Start();//&#x5B89;&#x88C5;&#x952E;&#x76D8;&#x94A9;&#x5B50;</pre>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">56</span>
+              <span class="site-state-item-count">61</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1825,7 +1694,7 @@ k_hook.Start();//&#x5B89;&#x88C5;&#x952E;&#x76D8;&#x94A9;&#x5B50;</pre>
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1834,7 +1703,7 @@ k_hook.Start();//&#x5B89;&#x88C5;&#x952E;&#x76D8;&#x94A9;&#x5B50;</pre>
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">123</span>
+                <span class="site-state-item-count">132</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

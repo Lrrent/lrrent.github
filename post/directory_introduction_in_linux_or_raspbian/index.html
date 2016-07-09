@@ -1,0 +1,790 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="f9kcHL9W1mQXtVMD51J919P_jKOPLSbMVi46xSMpOkM" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="树莓派,linux,raspbian,目录," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="&amp;#x6587;&amp;#x7AE0;&amp;#x66F4;&amp;#x65B0;1.20160707-&amp;#x521D;&amp;#x6B21;&amp;#x6210;&amp;#x6587;
+&amp;#x4E3A;&amp;#x4EC0;&amp;#x4E48;&amp;#x4F1A;&amp;#x6709;&amp;#x8FD9;&amp;#x7BC7;&amp;#x6587;&amp;#x7AE0;&amp;#x56E0;&amp;#x4E3A;&amp;#x5728;&amp;#x4F7F;&amp;#x7528;apt-get purg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux/Raspbian每个目录用途说明">
+<meta property="og:url" content="http://www.wuliaole.com/post/directory_introduction_in_linux_or_raspbian/index.html">
+<meta property="og:site_name" content="FOOLMAN 一个人的修行">
+<meta property="og:description" content="&amp;#x6587;&amp;#x7AE0;&amp;#x66F4;&amp;#x65B0;1.20160707-&amp;#x521D;&amp;#x6B21;&amp;#x6210;&amp;#x6587;
+&amp;#x4E3A;&amp;#x4EC0;&amp;#x4E48;&amp;#x4F1A;&amp;#x6709;&amp;#x8FD9;&amp;#x7BC7;&amp;#x6587;&amp;#x7AE0;&amp;#x56E0;&amp;#x4E3A;&amp;#x5728;&amp;#x4F7F;&amp;#x7528;apt-get purg">
+<meta property="og:image" content="http://www.wuliaole.com/post/directory_introduction_in_linux_or_raspbian/ldr.png">
+<meta property="og:updated_time" content="2016-07-07T02:27:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux/Raspbian每个目录用途说明">
+<meta name="twitter:description" content="&amp;#x6587;&amp;#x7AE0;&amp;#x66F4;&amp;#x65B0;1.20160707-&amp;#x521D;&amp;#x6B21;&amp;#x6210;&amp;#x6587;
+&amp;#x4E3A;&amp;#x4EC0;&amp;#x4E48;&amp;#x4F1A;&amp;#x6709;&amp;#x8FD9;&amp;#x7BC7;&amp;#x6587;&amp;#x7AE0;&amp;#x56E0;&amp;#x4E3A;&amp;#x5728;&amp;#x4F7F;&amp;#x7528;apt-get purg">
+<meta name="twitter:image" content="http://www.wuliaole.com/post/directory_introduction_in_linux_or_raspbian/ldr.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://www.wuliaole.com/post/directory_introduction_in_linux_or_raspbian/"/>
+
+  <title> Linux/Raspbian每个目录用途说明 | FOOLMAN 一个人的修行 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0b9af06e21a88c60dc3deb5b699a3e63";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259393906&web_id=1259393906" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">FOOLMAN 一个人的修行</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">随笔 随心</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Linux/Raspbian每个目录用途说明
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-07T02:19:25+08:00" content="2016-07-07">
+              2016-07-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/raspberry/" itemprop="url" rel="index">
+                    <span itemprop="name">raspberry</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/directory_introduction_in_linux_or_raspbian/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/directory_introduction_in_linux_or_raspbian/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"><a href="#&#x6587;&#x7AE0;&#x66F4;&#x65B0;" class="headerlink" title="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"></a>&#x6587;&#x7AE0;&#x66F4;&#x65B0;</h2><p>1.20160707-&#x521D;&#x6B21;&#x6210;&#x6587;</p>
+<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;</h2><p>&#x56E0;&#x4E3A;&#x5728;&#x4F7F;&#x7528;apt-get purge remove openvpn&#x4E4B;&#x540E;&#xFF0C;&#x53D1;&#x73B0;&#x7CFB;&#x7EDF;&#x91CC;&#x4F9D;&#x7136;&#x6709;&#x5F88;&#x591A;openvpn&#x540D;&#x5B57;&#x7684;&#x76EE;&#x5F55;&#x6216;&#x8005;&#x6587;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/usr/sbin/openvpn</div><div class="line">/etc/default/openvpn</div><div class="line">/etc/network/<span class="keyword">if</span>-down.d/openvpn</div><div class="line">/etc/network/<span class="keyword">if</span>-up.d/openvpn</div><div class="line">/etc/bash_completion.d/openvpn</div><div class="line">/etc/init.d/openvpn</div><div class="line">/run/openvpn</div></pre></td></tr></table></figure>
+<p>&#x6709;&#x5F3A;&#x8FEB;&#x75C7;+&#x6D01;&#x7656;&#x7684;&#x6211;&#x5F53;&#x7136;&#x5C31;&#x5F88;&#x4E0D;&#x723D;&#x4E86;&#xFF0C;&#x6328;&#x4E2A;&#x67E5;&#x770B;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x5220;&#x6389;&#x4E86;&#x8FD9;&#x4E9B;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x76EE;&#x5F55;&#x7684;&#x7528;&#x6237;&#x6BD4;&#x8F83;&#x611F;&#x5174;&#x8DA3;&#xFF0C;&#x5C31;&#x627E;&#x5230;&#x4E86;&#x4E0B;&#x9762;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x82F1;&#x6587;&#x7684;&#xFF0C;&#x7FFB;&#x8BD1;&#x4E86;&#xFF0C;&#x7559;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x589E;&#x52A0;&#x81EA;&#x5DF1;&#x5BF9;LINUX&#x7CFB;&#x7EDF;&#x7684;&#x4E86;&#x89E3;&#x3002;</p>
+<h2 id="Linux&#x548C;Windows&#x7684;&#x533A;&#x522B;"><a href="#Linux&#x548C;Windows&#x7684;&#x533A;&#x522B;" class="headerlink" title="Linux&#x548C;Windows&#x7684;&#x533A;&#x522B;"></a>Linux&#x548C;Windows&#x7684;&#x533A;&#x522B;</h2><p>&#x7684;&#x663E;&#x8457;&#x533A;&#x522B;&#x4E4B;&#x4E00;&#x5C31;&#x662F;&#x5176;&#x4E0D;&#x540C;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF0C;&#x5E76;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x683C;&#x5F0F;&#x4E0A;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x800C;&#x662F;&#x4E0D;&#x540C;&#x4F4D;&#x7F6E;&#x4E0A;&#x4FDD;&#x5B58;&#x7684;&#x4E1C;&#x897F;&#x533A;&#x522B;&#x5F88;&#x5927;&#x3002;</p>
+<p>&#x5728;Windows&#x4E2D;&#xFF0C;&#x5178;&#x578B;&#x7684;&#x8DEF;&#x5F84;&#x53EF;&#x80FD;&#x662F;&#x8FD9;&#x6837;&#x7684; <code>D:\Folder\subfolder\file.txt</code>&#xFF0C;&#x800C;&#x5728;Linux&#x4E2D;&#xFF0C;&#x8DEF;&#x5F84;&#x5219;&#x662F;&#x8FD9;&#x6837;&#x7684; <code>/Folder/subfolder/file.txt</code>&#x3002;</p>
+<p>&#x659C;&#x7EBF;&#x503E;&#x659C;&#x7684;&#x65B9;&#x5411;&#x4E0D;&#x540C;&#xFF0C;&#x5E76;&#x4E14;&#xFF0C;&#x5728;Linux&#x4E2D;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;C&#x76D8;D&#x76D8;&#x7684;&#x6982;&#x5FF5;&#xFF0C;Linux&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x4E4B;&#x540E;&#xFF0C;<code>&#x6839;&#x5206;&#x533A;</code> &#x5C31;&#x201D;&#x6302;&#x8F7D;&#x201D;&#x5728;&#x4E86;&#x5728;&#x4E86; <code>/</code> &#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x4E14;&#x6240;&#x6709;&#x7684;&#x6587;&#x4EF6;&#x3001;&#x6587;&#x4EF6;&#x5939;&#x3001;&#x8BBE;&#x5907;&#x4EE5;&#x53CA;&#x4E0D;&#x540C;&#x7684;&#x786C;&#x76D8;&#x5149;&#x9A71;&#x4E4B;&#x7C7B;&#x7684;&#xFF0C;&#x4E5F;&#x90FD;&#x6302;&#x8F7D;&#x5728;&#x4E86; <code>/</code>&#x3002;</p>
+<p>&#x867D;&#x7136;&#x53EF;&#x80FD;&#x5728;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x5E76;&#x4E0D;&#x660E;&#x663E;&#xFF0C;&#x4F46;&#x662F;Linux&#x7CFB;&#x7EDF;&#x5BF9;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x6587;&#x8DEF;&#x5F84;&#x7684;&#x540D;&#x79F0;&#x4E2D;&#x7684;&#x5927;&#x5C0F;&#x5199;&#x5B57;&#x7B26;&#x662F;&#x654F;&#x611F;&#x7684;&#x3002;</p>
+<p>&#x6BD4;&#x5982; <code>/Folder/subfolder/file.txt</code> &#x4E0E; <code>/folder/subfolder/file.txt</code>&#x5E76;&#x4E0D;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x3002;</p>
+<h2 id="Linux&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x8BF4;&#x660E;"><a href="#Linux&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x8BF4;&#x660E;" class="headerlink" title="Linux&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x8BF4;&#x660E;"></a>Linux&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x8BF4;&#x660E;</h2><p>Unix&#x4E2D;&#x548C;Linux&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x662F;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x76EE;&#x5F55;&#x548C;&#x6587;&#x4EF6;&#x6700;&#x7EC8;&#x90FD;&#x7EDF;&#x4E00;&#x5230;&#x201D;/&#x201C;&#x6839;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E0B;&#x3002;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x662F;&#x65E0;&#x8BBA;&#x662F;&#x4E0D;&#x662F;&#x6302;&#x8F7D;&#x8FC7;&#x6765;&#x7684;&#xFF0C;&#x6700;&#x7EC8;&#x90FD;&#x5206;&#x5C42;&#x6392;&#x5217;&#x5230;&#x4EE5;&#x201D;/&#x201C;&#x4E3A;&#x8D77;&#x59CB;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E4B;&#x4E0B;&#x3002;</p>
+<p>The Linux Directory Structure follows the &#x201C;Filesystem Hierarchy Structure (FHS)&#x201D; maintained by the Free Standards Group although most of the distributions sometimes tend to deviate from the standards.</p>
+<p>Lets have a quick stroll across the different directories under the Linux Filesystem Hierarchy</p>
+<p>&#x201C;/&#x201C; &#x6839;&#x8DEF;&#x5F84;</p>
+<p>The Directory Structure starts with the Root file system &#x201C;/&#x201C; and is indeed the root directory for the whole structure.The partition where / (the root directory) will be located on a UNIX or UNIX-compatible system.</p>
+<p>/boot</p>
+<p>The /boot directory contains the Boot loader files including Grub or Lilo, the Kernel, initrd and system.map config files<br>&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x5305;&#x542B;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#xFF08;boot loader&#xFF09;&#xFF0C;&#x4F8B;&#x5982;Grub&#xFF0C;Lilo&#x6216;&#x8005;Kernel&#xFF0C;</p>
+<p>/sys</p>
+<p>This contains the Kernel, Firmware and system related files.</p>
+<p>/sbin</p>
+<p>&#x5305;&#x542B;&#x7CFB;&#x7EDF;&#x64CD;&#x4F5C;&#x548C;&#x8FD0;&#x4F5C;&#x6240;&#x5FC5;&#x9700;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x4E3B;&#x8981;&#x5C31;&#x662F;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;&#x7C7B;&#x4F3C;WINDOWS&#x4E0B;&#x7684;EXE&#x6587;&#x4EF6;&#x3002;</p>
+<p>/bin</p>
+<p>&#x5305;&#x542B;&#x5355;&#x7528;&#x6237;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x7A0B;&#x5E8F;&#xFF0C;&#x6BD4;&#x5982;cat&#xFF0C;ls&#xFF0C;cp&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x3002;</p>
+<p>/lib</p>
+<p>&#x5305;&#x542B;/sbin&#x548C;/bin&#x76EE;&#x5F55;&#x4E0B;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x6240;&#x9700;&#x8981;&#x7684;&#x5E93;&#x6587;&#x4EF6;&#x3002;</p>
+<p>/dev</p>
+<p>&#x5185;&#x542B;&#x5FC5;&#x9700;&#x7684;&#x7CFB;&#x7EDF;&#x6587;&#x4EF6;&#x548C;&#x9A71;&#x52A8;&#x5668;&#x3002;</p>
+<p>/etc</p>
+<p>&#x5185;&#x542B;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4E0B;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x6BD4;&#x5982; /etc/hosts, /etc/resolv.conf, nsswitch.conf, &#x4EE5;&#x53CA;&#x7CFB;&#x7EDF;&#x7F3A;&#x7701;&#x8BBE;&#x7F6E;&#xFF0C;&#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7B49;&#x7B49;&#x3002;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x7CFB;&#x7EDF;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;</p>
+<p>/home</p>
+<p>&#x6BCF;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x5728;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x90FD;&#x4F1A;&#x5355;&#x72EC;&#x6709;&#x4E00;&#x4E2A;&#x4EE5;&#x5176;&#x7528;&#x6237;&#x540D;&#x547D;&#x4EE4;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x4FDD;&#x5B58;&#x7740;&#x7528;&#x6237;&#x7684;&#x4E2A;&#x4EBA;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x4EE5; profile&#x7ED3;&#x5C3E;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x4F46;&#x662F;&#x4E5F;&#x6709;&#x4F8B;&#x5916;&#xFF0C;root&#x7528;&#x6237;&#x7684;&#x6570;&#x636E;&#x5C31;&#x4E0D;&#x5728;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x800C;&#x662F;&#x5355;&#x72EC;&#x5728;&#x6839;&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x4FDD;&#x5B58;&#x5728;&#x5355;&#x72EC;&#x7684;/root&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x3002;</p>
+<p>/media</p>
+<p>&#x4E00;&#x4E2A;&#x7ED9;&#x6240;&#x6709;&#x53EF;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x6BD4;&#x5982;&#x5149;&#x9A71;&#x3001;USB&#x5916;&#x63A5;&#x76D8;&#x3001;&#x8F6F;&#x76D8;&#x63D0;&#x4F9B;&#x7684;&#x5E38;&#x89C4;&#x6302;&#x8F7D;&#x70B9;&#x3002;</p>
+<p>/mnt</p>
+<p>&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6302;&#x8F7D;&#x70B9;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x4F60;&#x5E76;&#x4E0D;&#x60F3;&#x957F;&#x671F;&#x6302;&#x8F7D;&#x67D0;&#x4E2A;&#x9A71;&#x52A8;&#x5668;&#xFF0C;&#x800C;&#x662F;&#x53EA;&#x662F;&#x4E34;&#x65F6;&#x6302;&#x8F7D;&#x4E00;&#x4F1A;U&#x76D8;&#x70E4;&#x4E2A;MP3&#x4E4B;&#x7C7B;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5E94;&#x8BE5;&#x6302;&#x8F7D;&#x5728;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0B;&#x3002;</p>
+<p>/opt</p>
+<p>&#x5728;Linux&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x7528;&#x5230;&#x7684;&#x5E76;&#x4E0D;&#x591A;&#xFF0C;opt&#x662F; &#x53EF;&#x9009;&#x7CFB;&#x7EDF;&#x7A0B;&#x5E8F;&#x5305;&#xFF08;Optional Software Packages&#xFF09;&#x7684;&#x7B80;&#x79F0;&#x3002;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x5728;UNIX&#x7CFB;&#x7EDF;&#xFF0C;&#x5982;Sun Solaris&#x7528;&#x9014;&#x8981;&#x5E7F;&#x6CDB;&#x7684;&#x591A;&#x3002;</p>
+<p>/usr</p>
+<p>&#x7528;&#x6237;&#x6570;&#x636E;&#x76EE;&#x5F55;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x5C5E;&#x4E8E;&#x7528;&#x6237;&#x7684;&#x5B9E;&#x7528;&#x7A0B;&#x5E8F;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x8FD9;&#x91CC;&#x6709;&#x5F88;&#x591A;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x4F46;&#x5E76;&#x975E;&#x5173;&#x952E;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6302;&#x8F7D;&#x8FD9;&#x4E2A;&#x8DEF;&#x5F84;&#x4E0B;&#x9762;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x4F60;&#x4F1A;&#x91CD;&#x65B0;&#x627E;&#x5230;&#x4E00;&#x4E2A; bin&#x3001;sbin &#x548C; lib&#x76EE;&#x5F55;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x975E;&#x5173;&#x952E;&#x7528;&#x6237;&#x548C;&#x7CFB;&#x7EDF;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x7684;&#x5E93;&#x548C;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x5E93;&#x6587;&#x4EF6;&#x3002;</p>
+<p>/usr/sbin</p>
+<p>&#x5305;&#x542B;&#x7CFB;&#x7EDF;&#x4E2D;&#x975E;&#x5FC5;&#x5907;&#x548C;&#x5E76;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x91CD;&#x8981;&#x7684;&#x7CFB;&#x7EDF;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x7F51;&#x7EDC;&#x5E94;&#x7528;&#x5DE5;&#x5177;&#x3002;</p>
+<p>/usr/bin</p>
+<p>&#x5305;&#x542B;&#x7528;&#x6237;&#x7684;&#x975E;&#x5FC5;&#x5907;&#x548C;&#x5E76;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x91CD;&#x8981;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x3002;</p>
+<p>/usr/lib</p>
+<p>&#x4FDD;&#x5B58;&#x7740;/usr/sbin&#x4EE5;&#x53CA;/usr/bin&#x4E2D;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x6240;&#x9700;&#x8981;&#x7684;&#x5E93;&#x6587;&#x4EF6;&#x3002;</p>
+<p>/usr/share</p>
+<p>&#x201C;&#x5E73;&#x53F0;&#x65E0;&#x5173;&#x201D;&#x7684;&#x5171;&#x4EAB;&#x6570;&#x636E;&#x76EE;&#x5F55;&#x3002;</p>
+<p>/usr/local</p>
+<p>&#x662F;/usr&#x4E0B;&#x7684;&#x4E8C;&#x7EA7;&#x76EE;&#x5F55;&#xFF0C;&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x4FDD;&#x5B58;&#x7740;&#x5305;&#x542B;&#x7CFB;&#x7EDF;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x8FD0;&#x884C;&#x5E93;&#x5728;&#x5185;&#x7684;&#x672C;&#x5730;&#x7CFB;&#x7EDF;&#x6570;&#x636E;&#x3002;</p>
+<p>/var</p>
+<p>&#x8FD9;&#x4E2A;&#x8DEF;&#x5F84;&#x4E0B;&#x901A;&#x5E38;&#x4FDD;&#x5B58;&#x7740;&#x5305;&#x62EC;&#x7CFB;&#x7EDF;&#x65E5;&#x5FD7;&#x3001;&#x6253;&#x5370;&#x673A;&#x540E;&#x53F0;&#x6587;&#x4EF6;&#xFF08;spool files&#xFF09;&#x3001;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#xFF08;crontab&#xFF09;&#x3001;&#x90AE;&#x4EF6;&#x3001;&#x8FD0;&#x884C;&#x8FDB;&#x7A0B;&#x3001;&#x8FDB;&#x7A0B;&#x9501;&#x6587;&#x4EF6;&#x7B49;&#x3002;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x5C24;&#x5176;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x8FDB;&#x884C;&#x65E5;&#x5E38;&#x7684;&#x68C0;&#x67E5;&#x548C;&#x7EF4;&#x62A4;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;&#x53EF;&#x80FD;&#x4F1A;&#x589E;&#x957F;&#x5F88;&#x5FEB;&#xFF0C;&#x4EE5;&#x81F4;&#x4E8E;&#x5F88;&#x5FEB;&#x5360;&#x6EE1;&#x786C;&#x76D8;&#xFF0C;&#x7136;&#x540E;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x4FBF;&#x4F1A;&#x51FA;&#x73B0;&#x5404;&#x79CD;&#x5947;&#x5947;&#x602A;&#x602A;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>/tmp</p>
+<p>&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x4E13;&#x95E8;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#xFF0C;&#x6BCF;&#x6B21;&#x7CFB;&#x7EDF;&#x91CD;&#x542F;&#x4E4B;&#x540E;&#xFF0C;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x201D;&#x4E34;&#x65F6;&#x201D;&#x6587;&#x4EF6;&#x4FBF;&#x4F1A;&#x88AB;&#x6E05;&#x7A7A;&#x3002;&#x540C;&#x6837;&#xFF0C;/var/tmp &#x4E5F;&#x540C;&#x6837;&#x4FDD;&#x5B58;&#x7740;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x3002;&#x4E24;&#x8005;&#x552F;&#x4E00;&#x7684;&#x4E0D;&#x540C;&#x662F;&#xFF0C;&#x540E;&#x8005; /var/tmp&#x76EE;&#x5F55;&#x4FDD;&#x5B58;&#x7684;&#x6587;&#x4EF6;&#x4F1A;&#x53D7;&#x5230;&#x7CFB;&#x7EDF;&#x4FDD;&#x62A4;&#xFF0C;&#x7CFB;&#x7EDF;&#x91CD;&#x542F;&#x4E4B;&#x540E;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x4E5F;&#x4E0D;&#x4F1A;&#x88AB;&#x6E05;&#x7A7A;&#x3002;</p>
+<p>/proc </p>
+<p>&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x662F;&#x9A7B;&#x7559;&#x5728;&#x7CFB;&#x7EDF;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x865A;&#x62DF;&#xFF08;psuedo&#xFF0C;&#x4F2A;&#xFF09;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5176;&#x4E2D;&#x4FDD;&#x5B58;&#x7684;&#x90FD;&#x662F;&#x6587;&#x672C;&#x683C;&#x5F0F;&#x7684;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x548C;&#x8FDB;&#x7A0B;&#x4FE1;&#x606F;&#x3002;</p>
+<h2 id="LINUX&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x56FE;"><a href="#LINUX&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x56FE;" class="headerlink" title="LINUX&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x56FE;"></a>LINUX&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x56FE;</h2><p><img src="/post/directory_introduction_in_linux_or_raspbian/ldr.png" alt="Linux Directory Structure in Visual View"></p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x4E0D;&#x540C;LINUX&#x53D1;&#x884C;&#x7248;&#x672C;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x5DEE;&#x5F02;&#xFF0C;&#x8FD9;&#x5BF9;LINUX&#x65B0;&#x624B;&#x6765;&#x8BF4;&#x6BD4;&#x8F83;&#x7EA0;&#x7ED3;&#xFF0C;&#x4F46;&#x662F;&#x5927;&#x4F53;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;LINUX&#x7684;&#x4E0D;&#x540C;&#x53D1;&#x884C;&#x7248;&#x672C;&#xFF0C;&#x90FD;&#x7B26;&#x5408;&#x4E0A;&#x9762;&#x8FD9;&#x5E45;&#x56FE;&#x7247;&#x4E2D;&#x7684;&#x8DEF;&#x5F84;&#x7ED3;&#x6784;&#x3002;</p>
+<h2 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;"><a href="#&#x53C2;&#x8003;&#x6587;&#x7AE0;" class="headerlink" title="&#x53C2;&#x8003;&#x6587;&#x7AE0;"></a>&#x53C2;&#x8003;&#x6587;&#x7AE0;</h2><p>1.<a href="http://www.debianadmin.com/linux-directory-structure-overview.html" target="_blank" rel="external">Linux Directory Structure Overview</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/树莓派/" rel="tag">#树莓派</a>
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+            <a href="/tags/raspbian/" rel="tag">#raspbian</a>
+          
+            <a href="/tags/目录/" rel="tag">#目录</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/how_to_install_ftp_on_raspberry/" rel="next" title="20160706-在树莓派上搭建FTP服务">
+                <i class="fa fa-chevron-left"></i> 20160706-在树莓派上搭建FTP服务
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/how_to_install_ghost_on_centos_6/" rel="prev" title="如何在CENTOS6上安装GHOST">
+                如何在CENTOS6上安装GHOST <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="post/directory_introduction_in_linux_or_raspbian/"
+           data-title="Linux/Raspbian每个目录用途说明" data-url="http://www.wuliaole.com/post/directory_introduction_in_linux_or_raspbian/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/150694?v=3&s=140"
+               alt="节约用爱" />
+          <p class="site-author-name" itemprop="name">节约用爱</p>
+          <p class="site-description motion-element" itemprop="description">随笔 随心</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">61</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">132</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tinyvane" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/tinyvane" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/tinyvane" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/2705283/" target="_blank" title="DouBan">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  DouBan
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/wang-yi-80" target="_blank" title="ZhiHu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.jerryzhang.net/" title="JerrySher's blog" target="_blank">JerrySher's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://3toptop.top/" title="山上" target="_blank">山上</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://sfantree.com/" title="水番林" target="_blank">水番林</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文章更新"><span class="nav-number">1.</span> <span class="nav-text">文章更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么会有这篇文章"><span class="nav-number">2.</span> <span class="nav-text">为什么会有这篇文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux和Windows的区别"><span class="nav-number">3.</span> <span class="nav-text">Linux和Windows的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux系统目录说明"><span class="nav-number">4.</span> <span class="nav-text">Linux系统目录说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LINUX系统目录结构图"><span class="nav-number">5.</span> <span class="nav-text">LINUX系统目录结构图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文章"><span class="nav-number">6.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">节约用爱</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wuliaole"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
