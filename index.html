@@ -266,6 +266,157 @@
             
               
                 
+                <a class="post-title-link" href="/post/use_bittorrent_to_synchronize_all_files_among_all_terminals_based_on_raspberry_pi/" itemprop="url">
+                  树莓派折腾之：BTSYNC同步所有电脑和手机
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-12T11:19:10+08:00" content="2016-07-12">
+              2016-07-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/raspberry/" itemprop="url" rel="index">
+                    <span itemprop="name">raspberry</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/use_bittorrent_to_synchronize_all_files_among_all_terminals_based_on_raspberry_pi/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/use_bittorrent_to_synchronize_all_files_among_all_terminals_based_on_raspberry_pi/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"><a href="#&#x6587;&#x7AE0;&#x66F4;&#x65B0;" class="headerlink" title="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"></a>&#x6587;&#x7AE0;&#x66F4;&#x65B0;</h2><p>1.20160526-&#x521D;&#x6B21;&#x6210;&#x6587;<br>2.20160712-&#x5185;&#x5BB9;&#x72EC;&#x7ACB;&#x5206;&#x62C6;&#xFF0C;&#x8865;&#x5145;&#x4E86;&#x811A;&#x672C;&#x5185;&#x5BB9;&#xFF0C;&#x6587;&#x7AE0;&#x6DFB;&#x52A0;&#x90E8;&#x5206;&#x5185;&#x5BB9;</p>
+<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;</h2><p>&#x56E0;&#x4E3A;&#x7535;&#x8111;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x6548;&#x7387;&#x4E0D;&#x60F3;&#x964D;&#x4F4E;&#xFF0C;&#x5C31;&#x8FD9;&#x4E48;&#x7B80;&#x5355;&#xFF0C;&#x5DE5;&#x4F5C;&#x6587;&#x4EF6;&#xFF0C;&#x751F;&#x6D3B;&#x7167;&#x7247;&#xFF0C;&#x968F;&#x624B;&#x53EF;&#x5F97;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x76EE;&#x6807;&#x3002;&#x81F3;&#x4E8E;&#x4E3A;&#x4EC0;&#x4E48;&#x63A8;&#x8350;Bit Synchronize&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x641C;&#x7D22;&#x7C7B;&#x4F3C;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x6700;&#x8FD1;&#x770B;&#x5C0F;&#x4F17;&#x8F6F;&#x4EF6;&#xFF0C;&#x63A8;&#x8350;&#x4E00;&#x4E2A;&#x53EB;Syncthing&#x7684;&#x8F6F;&#x4EF6;&#xFF0C;&#x8FD8;&#x6CA1;&#x6709;&#x5C1D;&#x8BD5;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E2A;&#x4EBA;&#x6765;&#x8BF4;&#xFF0C;&#x7A33;&#x5B9A;&#x719F;&#x6089;&#x7684;&#x5DE5;&#x5177;&#x6700;&#x987A;&#x624B;&#x3002;</p>
+<h2 id="&#x521B;&#x5EFA;BTSYNC&#x72EC;&#x7ACB;&#x8D26;&#x6237;"><a href="#&#x521B;&#x5EFA;BTSYNC&#x72EC;&#x7ACB;&#x8D26;&#x6237;" class="headerlink" title="&#x521B;&#x5EFA;BTSYNC&#x72EC;&#x7ACB;&#x8D26;&#x6237;"></a>&#x521B;&#x5EFA;BTSYNC&#x72EC;&#x7ACB;&#x8D26;&#x6237;</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo adduser --quiet --system --group --disabled-password btsync</div></pre></td></tr></table></figure>
+<h2 id="&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;BYSYNC"><a href="#&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;BYSYNC" class="headerlink" title="&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;BYSYNC"></a>&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;BYSYNC</h2><p>&#x547D;&#x4EE4;&#x5F88;&#x7B80;&#x5355;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr</div><div class="line">sudo wget https://download-cdn.getsync.com/stable/linux-arm/BitTorrent-Sync_arm.tar.gz <span class="comment">#&#x6811;&#x8393;&#x6D3E;&#x9700;&#x8981;&#x4E0B;&#x8F7D;ARM&#x7248;&#x672C;</span></div><div class="line">sudo tar -zxvf BitTorrent-Sync_arm.tar.gz -C /usr/<span class="built_in">local</span>/sbin btsync <span class="comment">#&#x89E3;&#x538B;&#x7F29;,btsync&#x8868;&#x793A;&#x53EA;&#x9700;&#x8981;&#x538B;&#x7F29;&#x5305;&#x4E2D;&#x7684;btsync&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</span></div><div class="line">/usr/<span class="built_in">local</span>/sbin/btsync/btsync --webui.listen 0.0.0.0:8888 <span class="comment">#&#x521D;&#x6B21;&#x8FD0;&#x884C;&#xFF0C;&#x76D1;&#x542C;8888&#x7AEF;&#x53E3;&#x63D0;&#x4F9B;GUI&#x7BA1;&#x7406;&#x754C;&#x9762;</span></div></pre></td></tr></table></figure>
+<p>&#x7136;&#x540E;&#xFF0C;&#x5728;&#x624B;&#x673A;&#x6216;&#x8005;&#x7535;&#x8111;&#x4E0A;&#x8BBF;&#x95EE; <code>http://your_raspberry_ip:8888/gui</code> &#x5373;&#x53EF;&#x770B;&#x5230;GUI&#x754C;&#x9762;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x6837;&#x6267;&#x884C;&#xFF0C;&#x53EA;&#x6309;&#x7167;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x81EA;&#x5DF1;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x8BF7;&#x9996;&#x5148;&#x901A;&#x8FC7; <code>./btsync --dump-sample-config</code> &#x6765;&#x5BFC;&#x51FA;&#x4E00;&#x4EFD;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x62F7;&#x8D1D;&#xFF0C;&#x6587;&#x4EF6;&#x540D;&#x5B57;&#x662F; <code>btsync.conf</code></p>
+<p>&#x4F8B;&#x5982;&#x6267;&#x884C;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/sbin/btsync --dump-sample-config &gt; /etc/btsync.confg</div></pre></td></tr></table></figure>
+<p>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x7684;&#x4E3B;&#x8981;&#x5C31;&#x662F;&#x7ED9;&#x4F60;&#x7684;&#x3C0;&#x8D77;&#x4E2A;&#x540D;&#x5B57;&#xFF0C;&#x5E76;&#x4E14;&#x4FEE;&#x6539;&#x4E0B;&#x5BC6;&#x7801;&#x4EE5;&#x53CA;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#xFF0C;&#x7136;&#x540E;&#x4EE5;&#x540E;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>./btsync --config btsync.conf</code> &#x6765;&#x6267;&#x884C;&#x4F60;&#x914D;&#x7F6E;&#x597D;&#x7684;&#x53C2;&#x6570;&#x4E86;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8BA9;BTSYNC&#x6BCF;&#x6B21;&#x6811;&#x8393;&#x6D3E;&#x5F00;&#x673A;&#x90FD;&#x542F;&#x52A8;&#xFF0C;&#x6211;&#x53C2;&#x8003;&#x8FD9;&#x4E2A;<a href="http://www.lai18.com/content/1294646.html" target="_blank" rel="external">&#x5730;&#x65B9;</a>&#xFF0C;&#x5199;&#x4E86;&#x4E2A;&#x811A;&#x672C;&#x653E;&#x5728;/etc/init.d&#x4E0B;&#x9762;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/init.d/btsync.sh</div></pre></td></tr></table></figure>
+<p>&#x811A;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="comment"># /etc/init.d/btsync</span></div><div class="line"></div><div class="line"><span class="comment">### BEGIN INIT INFO</span></div><div class="line"><span class="comment"># Provides: btsybc daemon</span></div><div class="line"><span class="comment"># Required-Start: $remote_fs $syslog</span></div><div class="line"><span class="comment"># Required-Stop: $remote_fs $syslog</span></div><div class="line"><span class="comment"># Default-Start: 2 3 4 5</span></div><div class="line"><span class="comment"># Default-Stop: 0 1 6</span></div><div class="line"><span class="comment"># Short-Description: BTSync server daemon</span></div><div class="line"><span class="comment"># Description: This service is used to support the bt sync.</span></div><div class="line"><span class="comment"># Placed in /etc/init.d.</span></div><div class="line"><span class="comment">### END INIT INFO</span></div><div class="line"><span class="comment"># Original Author: Nicolas Bernaerts &lt;nicolas.bernaerts@laposte.net&gt;</span></div><div class="line"><span class="comment"># Current Author: FOOLMAN &lt;tinyvane@gmail.com&gt;</span></div><div class="line"><span class="comment"># Version:</span></div><div class="line"><span class="comment">#  Ori V1.0, 06/09/2013 - Creation</span></div><div class="line"><span class="comment">#  Ori V1.1, 09/09/2013 - Use under-priviledged system user</span></div><div class="line"><span class="comment">#  Cur V1.0, 07/12/2016 - Localized into China Raspberry Pi Users</span></div><div class="line"></div><div class="line"><span class="comment"># description variables</span></div><div class="line">PATH=/sbin:/usr/sbin:/bin:/usr/bin</div><div class="line">DESC=<span class="string">&quot;BTSync server&quot;</span></div><div class="line">NAME=<span class="string">&quot;btsync&quot;</span></div><div class="line">USER=<span class="variable">$NAME</span></div><div class="line">DAEMON=/usr/<span class="built_in">local</span>/sbin/<span class="variable">$NAME</span></div><div class="line">ROOT=/home/<span class="variable">$NAME</span></div><div class="line">PIDFILE=<span class="variable">$ROOT</span>/<span class="variable">$NAME</span>.pid</div><div class="line">    </div><div class="line"><span class="comment"># Exit if btsync program is not installed</span></div><div class="line"><span class="keyword">if</span> [ ! -x <span class="string">&quot;<span class="variable">$DAEMON</span>&quot;</span> ] ; <span class="keyword">then</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">&quot;Binary <span class="variable">$DAEMON</span> does not exist. Aborting&quot;</span></div><div class="line">	<span class="built_in">exit</span> 0</div><div class="line"><span class="keyword">fi</span></div><div class="line">    </div><div class="line"><span class="comment"># Exit if btsync user home directory doesn&apos;t exist</span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-d</span> <span class="string">&quot;<span class="variable">$ROOT</span>&quot;</span> ]; <span class="keyword">then</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">&quot;User <span class="variable">$USER</span> does not exist. Aborting&quot;</span></div><div class="line">	<span class="built_in">exit</span> 0</div><div class="line"><span class="keyword">fi</span></div><div class="line">    </div><div class="line"><span class="comment"># Function that starts the daemon/service</span></div><div class="line"><span class="comment"># 0 - daemon started</span></div><div class="line"><span class="comment"># 1 - daemon already running</span></div><div class="line"><span class="comment"># 2 - daemon could not be started</span></div><div class="line"></div><div class="line"><span class="function"><span class="title">do_start</span></span>()</div><div class="line">{</div><div class="line">	<span class="comment"># If needed, start the daemon</span></div><div class="line">	<span class="keyword">if</span> [ <span class="_">-f</span> <span class="string">&quot;<span class="variable">$PIDFILE</span>&quot;</span> ]</div><div class="line">	<span class="keyword">then</span></div><div class="line">	    <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$NAME</span> already running&quot;</span></div><div class="line">	    RETVAL=<span class="string">&quot;1&quot;</span></div><div class="line">	<span class="keyword">else</span></div><div class="line">	    start-stop-daemon --start --quiet --chuid <span class="variable">$USER</span> --name <span class="variable">$NAME</span> --exec <span class="variable">$DAEMON</span> -- --config /etc/btsync.conf</div><div class="line">	    RETVAL=<span class="string">&quot;$?&quot;</span></div><div class="line">	    [ <span class="string">&quot;<span class="variable">$RETVAL</span>&quot;</span> = <span class="string">&quot;0&quot;</span> ] &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$NAME</span> started&quot;</span></div><div class="line">	<span class="keyword">fi</span></div><div class="line">	    </div><div class="line">	<span class="built_in">return</span> <span class="string">&quot;<span class="variable">$RETVAL</span>&quot;</span></div><div class="line">}</div><div class="line">    </div><div class="line"><span class="comment"># Function that stops the daemon/service</span></div><div class="line"><span class="comment"># 0 - daemon stopped</span></div><div class="line"><span class="comment"># 1 - daemon already stopped</span></div><div class="line"><span class="comment"># 2 - daemon could not be stopped</span></div><div class="line"></div><div class="line"><span class="function"><span class="title">do_stop</span></span>()</div><div class="line">{</div><div class="line">	<span class="comment"># Stop the daemon</span></div><div class="line">	start-stop-daemon --stop --quiet --retry=TERM/30/KILL/5 --pidfile <span class="variable">$PIDFILE</span> --name <span class="variable">$NAME</span></div><div class="line">	RETVAL=<span class="string">&quot;$?&quot;</span></div><div class="line">	[ <span class="string">&quot;<span class="variable">$RETVAL</span>&quot;</span> = <span class="string">&quot;0&quot;</span> ] &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$NAME</span> stopped&quot;</span></div><div class="line">	[ <span class="string">&quot;<span class="variable">$RETVAL</span>&quot;</span> = <span class="string">&quot;1&quot;</span> ] &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$NAME</span> was not running&quot;</span></div><div class="line">	    </div><div class="line">	<span class="comment"># remove pid file</span></div><div class="line">	rm <span class="_">-f</span> <span class="variable">$PIDFILE</span></div><div class="line">	    </div><div class="line">	<span class="built_in">return</span> <span class="string">&quot;<span class="variable">$RETVAL</span>&quot;</span></div><div class="line">}</div><div class="line">    </div><div class="line"><span class="comment"># deal with different parameters : start, stop &amp; status</span></div><div class="line"><span class="keyword">case</span> <span class="string">&quot;<span class="variable">$1</span>&quot;</span> <span class="keyword">in</span></div><div class="line">	<span class="comment"># start service</span></div><div class="line">	start)</div><div class="line">	    <span class="keyword">do</span>_start</div><div class="line">	    ;;</div><div class="line">	<span class="comment"># stop service</span></div><div class="line">	stop)</div><div class="line">	    <span class="keyword">do</span>_stop</div><div class="line">	    ;;</div><div class="line">	<span class="comment"># restart service</span></div><div class="line">	restart)</div><div class="line">	    <span class="keyword">do</span>_stop</div><div class="line">	    <span class="keyword">do</span>_start</div><div class="line">	    ;;</div><div class="line">	<span class="comment"># unknown command, display help message</span></div><div class="line">	*)</div><div class="line">	    <span class="built_in">echo</span> <span class="string">&quot;Usage : <span class="variable">$SCRIPTNAME</span> {start|stop|restart}&quot;</span> &gt;&amp;2</div><div class="line">	    <span class="built_in">exit</span> 3</div><div class="line">	    ;;</div><div class="line"><span class="keyword">esac</span></div></pre></td></tr></table></figure>
+<p>&#x7136;&#x540E;&#x7ED9;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF0C;&#x5E76;&#x4E14;&#x52A0;&#x5165;&#x5230;&#x542F;&#x52A8;&#x9879;&#x4E2D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo chmod +x /etc/init.d/btsync</div><div class="line">sudo update-rc.d btsync defaults</div></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x505C;&#x6B62;&#x548C;&#x542F;&#x52A8;BTSYNC&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x5373;&#x53EF;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo service btsync start 	<span class="comment">#&#x542F;&#x52A8;BTSync</span></div><div class="line">sudo service btsync stop 	<span class="comment">#&#x505C;&#x6B62;BTSync</span></div><div class="line">sudo service btsync status	<span class="comment">#&#x67E5;&#x770B;BTSync&#x72B6;&#x6001;</span></div></pre></td></tr></table></figure>
+<p>PS:&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x540D;&#x5B57;&#x548C;&#x5BC6;&#x7801;&#xFF0C;&#x6700;&#x597D;&#x7528;&#x4E2A;&#x5E38;&#x7528;&#x7684;&#xFF0C;&#x5426;&#x5219;&#x5FD8;&#x4E86;&#x4E5F;&#x9EBB;&#x70E6;&#x3002;</p>
+<h2 id="btsync-conf&#x6587;&#x4EF6;&#x914D;&#x7F6E;"><a href="#btsync-conf&#x6587;&#x4EF6;&#x914D;&#x7F6E;" class="headerlink" title="btsync.conf&#x6587;&#x4EF6;&#x914D;&#x7F6E;"></a>btsync.conf&#x6587;&#x4EF6;&#x914D;&#x7F6E;</h2><p>&#x6211;&#x7684;&#x914D;&#x7F6E;&#x5982;&#x4E0B;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">   <span class="string">&quot;device_name&quot;</span>: <span class="string">&quot;Pi in Beijing&quot;</span>,</div><div class="line">   <span class="string">&quot;listening_port&quot;</span> : 0, // 0 - randomize port</div><div class="line"></div><div class="line">/* storage_path dir contains auxilliary app files <span class="keyword">if</span> no storage_path field: .sync dir created <span class="keyword">in</span> current working directory */</div><div class="line">   <span class="string">&quot;storage_path&quot;</span> : <span class="string">&quot;/home/btsync/.sync&quot;</span>,</div><div class="line"></div><div class="line">/* <span class="built_in">set</span> location of pid file */</div><div class="line">   <span class="string">&quot;pid_file&quot;</span> : <span class="string">&quot;/home/btsync/btsync.pid&quot;</span>,</div><div class="line"></div><div class="line">/* use UPnP <span class="keyword">for</span> port mapping */</div><div class="line">  <span class="string">&quot;use_upnp&quot;</span> : <span class="literal">true</span>,</div><div class="line"></div><div class="line">/* limits <span class="keyword">in</span> kB/s. 0 - no <span class="built_in">limit</span> */</div><div class="line">  <span class="string">&quot;download_limit&quot;</span> : 0,</div><div class="line">  <span class="string">&quot;upload_limit&quot;</span> : 0,</div><div class="line"></div><div class="line">/* proxy configuration */</div><div class="line">// <span class="string">&quot;proxy_type&quot;</span> : <span class="string">&quot;socks4&quot;</span>, // Valid types: <span class="string">&quot;socks4&quot;</span>, <span class="string">&quot;socks5&quot;</span>, <span class="string">&quot;http_connect&quot;</span>. Any other value means no proxy</div><div class="line">// <span class="string">&quot;proxy_addr&quot;</span> : <span class="string">&quot;192.168.1.2&quot;</span>, // IP address of proxy server.</div><div class="line">// <span class="string">&quot;proxy_port&quot;</span> : 1080,</div><div class="line">// <span class="string">&quot;proxy_auth&quot;</span> : <span class="literal">false</span>, // Use authentication <span class="keyword">for</span> proxy. Note: only username/password <span class="keyword">for</span> socks5 (RFC 1929) is supported, and it is not really secure</div><div class="line">// <span class="string">&quot;proxy_username&quot;</span> : <span class="string">&quot;user&quot;</span>,</div><div class="line">// <span class="string">&quot;proxy_password&quot;</span> : <span class="string">&quot;password&quot;</span>,</div><div class="line"></div><div class="line">  <span class="string">&quot;webui&quot;</span> :</div><div class="line">  {</div><div class="line">    <span class="string">&quot;listen&quot;</span> : <span class="string">&quot;0.0.0.0:8888&quot;</span> // remove field to <span class="built_in">disable</span> WebUI</div><div class="line"></div><div class="line">/* preset credentials. Use password or password_<span class="built_in">hash</span> */</div><div class="line">    ,<span class="string">&quot;login&quot;</span> : <span class="string">&quot;tinyvane&quot;</span></div><div class="line">    ,<span class="string">&quot;password&quot;</span> : <span class="string">&quot;christina&quot;</span></div><div class="line">//  ,<span class="string">&quot;password_hash&quot;</span> : <span class="string">&quot;some_hash&quot;</span> // password <span class="built_in">hash</span> <span class="keyword">in</span> crypt(3) format</div><div class="line">//  ,<span class="string">&quot;allow_empty_password&quot;</span> : <span class="literal">false</span> // Defaults to <span class="literal">true</span></div><div class="line">/* ssl configuration */</div><div class="line">//  ,<span class="string">&quot;force_https&quot;</span> : <span class="literal">true</span> // <span class="built_in">disable</span> http</div><div class="line">//  ,<span class="string">&quot;ssl_certificate&quot;</span> : <span class="string">&quot;/path/to/cert.pem&quot;</span></div><div class="line">//  ,<span class="string">&quot;ssl_private_key&quot;</span> : <span class="string">&quot;/path/to/private.key&quot;</span></div><div class="line"></div><div class="line">/* directory_root path defines <span class="built_in">where</span> the WebUI Folder browser starts (linux only). Default value is / */</div><div class="line">//  ,<span class="string">&quot;directory_root&quot;</span> : <span class="string">&quot;/home/pi/MySharedFolders/&quot;</span></div><div class="line"></div><div class="line">/* directory_root_policy defines how directory_root is used (linux only).</div><div class="line">   Valid values are:</div><div class="line">     <span class="string">&quot;all&quot;</span> - accepts directory_root and its subdirectories <span class="keyword">for</span> <span class="string">&apos;getdir&apos;</span> and <span class="string">&apos;adddir&apos;</span> actions</div><div class="line">     <span class="string">&quot;belowroot&quot;</span> - accepts directory_root<span class="string">&apos;s subdirectories for &apos;</span>getdir<span class="string">&apos; and &apos;</span>adddir<span class="string">&apos; actions,</span></div><div class="line">     but denies attempts to use &apos;adddir<span class="string">&apos; to create directories directly within directory_root</span></div><div class="line">   Default value is &quot;all&quot;. */</div><div class="line">//  ,&quot;directory_root_policy&quot; : &quot;all&quot;</div><div class="line"></div><div class="line">/* dir_whitelist defines which directories can be shown to user or have folders added (linux only)</div><div class="line">   relative paths are relative to directory_root setting */</div><div class="line">//  ,&quot;dir_whitelist&quot; : [ &quot;/home/user/MySharedFolders/personal&quot;, &quot;work&quot; ]</div><div class="line">  }</div><div class="line"></div><div class="line">/* !!! if you set shared folders in config file WebUI will be DISABLED !!!</div><div class="line">   shared directories specified in config file  override the folders previously added from WebUI. */</div><div class="line">/*,</div><div class="line">  &quot;shared_folders&quot; :</div><div class="line">  [</div><div class="line">    {</div><div class="line">      &quot;secret&quot; : &quot;MY_SECRET_1&quot;, // required field - use --generate-secret in command line to create new secret</div><div class="line">      &quot;dir&quot; : &quot;/home/user/bittorrent/sync_test&quot;, // * required field</div><div class="line">      &quot;use_relay_server&quot; : true, //  use relay server when direct connection fails</div><div class="line">      &quot;use_tracker&quot; : true,</div><div class="line">      &quot;search_lan&quot; : true,</div><div class="line">      &quot;use_sync_trash&quot; : true, // enable SyncArchive to store files deleted on remote devices</div><div class="line">      &quot;overwrite_changes&quot; : false, // restore modified files to original version, ONLY for Read-Only folders</div><div class="line">      &quot;known_hosts&quot; : // specify hosts to attempt connection without additional search</div><div class="line">      [</div><div class="line">        &quot;192.168.1.2:44444&quot;</div><div class="line">      ]</div><div class="line">    }</div><div class="line">  ]</div><div class="line">*/</div><div class="line"></div><div class="line">/* Advanced preferences can be added to config file. Info is available at &quot;http://help.getsync.com/customer/portal/articles/1902048-sync-advanced-preferences--more-options&quot;</div><div class="line">For example see folder_rescan_interval below */</div><div class="line">//, &quot;folder_rescan_interval&quot; : &quot;86400&quot;</div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure>
+<p>&#x6709;&#x51E0;&#x4E2A;&#x5730;&#x65B9;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;</p>
+<ol>
+<li>&#x201C;device_name&#x201D;: &#x201C;Pi in Beijing&#x201D; #&#x8FD9;&#x4E2A;&#x662F;&#x4F60;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6807;&#x793A;&#xFF0C;&#x6539;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x8BB0;&#x7684;</li>
+<li>&#x201C;storage_path&#x201D; : &#x201C;/home/btsync/.sync&#x201D;, #&#x8FD9;&#x4E2A;&#x662F;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x8BBE;&#x7F6E;&#x597D;&#x4F4D;&#x7F6E;</li>
+<li>&#x201C;pid_file&#x201D; : &#x201C;/home/btsync/btsync.pid&#x201D;, #&#x8FD9;&#x4E2A;&#x662F;&#x8FDB;&#x7A0B;&#x7684;pid&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E86;&#x4E0A;&#x9762;&#x6211;&#x7684;&#x542F;&#x52A8;&#x811A;&#x672C;&#xFF0C;&#x8BF7;&#x8BB0;&#x5F97;&#x8FD9;&#x91CC;&#x4E00;&#x5B9A;&#x8981;&#x8BBE;&#x7F6E;&#x548C;&#x6211;&#x8FD9;&#x91CC;&#x76F8;&#x540C;</li>
+<li>2&#x548C;3&#x7684;&#x6743;&#x9650;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x5C5E;&#x4E8E;btsync&#xFF0C;&#x5E76;&#x4E14;&#x8BB0;&#x5F97;&#x7ED9;&#x5916;&#x63A5;&#x786C;&#x76D8;&#x4E0A;&#x7684;btysnc&#x76EE;&#x5F55;&#x6743;&#x9650;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>sudo chown -R btsync:btsync file</code></li>
+</ol>
+<h3 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;" class="headerlink" title="&#x53C2;&#x8003;&#x8D44;&#x6599;"></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h3><ol>
+<li><a href="https://www.johannesbader.ch/2014/05/installing-bittorrent-sync-on-raspberry-pi/" target="_blank" rel="external">INSTALLING BITTORRENT SYNC ON RASPBERRY PI</a></li>
+<li><a href=""></a></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/post/how_to_scientificly_online_by_shadowsocks/" itemprop="url">
                   搬瓦工自动配置shadowsocks翻墙
                 </a>
@@ -541,8 +692,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/raspberry/" itemprop="url" rel="index">
-                    <span itemprop="name">raspberry</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -582,66 +733,15 @@
 
       
         
-          
-            <h2 id="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"><a href="#&#x6587;&#x7AE0;&#x66F4;&#x65B0;" class="headerlink" title="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"></a>&#x6587;&#x7AE0;&#x66F4;&#x65B0;</h2><p>1.20160707-&#x521D;&#x6B21;&#x6210;&#x6587;</p>
+          <h2 id="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"><a href="#&#x6587;&#x7AE0;&#x66F4;&#x65B0;" class="headerlink" title="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"></a>&#x6587;&#x7AE0;&#x66F4;&#x65B0;</h2><p>1.20160707-&#x521D;&#x6B21;&#x6210;&#x6587;</p>
 <h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;</h2><p>&#x56E0;&#x4E3A;&#x5728;&#x4F7F;&#x7528;apt-get purge remove openvpn&#x4E4B;&#x540E;&#xFF0C;&#x53D1;&#x73B0;&#x7CFB;&#x7EDF;&#x91CC;&#x4F9D;&#x7136;&#x6709;&#x5F88;&#x591A;openvpn&#x540D;&#x5B57;&#x7684;&#x76EE;&#x5F55;&#x6216;&#x8005;&#x6587;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/usr/sbin/openvpn</div><div class="line">/etc/default/openvpn</div><div class="line">/etc/network/<span class="keyword">if</span>-down.d/openvpn</div><div class="line">/etc/network/<span class="keyword">if</span>-up.d/openvpn</div><div class="line">/etc/bash_completion.d/openvpn</div><div class="line">/etc/init.d/openvpn</div><div class="line">/run/openvpn</div></pre></td></tr></table></figure>
 <p>&#x6709;&#x5F3A;&#x8FEB;&#x75C7;+&#x6D01;&#x7656;&#x7684;&#x6211;&#x5F53;&#x7136;&#x5C31;&#x5F88;&#x4E0D;&#x723D;&#x4E86;&#xFF0C;&#x6328;&#x4E2A;&#x67E5;&#x770B;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x5220;&#x6389;&#x4E86;&#x8FD9;&#x4E9B;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x76EE;&#x5F55;&#x7684;&#x7528;&#x6237;&#x6BD4;&#x8F83;&#x611F;&#x5174;&#x8DA3;&#xFF0C;&#x5C31;&#x627E;&#x5230;&#x4E86;&#x4E0B;&#x9762;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x82F1;&#x6587;&#x7684;&#xFF0C;&#x7FFB;&#x8BD1;&#x4E86;&#xFF0C;&#x7559;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x589E;&#x52A0;&#x81EA;&#x5DF1;&#x5BF9;LINUX&#x7CFB;&#x7EDF;&#x7684;&#x4E86;&#x89E3;&#x3002;</p>
-<h2 id="Linux&#x548C;Windows&#x7684;&#x533A;&#x522B;"><a href="#Linux&#x548C;Windows&#x7684;&#x533A;&#x522B;" class="headerlink" title="Linux&#x548C;Windows&#x7684;&#x533A;&#x522B;"></a>Linux&#x548C;Windows&#x7684;&#x533A;&#x522B;</h2><p>&#x7684;&#x663E;&#x8457;&#x533A;&#x522B;&#x4E4B;&#x4E00;&#x5C31;&#x662F;&#x5176;&#x4E0D;&#x540C;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF0C;&#x5E76;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x683C;&#x5F0F;&#x4E0A;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x800C;&#x662F;&#x4E0D;&#x540C;&#x4F4D;&#x7F6E;&#x4E0A;&#x4FDD;&#x5B58;&#x7684;&#x4E1C;&#x897F;&#x533A;&#x522B;&#x5F88;&#x5927;&#x3002;</p>
-<p>&#x5728;Windows&#x4E2D;&#xFF0C;&#x5178;&#x578B;&#x7684;&#x8DEF;&#x5F84;&#x53EF;&#x80FD;&#x662F;&#x8FD9;&#x6837;&#x7684; <code>D:\Folder\subfolder\file.txt</code>&#xFF0C;&#x800C;&#x5728;Linux&#x4E2D;&#xFF0C;&#x8DEF;&#x5F84;&#x5219;&#x662F;&#x8FD9;&#x6837;&#x7684; <code>/Folder/subfolder/file.txt</code>&#x3002;</p>
-<p>&#x659C;&#x7EBF;&#x503E;&#x659C;&#x7684;&#x65B9;&#x5411;&#x4E0D;&#x540C;&#xFF0C;&#x5E76;&#x4E14;&#xFF0C;&#x5728;Linux&#x4E2D;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;C&#x76D8;D&#x76D8;&#x7684;&#x6982;&#x5FF5;&#xFF0C;Linux&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x4E4B;&#x540E;&#xFF0C;<code>&#x6839;&#x5206;&#x533A;</code> &#x5C31;&#x201D;&#x6302;&#x8F7D;&#x201D;&#x5728;&#x4E86;&#x5728;&#x4E86; <code>/</code> &#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x4E14;&#x6240;&#x6709;&#x7684;&#x6587;&#x4EF6;&#x3001;&#x6587;&#x4EF6;&#x5939;&#x3001;&#x8BBE;&#x5907;&#x4EE5;&#x53CA;&#x4E0D;&#x540C;&#x7684;&#x786C;&#x76D8;&#x5149;&#x9A71;&#x4E4B;&#x7C7B;&#x7684;&#xFF0C;&#x4E5F;&#x90FD;&#x6302;&#x8F7D;&#x5728;&#x4E86; <code>/</code>&#x3002;</p>
-<p>&#x867D;&#x7136;&#x53EF;&#x80FD;&#x5728;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x5E76;&#x4E0D;&#x660E;&#x663E;&#xFF0C;&#x4F46;&#x662F;Linux&#x7CFB;&#x7EDF;&#x5BF9;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x6587;&#x8DEF;&#x5F84;&#x7684;&#x540D;&#x79F0;&#x4E2D;&#x7684;&#x5927;&#x5C0F;&#x5199;&#x5B57;&#x7B26;&#x662F;&#x654F;&#x611F;&#x7684;&#x3002;</p>
-<p>&#x6BD4;&#x5982; <code>/Folder/subfolder/file.txt</code> &#x4E0E; <code>/folder/subfolder/file.txt</code>&#x5E76;&#x4E0D;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x3002;</p>
-<h2 id="Linux&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x8BF4;&#x660E;"><a href="#Linux&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x8BF4;&#x660E;" class="headerlink" title="Linux&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x8BF4;&#x660E;"></a>Linux&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x8BF4;&#x660E;</h2><p>Unix&#x4E2D;&#x548C;Linux&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x662F;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x76EE;&#x5F55;&#x548C;&#x6587;&#x4EF6;&#x6700;&#x7EC8;&#x90FD;&#x7EDF;&#x4E00;&#x5230;&#x201D;/&#x201C;&#x6839;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E0B;&#x3002;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x662F;&#x65E0;&#x8BBA;&#x662F;&#x4E0D;&#x662F;&#x6302;&#x8F7D;&#x8FC7;&#x6765;&#x7684;&#xFF0C;&#x6700;&#x7EC8;&#x90FD;&#x5206;&#x5C42;&#x6392;&#x5217;&#x5230;&#x4EE5;&#x201D;/&#x201C;&#x4E3A;&#x8D77;&#x59CB;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E4B;&#x4E0B;&#x3002;</p>
-<p>The Linux Directory Structure follows the &#x201C;Filesystem Hierarchy Structure (FHS)&#x201D; maintained by the Free Standards Group although most of the distributions sometimes tend to deviate from the standards.</p>
-<p>Lets have a quick stroll across the different directories under the Linux Filesystem Hierarchy</p>
-<p>&#x201C;/&#x201C; &#x6839;&#x8DEF;&#x5F84;</p>
-<p>The Directory Structure starts with the Root file system &#x201C;/&#x201C; and is indeed the root directory for the whole structure.The partition where / (the root directory) will be located on a UNIX or UNIX-compatible system.</p>
-<p>/boot</p>
-<p>The /boot directory contains the Boot loader files including Grub or Lilo, the Kernel, initrd and system.map config files<br>&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x5305;&#x542B;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#xFF08;boot loader&#xFF09;&#xFF0C;&#x4F8B;&#x5982;Grub&#xFF0C;Lilo&#x6216;&#x8005;Kernel&#xFF0C;</p>
-<p>/sys</p>
-<p>This contains the Kernel, Firmware and system related files.</p>
-<p>/sbin</p>
-<p>&#x5305;&#x542B;&#x7CFB;&#x7EDF;&#x64CD;&#x4F5C;&#x548C;&#x8FD0;&#x4F5C;&#x6240;&#x5FC5;&#x9700;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x4E3B;&#x8981;&#x5C31;&#x662F;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;&#x7C7B;&#x4F3C;WINDOWS&#x4E0B;&#x7684;EXE&#x6587;&#x4EF6;&#x3002;</p>
-<p>/bin</p>
-<p>&#x5305;&#x542B;&#x5355;&#x7528;&#x6237;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x7A0B;&#x5E8F;&#xFF0C;&#x6BD4;&#x5982;cat&#xFF0C;ls&#xFF0C;cp&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x3002;</p>
-<p>/lib</p>
-<p>&#x5305;&#x542B;/sbin&#x548C;/bin&#x76EE;&#x5F55;&#x4E0B;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x6240;&#x9700;&#x8981;&#x7684;&#x5E93;&#x6587;&#x4EF6;&#x3002;</p>
-<p>/dev</p>
-<p>&#x5185;&#x542B;&#x5FC5;&#x9700;&#x7684;&#x7CFB;&#x7EDF;&#x6587;&#x4EF6;&#x548C;&#x9A71;&#x52A8;&#x5668;&#x3002;</p>
-<p>/etc</p>
-<p>&#x5185;&#x542B;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4E0B;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x6BD4;&#x5982; /etc/hosts, /etc/resolv.conf, nsswitch.conf, &#x4EE5;&#x53CA;&#x7CFB;&#x7EDF;&#x7F3A;&#x7701;&#x8BBE;&#x7F6E;&#xFF0C;&#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7B49;&#x7B49;&#x3002;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x7CFB;&#x7EDF;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;</p>
-<p>/home</p>
-<p>&#x6BCF;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x5728;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x90FD;&#x4F1A;&#x5355;&#x72EC;&#x6709;&#x4E00;&#x4E2A;&#x4EE5;&#x5176;&#x7528;&#x6237;&#x540D;&#x547D;&#x4EE4;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x4FDD;&#x5B58;&#x7740;&#x7528;&#x6237;&#x7684;&#x4E2A;&#x4EBA;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x4EE5; profile&#x7ED3;&#x5C3E;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x4F46;&#x662F;&#x4E5F;&#x6709;&#x4F8B;&#x5916;&#xFF0C;root&#x7528;&#x6237;&#x7684;&#x6570;&#x636E;&#x5C31;&#x4E0D;&#x5728;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x800C;&#x662F;&#x5355;&#x72EC;&#x5728;&#x6839;&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x4FDD;&#x5B58;&#x5728;&#x5355;&#x72EC;&#x7684;/root&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x3002;</p>
-<p>/media</p>
-<p>&#x4E00;&#x4E2A;&#x7ED9;&#x6240;&#x6709;&#x53EF;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x6BD4;&#x5982;&#x5149;&#x9A71;&#x3001;USB&#x5916;&#x63A5;&#x76D8;&#x3001;&#x8F6F;&#x76D8;&#x63D0;&#x4F9B;&#x7684;&#x5E38;&#x89C4;&#x6302;&#x8F7D;&#x70B9;&#x3002;</p>
-<p>/mnt</p>
-<p>&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6302;&#x8F7D;&#x70B9;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x4F60;&#x5E76;&#x4E0D;&#x60F3;&#x957F;&#x671F;&#x6302;&#x8F7D;&#x67D0;&#x4E2A;&#x9A71;&#x52A8;&#x5668;&#xFF0C;&#x800C;&#x662F;&#x53EA;&#x662F;&#x4E34;&#x65F6;&#x6302;&#x8F7D;&#x4E00;&#x4F1A;U&#x76D8;&#x70E4;&#x4E2A;MP3&#x4E4B;&#x7C7B;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5E94;&#x8BE5;&#x6302;&#x8F7D;&#x5728;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0B;&#x3002;</p>
-<p>/opt</p>
-<p>&#x5728;Linux&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x7528;&#x5230;&#x7684;&#x5E76;&#x4E0D;&#x591A;&#xFF0C;opt&#x662F; &#x53EF;&#x9009;&#x7CFB;&#x7EDF;&#x7A0B;&#x5E8F;&#x5305;&#xFF08;Optional Software Packages&#xFF09;&#x7684;&#x7B80;&#x79F0;&#x3002;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x5728;UNIX&#x7CFB;&#x7EDF;&#xFF0C;&#x5982;Sun Solaris&#x7528;&#x9014;&#x8981;&#x5E7F;&#x6CDB;&#x7684;&#x591A;&#x3002;</p>
-<p>/usr</p>
-<p>&#x7528;&#x6237;&#x6570;&#x636E;&#x76EE;&#x5F55;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x5C5E;&#x4E8E;&#x7528;&#x6237;&#x7684;&#x5B9E;&#x7528;&#x7A0B;&#x5E8F;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x8FD9;&#x91CC;&#x6709;&#x5F88;&#x591A;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x4F46;&#x5E76;&#x975E;&#x5173;&#x952E;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6302;&#x8F7D;&#x8FD9;&#x4E2A;&#x8DEF;&#x5F84;&#x4E0B;&#x9762;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x4F60;&#x4F1A;&#x91CD;&#x65B0;&#x627E;&#x5230;&#x4E00;&#x4E2A; bin&#x3001;sbin &#x548C; lib&#x76EE;&#x5F55;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x975E;&#x5173;&#x952E;&#x7528;&#x6237;&#x548C;&#x7CFB;&#x7EDF;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x7684;&#x5E93;&#x548C;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x5E93;&#x6587;&#x4EF6;&#x3002;</p>
-<p>/usr/sbin</p>
-<p>&#x5305;&#x542B;&#x7CFB;&#x7EDF;&#x4E2D;&#x975E;&#x5FC5;&#x5907;&#x548C;&#x5E76;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x91CD;&#x8981;&#x7684;&#x7CFB;&#x7EDF;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x7F51;&#x7EDC;&#x5E94;&#x7528;&#x5DE5;&#x5177;&#x3002;</p>
-<p>/usr/bin</p>
-<p>&#x5305;&#x542B;&#x7528;&#x6237;&#x7684;&#x975E;&#x5FC5;&#x5907;&#x548C;&#x5E76;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x91CD;&#x8981;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x3002;</p>
-<p>/usr/lib</p>
-<p>&#x4FDD;&#x5B58;&#x7740;/usr/sbin&#x4EE5;&#x53CA;/usr/bin&#x4E2D;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x6240;&#x9700;&#x8981;&#x7684;&#x5E93;&#x6587;&#x4EF6;&#x3002;</p>
-<p>/usr/share</p>
-<p>&#x201C;&#x5E73;&#x53F0;&#x65E0;&#x5173;&#x201D;&#x7684;&#x5171;&#x4EAB;&#x6570;&#x636E;&#x76EE;&#x5F55;&#x3002;</p>
-<p>/usr/local</p>
-<p>&#x662F;/usr&#x4E0B;&#x7684;&#x4E8C;&#x7EA7;&#x76EE;&#x5F55;&#xFF0C;&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x4FDD;&#x5B58;&#x7740;&#x5305;&#x542B;&#x7CFB;&#x7EDF;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x8FD0;&#x884C;&#x5E93;&#x5728;&#x5185;&#x7684;&#x672C;&#x5730;&#x7CFB;&#x7EDF;&#x6570;&#x636E;&#x3002;</p>
-<p>/var</p>
-<p>&#x8FD9;&#x4E2A;&#x8DEF;&#x5F84;&#x4E0B;&#x901A;&#x5E38;&#x4FDD;&#x5B58;&#x7740;&#x5305;&#x62EC;&#x7CFB;&#x7EDF;&#x65E5;&#x5FD7;&#x3001;&#x6253;&#x5370;&#x673A;&#x540E;&#x53F0;&#x6587;&#x4EF6;&#xFF08;spool files&#xFF09;&#x3001;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#xFF08;crontab&#xFF09;&#x3001;&#x90AE;&#x4EF6;&#x3001;&#x8FD0;&#x884C;&#x8FDB;&#x7A0B;&#x3001;&#x8FDB;&#x7A0B;&#x9501;&#x6587;&#x4EF6;&#x7B49;&#x3002;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x5C24;&#x5176;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x8FDB;&#x884C;&#x65E5;&#x5E38;&#x7684;&#x68C0;&#x67E5;&#x548C;&#x7EF4;&#x62A4;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;&#x53EF;&#x80FD;&#x4F1A;&#x589E;&#x957F;&#x5F88;&#x5FEB;&#xFF0C;&#x4EE5;&#x81F4;&#x4E8E;&#x5F88;&#x5FEB;&#x5360;&#x6EE1;&#x786C;&#x76D8;&#xFF0C;&#x7136;&#x540E;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x4FBF;&#x4F1A;&#x51FA;&#x73B0;&#x5404;&#x79CD;&#x5947;&#x5947;&#x602A;&#x602A;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
-<p>/tmp</p>
-<p>&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x4E13;&#x95E8;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#xFF0C;&#x6BCF;&#x6B21;&#x7CFB;&#x7EDF;&#x91CD;&#x542F;&#x4E4B;&#x540E;&#xFF0C;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x201D;&#x4E34;&#x65F6;&#x201D;&#x6587;&#x4EF6;&#x4FBF;&#x4F1A;&#x88AB;&#x6E05;&#x7A7A;&#x3002;&#x540C;&#x6837;&#xFF0C;/var/tmp &#x4E5F;&#x540C;&#x6837;&#x4FDD;&#x5B58;&#x7740;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x3002;&#x4E24;&#x8005;&#x552F;&#x4E00;&#x7684;&#x4E0D;&#x540C;&#x662F;&#xFF0C;&#x540E;&#x8005; /var/tmp&#x76EE;&#x5F55;&#x4FDD;&#x5B58;&#x7684;&#x6587;&#x4EF6;&#x4F1A;&#x53D7;&#x5230;&#x7CFB;&#x7EDF;&#x4FDD;&#x62A4;&#xFF0C;&#x7CFB;&#x7EDF;&#x91CD;&#x542F;&#x4E4B;&#x540E;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x4E5F;&#x4E0D;&#x4F1A;&#x88AB;&#x6E05;&#x7A7A;&#x3002;</p>
-<p>/proc </p>
-<p>&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x662F;&#x9A7B;&#x7559;&#x5728;&#x7CFB;&#x7EDF;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x865A;&#x62DF;&#xFF08;psuedo&#xFF0C;&#x4F2A;&#xFF09;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5176;&#x4E2D;&#x4FDD;&#x5B58;&#x7684;&#x90FD;&#x662F;&#x6587;&#x672C;&#x683C;&#x5F0F;&#x7684;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x548C;&#x8FDB;&#x7A0B;&#x4FE1;&#x606F;&#x3002;</p>
-<h2 id="LINUX&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x56FE;"><a href="#LINUX&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x56FE;" class="headerlink" title="LINUX&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x56FE;"></a>LINUX&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x56FE;</h2><p><img src="/post/directory_introduction_in_linux_or_raspbian/ldr.png" alt="Linux Directory Structure in Visual View"></p>
-<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x4E0D;&#x540C;LINUX&#x53D1;&#x884C;&#x7248;&#x672C;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x5DEE;&#x5F02;&#xFF0C;&#x8FD9;&#x5BF9;LINUX&#x65B0;&#x624B;&#x6765;&#x8BF4;&#x6BD4;&#x8F83;&#x7EA0;&#x7ED3;&#xFF0C;&#x4F46;&#x662F;&#x5927;&#x4F53;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;LINUX&#x7684;&#x4E0D;&#x540C;&#x53D1;&#x884C;&#x7248;&#x672C;&#xFF0C;&#x90FD;&#x7B26;&#x5408;&#x4E0A;&#x9762;&#x8FD9;&#x5E45;&#x56FE;&#x7247;&#x4E2D;&#x7684;&#x8DEF;&#x5F84;&#x7ED3;&#x6784;&#x3002;</p>
-<h2 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;"><a href="#&#x53C2;&#x8003;&#x6587;&#x7AE0;" class="headerlink" title="&#x53C2;&#x8003;&#x6587;&#x7AE0;"></a>&#x53C2;&#x8003;&#x6587;&#x7AE0;</h2><p>1.<a href="http://www.debianadmin.com/linux-directory-structure-overview.html" target="_blank" rel="external">Linux Directory Structure Overview</a></p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/post/directory_introduction_in_linux_or_raspbian/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -690,7 +790,7 @@
               
                 
                 <a class="post-title-link" href="/post/how_to_install_ftp_on_raspberry/" itemprop="url">
-                  20160706-在树莓派上搭建FTP服务
+                  树莓派折腾10：在树莓派上搭建FTP服务
                 </a>
               
             
@@ -758,22 +858,13 @@
 
       
         
-          
-            <h2 id="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"><a href="#&#x6587;&#x7AE0;&#x66F4;&#x65B0;" class="headerlink" title="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"></a>&#x6587;&#x7AE0;&#x66F4;&#x65B0;</h2><p>1.20160706-&#x521D;&#x6B21;&#x6210;&#x6587;</p>
+          <h2 id="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"><a href="#&#x6587;&#x7AE0;&#x66F4;&#x65B0;" class="headerlink" title="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"></a>&#x6587;&#x7AE0;&#x66F4;&#x65B0;</h2><p>1.20160706-&#x521D;&#x6B21;&#x6210;&#x6587;</p>
 <h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;</h2><p>&#x5176;&#x5B9E;&#x4E00;&#x76F4;&#x60F3;&#x5F04;FTP&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x52A8;&#x529B;&#xFF0C;&#x76F4;&#x5230;&#x8FD9;&#x4E24;&#x5929;&#x642D;&#x5EFA;OPENVPN&#xFF0C;&#x8981;&#x4E0B;&#x8F7D;&#x51E0;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x8BC1;&#x4E66;&#x548C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;&#xFF0C;&#x624D;&#x89C9;&#x5F97;&#x7528;FTP&#x65B9;&#x4FBF;&#x4E00;&#x4E9B;&#x3002;</p>
-<p>&#x5B89;&#x88C5;vsftp&#xFF0C;&#x5F00;&#x6E90;&#x7684;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x5E38;&#x7528;ftp&#x670D;&#x52A1;&#x5668;</p>
-<h2 id="&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;vsftp"><a href="#&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;vsftp" class="headerlink" title="&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;vsftp"></a>&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;vsftp</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install vsftpd</div></pre></td></tr></table></figure>
-<p>&#x5148;&#x5907;&#x4EFD;&#xFF0C;&#x7136;&#x540E;&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;,</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.orig</div><div class="line">sudo vim /etc/vsftpd.conf</div></pre></td></tr></table></figure>
-<p>vsftp&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x4F60;&#x8BBE;&#x7F6E;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x9650;&#x5236;&#x548C;&#x7B56;&#x7565;&#xFF0C;&#x76EE;&#x524D;&#x6CA1;&#x6709;&#x6DF1;&#x5165;&#x7814;&#x7A76;&#xFF0C;&#x4FEE;&#x6539;&#x5982;&#x4E0B;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># &#x4E0D;&#x5141;&#x8BB8;&#x533F;&#x540D;&#x8BBF;&#x95EE;</span></div><div class="line">anonymous_<span class="built_in">enable</span>=NO</div><div class="line"><span class="comment"># &#x8BBE;&#x5B9A;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5199;&#x64CD;&#x4F5C;</span></div><div class="line">write_<span class="built_in">enable</span>=YES</div><div class="line"><span class="comment"># &#x8BBE;&#x5B9A;&#x672C;&#x5730;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;</span></div><div class="line"><span class="built_in">local</span>_<span class="built_in">enable</span>=YES</div></pre></td></tr></table></figure>
-<p>&#x91CD;&#x542F;vsftpd&#x670D;&#x52A1;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service vsftpd restart</div></pre></td></tr></table></figure>
-<p>&#x901A;&#x8FC7;ftp&#x8FDE;&#x63A5;&#x6811;&#x8393;&#x6D3E;&#x7CFB;&#x7EDF;&#xFF0C;&#x4EE5;&#x7528;&#x6237;&#x540D;pi&#x767B;&#x5F55;&#xFF0C;&#x5BC6;&#x7801;&#x662F;pi&#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;&#x3002;ftp&#x7684;&#x6839;&#x76EE;&#x5F55;&#x662F;/home/pi&#xFF0C;&#x5373;pi&#x7528;&#x6237;&#x7684;HOME&#x76EE;&#x5F55;&#xFF0C;&#x53EF;&#x4E0A;&#x4F20;&#x6216;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x4E86;&#x3002;</p>
-<h2 id="&#x9700;&#x8981;&#x6CE8;&#x610F;"><a href="#&#x9700;&#x8981;&#x6CE8;&#x610F;" class="headerlink" title="&#x9700;&#x8981;&#x6CE8;&#x610F;"></a>&#x9700;&#x8981;&#x6CE8;&#x610F;</h2><p>&#x8BB0;&#x5F97;&#x8981;&#x5728;&#x9632;&#x706B;&#x5899;&#x4E0A;&#xFF0C;&#x5F00;&#x542F;21&#x7AEF;&#x53E3;&#xFF0C;&#x5E76;&#x4E14;&#x6700;&#x597D;&#x505A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x6240;&#x5728;&#x7684;&#x5317;&#x4EAC;&#x8054;&#x901A;&#x5C31;&#x5C01;&#x6389;&#x4E86;80&#x548C;21&#x7AEF;&#x53E3;&#xFF0C;&#x800C;&#x4E14;&#x8C01;&#x4E5F;&#x4E0D;&#x60F3;&#x5929;&#x5929;&#x770B;&#x4E00;&#x5806;&#x66B4;&#x529B;&#x7834;&#x89E3;&#x5929;&#x5929;&#x653B;&#x51FB;&#x4F60;&#x7684;FTP&#x7AEF;&#x53E3;&#x5427;&#x3002;</p>
-<h2 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;"><a href="#&#x53C2;&#x8003;&#x6587;&#x7AE0;" class="headerlink" title="&#x53C2;&#x8003;&#x6587;&#x7AE0;"></a>&#x53C2;&#x8003;&#x6587;&#x7AE0;</h2><p>1.<a href="http://mkitby.com/2015/12/08/raspberry-pi-nas-file-sharing/" target="_blank" rel="external">Raspberry Pi&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x642D;&#x5EFA;&#x4F4E;&#x6210;&#x672C;NAS(6)-&#x6587;&#x4EF6;&#x5171;&#x4EAB;</a></p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/post/how_to_install_ftp_on_raspberry/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -895,7 +986,11 @@
 <h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x7AE0;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x7AE0;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x7AE0;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x7AE0;</h2><p>&#x4E3B;&#x8981;&#x662F;&#x56E0;&#x4E3A;&#x4E4B;&#x524D;&#x5728;&#x6811;&#x8393;&#x6D3E;&#x4E0A;&#x5B89;&#x88C5;&#x4E86;samba&#x670D;&#x52A1;&#xFF0C;&#x4F46;&#x662F;&#x5916;&#x7F51;&#x670D;&#x52A1;&#x8BBF;&#x95EE;&#xFF0C;&#x6240;&#x4EE5;&#x7F51;&#x4E0A;&#x770B;&#x5230;&#x7684;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x662F;&#x8981;&#x7ED9;&#x3C0;&#x5B89;&#x88C5;&#x4E00;&#x4E2A;vpn&#xFF0C;&#x5148;&#x62E8;&#x53F7;&#x8FDB;&#x5230;VPN&#x91CC;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x8BBF;&#x95EE;&#x4E86;&#x3002;&#x867D;&#x7136;&#x6211;&#x8FD8;&#x6CA1;&#x6709;&#x653E;&#x5F03;&#x7EE7;&#x7EED;&#x5C1D;&#x8BD5;&#x5916;&#x7F51;&#x8BBF;&#x95EE;&#x6811;&#x8393;&#x6D3E;&#x7684;samba&#x670D;&#x52A1;&#xFF0C;&#x4F46;&#x662F;&#x5148;&#x5B66;&#x4E60;&#x4E0B;&#x5982;&#x4F55;&#x5B89;&#x88C5;OPENVPN&#x5427;&#x3002;</p>
 <h3 id="&#x5B89;&#x88C5;OpenVPN"><a href="#&#x5B89;&#x88C5;OpenVPN" class="headerlink" title="&#x5B89;&#x88C5;OpenVPN"></a>&#x5B89;&#x88C5;OpenVPN</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install openvpn</div></pre></td></tr></table></figure>
 <h3 id="&#x4E0B;&#x8F7D;easy-rsa"><a href="#&#x4E0B;&#x8F7D;easy-rsa" class="headerlink" title="&#x4E0B;&#x8F7D;easy-rsa"></a>&#x4E0B;&#x8F7D;easy-rsa</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /etc/openvpn</div><div class="line">sudo wget --no-check-certificate https://github.com/OpenVPN/easy-rsa/releases/download/3.0.1/EasyRSA-3.0.1.tgz</div><div class="line">sudo tar -xzvf EasyRSA-3.0.1.tgz</div><div class="line">sudo mv EasyRSA-3.0.1 easy-rsa</div></pre></td></tr></table></figure>
-<h3 id="&#x914D;&#x7F6E;easy-rsa"><a href="#&#x914D;&#x7F6E;easy-rsa" class="headerlink" title="&#x914D;&#x7F6E;easy-rsa"></a>&#x914D;&#x7F6E;easy-rsa</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /etc/openvpn/easy-rsa</div><div class="line">sudo cp vars.example vars</div><div class="line">sudo vim /etc/openvpn/easy-rsa/vars <span class="comment"># &#x6253;&#x5F00;easy-rsa&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span></div></pre></td></tr></table></figure>
+<h3 id="&#x914D;&#x7F6E;easy-rsa"><a href="#&#x914D;&#x7F6E;easy-rsa" class="headerlink" title="&#x914D;&#x7F6E;easy-rsa"></a>&#x914D;&#x7F6E;easy-rsa</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /etc/openvpn/easy-rsa</div><div class="line">sudo cp vars.example vars</div><div class="line">sudo vim /etc/openvpn/easy-rsa/vars <span class="comment"># &#x6253;&#x5F00;easy-rsa&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span></div><div class="line">sudo ./easyrsa init-pki <span class="comment">#&#x521D;&#x59CB;&#x5316;PKI</span></div></pre></td></tr></table></figure>
+<p>&#x7ED3;&#x679C;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Note: using Easy-RSA configuration from: ./vars</div><div class="line"></div><div class="line">init-pki complete; you may now create a CA or requests.</div><div class="line">Your newly created PKI dir is: /etc/openvpn/easy-rsa/pki</div></pre></td></tr></table></figure>
+<p>&#x547D;&#x4EE4;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pi@raspberrypi:/etc/openvpn/easy-rsa $ sudo ./easyrsa gen-req client1 nopass</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">Note: using Easy-RSA configuration from: ./vars</div><div class="line">Generating a 2048 bit RSA private key</div><div class="line">......+++</div><div class="line">..............................................................................................+++</div><div class="line">writing new private key to <span class="string">&apos;/etc/openvpn/easy-rsa/pki/private/client1.key.pEdHmavQxe&apos;</span></div><div class="line">-----</div><div class="line">You are about to be asked to enter information that will be incorporated</div><div class="line">into your certificate request.</div><div class="line">What you are about to enter is what is called a Distinguished Name or a DN.</div><div class="line">There are quite a few fields but you can leave some blank</div><div class="line">For some fields there will be a default value,</div><div class="line">If you enter <span class="string">&apos;.&apos;</span>, the field will be left blank.</div><div class="line">-----</div><div class="line">Common Name (eg: your user, host, or server name) [client1]: <span class="comment">#&#x8F93;&#x5165;&#x56DE;&#x8F66;&#x5373;&#x53EF;</span></div><div class="line">Keypair and certificate request completed. Your files are:</div><div class="line">req: /etc/openvpn/easy-rsa/pki/reqs/client1.req</div><div class="line">key: /etc/openvpn/easy-rsa/pki/private/client1.key</div></pre></td></tr></table></figure>
 <p>a. &#x7F16;&#x8F91;&#x5BC6;&#x94A5;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;</p>
 <p>export EASY_RSA=&#x201D;/etc/openvpn/easy-rsa&#x201D;</p>
 <p>b. &#x7F16;&#x8F91;dh&#x5BC6;&#x94A5;&#x5927;&#x5C0F;</p>
@@ -954,7 +1049,7 @@
 <p>10.&#x52A8;&#x6001;&#x57DF;&#x540D;&#x7ED1;&#x5B9A;<br>&#x4F7F;&#x7528;&#x6781;&#x8DEF;&#x7531;&#x63D0;&#x4F9B;&#x7684;&#x63D2;&#x4EF6;&#x5C31;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;<br>&#x52A8;&#x6001;&#x57DF;&#x540D;&#x7ED1;&#x5B9A;</p>
 <p>11.&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;<br>&#x5B89;&#x88C5;&#x5BA2;&#x6237;&#x7AEF;:<br>Openvpn for windows: <a href="https://yunpan.cn/cqhzz5LTCdG2R" target="_blank" rel="external">https://yunpan.cn/cqhzz5LTCdG2R</a> &#x8BBF;&#x95EE;&#x5BC6;&#x7801; c332<br>Openvpn for Android: <a href="https://yunpan.cn/cqhz4jHXkUjyY" target="_blank" rel="external">https://yunpan.cn/cqhz4jHXkUjyY</a> &#x8BBF;&#x95EE;&#x5BC6;&#x7801; f688</p>
 <p>&#x5B89;&#x88C5;&#x540E;&#xFF0C;&#x5C06;client.conf&#xFF0C;ca.crt&#xFF0C;client1.crt&#xFF0C;client1.key&#x8FD9;4&#x4E2A;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x81F3;Openvpn&#x7684;&#x914D;&#x7F6E;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;client.conf&#x6539;&#x540D;&#x4E3A;client.ovpn&#x3002;&#x7136;&#x540E;&#x767B;&#x5F55;&#xFF0C;&#x8F93;&#x5165;&#x751F;&#x6210;&#x5BA2;&#x6237;&#x7AEF;&#x5BC6;&#x94A5;&#x65F6;&#x8BBE;&#x7F6E;&#x7684;&#x5BC6;&#x7801;&#x3002;&#x5982;&#x679C;&#x767B;&#x5F55;&#x5931;&#x8D25;&#x53EF;&#x4EE5;&#x770B;&#x5BA2;&#x6237;&#x7AEF;log&#xFF0C;&#x5224;&#x65AD;&#x539F;&#x56E0;&#x5728;&#x54EA;&#x91CC;&#x3002;</p>
-<h2 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;"><a href="#&#x53C2;&#x8003;&#x6587;&#x7AE0;" class="headerlink" title="&#x53C2;&#x8003;&#x6587;&#x7AE0;"></a>&#x53C2;&#x8003;&#x6587;&#x7AE0;</h2><p>1.<a href="http://blog.csdn.net/wxlguitar/article/details/51175872" target="_blank" rel="external">&#x6811;&#x8393;&#x6D3E;&#x642D;&#x5EFA;Openvpn</a></p>
+<h2 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;"><a href="#&#x53C2;&#x8003;&#x6587;&#x7AE0;" class="headerlink" title="&#x53C2;&#x8003;&#x6587;&#x7AE0;"></a>&#x53C2;&#x8003;&#x6587;&#x7AE0;</h2><p>1.<a href="http://blog.csdn.net/wxlguitar/article/details/51175872" target="_blank" rel="external">&#x6811;&#x8393;&#x6D3E;&#x642D;&#x5EFA;Openvpn</a><br>2.<a href="https://www.raspberrypi.org/forums/viewtopic.php?t=89216&amp;p=626393" target="_blank" rel="external">Install latest openvpn and easyrsa3</a></p>
 
           
         
@@ -1375,7 +1470,7 @@
               
                 
                 <a class="post-title-link" href="/post/config_php_on_mac_using_brew/" itemprop="url">
-                  mac下使用Homebrew配置php环境
+                  MAC系统下使用Homebrew配置php环境
                 </a>
               
             
@@ -1393,6 +1488,25 @@
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/环境配置/" itemprop="url" rel="index">
+                    <span itemprop="name">环境配置</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -1424,325 +1538,10 @@
 
       
         
-          
-            <h2 id="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"><a href="#&#x6587;&#x7AE0;&#x66F4;&#x65B0;" class="headerlink" title="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"></a>&#x6587;&#x7AE0;&#x66F4;&#x65B0;</h2><p>20160701-&#x521D;&#x6B21;&#x6210;&#x6587;</p>
-<p>20160704-&#x5B8C;&#x6574;&#x914D;&#x7F6E;&#x5B8C;&#x6210;</p>
+          <h2 id="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"><a href="#&#x6587;&#x7AE0;&#x66F4;&#x65B0;" class="headerlink" title="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"></a>&#x6587;&#x7AE0;&#x66F4;&#x65B0;</h2><p>1.20160701-&#x521D;&#x6B21;&#x6210;&#x6587;<br>2.20160704-&#x5B8C;&#x6574;&#x914D;&#x7F6E;&#x5B8C;&#x6210;<br>3.20160708-&#x6574;&#x7406;&#x5C0F;&#x9519;&#x8BEF;&#xFF0C;&#x7406;&#x987A;&#x4E00;&#x4E9B;&#x4E0D;&#x901A;&#x987A;&#x7684;&#x5730;&#x65B9;</p>
 <h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;</h2><p>&#x56E0;&#x4E3A;&#x6211;&#x60F3;&#x5728;mbp&#x4E0B;&#x88C5;php&#x8C03;&#x8BD5;&#x73AF;&#x5883;&#xFF0C;&#x5374;&#x53C8;&#x4E0D;&#x60F3;&#x5B89;&#x88C5;docker&#x6216;&#x8005;vagrant&#xFF0C;&#x8D77;&#x7801;Homebrew&#x7528;&#x7740;&#x8FD8;&#x7B97;&#x6BD4;&#x8F83;&#x9760;&#x8C31;&#x3002;&#x7B80;&#x5355;&#x7684;&#x7406;&#x89E3;&#xFF0C;Homebrew&#x5F88;&#x60F3;centos&#x4E0B;&#x7684;yum&#xFF0C;debian&#x4E0B;&#x7684;apt-get&#x3002;</p>
-<h2 id="&#x5B89;&#x88C5;&#x524D;&#x786E;&#x8BA4;Homebrew&#x5C31;&#x7EEA;"><a href="#&#x5B89;&#x88C5;&#x524D;&#x786E;&#x8BA4;Homebrew&#x5C31;&#x7EEA;" class="headerlink" title="&#x5B89;&#x88C5;&#x524D;&#x786E;&#x8BA4;Homebrew&#x5C31;&#x7EEA;"></a>&#x5B89;&#x88C5;&#x524D;&#x786E;&#x8BA4;Homebrew&#x5C31;&#x7EEA;</h2><p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x7CFB;&#x7EDF;&#x91CC;&#x6CA1;&#x6709;&#x88C5;homebrew&#xFF0C;&#x5C31;&#x5148;&#x5B89;&#x88C5;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby <span class="_">-e</span> <span class="string">&quot;<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>&quot;</span></div></pre></td></tr></table></figure>
-<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x7CFB;&#x7EDF;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x8FC7;&#x4E86;Homebrew&#xFF0C;&#x90A3;&#x4E48;&#x5148;&#x5176;&#x66F4;&#x65B0;&#x5230;&#x6700;&#x65B0;&#x3002;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update &amp;&amp; brew upgrade</div></pre></td></tr></table></figure>
-<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x9047;&#x5230;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Error: Cowardly refusing to <span class="string">&apos;sudo brew update&apos;</span></div><div class="line">You can use brew with sudo, but only <span class="keyword">if</span> the brew executable is owned by root.</div><div class="line">However, this is both not recommended and completely unsupported so <span class="keyword">do</span> so at</div><div class="line">your own risk.</div></pre></td></tr></table></figure>
-<p>&#x610F;&#x601D;&#x5C31;&#x662F;Homebrew&#x7EDD;&#x5BF9;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528; <code>sudo brew update</code>&#x6765;&#x5F3A;&#x5236;&#x66F4;&#x65B0;&#xFF0C;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x6700;&#x597D;&#x5728;&#x786E;&#x5B9A;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x5C5E;&#x4E8E;root&#x7528;&#x6237;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x624D;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x505A;&#x3002;&#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;Homebrew&#x4E0D;&#x63A8;&#x8350;&#x4E5F;&#x4E0D;&#x652F;&#x6301;&#x7528;&#x6237;&#x8FD9;&#x6837;&#x64CD;&#x4F5C;&#x3002;</p>
-<p>&#x5C31;&#x7B97;&#x4F60;&#x4F7F;&#x7528;&#x4E86; <code>sudo -s</code> &#x5207;&#x6362;&#x5230; root &#x7528;&#x6237;&#x4E0B;&#xFF0C;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x4E5F;&#x4E0D;&#x884C;&#x3002;</p>
-<p>&#x8FD9;&#x662F;&#x56E0;&#x4E3A;Homebrew&#x4E0D;&#x5C5E;&#x4E8E;root&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x9700;&#x8981;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chown root /usr/<span class="built_in">local</span>/bin/brew</div></pre></td></tr></table></figure>
-<p>&#x7136;&#x540E;&#x518D;&#x6B21;&#x5347;&#x7EA7;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
-<p>&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#xFF0C;&#x5728;&#x6211;&#x6574;&#x4E2A;&#x5199;&#x5B8C;&#x6587;&#x7AE0;&#x4E4B;&#x540E;&#xFF0C;&#x89C9;&#x5F97;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x5E94;&#x8BE5;&#x662F;&#x6709;&#x70B9;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x6309;&#x7406;&#x8BF4;&#x4E0D;&#x5E94;&#x8BE5;&#x628A;brew update&#x52A0;sudo&#x524D;&#x7F00;&#x6765;&#x4F7F;&#x7528;&#x3002;</p>
-<p>&#x5B89;&#x88C5;&#x4E4B;&#x540E;&#xFF0C;&#x901A;&#x8FC7; <code>brew doctor</code> &#x53EF;&#x4EE5;&#x8BCA;&#x65AD;&#x4E0B;&#x7CFB;&#x7EDF;Homebrew&#x51B2;&#x7A81;&#xFF0C;&#x7ED3;&#x679C;&#x663E;&#x793A;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Your system is ready to brew.</div></pre></td></tr></table></figure>
-<p>&#x5219;&#x8868;&#x660E;Homebrew&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x5C31;&#x7EEA;&#xFF0C;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x5347;&#x7EA7;&#x64CD;&#x4F5C;&#x4E86;&#x3002;</p>
-<blockquote>
-<p>&#x5728;&#x6211;&#x7684;&#x7CFB;&#x7EDF;&#x4E0B;&#x8FD0;&#x884C; <code>brew doctor</code> &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53D1;&#x73B0;&#x6709;&#x5F88;&#x591A;Node&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;node.js&#x5E76;&#x4E0D;&#x662F;&#x4F7F;&#x7528;brew&#x5B89;&#x88C5;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x6709;&#x5F88;&#x591A;&#x6587;&#x4EF6;&#xFF0C;&#x5B89;&#x88C5;&#x5230;&#x4E86;&#x4E0D;&#x5E94;&#x8BE5;&#x7684;&#x4F4D;&#x7F6E;&#x4E0A;&#xFF0C;&#x8FD9;&#x91CC;&#x5F00;&#x4E86;&#x4E2A;<a href="http://www.wuliaole.com/post/how_to_uninstall_nodejs_and_reinstall_with_brew">&#x65B0;&#x5E16;&#x5B50;</a>&#xFF0C;&#x4E13;&#x95E8;&#x8BA8;&#x8BBA;&#x5728;mac&#x4E0B;&#x5B8C;&#x6574;&#x5378;&#x8F7D;node.js&#x5E76;&#x4E14;&#x4F7F;&#x7528;Homebrew&#x91CD;&#x65B0;&#x5C06;&#x5176;&#x5B89;&#x88C5;&#x3002;</p>
-</blockquote>
-<p>&#x8BF4;&#x660E;&#x7CFB;&#x7EDF;&#x4E00;&#x5207;&#x6B63;&#x5E38;&#xFF0C;&#x5982;&#x679C;&#x6709;warning&#xFF0C;&#x8FD8;&#x662F;&#x9700;&#x8981;&#x5148;&#x5206;&#x6790;&#x4E0B;&#x95EE;&#x9898;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x7136;&#x540E;&#x9488;&#x5BF9;&#x6027;&#x7684;&#x53BB;&#x89E3;&#x51B3;&#x4E4B;&#x540E;&#xFF0C;&#x518D;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B65;&#x3002;</p>
-<p>&#x518D;&#x5B89;&#x88C5;&#x65B0;&#x7248;PHP&#x4E4B;&#x524D;&#xFF0C;&#x5148;&#x786E;&#x8BA4;&#x8981;&#x5220;&#x6389;&#x7CFB;&#x7EDF;&#x4E2D;&#x81EA;&#x5E26;&#x7684;PHP&#xFF0C;&#x6211;&#x7684;&#x7CFB;&#x7EDF;&#x662F;YOSIMITE&#xFF0C;PHP&#x7248;&#x672C;&#x662F;5.5.31&#xFF0C;&#x6839;&#x636E;&#x7F51;&#x4E0A;&#x7684;<a href="http://www.cnblogs.com/meixinghao/articles/4681041.html" target="_blank" rel="external">&#x6587;&#x7AE0;</a>&#xFF0C;&#x5199;&#x4E86;&#x4E2A;&#x811A;&#x672C;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /private/etc/               </div><div class="line">sudo rm -rf php-fpm.conf.default php.ini php.ini.default</div><div class="line"><span class="built_in">cd</span> /usr/bin/               </div><div class="line">sudo rm -rf php php-config phpdoc phpize</div><div class="line"><span class="built_in">cd</span> /usr/include                </div><div class="line">sudo rm -rf php</div><div class="line"><span class="built_in">cd</span> /usr/lib                </div><div class="line">sudo rm -rf php</div><div class="line"><span class="built_in">cd</span> /usr/sbin               </div><div class="line">sudo rm -rf php-fpm</div><div class="line"><span class="built_in">cd</span> /usr/share              </div><div class="line">sudo rm -rf php</div><div class="line"><span class="built_in">cd</span> /usr/share/man/man1         </div><div class="line">sudo rm -rf php-config.1 php.1 phpize.1</div><div class="line"><span class="built_in">cd</span> /usr/share/man/man8         </div><div class="line">sudo rm -rf php-fpm.8</div></pre></td></tr></table></figure>
-<h2 id="&#x5B89;&#x88C5;PHP-FPM"><a href="#&#x5B89;&#x88C5;PHP-FPM" class="headerlink" title="&#x5B89;&#x88C5;PHP-FPM"></a>&#x5B89;&#x88C5;PHP-FPM</h2><p>&#x56E0;&#x4E3A;Homebrew&#x4E2D;&#x7684;PHP&#x9ED8;&#x8BA4;&#x6CA1;&#x6709;&#x5E26;PHP-FPM&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x9996;&#x5148;tap&#xFF08;&#x6216;&#x8005;&#x8BF4;&#x767B;&#x8BB0;&#xFF09;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;PHP&#x5E93;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew tap homebrew/dupes</div><div class="line">brew tap homebrew/php</div></pre></td></tr></table></figure>
-<p>&#x73B0;&#x5728;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x6765;&#x5B89;&#x88C5;PHP&#x4E86;&#xFF0C;&#x5E76;&#x4E14;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x540C;&#x65F6;&#x7F16;&#x8BD1;MySQL&#xFF0C;&#x4EE5;&#x53CA;&#x4E0D;&#x914D;&#x7F6E;&#x9ED8;&#x8BA4;&#x7684;apache&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x53C2;&#x6570;&#xFF1A;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install --without-apache --with-fpm --with-mysql php56</div></pre></td></tr></table></figure>
-<p>&#x7136;&#x540E;&#xFF0C;Homebrew&#x5C31;&#x5F00;&#x59CB;&#x4E3A;&#x4F60;&#x4E0B;&#x8F7D;&#x5E76;&#x4E14;&#x5B89;&#x88C5;PHP-FPM&#x4E86;&#x3002;</p>
-<p>&#x5982;&#x679C;&#x4F60;&#x9047;&#x5230;&#x4E86;&#x9519;&#x8BEF;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">checking <span class="keyword">if</span> the location of ZLIB install directory is defined... no</div><div class="line">configure: error: Cannot find libz</div><div class="line"></div><div class="line">READ THIS: https://git.io/brew-troubleshooting</div><div class="line">If reporting this issue please <span class="keyword">do</span> so at (not Homebrew/brew):</div><div class="line">  https://github.com/Homebrew/homebrew-php/issues</div></pre></td></tr></table></figure>
-<p>&#x8BF4;&#x660E;&#x4F60;&#x7684;libz&#x5E93;&#x627E;&#x4E0D;&#x5230;&#x4E86;&#xFF0C;&#x5728;&#x65B0;&#x7684;MACOS&#x7CFB;&#x7EDF;&#x4E0B;&#xFF0C;&#x8FD9;&#x901A;&#x5E38;&#x662F;&#x56E0;&#x4E3A;xcode&#x7684;&#x66F4;&#x65B0;&#x5230;7&#x4E4B;&#x540E;&#xFF0C;&#x7F3A;&#x5C11;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x9020;&#x6210;&#x7684;</p>
-<p>&#x8FD0;&#x884C;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xcode-select --install </div><div class="line">brew upgrade</div></pre></td></tr></table></figure>
-<p>&#x8FD9;&#x65F6;&#x5019;&#x53C8;&#x9047;&#x5230;&#x4E86;&#x65B0;&#x7684;&#x9519;&#x8BEF;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">error: insufficient permission <span class="keyword">for</span> adding an object to repository database .git/objects</div><div class="line">fatal: failed to write object</div><div class="line">fatal: unpack-objects failed</div><div class="line">Error: Fetching /usr/<span class="built_in">local</span>/Library/Taps/homebrew/homebrew-core failed!</div></pre></td></tr></table></figure>
-<p>&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x5F88;&#x5178;&#x578B;&#xFF0C;&#x5728;Homebrew&#x7684;&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#x5F88;&#x5E38;&#x89C1;&#xFF0C;&#x9700;&#x8981;&#x7279;&#x522B;&#x7559;&#x5FC3;</p>
-<p>&#x8F93;&#x5165;&#x547D;&#x4EE4;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/Library/Taps/homebrew/homebrew-core</div><div class="line">sudo chown -R $(whoami) /usr/<span class="built_in">local</span>/Library/Taps/homebrew/</div></pre></td></tr></table></figure>
-<p>&#x62FF;&#x56DE;/usr/local/Library/Taps/homebrew/&#x7684;&#x6743;&#x9650;&#xFF0C;&#x89E3;&#x51B3;&#xFF0C;&#x7EE7;&#x7EED;&#x3002;</p>
-<p>&#x8FD0;&#x884C;brew install &#x2013;without-apache &#x2013;with-fpm &#x2013;with-mysql php56&#x65F6;&#x5019;&#xFF0C;&#x9047;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x5C0F;&#x9519;&#x8BEF;</p>
-<p>==&gt; make install<br>Error: The <code>brew link</code> step did not complete successfully<br>The formula built, but is not symlinked into /usr/local<br>Could not symlink .<br>/usr/local/Library/LinkedKegs is not writable.</p>
-<p>You can try again using:<br>  brew link php56<br>==&gt; Caveats<br>The php.ini file can be found in:<br>    /usr/local/etc/php/5.6/php.ini</p>
-<p>&#x73B0;&#x5728;&#x770B;&#x8FD9;&#x79CD;brew link&#x7684;&#x9519;&#x8BEF;&#x90FD;&#x4E0D;&#x662F;&#x591A;&#x5927;&#x7684;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x611F;&#x89C9;&#x81EA;&#x5DF1;&#x53C8;&#x8FDB;&#x6B65;&#x4E86;&#xFF0C;&#x5077;&#x7B11;&#x3002;</p>
-<p>$ brew link php56<br>Linking /usr/local/Cellar/php56/5.6.23&#x2026;<br>Error: Could not symlink .<br>/usr/local/Library/LinkedKegs is not writable.</p>
-<p>&#x8FD8;&#x662F;&#x6743;&#x9650;&#x95EE;&#x9898;&#xFF0C;&#x7EE7;&#x7EED;sudo chown -R $(whoami) /usr/local/Library/LinkedKegs</p>
-<p>&#x641E;&#x5B9A;&#x4E86;&#x3002;</p>
-<p>&#x597D;&#x4E86;&#xFF0C;&#x7EC8;&#x4E8E;&#x987A;&#x5229;&#x88C5;&#x597D;&#x4E86;php56&#xFF0C;&#x9759;&#x4E0B;&#x5FC3;&#x6765;&#x770B;&#x770B;&#x8F93;&#x51FA;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
-<p>&#x2729;&#x2729;&#x2729;&#x2729; Extensions &#x2729;&#x2729;&#x2729;&#x2729;</p>
-<p>If you are having issues with custom extension compiling, ensure that<br>you are using the brew version, by placing /usr/local/bin before /usr/sbin in your PATH:</p>
-<pre><code>PATH=&quot;/usr/local/bin:$PATH&quot;
-</code></pre><p>PHP56 Extensions will always be compiled against this PHP. Please install them<br>using &#x2013;without-homebrew-php to enable compiling against system PHP.</p>
-<p>&#x2729;&#x2729;&#x2729;&#x2729; PHP CLI &#x2729;&#x2729;&#x2729;&#x2729;</p>
-<p>If you wish to swap the PHP you use on the command line, you should add the following to ~/.bashrc,<br>~/.zshrc, ~/.profile or your shell&#x2019;s equivalent configuration file:</p>
-<pre><code>export PATH=&quot;$(brew --prefix homebrew/php/php56)/bin:$PATH&quot;
-</code></pre><p>&#x2729;&#x2729;&#x2729;&#x2729; FPM &#x2729;&#x2729;&#x2729;&#x2729;</p>
-<p>To launch php-fpm on startup:<br>    mkdir -p ~/Library/LaunchAgents #&#x53C2;&#x6570;p&#x662F;&#x6839;&#x636E;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E2D;&#x95F4;&#x76EE;&#x5F55;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x4F46;&#x662F;&#x5177;&#x4F53;&#x5565;&#x610F;&#x601D;&#xFF0C;&#x8FD8;&#x4E0D;&#x662F;&#x5F88;&#x660E;&#x767D;&#x3002;<br>    cp /usr/local/opt/php56/homebrew.mxcl.php56.plist ~/Library/LaunchAgents/ #&#x8FD9;&#x91CC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ln -<br>    launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist</p>
-<p>The control script is located at /usr/local/opt/php56/sbin/php56-fpm</p>
-<p>OS X 10.8 and newer come with php-fpm pre-installed, to ensure you are using the brew version you need to make sure /usr/local/sbin is before /usr/sbin in your PATH:</p>
-<p>  PATH=&#x201D;/usr/local/sbin:$PATH&#x201D;</p>
-<p>You may also need to edit the plist to use the correct &#x201C;UserName&#x201D;.</p>
-<p>Please note that the plist was called &#x2018;homebrew-php.josegonzalez.php56.plist&#x2019; in old versions<br>of this formula.</p>
-<p>To have launchd start homebrew/php/php56 now and restart at login:<br>  brew services start homebrew/php/php56<br>==&gt; Summary<br>&#x1F37A;  /usr/local/Cellar/php56/5.6.23: 330 files, 38M, built in 5 minutes 30 seconds</p>
-<p>Setup PHP CLI binary</p>
-<p>&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x5E0C;&#x671B;&#x4F7F;&#x7528;PHP&#x547D;&#x4EE4;&#x547D;&#x4EE4;&#x5DE5;&#x5177;&#xFF0C;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7CFB;&#x7EDF;PATH&#x53D8;&#x91CF;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x7684;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x7684;&#x7684;bash</p>
-<p>echo &#x2018;export PATH=&#x201D;/usr/local/sbin:$PATH&#x201D;&#x2018; &gt;&gt; ~/.bash_profile &amp;&amp; . ~/.bash_profile</p>
-<p>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x7684;&#x662F;ZSH</p>
-<p>echo &#x2018;export PATH=&#x201D;/usr/local/sbin:$PATH&#x201D;&#x2018; &gt;&gt; ~/.zshrc &amp;&amp; . ~/.zshrc</p>
-<p>&#x5982;&#x679C;&#x4F60;&#x4E5F;&#x4E0D;&#x786E;&#x5B9A;&#x81EA;&#x5DF1;&#x7528;&#x7684;BASH&#x8FD8;&#x662F;ZSH&#xFF0C;&#x4F7F;&#x7528; echo $SHELL &#x547D;&#x4EE4;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4F60;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x90A3;&#x79CD;shell&#x4E86;&#x3002;<br>&#x6211;&#x7684;&#x4F1A;&#x663E;&#x793A;</p>
-<p>/bin/zsh</p>
-<p>&#x8BBE;&#x7F6E;PHP&#x81EA;&#x52A8;&#x8FD0;&#x884C;</p>
-<p>Create a folder for the LaunchAgents and symlink the start/stop service:</p>
-<p>mkdir -p ~/Library/LaunchAgents<br>ln -sfv /usr/local/opt/php56/homebrew.mxcl.php56.plist ~/Library/LaunchAgents/<br>launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist</p>
-<p>&#x7136;&#x540E;&#xFF0C;&#x6211;&#x8FD0;&#x884C;php-fpm&#xFF0C;&#x76F4;&#x63A5;&#x9047;&#x5230;&#x4E0B;&#x9762;&#x7684;&#x9519;&#x8BEF;&#xFF1A;</p>
-<p>$ php-fpm<br>[04-Jul-2016 22:58:50] ERROR: failed to open configuration file &#x2018;/private/etc/php-fpm.conf&#x2019;: No such file or directory (2)<br>[04-Jul-2016 22:58:50] ERROR: failed to load configuration file &#x2018;/private/etc/php-fpm.conf&#x2019;<br>[04-Jul-2016 22:58:50] ERROR: FPM initialization failed</p>
-<p>&#x53EF;&#x4EE5;&#x5728;/private/etc/ &#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;root&#x6743;&#x9650;(sudo)</p>
-<h1 id="cp-usr-local-etc-php-5-6-php-fpm-conf-default-usr-local-etc-php-fpm-conf"><a href="#cp-usr-local-etc-php-5-6-php-fpm-conf-default-usr-local-etc-php-fpm-conf" class="headerlink" title="cp /usr/local/etc/php/5.6/php-fpm.conf.default /usr/local/etc/php-fpm.conf"></a>cp /usr/local/etc/php/5.6/php-fpm.conf.default /usr/local/etc/php-fpm.conf</h1><p>&#x6216;&#x8005;&#x5728;&#x666E;&#x901A;&#x7528;&#x6237;&#x6709;&#x6743;&#x9650;&#x7684;&#x76EE;&#x5F55;&#x91CC;&#x653E;&#x7F6E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x901A;&#x8FC7;&#x2013;fpm-config&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;<br>$ php-fpm &#x2013;fpm-config /usr/local/etc/php-fpm.conf</p>
-<p>&#x7136;&#x540E;&#xFF0C;&#x518D;&#x6B21;php-fpm&#xFF0C;&#x9519;&#x8BEF;&#x7EE7;&#x7EED;&#x3002;</p>
-<p>[04-Jul-2016 23:22:25] ERROR: failed to open error_log (/usr/local/var/log/php-fpm.log): No such file or directory (2)<br>[04-Jul-2016 23:22:25] ERROR: failed to post process the configuration<br>[04-Jul-2016 23:22:25] ERROR: FPM initialization failed</p>
-<p>&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x663E;&#x793A;&#xFF1A;&#x4E0D;&#x80FD;&#x6B63;&#x786E;&#x7684;&#x6253;&#x5F00;&#x201D;&#x65E5;&#x5FD7;&#x201C;&#x6587;&#x4EF6;&#xFF0C;&#x539F;&#x56E0;&#x662F;&#x9ED8;&#x8BA4;&#x5728;/usr/var&#x76EE;&#x5F55;&#x4E0B;&#x5DE5;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6307;&#x5B9A;&#x6B63;&#x786E;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</p>
-<p>$ vim /usr/local/etc/php-fpm.conf<br>&#x4FEE;&#x6539;php-fpm.conf&#x6587;&#x4EF6;&#x4E2D;&#x7684;error_log&#x9879;&#xFF0C;&#x9ED8;&#x8BA4;&#x524D;&#x7F00;&#x662F;/usr/var &#xFF0C;&#x4F46;&#x5E76;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x8DEF;&#x5F84;<br>error_log = /usr/local/var/log/php-fpm.log<br>pid = /usr/local/var/run/php-fpm.pid<br>&#x6216;&#x8005;&#x4E0D;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x9879;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x5728;php-fpm&#x7684;&#x8FD0;&#x884C;&#x53C2;&#x6570;&#x4E2D;(-p)&#x6307;&#x5B9A;&#x653E;&#x7F6E;&#x8FD0;&#x884C;&#x65F6;&#x6587;&#x4EF6;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x524D;&#x7F00;</p>
-<p>$ php-fpm &#x2013;fpm-config /usr/local/etc/php-fpm.conf  &#x2013;prefix /usr/local/var<br>&#x5230;&#x6B64;&#xFF0C;php-fpm&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x5DF2;&#x7ECF;&#x57FA;&#x672C;&#x53EF;&#x4EE5;&#x6B63;&#x786E;&#x7684;&#x542F;&#x52A8;&#x4E86;&#x3002;</p>
-<p>&#x518D;&#x6B21;&#x8FD0;&#x884C;php-fpm&#xFF0C;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x5F97;&#x5230;&#x7248;&#x672C;&#x53F7;&#x4E86;&#xFF0C;5.6.23&#xFF0C;GAME OVER.</p>
-<p>Assure PHP-FPM is running. To do so, check if there is an open listener on port 9000:</p>
-<p>lsof -Pni4 | grep LISTEN | grep php</p>
-<p>php-fpm   35370           root    7u  IPv4 0x7a8545f6d5d08f1d      0t0  TCP 127.0.0.1:9000 (LISTEN)<br>php-fpm   35371           _www    0u  IPv4 0x7a8545f6d5d08f1d      0t0  TCP 127.0.0.1:9000 (LISTEN)<br>php-fpm   35372           _www    0u  IPv4 0x7a8545f6d5d08f1d      0t0  TCP 127.0.0.1:9000 (LISTEN)</p>
-<p>&#x5F00;&#x59CB;&#x5B89;&#x88C5;MySQL</p>
-<p>brew install mysql</p>
-<p>And set up the start/stop service, so the MySQL server gets automatically started and stopped when the Mac is shutdown/powered on:</p>
-<p>ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents</p>
-<p>To start if manually for now, run:</p>
-<p>launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist</p>
-<p>Secure the installation</p>
-<p>To secure our MySQL server, we&#x2019;ll execute the provided secure_mysql_installation binary to change the root password, remove anonymous users and disable remote root logins:</p>
-<p>mysql_secure_installation</p>
-<blockquote>
-<p>Enter current password for root (enter for none):</p>
-</blockquote>
-<p>Press ENTER since you don&#x2019;t have one set.</p>
-<p>Change the root password? [Y/n]</p>
-<p>Confirm using ENTER to accept the suggested default answer (Y), choose a root password, add it to your 1Password keychain or just write it down and finally enter it here in the prompt.</p>
-<blockquote>
-<p>Remove anonymous users? [Y/n]</p>
-</blockquote>
-<p>Yes - ENTER. They are not necessary.</p>
-<blockquote>
-<p>Disallow root login remotely? [Y/n]</p>
-</blockquote>
-<p>ENTER &#x2014; No need to log in as root from any other IP than 127.0.0.1.</p>
-<blockquote>
-<p>Remove test database and access to it? [Y/n]<br>&#x2704; COPY<br>ENTER &#x2014; You don&#x2019;t need the testing tables.</p>
-<p>Reload privilege tables now? [Y/n]<br>&#x2704; COPY<br>ENTER &#x2014; Reload the privilege tables to ensure all of the changes made so far will take effect immediately.</p>
-</blockquote>
-<p>&#x6D4B;&#x8BD5;&#x8FDE;&#x63A5;&#x5B89;&#x5168;&#x6027;est connection</p>
-<p>mysql -uroot -p</p>
-<p>Enter your root password and you should see the MySQL console:</p>
-<p>Type &#x2018;help;&#x2019; or &#x2018;\h&#x2019; for help. Type &#x2018;\c&#x2019; to clear the current input statement.</p>
-<p>mysql&gt;</p>
-<p>Since you now know that this works, you can log out and quit the session using \q:</p>
-<p>mysql&gt; \q<br>Bye</p>
-<p>&#x5B89;&#x88C5;phpMyAdmin</p>
-<p>Install autoconf, which is needed for the installation of phpMyAdmin:</p>
-<p>brew install autoconf<br>&#x2704; COPY<br>And set the $PHP_AUTOCONF environment variable:</p>
-<p>If you use the default Bash shell:</p>
-<p>echo &#x2018;PHP_AUTOCONF=&#x201D;&#x2018;$(which autoconf)&#x2019;&#x201D;&#x2018; &gt;&gt; ~/.bash_profile &amp;&amp; . ~/.bash_profile<br>&#x2704; COPY<br>or if you use ZSH:</p>
-<p>echo &#x2018;PHP_AUTOCONF=&#x201D;&#x2018;$(which autoconf)&#x2019;&#x201D;&#x2018; &gt;&gt; ~/.zshrc &amp;&amp; . ~/.zshrc<br>&#x2704; COPY<br>Since now you&#x2019;re all set, you can finish this part with the actual installation of phpMyAdmin:</p>
-<p>brew install phpmyadmin</p>
-<p>&#x770B;&#x770B;&#x7ED3;&#x679C;</p>
-<p>Webserver configuration example (add this at the end of<br>your /etc/apache2/httpd.conf for instance) :<br>  Alias /phpmyadmin /usr/local/share/phpmyadmin<br>  <directory usr="" local="" share="" phpmyadmin=""><br>    Options Indexes FollowSymLinks MultiViews<br>    AllowOverride All<br>    <ifmodule mod_authz_core.c=""><br>      Require all granted<br>    </ifmodule><br>    <ifmodule !mod_authz_core.c=""><br>      Order allow,deny<br>      Allow from all<br>    </ifmodule><br>  </directory><br>Then, open <a href="http://localhost/phpmyadmin" target="_blank" rel="external">http://localhost/phpmyadmin</a></p>
-<p>More documentation : file:///usr/local/Cellar/phpmyadmin/4.6.2/share/phpmyadmin/doc/</p>
-<p>Configuration has been copied to /usr/local/etc/phpmyadmin.config.inc.php<br>Don&#x2019;t forget to:</p>
-<ul>
-<li>change your secret blowfish</li>
-<li>uncomment the configuration lines (pma, pmapass &#x2026;)</li>
-</ul>
-<p>==&gt; Summary<br>&#x1F37A;  /usr/local/Cellar/phpmyadmin/4.6.2: 2,256 files, 63.2M, built in 5 minutes 29 seconds</p>
-<p>&#x5B89;&#x88C5; Nginx<br>Install the default Nginx with:</p>
-<p>brew install nginx</p>
-<p>&#x770B;&#x770B;&#x7ED3;&#x679C;<br>The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that<br>nginx can run without sudo.</p>
-<p>nginx will load all files in /usr/local/etc/nginx/servers/.</p>
-<p>To have launchd start nginx now and restart at login:<br>  brew services start nginx<br>Or, if you don&#x2019;t want/need a background service you can just run:<br>  nginx</p>
-<p>Setup auto start</p>
-<p>Since you want to use port 80 (default HTTP port), you have to run the Nginx process with root privileges:</p>
-<p>sudo cp -v /usr/local/opt/nginx/*.plist /Library/LaunchDaemons/<br>sudo chown root:wheel /Library/LaunchDaemons/homebrew.mxcl.nginx.plist</p>
-<p>(Only the root user is allowed to open listening ports &lt; 1024)</p>
-<p>&#x6D4B;&#x8BD5;&#x7F51;&#x9875;&#x670D;&#x52A1;&#x5668;</p>
-<p>Start Nginx for the first with:</p>
-<p>sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist</p>
-<p>The default configuration currently active so it will listen on port 8080 instead of the HTTP default port 80. Ignore that for now:</p>
-<p>curl -IL <a href="http://127.0.0.1:8080" target="_blank" rel="external">http://127.0.0.1:8080</a><br>&#x2704; COPY<br>The output should look like this:</p>
-<p>HTTP/1.1 200 OK<br>Server: nginx/1.10.1<br>Date: Mon, 04 Jul 2016 18:18:53 GMT<br>Content-Type: text/html<br>Content-Length: 612<br>Last-Modified: Tue, 31 May 2016 13:47:07 GMT<br>Connection: keep-alive<br>ETag: &#x201C;574d95db-264&#x201D;<br>Accept-Ranges: bytes</p>
-<p>Stop Nginx again:</p>
-<p>sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.nginx.plist</p>
-<p>&#x66F4;&#x591A;nginx.conf&#x8BBE;&#x7F6E;</p>
-<p>Create these bunch of folders which we&#x2019;re going to use for the upcoming configuration:</p>
-<p>mkdir -p /usr/local/etc/nginx/logs<br>mkdir -p /usr/local/etc/nginx/sites-available<br>mkdir -p /usr/local/etc/nginx/sites-enabled<br>mkdir -p /usr/local/etc/nginx/conf.d<br>mkdir -p /usr/local/etc/nginx/ssl<br>sudo mkdir -p /var/www<br>sudo chown :staff /var/www<br>sudo chmod 775 /var/www</p>
-<p>Remove the current nginx.conf (which is also available as /usr/local/etc/nginx/nginx.conf.default in case you want to restore the defaults) and download my custom from GitHub:</p>
-<p>rm /usr/local/etc/nginx/nginx.conf<br>curl -L <a href="https://gist.githubusercontent.com/frdmn/7853158/raw/nginx.conf" target="_blank" rel="external">https://gist.githubusercontent.com/frdmn/7853158/raw/nginx.conf</a> -o /usr/local/etc/nginx/nginx.conf</p>
-<p>The configuration is simple and as lightweight as possible: worker settings, log format/paths and some includes. None of unnecessary (and probably commented out) stuff like in the nginx.conf.default.</p>
-<p>&#x8F7D;&#x5165;PHP FPM</p>
-<p>Download my custom PHP-FPM configuration from GitHub:</p>
-<p>curl -L <a href="https://gist.githubusercontent.com/frdmn/7853158/raw/php-fpm" target="_blank" rel="external">https://gist.githubusercontent.com/frdmn/7853158/raw/php-fpm</a> -o /usr/local/etc/nginx/conf.d/php-fpm</p>
-<p>Setup example virtual hosts</p>
-<p>curl -L <a href="https://gist.githubusercontent.com/frdmn/7853158/raw/sites-available_default" target="_blank" rel="external">https://gist.githubusercontent.com/frdmn/7853158/raw/sites-available_default</a> -o /usr/local/etc/nginx/sites-available/default<br>curl -L <a href="https://gist.githubusercontent.com/frdmn/7853158/raw/sites-available_default-ssl" target="_blank" rel="external">https://gist.githubusercontent.com/frdmn/7853158/raw/sites-available_default-ssl</a> -o /usr/local/etc/nginx/sites-available/default-ssl<br>curl -L <a href="https://gist.githubusercontent.com/frdmn/7853158/raw/sites-available_phpmyadmin" target="_blank" rel="external">https://gist.githubusercontent.com/frdmn/7853158/raw/sites-available_phpmyadmin</a> -o /usr/local/etc/nginx/sites-available/phpmyadmin</p>
-<p>Clone my example virtual hosts (including 404/403 error pages and a phpinfo() status site) using git:</p>
-<p>git clone <a href="http://git.frd.mn/frdmn/nginx-virtual-host.git" target="_blank" rel="external">http://git.frd.mn/frdmn/nginx-virtual-host.git</a> /var/www</p>
-<p>And remove the .git folder so your content won&#x2019;t get tracked by git.</p>
-<p>rm -rf /var/www/.git</p>
-<p>&#x8BBE;&#x7F6E; SSL</p>
-<p>Create a folder for our SSL certificates and private keys:</p>
-<p>mkdir -p /usr/local/etc/nginx/ssl</p>
-<p>Generate 4096 bit RSA keys and the self-sign the certificates in one command:</p>
-<p>openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -subj &#x201C;/C=US/ST=State/L=Town/O=Office/CN=localhost&#x201D; -keyout /usr/local/etc/nginx/ssl/localhost.key -out /usr/local/etc/nginx/ssl/localhost.crt<br>openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -subj &#x201C;/C=US/ST=State/L=Town/O=Office/CN=phpmyadmin&#x201D; -keyout /usr/local/etc/nginx/ssl/phpmyadmin.key -out /usr/local/etc/nginx/ssl/phpmyadmin.crt</p>
-<p>&#x6253;&#x5F00;&#x865A;&#x62DF;&#x591A;&#x57DF;&#x540D;&#xFF08;virtual hosts&#xFF09;</p>
-<p>Now you need to symlink the virtual hosts that you want to enable into the sites-enabled folder:</p>
-<p>ln -sfv /usr/local/etc/nginx/sites-available/default /usr/local/etc/nginx/sites-enabled/default<br>ln -sfv /usr/local/etc/nginx/sites-available/default-ssl /usr/local/etc/nginx/sites-enabled/default-ssl<br>ln -sfv /usr/local/etc/nginx/sites-available/phpmyadmin /usr/local/etc/nginx/sites-enabled/phpmyadmin</p>
-<p>And start Nginx again:</p>
-<p>sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist</p>
-<p>&#x6700;&#x540E;&#x7684;&#x6D4B;&#x8BD5;</p>
-<p>Congratulations, that&#x2019;s it! Everything should be set up and running. Click on the links below to ensure that your virtual hosts show the correct content:</p>
-<p>Virtual host    Expected content<br><a href="http://localhost" target="_blank" rel="external">http://localhost</a>    &#x201C;Nginx works&#x201D; page<br><a href="http://localhost/info" target="_blank" rel="external">http://localhost/info</a>    phpinfo() status<br><a href="http://localhost/nope" target="_blank" rel="external">http://localhost/nope</a>    &#x201C;Not Found&#x201D; page<br><a href="https://localhost:443" target="_blank" rel="external">https://localhost:443</a>    &#x201C;Nginx works&#x201D; page (SSL)<br><a href="https://localhost:443/info" target="_blank" rel="external">https://localhost:443/info</a>    phpinfo() (SSL)<br><a href="https://localhost:443/nope" target="_blank" rel="external">https://localhost:443/nope</a>    &#x201C;Not Found&#x201D; page (SSL)<br><a href="https://localhost:306" target="_blank" rel="external">https://localhost:306</a>    phpMyAdmin (SSL)</p>
-<p>&#x63A7;&#x5236;&#x7F51;&#x7EDC;&#x670D;&#x52A1;</p>
-<p>Because your probably need to restart the one or other service sooner or later, you probably want to set up some aliases:</p>
-<p>curl -L <a href="https://gist.github.com/frdmn/7853158/raw/bash_aliases" target="_blank" rel="external">https://gist.github.com/frdmn/7853158/raw/bash_aliases</a> -o /tmp/.bash_aliases<br>cat /tmp/.bash_aliases &gt;&gt; ~/.bash_aliases</p>
-<p>If you use the default Bash shell:</p>
-<p>echo &#x201C;source ~/.bash_aliases&#x201D; &gt;&gt; ~/.bash_profile &amp;&amp; . ~/.bash_profile</p>
-<p>or if you use ZSH:</p>
-<p>echo &#x201C;source ~/.bash_aliases&#x201D; &gt;&gt; ~/.zshrc &amp;&amp;  . ~/.zshrc</p>
-<p>Now you can use handy short aliases instead of typing the long launchctl commands:</p>
-<p>Nginx&#x76F8;&#x5173;</p>
-<p>You can start, stop and restart Nginx with:</p>
-<p>nginx.start<br>nginx.stop<br>nginx.restart</p>
-<p>To quickly tail the latest error or access logs:</p>
-<p>nginx.logs.access<br>nginx.logs.default.access<br>nginx.logs.phpmyadmin.access<br>nginx.logs.default-ssl.access<br>nginx.logs.error<br>nginx.logs.phpmyadmin.error</p>
-<p>&#x68C0;&#x67E5;&#x914D;&#x7F6E;: sudo nginx -t</p>
-<p>PHP-FPM&#x76F8;&#x5173;</p>
-<p>Start, start and restart PHP-FPM:</p>
-<p>php-fpm.start<br>php-fpm.stop<br>php-fpm.restart</p>
-<p>&#x68C0;&#x67E5;PHP-FPM&#x914D;&#x7F6E;:php-fpm -t</p>
-<p>MySQL&#x76F8;&#x5173;</p>
-<p>Start, start and restart your MySQL server:</p>
-<p>mysql.start<br>mysql.stop<br>mysql.restart</p>
-<p>FAQ<br>Here are some of the frequently asked questions from the comments. In case you encounter any issues or problems, check below to find a solution.</p>
-<p>Nginx: &#x2018;[emerg] mkdir() &#x201C;/usr/local/var/run/nginx/client_body_temp&#x201D;&#x2018;</p>
-<p>Upgraded to Yosemite and now Nginx doesn&#x2019;t start anymore? Try to reinstall the brew formula:</p>
-<p>brew reinstall &#x2013;force nginx<br>&#x2704; COPY<br>PHP-FPM: &#x2018;lsof -Pni4 | grep LISTEN | grep php&#x2019; doesn&#x2019;t return anything</p>
-<p>Make sure your $PATH variable is properly set:</p>
-<p>echo $PATH | grep php56<br>&#x2704; COPY<br>If that command doesn&#x2019;t return anything at all, you probably forgot to adjust your .zshrc/.bash_profile. Make sure to add this line at the end:</p>
-<p>export PATH=&#x201D;$(brew &#x2013;prefix homebrew/php/php56)/bin:$PATH&#x201D;<br>&#x2704; COPY<br>git: &#x2018;Could not resolve host: git.frd.mn&#x2019;</p>
-<p>Probably an outage of my private hosted GitLab server. To fix this, simply try to get in touch with me. Either via Twitter, E-Mail IRC (frdmn@freenode/espernet) or the comment section below.<br>curl: &#x2018;Failed to connect to localhost port 80: Connection refused&#x2019;</p>
-<p>This is an IPv6 related issue, originating in the /etc/hosts file of your Mac. To fix this, find the line &#x201C;fe80::1%lo0 localhost&#x201D; and comment it out. Or just use this one-liner:</p>
-<p>sudo sed -i &#x201C;&#x201D; &#x2018;s/^fe80\:\:/#fe80\:\:/g&#x2019; /etc/hosts<br>&#x2704; COPY<br>brew: &#x2018;configure: error: Can not find OpenSSL&#x2019;s &#x2018;</p>
-<p>Make sure Xcode as well as Xcode&#x2019;s CLI tools as installed and up to date!<br>Mavericks: Compilation error while building PHP / missing zlib</p>
-<p>Try to restore the /usr/include directory:</p>
-<p>sudo ln -s /Applications/Xcode5-DP.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include /usr/include<br>&#x2704; COPY<br>Let me know in case you&#x2019;re stuck at some point or have general feedback or suggestions!</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/post/how_to_add_new_yum_repos_to_centos_rhel/" itemprop="url">
-                  如何更新CENTOS/REHL系统的REPO库
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-24T18:18:29+08:00" content="2016-06-24">
-              2016-06-24
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/post/how_to_add_new_yum_repos_to_centos_rhel/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="post/how_to_add_new_yum_repos_to_centos_rhel/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="&#x66F4;&#x65B0;&#x65E5;&#x671F;"><a href="#&#x66F4;&#x65B0;&#x65E5;&#x671F;" class="headerlink" title="&#x66F4;&#x65B0;&#x65E5;&#x671F;"></a>&#x66F4;&#x65B0;&#x65E5;&#x671F;</h2><p>20160624-&#x521D;&#x6B21;&#x6210;&#x6587;</p>
-<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;</h2><p>&#x56E0;&#x4E3A;&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x7684;YUM&#x6E90;&#xFF0C;&#x66F4;&#x65B0;&#x7CFB;&#x7EDF;&#x901F;&#x5EA6;&#x6162;&#x5457;&#xFF01;&#x6211;&#x4F7F;&#x7528;&#x7684;&#x6811;&#x8393;&#x6D3E;&#x4E5F;&#x597D;&#xFF0C;&#x963F;&#x91CC;&#x4E91;&#x7684;CENTOS&#x7CFB;&#x7EDF;&#x4E5F;&#x597D;&#xFF0C;&#x5728;&#x4F7F;&#x7528; YUM &#x5B89;&#x88C5;&#x548C;&#x66F4;&#x65B0;&#x8F6F;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901F;&#x5EA6;&#x90FD;&#x4E0D;&#x662F;&#x5F88;&#x7406;&#x60F3;&#xFF0C;&#x56E0;&#x6B64;&#x4E5F;&#x4E00;&#x76F4;&#x5728;&#x5BFB;&#x627E;&#x66F4;&#x65B0;&#x548C;&#x6DFB;&#x52A0; YUM REPO &#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x4E14;&#x7F51;&#x4E0A;&#x73B0;&#x5728;&#x4E5F;&#x6709;&#x5F88;&#x591A;&#x963F;&#x91CC;&#x4E91;&#x7684;&#x56FD;&#x5185;&#x955C;&#x50CF;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x6BD4;&#x5982;&#x6E05;&#x534E;&#x5927;&#x5B66;&#x3001;&#x91CD;&#x5E86;&#x5927;&#x5B66;&#x8FD9;&#x4E9B;&#x673A;&#x6784;&#x63D0;&#x4F9B;&#x7684; REPO &#x5E93;&#xFF0C;&#x6B63;&#x597D;&#x8D81;&#x73B0;&#x5728;&#x8FD9;&#x4E2A;&#x673A;&#x4F1A;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x3002;</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/post/how_to_add_new_yum_repos_to_centos_rhel/#more" rel="contents">
+            <a class="btn" href="/post/config_php_on_mac_using_brew/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1817,7 +1616,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">61</span>
+              <span class="site-state-item-count">62</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1825,7 +1624,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1834,7 +1633,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">132</span>
+                <span class="site-state-item-count">134</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

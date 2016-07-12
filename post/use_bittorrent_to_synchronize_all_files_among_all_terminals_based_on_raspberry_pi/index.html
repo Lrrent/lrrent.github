@@ -1,0 +1,758 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="f9kcHL9W1mQXtVMD51J919P_jKOPLSbMVi46xSMpOkM" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="同步,树莓派,raspberry,Bit Torrent,效率," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="&amp;#x6587;&amp;#x7AE0;&amp;#x66F4;&amp;#x65B0;1.20160526-&amp;#x521D;&amp;#x6B21;&amp;#x6210;&amp;#x6587;2.20160712-&amp;#x5185;&amp;#x5BB9;&amp;#x72EC;&amp;#x7ACB;&amp;#x5206;&amp;#x62C6;&amp;#xFF0C;&amp;#x8865;&amp;#x5145;&amp;#x4E86;&amp;#x811A;&amp;#x672C;&amp;#x5185;&amp;#x5BB9;&amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派折腾之：BTSYNC同步所有电脑和手机">
+<meta property="og:url" content="http://www.wuliaole.com/post/use_bittorrent_to_synchronize_all_files_among_all_terminals_based_on_raspberry_pi/index.html">
+<meta property="og:site_name" content="FOOLMAN 一个人的修行">
+<meta property="og:description" content="&amp;#x6587;&amp;#x7AE0;&amp;#x66F4;&amp;#x65B0;1.20160526-&amp;#x521D;&amp;#x6B21;&amp;#x6210;&amp;#x6587;2.20160712-&amp;#x5185;&amp;#x5BB9;&amp;#x72EC;&amp;#x7ACB;&amp;#x5206;&amp;#x62C6;&amp;#xFF0C;&amp;#x8865;&amp;#x5145;&amp;#x4E86;&amp;#x811A;&amp;#x672C;&amp;#x5185;&amp;#x5BB9;&amp;#">
+<meta property="og:updated_time" content="2016-07-12T12:40:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="树莓派折腾之：BTSYNC同步所有电脑和手机">
+<meta name="twitter:description" content="&amp;#x6587;&amp;#x7AE0;&amp;#x66F4;&amp;#x65B0;1.20160526-&amp;#x521D;&amp;#x6B21;&amp;#x6210;&amp;#x6587;2.20160712-&amp;#x5185;&amp;#x5BB9;&amp;#x72EC;&amp;#x7ACB;&amp;#x5206;&amp;#x62C6;&amp;#xFF0C;&amp;#x8865;&amp;#x5145;&amp;#x4E86;&amp;#x811A;&amp;#x672C;&amp;#x5185;&amp;#x5BB9;&amp;#">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://www.wuliaole.com/post/use_bittorrent_to_synchronize_all_files_among_all_terminals_based_on_raspberry_pi/"/>
+
+  <title> 树莓派折腾之：BTSYNC同步所有电脑和手机 | FOOLMAN 一个人的修行 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0b9af06e21a88c60dc3deb5b699a3e63";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1259393906&web_id=1259393906" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">FOOLMAN 一个人的修行</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">随笔 随心</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                树莓派折腾之：BTSYNC同步所有电脑和手机
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-12T11:19:10+08:00" content="2016-07-12">
+              2016-07-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/raspberry/" itemprop="url" rel="index">
+                    <span itemprop="name">raspberry</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/post/use_bittorrent_to_synchronize_all_files_among_all_terminals_based_on_raspberry_pi/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="post/use_bittorrent_to_synchronize_all_files_among_all_terminals_based_on_raspberry_pi/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"><a href="#&#x6587;&#x7AE0;&#x66F4;&#x65B0;" class="headerlink" title="&#x6587;&#x7AE0;&#x66F4;&#x65B0;"></a>&#x6587;&#x7AE0;&#x66F4;&#x65B0;</h2><p>1.20160526-&#x521D;&#x6B21;&#x6210;&#x6587;<br>2.20160712-&#x5185;&#x5BB9;&#x72EC;&#x7ACB;&#x5206;&#x62C6;&#xFF0C;&#x8865;&#x5145;&#x4E86;&#x811A;&#x672C;&#x5185;&#x5BB9;&#xFF0C;&#x6587;&#x7AE0;&#x6DFB;&#x52A0;&#x90E8;&#x5206;&#x5185;&#x5BB9;</p>
+<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;</h2><p>&#x56E0;&#x4E3A;&#x7535;&#x8111;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x6548;&#x7387;&#x4E0D;&#x60F3;&#x964D;&#x4F4E;&#xFF0C;&#x5C31;&#x8FD9;&#x4E48;&#x7B80;&#x5355;&#xFF0C;&#x5DE5;&#x4F5C;&#x6587;&#x4EF6;&#xFF0C;&#x751F;&#x6D3B;&#x7167;&#x7247;&#xFF0C;&#x968F;&#x624B;&#x53EF;&#x5F97;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x76EE;&#x6807;&#x3002;&#x81F3;&#x4E8E;&#x4E3A;&#x4EC0;&#x4E48;&#x63A8;&#x8350;Bit Synchronize&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x641C;&#x7D22;&#x7C7B;&#x4F3C;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x6700;&#x8FD1;&#x770B;&#x5C0F;&#x4F17;&#x8F6F;&#x4EF6;&#xFF0C;&#x63A8;&#x8350;&#x4E00;&#x4E2A;&#x53EB;Syncthing&#x7684;&#x8F6F;&#x4EF6;&#xFF0C;&#x8FD8;&#x6CA1;&#x6709;&#x5C1D;&#x8BD5;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E2A;&#x4EBA;&#x6765;&#x8BF4;&#xFF0C;&#x7A33;&#x5B9A;&#x719F;&#x6089;&#x7684;&#x5DE5;&#x5177;&#x6700;&#x987A;&#x624B;&#x3002;</p>
+<h2 id="&#x521B;&#x5EFA;BTSYNC&#x72EC;&#x7ACB;&#x8D26;&#x6237;"><a href="#&#x521B;&#x5EFA;BTSYNC&#x72EC;&#x7ACB;&#x8D26;&#x6237;" class="headerlink" title="&#x521B;&#x5EFA;BTSYNC&#x72EC;&#x7ACB;&#x8D26;&#x6237;"></a>&#x521B;&#x5EFA;BTSYNC&#x72EC;&#x7ACB;&#x8D26;&#x6237;</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo adduser --quiet --system --group --disabled-password btsync</div></pre></td></tr></table></figure>
+<h2 id="&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;BYSYNC"><a href="#&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;BYSYNC" class="headerlink" title="&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;BYSYNC"></a>&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;BYSYNC</h2><p>&#x547D;&#x4EE4;&#x5F88;&#x7B80;&#x5355;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr</div><div class="line">sudo wget https://download-cdn.getsync.com/stable/linux-arm/BitTorrent-Sync_arm.tar.gz <span class="comment">#&#x6811;&#x8393;&#x6D3E;&#x9700;&#x8981;&#x4E0B;&#x8F7D;ARM&#x7248;&#x672C;</span></div><div class="line">sudo tar -zxvf BitTorrent-Sync_arm.tar.gz -C /usr/<span class="built_in">local</span>/sbin btsync <span class="comment">#&#x89E3;&#x538B;&#x7F29;,btsync&#x8868;&#x793A;&#x53EA;&#x9700;&#x8981;&#x538B;&#x7F29;&#x5305;&#x4E2D;&#x7684;btsync&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</span></div><div class="line">/usr/<span class="built_in">local</span>/sbin/btsync/btsync --webui.listen 0.0.0.0:8888 <span class="comment">#&#x521D;&#x6B21;&#x8FD0;&#x884C;&#xFF0C;&#x76D1;&#x542C;8888&#x7AEF;&#x53E3;&#x63D0;&#x4F9B;GUI&#x7BA1;&#x7406;&#x754C;&#x9762;</span></div></pre></td></tr></table></figure>
+<p>&#x7136;&#x540E;&#xFF0C;&#x5728;&#x624B;&#x673A;&#x6216;&#x8005;&#x7535;&#x8111;&#x4E0A;&#x8BBF;&#x95EE; <code>http://your_raspberry_ip:8888/gui</code> &#x5373;&#x53EF;&#x770B;&#x5230;GUI&#x754C;&#x9762;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x6837;&#x6267;&#x884C;&#xFF0C;&#x53EA;&#x6309;&#x7167;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x81EA;&#x5DF1;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x8BF7;&#x9996;&#x5148;&#x901A;&#x8FC7; <code>./btsync --dump-sample-config</code> &#x6765;&#x5BFC;&#x51FA;&#x4E00;&#x4EFD;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x62F7;&#x8D1D;&#xFF0C;&#x6587;&#x4EF6;&#x540D;&#x5B57;&#x662F; <code>btsync.conf</code></p>
+<p>&#x4F8B;&#x5982;&#x6267;&#x884C;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/sbin/btsync --dump-sample-config &gt; /etc/btsync.confg</div></pre></td></tr></table></figure>
+<p>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x7684;&#x4E3B;&#x8981;&#x5C31;&#x662F;&#x7ED9;&#x4F60;&#x7684;&#x3C0;&#x8D77;&#x4E2A;&#x540D;&#x5B57;&#xFF0C;&#x5E76;&#x4E14;&#x4FEE;&#x6539;&#x4E0B;&#x5BC6;&#x7801;&#x4EE5;&#x53CA;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#xFF0C;&#x7136;&#x540E;&#x4EE5;&#x540E;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>./btsync --config btsync.conf</code> &#x6765;&#x6267;&#x884C;&#x4F60;&#x914D;&#x7F6E;&#x597D;&#x7684;&#x53C2;&#x6570;&#x4E86;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8BA9;BTSYNC&#x6BCF;&#x6B21;&#x6811;&#x8393;&#x6D3E;&#x5F00;&#x673A;&#x90FD;&#x542F;&#x52A8;&#xFF0C;&#x6211;&#x53C2;&#x8003;&#x8FD9;&#x4E2A;<a href="http://www.lai18.com/content/1294646.html" target="_blank" rel="external">&#x5730;&#x65B9;</a>&#xFF0C;&#x5199;&#x4E86;&#x4E2A;&#x811A;&#x672C;&#x653E;&#x5728;/etc/init.d&#x4E0B;&#x9762;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/init.d/btsync.sh</div></pre></td></tr></table></figure>
+<p>&#x811A;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="comment"># /etc/init.d/btsync</span></div><div class="line"></div><div class="line"><span class="comment">### BEGIN INIT INFO</span></div><div class="line"><span class="comment"># Provides: btsybc daemon</span></div><div class="line"><span class="comment"># Required-Start: $remote_fs $syslog</span></div><div class="line"><span class="comment"># Required-Stop: $remote_fs $syslog</span></div><div class="line"><span class="comment"># Default-Start: 2 3 4 5</span></div><div class="line"><span class="comment"># Default-Stop: 0 1 6</span></div><div class="line"><span class="comment"># Short-Description: BTSync server daemon</span></div><div class="line"><span class="comment"># Description: This service is used to support the bt sync.</span></div><div class="line"><span class="comment"># Placed in /etc/init.d.</span></div><div class="line"><span class="comment">### END INIT INFO</span></div><div class="line"><span class="comment"># Original Author: Nicolas Bernaerts &lt;nicolas.bernaerts@laposte.net&gt;</span></div><div class="line"><span class="comment"># Current Author: FOOLMAN &lt;tinyvane@gmail.com&gt;</span></div><div class="line"><span class="comment"># Version:</span></div><div class="line"><span class="comment">#  Ori V1.0, 06/09/2013 - Creation</span></div><div class="line"><span class="comment">#  Ori V1.1, 09/09/2013 - Use under-priviledged system user</span></div><div class="line"><span class="comment">#  Cur V1.0, 07/12/2016 - Localized into China Raspberry Pi Users</span></div><div class="line"></div><div class="line"><span class="comment"># description variables</span></div><div class="line">PATH=/sbin:/usr/sbin:/bin:/usr/bin</div><div class="line">DESC=<span class="string">&quot;BTSync server&quot;</span></div><div class="line">NAME=<span class="string">&quot;btsync&quot;</span></div><div class="line">USER=<span class="variable">$NAME</span></div><div class="line">DAEMON=/usr/<span class="built_in">local</span>/sbin/<span class="variable">$NAME</span></div><div class="line">ROOT=/home/<span class="variable">$NAME</span></div><div class="line">PIDFILE=<span class="variable">$ROOT</span>/<span class="variable">$NAME</span>.pid</div><div class="line">    </div><div class="line"><span class="comment"># Exit if btsync program is not installed</span></div><div class="line"><span class="keyword">if</span> [ ! -x <span class="string">&quot;<span class="variable">$DAEMON</span>&quot;</span> ] ; <span class="keyword">then</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">&quot;Binary <span class="variable">$DAEMON</span> does not exist. Aborting&quot;</span></div><div class="line">	<span class="built_in">exit</span> 0</div><div class="line"><span class="keyword">fi</span></div><div class="line">    </div><div class="line"><span class="comment"># Exit if btsync user home directory doesn&apos;t exist</span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-d</span> <span class="string">&quot;<span class="variable">$ROOT</span>&quot;</span> ]; <span class="keyword">then</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">&quot;User <span class="variable">$USER</span> does not exist. Aborting&quot;</span></div><div class="line">	<span class="built_in">exit</span> 0</div><div class="line"><span class="keyword">fi</span></div><div class="line">    </div><div class="line"><span class="comment"># Function that starts the daemon/service</span></div><div class="line"><span class="comment"># 0 - daemon started</span></div><div class="line"><span class="comment"># 1 - daemon already running</span></div><div class="line"><span class="comment"># 2 - daemon could not be started</span></div><div class="line"></div><div class="line"><span class="function"><span class="title">do_start</span></span>()</div><div class="line">{</div><div class="line">	<span class="comment"># If needed, start the daemon</span></div><div class="line">	<span class="keyword">if</span> [ <span class="_">-f</span> <span class="string">&quot;<span class="variable">$PIDFILE</span>&quot;</span> ]</div><div class="line">	<span class="keyword">then</span></div><div class="line">	    <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$NAME</span> already running&quot;</span></div><div class="line">	    RETVAL=<span class="string">&quot;1&quot;</span></div><div class="line">	<span class="keyword">else</span></div><div class="line">	    start-stop-daemon --start --quiet --chuid <span class="variable">$USER</span> --name <span class="variable">$NAME</span> --exec <span class="variable">$DAEMON</span> -- --config /etc/btsync.conf</div><div class="line">	    RETVAL=<span class="string">&quot;$?&quot;</span></div><div class="line">	    [ <span class="string">&quot;<span class="variable">$RETVAL</span>&quot;</span> = <span class="string">&quot;0&quot;</span> ] &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$NAME</span> started&quot;</span></div><div class="line">	<span class="keyword">fi</span></div><div class="line">	    </div><div class="line">	<span class="built_in">return</span> <span class="string">&quot;<span class="variable">$RETVAL</span>&quot;</span></div><div class="line">}</div><div class="line">    </div><div class="line"><span class="comment"># Function that stops the daemon/service</span></div><div class="line"><span class="comment"># 0 - daemon stopped</span></div><div class="line"><span class="comment"># 1 - daemon already stopped</span></div><div class="line"><span class="comment"># 2 - daemon could not be stopped</span></div><div class="line"></div><div class="line"><span class="function"><span class="title">do_stop</span></span>()</div><div class="line">{</div><div class="line">	<span class="comment"># Stop the daemon</span></div><div class="line">	start-stop-daemon --stop --quiet --retry=TERM/30/KILL/5 --pidfile <span class="variable">$PIDFILE</span> --name <span class="variable">$NAME</span></div><div class="line">	RETVAL=<span class="string">&quot;$?&quot;</span></div><div class="line">	[ <span class="string">&quot;<span class="variable">$RETVAL</span>&quot;</span> = <span class="string">&quot;0&quot;</span> ] &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$NAME</span> stopped&quot;</span></div><div class="line">	[ <span class="string">&quot;<span class="variable">$RETVAL</span>&quot;</span> = <span class="string">&quot;1&quot;</span> ] &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$NAME</span> was not running&quot;</span></div><div class="line">	    </div><div class="line">	<span class="comment"># remove pid file</span></div><div class="line">	rm <span class="_">-f</span> <span class="variable">$PIDFILE</span></div><div class="line">	    </div><div class="line">	<span class="built_in">return</span> <span class="string">&quot;<span class="variable">$RETVAL</span>&quot;</span></div><div class="line">}</div><div class="line">    </div><div class="line"><span class="comment"># deal with different parameters : start, stop &amp; status</span></div><div class="line"><span class="keyword">case</span> <span class="string">&quot;<span class="variable">$1</span>&quot;</span> <span class="keyword">in</span></div><div class="line">	<span class="comment"># start service</span></div><div class="line">	start)</div><div class="line">	    <span class="keyword">do</span>_start</div><div class="line">	    ;;</div><div class="line">	<span class="comment"># stop service</span></div><div class="line">	stop)</div><div class="line">	    <span class="keyword">do</span>_stop</div><div class="line">	    ;;</div><div class="line">	<span class="comment"># restart service</span></div><div class="line">	restart)</div><div class="line">	    <span class="keyword">do</span>_stop</div><div class="line">	    <span class="keyword">do</span>_start</div><div class="line">	    ;;</div><div class="line">	<span class="comment"># unknown command, display help message</span></div><div class="line">	*)</div><div class="line">	    <span class="built_in">echo</span> <span class="string">&quot;Usage : <span class="variable">$SCRIPTNAME</span> {start|stop|restart}&quot;</span> &gt;&amp;2</div><div class="line">	    <span class="built_in">exit</span> 3</div><div class="line">	    ;;</div><div class="line"><span class="keyword">esac</span></div></pre></td></tr></table></figure>
+<p>&#x7136;&#x540E;&#x7ED9;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF0C;&#x5E76;&#x4E14;&#x52A0;&#x5165;&#x5230;&#x542F;&#x52A8;&#x9879;&#x4E2D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo chmod +x /etc/init.d/btsync</div><div class="line">sudo update-rc.d btsync defaults</div></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x505C;&#x6B62;&#x548C;&#x542F;&#x52A8;BTSYNC&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x5373;&#x53EF;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo service btsync start 	<span class="comment">#&#x542F;&#x52A8;BTSync</span></div><div class="line">sudo service btsync stop 	<span class="comment">#&#x505C;&#x6B62;BTSync</span></div><div class="line">sudo service btsync status	<span class="comment">#&#x67E5;&#x770B;BTSync&#x72B6;&#x6001;</span></div></pre></td></tr></table></figure>
+<p>PS:&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x540D;&#x5B57;&#x548C;&#x5BC6;&#x7801;&#xFF0C;&#x6700;&#x597D;&#x7528;&#x4E2A;&#x5E38;&#x7528;&#x7684;&#xFF0C;&#x5426;&#x5219;&#x5FD8;&#x4E86;&#x4E5F;&#x9EBB;&#x70E6;&#x3002;</p>
+<h2 id="btsync-conf&#x6587;&#x4EF6;&#x914D;&#x7F6E;"><a href="#btsync-conf&#x6587;&#x4EF6;&#x914D;&#x7F6E;" class="headerlink" title="btsync.conf&#x6587;&#x4EF6;&#x914D;&#x7F6E;"></a>btsync.conf&#x6587;&#x4EF6;&#x914D;&#x7F6E;</h2><p>&#x6211;&#x7684;&#x914D;&#x7F6E;&#x5982;&#x4E0B;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">   <span class="string">&quot;device_name&quot;</span>: <span class="string">&quot;Pi in Beijing&quot;</span>,</div><div class="line">   <span class="string">&quot;listening_port&quot;</span> : 0, // 0 - randomize port</div><div class="line"></div><div class="line">/* storage_path dir contains auxilliary app files <span class="keyword">if</span> no storage_path field: .sync dir created <span class="keyword">in</span> current working directory */</div><div class="line">   <span class="string">&quot;storage_path&quot;</span> : <span class="string">&quot;/home/btsync/.sync&quot;</span>,</div><div class="line"></div><div class="line">/* <span class="built_in">set</span> location of pid file */</div><div class="line">   <span class="string">&quot;pid_file&quot;</span> : <span class="string">&quot;/home/btsync/btsync.pid&quot;</span>,</div><div class="line"></div><div class="line">/* use UPnP <span class="keyword">for</span> port mapping */</div><div class="line">  <span class="string">&quot;use_upnp&quot;</span> : <span class="literal">true</span>,</div><div class="line"></div><div class="line">/* limits <span class="keyword">in</span> kB/s. 0 - no <span class="built_in">limit</span> */</div><div class="line">  <span class="string">&quot;download_limit&quot;</span> : 0,</div><div class="line">  <span class="string">&quot;upload_limit&quot;</span> : 0,</div><div class="line"></div><div class="line">/* proxy configuration */</div><div class="line">// <span class="string">&quot;proxy_type&quot;</span> : <span class="string">&quot;socks4&quot;</span>, // Valid types: <span class="string">&quot;socks4&quot;</span>, <span class="string">&quot;socks5&quot;</span>, <span class="string">&quot;http_connect&quot;</span>. Any other value means no proxy</div><div class="line">// <span class="string">&quot;proxy_addr&quot;</span> : <span class="string">&quot;192.168.1.2&quot;</span>, // IP address of proxy server.</div><div class="line">// <span class="string">&quot;proxy_port&quot;</span> : 1080,</div><div class="line">// <span class="string">&quot;proxy_auth&quot;</span> : <span class="literal">false</span>, // Use authentication <span class="keyword">for</span> proxy. Note: only username/password <span class="keyword">for</span> socks5 (RFC 1929) is supported, and it is not really secure</div><div class="line">// <span class="string">&quot;proxy_username&quot;</span> : <span class="string">&quot;user&quot;</span>,</div><div class="line">// <span class="string">&quot;proxy_password&quot;</span> : <span class="string">&quot;password&quot;</span>,</div><div class="line"></div><div class="line">  <span class="string">&quot;webui&quot;</span> :</div><div class="line">  {</div><div class="line">    <span class="string">&quot;listen&quot;</span> : <span class="string">&quot;0.0.0.0:8888&quot;</span> // remove field to <span class="built_in">disable</span> WebUI</div><div class="line"></div><div class="line">/* preset credentials. Use password or password_<span class="built_in">hash</span> */</div><div class="line">    ,<span class="string">&quot;login&quot;</span> : <span class="string">&quot;tinyvane&quot;</span></div><div class="line">    ,<span class="string">&quot;password&quot;</span> : <span class="string">&quot;christina&quot;</span></div><div class="line">//  ,<span class="string">&quot;password_hash&quot;</span> : <span class="string">&quot;some_hash&quot;</span> // password <span class="built_in">hash</span> <span class="keyword">in</span> crypt(3) format</div><div class="line">//  ,<span class="string">&quot;allow_empty_password&quot;</span> : <span class="literal">false</span> // Defaults to <span class="literal">true</span></div><div class="line">/* ssl configuration */</div><div class="line">//  ,<span class="string">&quot;force_https&quot;</span> : <span class="literal">true</span> // <span class="built_in">disable</span> http</div><div class="line">//  ,<span class="string">&quot;ssl_certificate&quot;</span> : <span class="string">&quot;/path/to/cert.pem&quot;</span></div><div class="line">//  ,<span class="string">&quot;ssl_private_key&quot;</span> : <span class="string">&quot;/path/to/private.key&quot;</span></div><div class="line"></div><div class="line">/* directory_root path defines <span class="built_in">where</span> the WebUI Folder browser starts (linux only). Default value is / */</div><div class="line">//  ,<span class="string">&quot;directory_root&quot;</span> : <span class="string">&quot;/home/pi/MySharedFolders/&quot;</span></div><div class="line"></div><div class="line">/* directory_root_policy defines how directory_root is used (linux only).</div><div class="line">   Valid values are:</div><div class="line">     <span class="string">&quot;all&quot;</span> - accepts directory_root and its subdirectories <span class="keyword">for</span> <span class="string">&apos;getdir&apos;</span> and <span class="string">&apos;adddir&apos;</span> actions</div><div class="line">     <span class="string">&quot;belowroot&quot;</span> - accepts directory_root<span class="string">&apos;s subdirectories for &apos;</span>getdir<span class="string">&apos; and &apos;</span>adddir<span class="string">&apos; actions,</span></div><div class="line">     but denies attempts to use &apos;adddir<span class="string">&apos; to create directories directly within directory_root</span></div><div class="line">   Default value is &quot;all&quot;. */</div><div class="line">//  ,&quot;directory_root_policy&quot; : &quot;all&quot;</div><div class="line"></div><div class="line">/* dir_whitelist defines which directories can be shown to user or have folders added (linux only)</div><div class="line">   relative paths are relative to directory_root setting */</div><div class="line">//  ,&quot;dir_whitelist&quot; : [ &quot;/home/user/MySharedFolders/personal&quot;, &quot;work&quot; ]</div><div class="line">  }</div><div class="line"></div><div class="line">/* !!! if you set shared folders in config file WebUI will be DISABLED !!!</div><div class="line">   shared directories specified in config file  override the folders previously added from WebUI. */</div><div class="line">/*,</div><div class="line">  &quot;shared_folders&quot; :</div><div class="line">  [</div><div class="line">    {</div><div class="line">      &quot;secret&quot; : &quot;MY_SECRET_1&quot;, // required field - use --generate-secret in command line to create new secret</div><div class="line">      &quot;dir&quot; : &quot;/home/user/bittorrent/sync_test&quot;, // * required field</div><div class="line">      &quot;use_relay_server&quot; : true, //  use relay server when direct connection fails</div><div class="line">      &quot;use_tracker&quot; : true,</div><div class="line">      &quot;search_lan&quot; : true,</div><div class="line">      &quot;use_sync_trash&quot; : true, // enable SyncArchive to store files deleted on remote devices</div><div class="line">      &quot;overwrite_changes&quot; : false, // restore modified files to original version, ONLY for Read-Only folders</div><div class="line">      &quot;known_hosts&quot; : // specify hosts to attempt connection without additional search</div><div class="line">      [</div><div class="line">        &quot;192.168.1.2:44444&quot;</div><div class="line">      ]</div><div class="line">    }</div><div class="line">  ]</div><div class="line">*/</div><div class="line"></div><div class="line">/* Advanced preferences can be added to config file. Info is available at &quot;http://help.getsync.com/customer/portal/articles/1902048-sync-advanced-preferences--more-options&quot;</div><div class="line">For example see folder_rescan_interval below */</div><div class="line">//, &quot;folder_rescan_interval&quot; : &quot;86400&quot;</div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure>
+<p>&#x6709;&#x51E0;&#x4E2A;&#x5730;&#x65B9;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;</p>
+<ol>
+<li>&#x201C;device_name&#x201D;: &#x201C;Pi in Beijing&#x201D; #&#x8FD9;&#x4E2A;&#x662F;&#x4F60;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6807;&#x793A;&#xFF0C;&#x6539;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x8BB0;&#x7684;</li>
+<li>&#x201C;storage_path&#x201D; : &#x201C;/home/btsync/.sync&#x201D;, #&#x8FD9;&#x4E2A;&#x662F;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x8BBE;&#x7F6E;&#x597D;&#x4F4D;&#x7F6E;</li>
+<li>&#x201C;pid_file&#x201D; : &#x201C;/home/btsync/btsync.pid&#x201D;, #&#x8FD9;&#x4E2A;&#x662F;&#x8FDB;&#x7A0B;&#x7684;pid&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E86;&#x4E0A;&#x9762;&#x6211;&#x7684;&#x542F;&#x52A8;&#x811A;&#x672C;&#xFF0C;&#x8BF7;&#x8BB0;&#x5F97;&#x8FD9;&#x91CC;&#x4E00;&#x5B9A;&#x8981;&#x8BBE;&#x7F6E;&#x548C;&#x6211;&#x8FD9;&#x91CC;&#x76F8;&#x540C;</li>
+<li>2&#x548C;3&#x7684;&#x6743;&#x9650;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x5C5E;&#x4E8E;btsync&#xFF0C;&#x5E76;&#x4E14;&#x8BB0;&#x5F97;&#x7ED9;&#x5916;&#x63A5;&#x786C;&#x76D8;&#x4E0A;&#x7684;btysnc&#x76EE;&#x5F55;&#x6743;&#x9650;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>sudo chown -R btsync:btsync file</code></li>
+</ol>
+<h3 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;" class="headerlink" title="&#x53C2;&#x8003;&#x8D44;&#x6599;"></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h3><ol>
+<li><a href="https://www.johannesbader.ch/2014/05/installing-bittorrent-sync-on-raspberry-pi/" target="_blank" rel="external">INSTALLING BITTORRENT SYNC ON RASPBERRY PI</a></li>
+<li><a href=""></a></li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/同步/" rel="tag">#同步</a>
+          
+            <a href="/tags/树莓派/" rel="tag">#树莓派</a>
+          
+            <a href="/tags/raspberry/" rel="tag">#raspberry</a>
+          
+            <a href="/tags/Bit-Torrent/" rel="tag">#Bit Torrent</a>
+          
+            <a href="/tags/效率/" rel="tag">#效率</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/how_to_scientificly_online_by_shadowsocks/" rel="next" title="搬瓦工自动配置shadowsocks翻墙">
+                <i class="fa fa-chevron-left"></i> 搬瓦工自动配置shadowsocks翻墙
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="post/use_bittorrent_to_synchronize_all_files_among_all_terminals_based_on_raspberry_pi/"
+           data-title="树莓派折腾之：BTSYNC同步所有电脑和手机" data-url="http://www.wuliaole.com/post/use_bittorrent_to_synchronize_all_files_among_all_terminals_based_on_raspberry_pi/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/150694?v=3&s=140"
+               alt="节约用爱" />
+          <p class="site-author-name" itemprop="name">节约用爱</p>
+          <p class="site-description motion-element" itemprop="description">随笔 随心</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">134</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tinyvane" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/tinyvane" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/tinyvane" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/2705283/" target="_blank" title="DouBan">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  DouBan
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/wang-yi-80" target="_blank" title="ZhiHu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.jerryzhang.net/" title="JerrySher's blog" target="_blank">JerrySher's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://3toptop.top/" title="山上" target="_blank">山上</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://sfantree.com/" title="水番林" target="_blank">水番林</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文章更新"><span class="nav-number">1.</span> <span class="nav-text">文章更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么会有这篇文章"><span class="nav-number">2.</span> <span class="nav-text">为什么会有这篇文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建BTSYNC独立账户"><span class="nav-number">3.</span> <span class="nav-text">创建BTSYNC独立账户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载并安装BYSYNC"><span class="nav-number">4.</span> <span class="nav-text">下载并安装BYSYNC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#btsync-conf文件配置"><span class="nav-number">5.</span> <span class="nav-text">btsync.conf文件配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">5.1.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">节约用爱</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wuliaole"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
